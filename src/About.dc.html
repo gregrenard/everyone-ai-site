@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<title>About | Everyone.AI</title>
+<meta name="description" content="Our values and our team: bridging multi-disciplinary experiences and expertises for a better AI for children.">
+<link rel="canonical" href="https://everyone.ai/about/">
+<link rel="icon" type="image/png" href="assets/logo-everyone-ai.png">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,300&family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
+<script src="image-slot.js"></script>
+<style>body{margin:0;background:#f0f2f6;color:#222;font-family:'Open Sans',system-ui,sans-serif;-webkit-font-smoothing:antialiased;text-wrap:pretty}a{color:#829bcb}a:hover{color:#f8903e}@media (max-width:980px){[data-team]{grid-template-columns:repeat(3,1fr)!important}}@media (max-width:640px){[data-team]{grid-template-columns:repeat(2,1fr)!important}}</style>
+</helmet>
+<div data-screen-label="About" style="min-height:100vh;display:flex;flex-direction:column;background:#f0f2f6">
+<dc-import name="SiteHeader" active="about" hint-size="100%,158px"></dc-import>
+<section style="background:#35425b;padding:64px 20px;text-align:center"><h1 style="margin:0;font:300 clamp(28px,4vw,48px)/1.2 Poppins,sans-serif;color:#fff;text-transform:uppercase;letter-spacing:.04em">About Us</h1></section>
+<main style="flex:1;max-width:1080px;width:100%;margin:0 auto;padding:72px 20px 88px;box-sizing:border-box">
+<h2 style="margin:0;font:600 36px/1.2 'Open Sans',sans-serif;color:#000">Our Values</h2>
+<p style="margin:18px 0 0;font:300 17px/1.8 'Open Sans',sans-serif">We are committed to upholding the recognized ethical standards in AI. Therefore, AI must be <strong style="font-weight:700">secure</strong>, protecting children from online risks; <strong style="font-weight:700">ethical</strong>, respecting their rights and well-being; <strong style="font-weight:700">fair</strong>, ensuring the absence of discriminatory bias; <strong style="font-weight:700">inclusive and equitable</strong>, offering equal access to all; <strong style="font-weight:700">transparent</strong>, with clear and understandable processes; and <strong style="font-weight:700">respectful of data</strong>, ensuring confidentiality according to current standards.</p>
+<p style="margin:14px 0 0;font:300 17px/1.8 'Open Sans',sans-serif">To this, we add <strong style="font-weight:700">the necessity of framing AI development in a way that preserves children's cognitive and socio-emotional development</strong>, taking into account their specific needs at each stage of their development.</p>
+<h2 style="margin:80px 0 0;text-align:center;font:600 36px/1.2 'Open Sans',sans-serif;color:#000">Our Team</h2>
+<p style="margin:12px 0 0;text-align:center;font:300 20px/1.5 'Open Sans',sans-serif;color:#333">Bridging our multi-disciplinary experiences and expertises for a better AI</p>
+<sc-for list="{{ groups }}" as="g" hint-placeholder-count="3">
+<h3 style="margin:64px 0 0;text-align:center;font:600 26px/1.3 'Open Sans',sans-serif;color:#829bcb">{{ g.title }}</h3>
+<div data-team="" style="display:grid;grid-template-columns:repeat(4,1fr);gap:40px 24px;margin-top:32px">
+<sc-for list="{{ g.people }}" as="m" hint-placeholder-count="4">
+<div style="display:flex;flex-direction:column;align-items:center;text-align:center">
+<image-slot id="{{ m.slot }}" shape="circle" src="{{ m.photo }}" placeholder="{{ m.name }}" style="width:140px;height:140px"></image-slot>
+<h4 style="margin:16px 0 0;font:600 17px/1.3 'Open Sans',sans-serif;color:#000">{{ m.name }}</h4>
+<p style="margin:6px 0 0;font:300 14px/1.5 'Open Sans',sans-serif;color:#444">{{ m.role }}</p>
+<div style="display:flex;gap:10px;margin-top:12px">
+<a href="{{ m.li }}" target="_blank" rel="noopener" aria-label="{{ m.liLabel }}" style="display:inline-flex;align-items:center;justify-content:center;width:36px;height:36px;border-radius:50%;background:#829bcb;color:#fff" style-hover="background:#f8903e;color:#fff"><svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 110 5 2.5 2.5 0 010-5zM3 9h4v12H3zM10 9h3.8v1.7h.1c.5-1 1.8-2 3.7-2 4 0 4.7 2.6 4.7 6V21h-4v-5.5c0-1.3 0-3-1.9-3s-2.1 1.4-2.1 2.9V21h-4z" fill="currentColor"></path></svg></a>
+<sc-if value="{{ m.hasMail }}" hint-placeholder-val="{{ false }}"><a href="{{ m.mail }}" aria-label="{{ m.mailLabel }}" style="display:inline-flex;align-items:center;justify-content:center;width:36px;height:36px;border-radius:50%;background:#829bcb;color:#fff" style-hover="background:#f8903e;color:#fff"><svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6h18v12H3zM3 6l9 7 9-7" fill="none" stroke="currentColor" strokeWidth="2"></path></svg></a></sc-if>
+</div>
+</div>
+</sc-for>
+</div>
+</sc-for>
+</main>
+<dc-import name="SiteFooter" hint-size="100%,520px"></dc-import>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+const P = {
+  as: ['Anne-Sophie Seret', 'annesophieseret', 'annesophie@everyone.ai', 'assets/team-anne-sophie-seret.webp'],
+  gr: ['Gregory Renard', 'gregoryrenard', 'greg@everyone.ai', 'assets/team-gregory-renard.webp'],
+  mc: ['Mathilde Cerioli, Ph.D', 'mathilde-neugnot-cerioli', 'mathilde@everyone.ai', 'assets/team-mathilde-cerioli.webp'],
+  cm: ['Céline Malvoisin', 'celinemalvoisin', 'celine@everyone.ai', 'assets/team-celine-malvoisin.webp'],
+  lv: ['Laurent Vernhes', 'laurentvernhes', 'laurent@everyone.ai'],
+  ml: ['Maxime Le Bourgeois', 'maximelebourgeois', 'maxime.lebourgeois@wanadoo.fr']
+};
+const G = [
+  ['Founding & Leadership Team', [[P.as, 'Executive Director - Cofounder'], [P.gr, 'Fellow AI Architect - Applied Gen AI - Board President - Cofounder'], [P.mc, 'Chief Scientist - Cofounder'], [P.cm, 'Head of Operations & Programs - Cofounder'], [P.lv, 'CTO'], [P.ml, 'Head of Finance - Cognitive Science Researcher']]],
+  ['Research Team', [[P.mc, 'Chief Scientist'], [['Olga Muss Laurenty', 'olgalaurenty', 'olga.laurenty@gmail.com'], 'AI and Child Development Researcher'], [P.ml, 'Cognitive Neuroscience Researcher'], [['Polina Lulu', 'polina-lulu-ba774292', 'polinabsky@gmail.com'], 'Child Experienced Researcher Youth Voices'], [['Sonia Tiwari, Ph.D', 'soniastic', 'soniastic@gmail.com'], "Children's Media Researcher"], [['Nandini Asavari Bharadwaj, Ph.D', 'nandini-asavari-bharadwaj-a5336810b', 'asavari@gmail.com'], 'AI in Education and Child Development Researcher'], [['Hannah Griswold', 'hannah-griswold'], 'Researcher'], [['Hechmi Kilani', 'hechmi-kilani'], 'Researcher'], [['Simar Singh, PhD', 'simar-singh-phd-92895a139'], 'Researcher']]],
+  ['Engineering Team', [[P.lv, 'CTO'], [['Marc Baillavoine', 'marc-baillavoine', 'marcbaillavoine@gmail.com'], 'Full Stack Builder'], [P.gr, 'Fellow Chief AI Officer - Board President']]],
+  ['US Contributors', [[['Gaëlle Desroziers', 'gaëlle-desroziers-7442b8159'], 'Web & Graphic Design'], [['Dave Shesgreen', 'daveshesgreen'], 'Legal Advisor'], [['Julie Cazajus', 'juliecazajus'], 'Brand Manager'], [['Bethany Robertson', 'bethanylrobertson'], 'Senior Advisor']]],
+  ['EU Contributors', [[['Julien Etienne', 'julienetienne', 'julien@everyone.ai'], 'Marketing / Communication'], [['Laura Berton', 'jplevieux', 'jplevieux@holisteam.com'], 'Legal Advisor'], [['Jean-Pierre Levieux', 'jplevieux', 'jplevieux@holisteam.com'], 'Board advisor Programs & Partnerships'], [['Antoine Vaccaro', 'antoine-vaccaro-5143615', 'antoine.vaccaro@gmail.com'], 'Fundraising for impact in France/ Europe'], [['Emilie Treuillard', 'emilie-treuillard', 'treuillard.emilie@gmail.com'], 'Advisor, Partnerships & Philanthropy'], [['Ludwig Charlaté', 'ludwigcharlate'], 'Growth Contributor - Youth Advocate'], [['Paulin Avril', 'paulin-avril'], 'Growth Contributor']]],
+  ['Youth Contributors and Advocates', [[['Arthur Renard', 'arthur-m-renard'], ''], [['Nikhil Gujral', 'nikhilgujralofficial'], ''], [['Yerim Bella Kim', 'bellaykim'], ''], [['Victor Delvat', 'delvatvictor'], '']]],
+  ['Board Members', [[['Andrea Bornstein', 'andrea-b-614850', 'andrea@opsrunner.com'], 'Board Member'], [['Dave Spell', 'dave-spell-24b425', 'dspell@sitrovainnovation.com'], 'Board Member'], [['Ajay Rai', 'raiajay', 'ajayrai@sitrovainnovation.com'], 'Board Member'], [['Christine Allan de Lavenne', 'christineallandelavenne'], 'Board Member']]],
+  ['Alumni', [['Matthieu Guiet', 'matthieu-guiet'], ['Victoria Arcangeli', 'victoria-arcangeli'], ['Antoine Lefèbvre', 'antoine-lefebvre-7800951ba'], ['Karl Luneau', 'karl-luneau-b49178221'], ['Ambre Espitallier', 'ambre-espitallier'], ['Inès Burrus', 'inesburrus'], ['Anouck Marechal', 'anouck-maréchal'], ['Elena Grelier', 'elena-grelier-a56497248'], ['Jiaru Liu', 'jiaru-liu-3b989121a'], ['Sophie Meesseman', 'sophie-meesseman'], ['Aurore Boget', 'aurore-boget-798840246'], ['Claire Meesseman', 'claire-meesseman-4a940524b'], ['Arthur Collet', 'arthur-collet-2252a322a'], ['Chinmay Patil', 'chinmay-rajendra-patil'], ['Juliette Vermelle', 'juliette-vermelle-70603124b'], ['Riadh Amrouche', 'riadh-amrouche-412395215'], ['Rodrigue Scholtès', 'rodrigue-scholtès-90156521b'], ['Edgar Milius', 'edgar-milius'], ['Delphine Laget', 'delphine-laget-928a0024a'], ['Charlotte Neltner', 'charlotte-neltner'], ['Thaïs Artaud', 'thaïs-artaud']].map(p => [p, ''])]
+];
+const slug = s => s.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+class Component extends DCLogic {
+  renderVals() {
+    return {
+      groups: G.map(([title, people]) => ({
+        title,
+        people: people.map(([p, role]) => ({
+          name: p[0], role, li: 'https://www.linkedin.com/in/' + p[1] + '/', liLabel: p[0] + ' on LinkedIn',
+          hasMail: !!p[2], mail: p[2] ? 'mailto:' + p[2] : '', mailLabel: 'Email ' + p[0],
+          photo: p[3] || '', slot: 'about-' + slug(p[0])
+        }))
+      }))
+    };
+  }
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+# everyone.AI
+
+> everyone.AI is a 501(c)(3) nonprofit organization (EIN 99-2317785) that anticipates, educates, and evaluates the risks and opportunities of Artificial Intelligence for children, adolescents, and young adults (0–25). Grounded in research from developmental neuroscience, psychology, science of learning, and AI, it moves from evidence to practical action so that AI supports healthy cognitive, social, and emotional development for the next generation. Vision: a future where Beneficial AI supports the healthy development of every child, everywhere.
+
+## What everyone.AI does
+
+Applied science feeds three pillars:
+
+- **iRAISE — International Coalition**: brings together researchers, industry leaders, governments, educators, and civil society to advance responsible AI and promote child-centered policies, standards, and best practices.
+- **Education**: training, workshops, conferences, and resources that help companies, educators, parents, and young people navigate the opportunities and challenges of AI.
+- **AïA — Evaluation Framework**: enables AI developers and decision makers to make AI systems safer for children, teenagers and young adults. It includes the AïA / CALIBER evaluation method and the AïA Safety Builder, which is now expanding its reach via Open Source.
+
+Latest publication: *Mapping of GenAI impacts on child development* — how generative AI use may shape children's cognitive, emotional, and developmental trajectories across four age bands (birth to 18), translated into developmentally grounded governance priorities for G7 policymakers.
+
+Why now: the rapid evolution of AI technologies is outpacing the development of child-specific safeguards; waiting to course-correct could have irreversible impacts.
+
+## Founding team
+
+- Anne-Sophie Seret — Executive Director, Cofounder
+- Gregory Renard — Fellow AI Architect, Applied Gen AI, Board President, Cofounder
+- Mathilde Cerioli, Ph.D — Chief Scientist, Cofounder
+- Céline Malvoisin — Head of Operations & Programs, Cofounder
+
+## Pages
+
+- [Home](https://everyone.ai/): mission, vision, pillars, latest publication, founding team, featured press, contact form (8 languages via ?lang=).
+- [Research](https://everyone.ai/research/): reports and the #RPD model policy.
+- [Mapping of GenAI impacts on child development](https://everyone.ai/research/mapping-of-genai-impacts/): G7 scientific contribution by Mathilde Cerioli, Ph.D and Daniel Hipp, Ph.D, with PDF download.
+- [Adolescents & Anthropomorphic AI: Rethinking Design for Wellbeing](https://everyone.ai/research/adolescents-and-anthropomorphic-ai/): report by Mathilde Cerioli, Ph.D on how conversational AI is embedded in adolescents' daily lives, with report and executive summary downloads.
+- [The Future of Child Development in the AI Era](https://everyone.ai/research/the-future-of-child-development-in-the-ai-era/): report on the implications of rapidly integrating AI applications into children's environments, with report and executive summary downloads (English and French).
+- [Relational Positioning, Dependency & Exclusivity Policy (#RPD)](https://everyone.ai/research/relational-positioning-dependency-exclusivity-policy-rpd/): model policy addressing the structural gap between child-development experts and those drafting the technical rules that govern AI systems, with PDF download.
+- [AïA Evaluation Framework](https://everyone.ai/aia-safety-builder/): mission, goals, CALIBER methodology, Open Source / Safety Builder / White Label.
+- [AïA Technical Method (CALIBER)](https://everyone.ai/aia-safety-builder/method/): executive summary, evaluation flow, validation evidence and limits.
+- [AïA Safety Builder Service ßeta](https://everyone.ai/aia-safety-builder/service/): features, how it works, offers (Freemium, Pro, Enterprise).
+- [Education](https://everyone.ai/formation/): workshops, interactive talks, keynotes and speakers (English and French).
+- [International Coalition (iRAISE)](https://everyone.ai/international-coalition/): participants, experts, guiding principles, objectives, join form.
+- [Open Letter](https://everyone.ai/open-letter/): full letter, signatories, pledge form.
+- [Newsroom](https://everyone.ai/newsroom/): press, podcasts, events, webinars, awards, media inquiries.
+- [About](https://everyone.ai/about/): values and full team.
+- [Donate](https://everyone.ai/donate/): tax-deductible donations in EUR and USD.
+
+## Elsewhere
+
+- [LinkedIn](https://www.linkedin.com/company/everyone-ai/)
+- [Instagram](https://www.instagram.com/everyoneai_official/)
+
+Social hashtag: #BeneficialAIforChildren

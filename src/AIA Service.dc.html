@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<title>AïA - Safety Builder Beta Service | Everyone.AI</title>
+<meta name="description" content="AïA Safety Builder Service ßeta — built for developers who care about the impact of AI on children.">
+<link rel="canonical" href="https://everyone.ai/aia-safety-builder/service/">
+<link rel="icon" type="image/png" href="assets/logo-everyone-ai.png">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,300&family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
+<style>body{margin:0;background:#f0f2f6;color:#222;font-family:'Open Sans',system-ui,sans-serif;-webkit-font-smoothing:antialiased;text-wrap:pretty}a{color:#829bcb}a:hover{color:#f8903e}@media (max-width:860px){[data-g3]{grid-template-columns:1fr!important}}</style>
+</helmet>
+<div data-screen-label="AïA Safety Builder" style="min-height:100vh;display:flex;flex-direction:column;background:#f0f2f6">
+<dc-import name="SiteHeader" active="initiatives" hint-size="100%,158px"></dc-import>
+<section style="background:#35425b;padding:72px 20px;text-align:center">
+<h1 style="margin:0;font:300 clamp(26px,3.6vw,44px)/1.2 Poppins,sans-serif;color:#fff;text-transform:uppercase;letter-spacing:.04em">AïA Safety Builder Service ßeta</h1>
+<p style="margin:18px 0 0;font:400 19px/1.5 'Open Sans',sans-serif;color:#fff">Built for developers who care about the impact of AI on children</p>
+<p style="margin:14px 0 0;font:italic 300 16px/1.5 'Open Sans',sans-serif;color:#cfd8ea">🏆 Recognized #Tech for change startup by VivaTech, Paris 2026</p>
+<a href="https://challenges-awards.vivatech.com/awards/tech-for-change-award" target="_blank" rel="noopener" style="display:block;width:200px;margin:20px auto 0;background:#fff;border-radius:6px;padding:8px"><img src="assets/tech-for-change.webp" alt="VivaTech Tech for Change" style="width:100%;height:auto;display:block"></a>
+<a href="https://production.srl4c.everyone.ai/" style="display:inline-block;margin-top:28px;background:#f8903e;color:#fff;font:500 16px/1 Poppins,sans-serif;padding:15px 30px;border-radius:999px;text-decoration:none" style-hover="background:#e97f2d;color:#fff">Apply for ßeta access</a>
+</section>
+<main style="flex:1;max-width:1080px;width:100%;margin:0 auto;padding:72px 20px 88px;box-sizing:border-box">
+<p style="margin:0 auto;max-width:820px;text-align:center;font:300 19px/1.7 'Open Sans',sans-serif">Available AI safety tools miss how children actually form trust and attachment with conversational AI. AïA Safety Builder will help AI systems stakeholders not only check for harmful content but also identify behavioral risks.</p>
+<h2 style="margin:72px 0 0;font:600 32px/1.2 'Open Sans',sans-serif;color:#000">Go beyond content moderation</h2>
+<p style="margin:14px 0 0;font:300 17px/1.75 'Open Sans',sans-serif">Most AI safety tools focus only on screening harmful content. AïA Safety Builder also evaluates AI powered responses for child developmental behavioral risk.</p>
+<h2 style="margin:56px 0 0;font:600 28px/1.25 'Open Sans',sans-serif;color:#000">AïA Safety Builder helps AI companies by:</h2>
+<div data-g3="" style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:28px;margin-top:24px">
+<div style="background:#fff;border-radius:8px;padding:30px"><h3 style="margin:0;font:700 19px/1.4 'Open Sans',sans-serif;color:#829bcb">Checking for harmful and explicit content</h3><p style="margin:12px 0 0;font:300 16px/1.7 'Open Sans',sans-serif">Harmful, violent and explicit content has no place in the discourse AI applications and models have with children and teens. Our tool stimulates models to verify they never cross this line.</p></div>
+<div style="background:#fff;border-radius:8px;padding:30px"><h3 style="margin:0;font:700 19px/1.4 'Open Sans',sans-serif;color:#829bcb">Ensuring AI systems enhance child development</h3><p style="margin:12px 0 0;font:300 16px/1.7 'Open Sans',sans-serif">Even with appropriate content, AI systems could isolate children and teens from their world. AïA Safety Builder helps application and model builders evaluate the tradeoff between product engagement and the risk of harming their younger customers. The behavioral risks we check for are categorized as follows.</p></div>
+</div>
+<div data-g3="" style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;margin-top:28px">
+<sc-for list="{{ cues }}" as="c" hint-placeholder-count="3"><div style="border-top:4px solid #f8903e;background:#fff;border-radius:0 0 8px 8px;padding:26px"><h3 style="margin:0;font:700 19px/1.4 'Open Sans',sans-serif;color:#000">{{ c.t }}</h3><p style="margin:10px 0 0;font:300 16px/1.65 'Open Sans',sans-serif">{{ c.d }}</p></div></sc-for>
+</div>
+<div style="display:flex;justify-content:center;margin-top:36px"><img src="assets/aia-scoring-sample.webp" alt="Scoring sample — anthropomorphic, interactional and relational cues" loading="lazy" style="width:100%;max-width:380px;height:auto;display:block"></div>
+<div style="text-align:center;margin-top:28px"><a href="AIA Method.dc.html" style="display:inline-block;background:#f8903e;color:#fff;font:500 15px/1 Poppins,sans-serif;padding:13px 26px;border-radius:999px;text-decoration:none" style-hover="background:#e97f2d;color:#fff">Learn more</a></div>
+<h2 style="margin:80px 0 0;text-align:center;font:600 32px/1.2 'Open Sans',sans-serif;color:#000">How It Works</h2>
+<div data-g3="" style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;margin-top:32px">
+<sc-for list="{{ steps }}" as="s" hint-placeholder-count="3"><div style="text-align:center;background:#fff;border-radius:8px;padding:30px"><div style="width:52px;height:52px;margin:0 auto;border-radius:50%;background:#829bcb;color:#fff;display:flex;align-items:center;justify-content:center;font:600 22px/1 Poppins,sans-serif">{{ s.n }}</div><h3 style="margin:16px 0 0;font:700 20px/1.3 'Open Sans',sans-serif;color:#000">{{ s.t }}</h3><p style="margin:8px 0 0;font:300 16px/1.6 'Open Sans',sans-serif">{{ s.d }}</p></div></sc-for>
+</div>
+<div data-g3="" style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:28px;margin-top:40px">
+<div style="background:#fff;border-radius:8px;padding:30px"><h3 style="margin:0 0 12px;font:700 19px/1.4 'Open Sans',sans-serif;color:#000">What It Provides</h3><sc-for list="{{ provides }}" as="p" hint-placeholder-count="6"><p style="margin:6px 0 0;font:300 16px/1.6 'Open Sans',sans-serif">✓ {{ p }}</p></sc-for></div>
+<div style="background:#fff;border-radius:8px;padding:30px"><h3 style="margin:0 0 12px;font:700 19px/1.4 'Open Sans',sans-serif;color:#000">Built For</h3><sc-for list="{{ builtFor }}" as="p" hint-placeholder-count="6"><p style="margin:6px 0 0;font:300 16px/1.6 'Open Sans',sans-serif">✓ {{ p }}</p></sc-for></div>
+</div>
+<p style="margin:64px 0 0;text-align:center;font:600 20px/1.5 'Open Sans',sans-serif;color:#35425b">Built on peer-reviewed science powered by the latest generative AI technology</p>
+<div data-g3="" style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:28px;margin-top:24px">
+<div style="background:#35425b;color:#fff;border-radius:8px;padding:30px"><h3 style="margin:0;font:600 22px/1.3 Poppins,sans-serif;color:#fff">CALIBER</h3><p style="margin:10px 0 0;font:300 16px/1.7 'Open Sans',sans-serif;color:#fff">A behavioral evaluation methodology designed to structure expert consensus around healthy versus potentially problematic relational behaviors in human-AI interactions.</p></div>
+<div style="background:#35425b;color:#fff;border-radius:8px;padding:30px"><h3 style="margin:0;font:600 22px/1.3 Poppins,sans-serif;color:#fff">SRL4Children</h3><p style="margin:10px 0 0;font:300 16px/1.7 'Open Sans',sans-serif;color:#fff">An AI-powered execution and assessment engine operationalizing large-scale behavioral evaluation, safety scoring, and monitoring of conversational AI systems.</p></div>
+</div>
+<h2 style="margin:80px 0 0;text-align:center;font:600 32px/1.2 'Open Sans',sans-serif;color:#000">See it in action</h2>
+<div style="margin:28px auto 0;max-width:880px;aspect-ratio:16/9;background:#0f1522;border-radius:8px;overflow:hidden">
+<sc-if value="{{ hasVideo }}" hint-placeholder-val="{{ false }}"><sc-if value="{{ isEmbed }}" hint-placeholder-val="{{ false }}"><iframe src="{{ embedUrl }}" title="AïA Safety Builder demo" allow="accelerometer; autoplay; clipboard-write; encrypted-media; picture-in-picture" allowFullScreen="allowFullScreen" style="width:100%;height:100%;border:0;display:block"></iframe></sc-if><sc-if value="{{ isFile }}" hint-placeholder-val="{{ false }}"><video src="{{ videoUrl }}" controls="controls" preload="metadata" style="width:100%;height:100%;display:block;background:#000"></video></sc-if></sc-if>
+<sc-if value="{{ noVideo }}" hint-placeholder-val="{{ true }}"><div style="width:100%;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;color:#cfd8ea;text-align:center;padding:20px;box-sizing:border-box"><svg width="56" height="56" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="none" stroke="currentColor" strokeWidth="1.2"></circle><path d="M10 8l6 4-6 4z" fill="currentColor"></path></svg><span style="font:400 15px/1.5 'Open Sans',sans-serif">Demo video — set the video URL (YouTube or .mp4) in Tweaks</span></div></sc-if>
+</div>
+<h2 style="margin:80px 0 0;text-align:center;font:600 32px/1.2 'Open Sans',sans-serif;color:#000">Our Offers</h2>
+<div data-g3="" style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;margin-top:32px;align-items:stretch">
+<div style="background:#fff;border-radius:8px;padding:30px;display:flex;flex-direction:column"><h3 style="margin:0;font:700 22px/1.3 'Open Sans',sans-serif">Freemium</h3><p style="margin:10px 0 18px;font:600 26px/1.2 Poppins,sans-serif;color:#829bcb">$0 / Free</p><sc-for list="{{ free }}" as="p" hint-placeholder-count="5"><p style="margin:6px 0 0;font:300 15px/1.6 'Open Sans',sans-serif">✓ {{ p }}</p></sc-for></div>
+<div style="background:#fff;border:2px solid #f8903e;border-radius:8px;padding:30px;display:flex;flex-direction:column"><h3 style="margin:0;font:700 22px/1.3 'Open Sans',sans-serif">Pro</h3><p style="margin:10px 0 0;font:400 18px/1.2 Poppins,sans-serif;color:#8a93a6;text-decoration:line-through">$987 / month per seat</p><p style="margin:6px 0 18px;font:600 26px/1.2 Poppins,sans-serif;color:#f8903e">$287 / month per seat</p><sc-for list="{{ pro }}" as="p" hint-placeholder-count="6"><p style="margin:6px 0 0;font:300 15px/1.6 'Open Sans',sans-serif">{{ p }}</p></sc-for></div>
+<div style="background:#fff;border-radius:8px;padding:30px;display:flex;flex-direction:column"><h3 style="margin:0;font:700 22px/1.3 'Open Sans',sans-serif">Enterprise</h3><p style="margin:10px 0 18px;font:600 26px/1.2 Poppins,sans-serif;color:#829bcb">Custom</p><a href="mailto:partners@everyone.ai" style="font:600 15px/1.5 'Open Sans',sans-serif">Contact us for larger deployments</a></div>
+</div>
+<section style="margin-top:80px;text-align:center;background:#829bcb;border-radius:8px;padding:48px 24px"><h2 style="margin:0;font:600 30px/1.25 'Open Sans',sans-serif;color:#fff">Ready to build safer AI for children?</h2><a href="https://production.srl4c.everyone.ai/" style="display:inline-block;margin-top:24px;background:#f8903e;color:#fff;font:500 16px/1 Poppins,sans-serif;padding:15px 30px;border-radius:999px;text-decoration:none" style-hover="background:#e97f2d;color:#fff">Apply for ßeta access</a></section>
+<p style="margin:40px 0 0;text-align:center;font:300 17px/1.6 'Open Sans',sans-serif">Questions? Reach out at <a href="mailto:partners@everyone.ai" style="font-weight:700">partners@everyone.ai</a></p>
+<p style="margin:8px 0 0;text-align:center;font:300 14px/1.6 'Open Sans',sans-serif;color:#555">AïA Safety Builder is a product of everyone.AI ⎮ Presented at VivaTech 2026, Paris</p>
+</main>
+<dc-import name="SiteFooter" hint-size="100%,520px"></dc-import>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;demoVideoUrl&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Video&quot;}}">
+class Component extends DCLogic {
+  renderVals() {
+    const v = (this.props.demoVideoUrl || '').trim();
+    const yt = v.match(/(?:youtu\.be\/|v=|embed\/)([\w-]{11})/);
+    const vm = v.match(/vimeo\.com\/(\d+)/);
+    const embedUrl = yt ? 'https://www.youtube-nocookie.com/embed/' + yt[1] : vm ? 'https://player.vimeo.com/video/' + vm[1] : '';
+    return {
+      hasVideo: !!v, noVideo: !v, isEmbed: !!embedUrl, isFile: !!v && !embedUrl, embedUrl, videoUrl: v,
+      cues: [
+        { t: 'Anthropomorphic cues', d: 'Behaviors that make AI appear more like a human being with a mind or body.' },
+        { t: 'Interactional cues', d: 'Behaviors that shape how the conversation is conducted in the moment.' },
+        { t: 'Relational cues', d: 'Behaviors that explicitly label, or escalate the relationship between the user and the AI.' }
+      ],
+      steps: [
+        { n: '1', t: 'Upload', d: 'Prompts, conversations, or model outputs' },
+        { n: '2', t: 'Analyze', d: 'Apply science-based behavioral safety metrics' },
+        { n: '3', t: 'Report', d: 'Get comprehensive scores, reports, and safeguards' }
+      ],
+      provides: ['Behavioral safety scores', 'Content risk screening', 'Contextualized risk reports', 'Comparative model evaluation', 'Developmentally informed indicators', 'Actionable evidence for product and safety teams'],
+      builtFor: ['AI companies', 'Safety teams', 'Startups & EdTech', 'Researchers', 'Policymakers', 'Institutions'],
+      free: ['First team member', '5 scoring runs per month', 'Up to 30 prompts per run', 'Freemium Benchmark', 'Unlimited endpoints'],
+      pro: ['✓ Up to 3 seats', '✓ Unlimited scoring runs', '✓ Unlimited prompts per run', '✓ All AïA Benchmarks', '✓ Unlimited endpoints', '+ Guardrail generation']
+    };
+  }
+}
+</script>
+</body>
+</html>

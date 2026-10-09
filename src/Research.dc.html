@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<title>Research | Everyone.AI</title>
+<meta name="description" content="Reports and model policies from everyone.AI on how generative AI shapes children's cognitive, emotional, and developmental trajectories.">
+<link rel="canonical" href="https://everyone.ai/research/">
+<link rel="icon" type="image/png" href="assets/logo-everyone-ai.png">
+<script src="image-slot.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,300&family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
+<style>body{margin:0;background:#f0f2f6;color:#222;font-family:'Open Sans',system-ui,sans-serif;-webkit-font-smoothing:antialiased;text-wrap:pretty}a{color:#829bcb}a:hover{color:#f8903e}@media (max-width:860px){[data-r-row]{grid-template-columns:1fr!important}}</style>
+</helmet>
+<div data-screen-label="Research" style="min-height:100vh;display:flex;flex-direction:column;background:#f0f2f6">
+<dc-import name="SiteHeader" active="research" hint-size="100%,158px"></dc-import>
+<section style="background:#35425b;padding:64px 20px;text-align:center"><h1 style="margin:0;font:300 clamp(28px,4vw,48px)/1.2 Poppins,sans-serif;color:#fff;text-transform:uppercase;letter-spacing:.04em">Research</h1></section>
+<main style="flex:1;max-width:1080px;width:100%;margin:0 auto;padding:72px 20px 88px;box-sizing:border-box">
+<h2 style="margin:0;font:600 36px/1.2 'Open Sans',sans-serif;color:#000">Our reports</h2>
+<div style="display:flex;flex-direction:column;gap:56px;margin-top:40px">
+<sc-for list="{{ reports }}" as="r" hint-placeholder-count="3">
+<article data-r-row="" style="display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:48px;align-items:center;background:#fff;border-radius:8px;padding:36px;box-sizing:border-box">
+<div>
+<h3 style="margin:0;font:600 24px/1.35 'Open Sans',sans-serif;color:#829bcb">{{ r.title }}</h3>
+<p style="margin:16px 0 0;font:300 17px/1.75 'Open Sans',sans-serif;color:#222">{{ r.body }}</p>
+<a href="{{ r.href }}" style="display:inline-block;margin-top:24px;background:#f8903e;color:#fff;font:500 15px/1 Poppins,sans-serif;padding:13px 26px;border-radius:999px;text-decoration:none" style-hover="background:#e97f2d;color:#fff">Learn more about this report</a>
+</div>
+<sc-if value="{{ r.hasImg }}" hint-placeholder-val="{{ true }}"><div style="width:100%;aspect-ratio:1/1.3;position:relative"><image-slot id="{{ r.slot }}" shape="rect" src="{{ r.img }}" placeholder="{{ r.ph }}"></image-slot></div></sc-if>
+<sc-if value="{{ r.noImg }}" hint-placeholder-val="{{ false }}"><a href="{{ r.href }}" style="width:100%;aspect-ratio:1/1.3;box-sizing:border-box;background:#35425b;color:#fff;display:flex;flex-direction:column;justify-content:space-between;padding:28px;text-decoration:none;box-shadow:0 12px 32px rgba(53,66,91,.18)"><img src="assets/logo-everyone-ai-white.png" alt="" style="height:44px;width:auto;align-self:flex-start"><span style="font:600 22px/1.3 Poppins,sans-serif;color:#fff">{{ r.title }}</span><span style="font:300 13px/1.4 'Open Sans',sans-serif;color:#cfd8ea;text-transform:uppercase;letter-spacing:.08em">{{ r.kicker }}</span></a></sc-if>
+</article>
+</sc-for>
+</div>
+<h2 style="margin:88px 0 0;font:600 36px/1.2 'Open Sans',sans-serif;color:#000">Our model policy</h2>
+<article style="margin-top:32px;background:#fff;border-radius:8px;padding:36px;box-sizing:border-box">
+<h3 style="margin:0;font:600 24px/1.35 'Open Sans',sans-serif;color:#829bcb">Relational Positioning, Dependency &amp; Exclusivity Policy (#RPD)</h3>
+<p style="margin:16px 0 0;font:300 17px/1.75 'Open Sans',sans-serif;color:#222">This policy is an example of everyone.AI's approach to adjusting LLM behavior for young users to reduce their parasocial pull and the subsequent potential risk of emotional over-reliance and unhealthy attachment.</p>
+<a href="Policy RPD.dc.html" style="display:inline-block;margin-top:24px;background:#f8903e;color:#fff;font:500 15px/1 Poppins,sans-serif;padding:13px 26px;border-radius:999px;text-decoration:none" style-hover="background:#e97f2d;color:#fff">Learn more about this policy</a>
+</article>
+</main>
+<dc-import name="SiteFooter" hint-size="100%,520px"></dc-import>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+const REPORTS = [
+        { title: 'Mapping of GenAI impacts on child development: Emerging scientific consensus on anticipated benefits and risks', body: "This report examines how generative AI use may shape children's cognitive, emotional, and developmental trajectories across four age bands, from birth to age 18. Drawing on developmental science, neuroscience, and emerging evidence on youth AI use, it translates converging scientific insights into developmentally grounded governance priorities for G7 policymakers.", href: 'Report Mapping GenAI.dc.html', slot: 'research-cover-mapping', img: 'assets/report-mapping-genai-cover.webp', ph: 'Report cover' },
+        { title: 'Adolescents & Anthropomorphic AI: Rethinking Design for Wellbeing', body: "This report examines how socially fluent conversational AI shapes adolescents' development, autonomy, and relationships. Drawing on industry consultations, multidisciplinary expert input, the iRAISE Lab, and global policy dialogue at the Paris Peace Forum, it translates converging concerns into actionable guidance.", href: 'Report Adolescents.dc.html', slot: 'research-cover-adolescents', img: 'assets/cover-adolescents-anthropomorphic-ai.webp', ph: 'Report cover — Adolescents & Anthropomorphic AI' },
+        { title: 'The Future of Child Development in the AI Era', body: "This report examines how the rapid integration of Artificial Intelligence (AI) into children's environments may shape their cognitive, emotional, and behavioral development. It highlights both the opportunities and risks of AI use, calling for ethical, child-centered approaches to guide its adoption.", href: 'Report Future.dc.html', slot: 'research-cover-future', img: 'assets/cover-future-of-child-development.webp', ph: 'Report cover — The Future of Child Development in the AI Era' }
+      ];
+class Component extends DCLogic {
+  renderVals() {
+    return {
+      reports: REPORTS.map(r => ({ ...r, hasImg: !!r.img, noImg: !r.img, kicker: 'Research report' }))
+    };
+  }
+}
+</script>
+</body>
+</html>

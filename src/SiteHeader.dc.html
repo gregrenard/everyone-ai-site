@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<style>
+@media (max-width:980px){[data-eai-nav],[data-eai-lang]{display:none!important}[data-eai-burger]{display:inline-flex!important}[data-eai-hdr]{min-height:76px!important}[data-eai-top]{flex-direction:column!important;gap:12px!important;text-align:center!important}}
+</style>
+</helmet>
+<div style="width:100%">
+<div style="background:#829bcb">
+<div data-eai-top="" style="max-width:1080px;margin:0 auto;padding:14px 20px;box-sizing:border-box;display:flex;align-items:center;justify-content:center;gap:28px;min-height:62px">
+<span style="color:#fff;font:400 16px/1.4 'Open Sans',sans-serif">{{ t.ann.text }}</span>
+<a href="AIA.dc.html" style="display:inline-block;background:#f8903e;color:#fff;font:500 15px/1 Poppins,sans-serif;padding:12px 20px;border-radius:999px;text-decoration:none;white-space:nowrap" style-hover="background:#e97f2d;color:#fff">{{ t.ann.cta }}</a>
+</div>
+</div>
+<header style="background:#fff;position:relative;z-index:50;border-bottom:1px solid #e9ecf3">
+<div data-eai-hdr="" style="max-width:1080px;margin:0 auto;padding:12px 20px;box-sizing:border-box;display:flex;align-items:center;justify-content:space-between;gap:24px;min-height:96px">
+<a href="Home.dc.html" style="display:block;flex:none"><img src="assets/logo-everyone-ai.png" alt="everyone.AI" width="64" height="64" style="height:64px;width:auto;display:block"></a>
+<nav data-eai-nav="" aria-label="Main" style="display:flex;align-items:center;gap:20px">
+<sc-for list="{{ top }}" as="n" hint-placeholder-count="5">
+<sc-if value="{{ n.isMenu }}" hint-placeholder-val="{{ false }}">
+<div style="position:relative" onMouseEnter="{{ openInit }}" onMouseLeave="{{ closeInit }}">
+<button type="button" onClick="{{ toggleInit }}" aria-haspopup="true" style="display:inline-flex;align-items:center;gap:6px;background:none;border:0;padding:6px 0;cursor:pointer;font:400 15px/1.4 'Open Sans',sans-serif;color:{{ n.color }}" style-hover="color:#829bcb">{{ n.label }}<svg width="10" height="10" viewBox="0 0 10 10" aria-hidden="true"><path d="M2 3.5l3 3 3-3" fill="none" stroke="currentColor" strokeWidth="1.5"></path></svg></button>
+<sc-if value="{{ initOpen }}" hint-placeholder-val="{{ false }}">
+<div style="position:absolute;top:100%;left:-14px;padding-top:8px;z-index:60">
+<div style="background:#fff;box-shadow:0 10px 30px rgba(53,66,91,.18);border-radius:6px;padding:8px 0;min-width:240px">
+<sc-for list="{{ sub }}" as="s" hint-placeholder-count="6">
+<a href="{{ s.href }}" style="display:block;padding:10px 18px 10px {{ s.pad }};font:400 14px/1.4 'Open Sans',sans-serif;color:#333;text-decoration:none;white-space:nowrap" style-hover="background:#f0f2f6;color:#829bcb">{{ s.label }}</a>
+</sc-for>
+</div>
+</div>
+</sc-if>
+</div>
+</sc-if>
+<sc-if value="{{ n.isLink }}" hint-placeholder-val="{{ true }}">
+<a href="{{ n.href }}" style="font:400 15px/1.4 'Open Sans',sans-serif;color:{{ n.color }};text-decoration:none;padding:6px 0" style-hover="color:#829bcb">{{ n.label }}</a>
+</sc-if>
+</sc-for>
+</nav>
+<div style="display:flex;align-items:center;gap:14px;flex:none">
+<a href="Donate.dc.html" style="display:inline-block;background:#f8903e;color:#fff;font:500 14px/1 Poppins,sans-serif;padding:10px 18px;border-radius:999px;text-decoration:none;white-space:nowrap" style-hover="background:#e97f2d;color:#fff">{{ t.nav.donate }}</a>
+<div data-eai-lang="" style="position:relative">
+<button type="button" onClick="{{ toggleLang }}" aria-label="{{ t.nav.language }}" aria-haspopup="listbox" style="display:inline-flex;align-items:center;gap:6px;background:none;border:1px solid #dfe4ee;border-radius:999px;padding:7px 10px;cursor:pointer;font:600 12px/1 'Open Sans',sans-serif;color:#333;letter-spacing:.04em" style-hover="border-color:#829bcb;color:#829bcb"><svg width="14" height="14" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" strokeWidth="1.6"></circle><path d="M2 12h20M12 2c3 3.5 3 16.5 0 20M12 2c-3 3.5-3 16.5 0 20" fill="none" stroke="currentColor" strokeWidth="1.6"></path></svg>{{ langCode }}</button>
+<sc-if value="{{ langOpen }}" hint-placeholder-val="{{ false }}">
+<div role="listbox" style="position:absolute;top:calc(100% + 8px);right:0;background:#fff;box-shadow:0 10px 30px rgba(53,66,91,.18);border-radius:6px;padding:6px 0;min-width:160px;z-index:60">
+<sc-for list="{{ languages }}" as="l" hint-placeholder-count="8">
+<button type="button" role="option" onClick="{{ l.select }}" style="display:flex;justify-content:space-between;gap:12px;width:100%;background:none;border:0;padding:9px 16px;cursor:pointer;font:400 14px/1.3 'Open Sans',sans-serif;color:#333;text-align:left" style-hover="background:#f0f2f6;color:#829bcb"><span>{{ l.name }}</span><span style="color:#829bcb;font-weight:700">{{ l.mark }}</span></button>
+</sc-for>
+</div>
+</sc-if>
+</div>
+<button data-eai-burger="" type="button" onClick="{{ toggleMenu }}" aria-label="{{ t.nav.menu }}" style="display:none;align-items:center;justify-content:center;width:44px;height:44px;background:none;border:0;cursor:pointer;color:#35425b"><svg width="26" height="26" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round"></path></svg></button>
+</div>
+</div>
+<sc-if value="{{ menuOpen }}" hint-placeholder-val="{{ false }}">
+<div style="background:#fff;border-top:1px solid #e9ecf3;padding:4px 20px 20px;display:flex;flex-direction:column">
+<sc-for list="{{ mobile }}" as="m" hint-placeholder-count="11">
+<a href="{{ m.href }}" style="padding:12px 0 12px {{ m.pad }};border-bottom:1px solid #eef1f6;font:{{ m.weight }} 15px/1.3 'Open Sans',sans-serif;color:{{ m.color }};text-decoration:none">{{ m.label }}</a>
+</sc-for>
+<div style="display:flex;flex-wrap:wrap;gap:8px;margin-top:18px">
+<sc-for list="{{ languages }}" as="l" hint-placeholder-count="8"><button type="button" onClick="{{ l.select }}" style="background:#f0f2f6;border:1px solid #dfe4ee;border-radius:999px;padding:8px 14px;cursor:pointer;font:400 13px/1 'Open Sans',sans-serif;color:#333">{{ l.name }} {{ l.mark }}</button></sc-for>
+</div>
+</div>
+</sc-if>
+</header>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1200,&quot;height&quot;:170},&quot;active&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;home&quot;,&quot;research&quot;,&quot;initiatives&quot;,&quot;newsroom&quot;,&quot;about&quot;,&quot;&quot;],&quot;default&quot;:&quot;&quot;,&quot;tsType&quot;:&quot;string&quot;}}">
+const EN = {
+  ann: { text: 'AïA Safety Builders expands its reach via Open Source', cta: 'Learn more' },
+  nav: { home: 'Home', research: 'Research', initiatives: 'Our Initiatives', aiaEval: 'AïA Evaluation', caliber: 'AïA / CALIBER', safetyBuilder: 'AïA Safety Builder', education: 'Education', coalition: 'International Coalition', openLetter: 'Open Letter', newsroom: 'Newsroom', about: 'About Us', donate: 'Donate', language: 'Language', menu: 'Menu' }
+};
+const LANGS = [['en', 'English'], ['fr', 'Français'], ['es', 'Español'], ['de', 'Deutsch'], ['nl', 'Nederlands'], ['it', 'Italiano'], ['pt', 'Português'], ['zh', '中文']];
+class Component extends DCLogic {
+  state = { initOpen: false, menuOpen: false, langOpen: false, lang: 'en', dict: null };
+  componentDidMount() {
+    import('./i18n-site.js').then(m => { this.site = m; this.setState({ lang: m.currentLang() }); });
+    import('./i18n-home.js').then(m => this.setState({ dict: m.translations })).catch(() => {});
+    this._on = e => this.setState({ lang: e.detail });
+    window.addEventListener('eai:lang', this._on);
+    this._doc = e => { if (this.state.langOpen && !(e.target.closest && e.target.closest('[data-eai-lang]'))) this.setState({ langOpen: false }); };
+    document.addEventListener('click', this._doc);
+  }
+  componentWillUnmount() { window.removeEventListener('eai:lang', this._on); document.removeEventListener('click', this._doc); }
+  renderVals() {
+    const s = this.state, d = s.dict && s.dict[s.lang];
+    const t = { ann: { ...EN.ann, ...(d && d.ann) }, nav: { ...EN.nav, ...(d && d.nav) } }, n = t.nav;
+    const a = this.props.active || '';
+    const c = k => (k === a ? '#829bcb' : '#333');
+    const top = [
+      { label: n.home, href: 'Home.dc.html#mission', k: 'home' },
+      { label: n.research, href: 'Research.dc.html', k: 'research' },
+      { label: n.initiatives, menu: true, k: 'initiatives' },
+      { label: n.newsroom, href: 'Newsroom.dc.html', k: 'newsroom' },
+      { label: n.about, href: 'About.dc.html', k: 'about' }
+    ].map(x => ({ ...x, isMenu: !!x.menu, isLink: !x.menu, color: c(x.k) }));
+    const sub = [
+      { label: n.aiaEval, href: 'AIA.dc.html', pad: '18px' },
+      { label: n.caliber, href: 'AIA Method.dc.html', pad: '34px' },
+      { label: n.safetyBuilder, href: 'AIA Service.dc.html', pad: '34px' },
+      { label: n.education, href: 'Education.dc.html', pad: '18px' },
+      { label: n.coalition, href: 'Coalition.dc.html', pad: '18px' },
+      { label: n.openLetter, href: 'Open Letter.dc.html', pad: '18px' }
+    ];
+    const links = top.filter(x => x.isLink);
+    const mobile = [
+      ...links.slice(0, 2).map(x => ({ ...x, pad: '0', weight: 600 })),
+      ...sub.map(x => ({ ...x, pad: x.pad === '34px' ? '32px' : '16px', weight: 400, color: '#444' })),
+      ...links.slice(2).map(x => ({ ...x, pad: '0', weight: 600 }))
+    ];
+    return {
+      t, top, sub, mobile, langCode: s.lang.toUpperCase(),
+      languages: LANGS.map(([code, name]) => ({ name, mark: code === s.lang ? '✓' : '', select: () => { this.setState({ langOpen: false, menuOpen: false }); this.site && this.site.setLang(code); } })),
+      initOpen: s.initOpen, menuOpen: s.menuOpen, langOpen: s.langOpen,
+      openInit: () => this.setState({ initOpen: true }),
+      closeInit: () => this.setState({ initOpen: false }),
+      toggleInit: () => this.setState(x => ({ initOpen: !x.initOpen })),
+      toggleMenu: () => this.setState(x => ({ menuOpen: !x.menuOpen })),
+      toggleLang: e => { e.stopPropagation(); this.setState(x => ({ langOpen: !x.langOpen })); }
+    };
+  }
+}
+</script>
+</body>
+</html>

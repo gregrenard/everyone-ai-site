@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<title>Everyone.AI — Shaping Beneficial AI for Children</title>
+<meta name="description" content="everyone.AI anticipates and educates about the opportunities and risks of AI for children. Through research, collaboration, and advocacy.">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<link rel="canonical" href="https://everyone.ai/">
+<link rel="alternate" hreflang="x-default" href="https://everyone.ai/">
+<link rel="alternate" hreflang="en" href="https://everyone.ai/">
+<link rel="alternate" hreflang="fr" href="https://everyone.ai/?lang=fr">
+<link rel="alternate" hreflang="es" href="https://everyone.ai/?lang=es">
+<link rel="alternate" hreflang="de" href="https://everyone.ai/?lang=de">
+<link rel="alternate" hreflang="nl" href="https://everyone.ai/?lang=nl">
+<link rel="alternate" hreflang="it" href="https://everyone.ai/?lang=it">
+<link rel="alternate" hreflang="pt" href="https://everyone.ai/?lang=pt">
+<link rel="alternate" hreflang="zh" href="https://everyone.ai/?lang=zh">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="everyone.AI">
+<meta property="og:url" content="https://everyone.ai/">
+<meta property="og:title" content="Everyone.AI — Shaping Beneficial AI for Children">
+<meta property="og:description" content="everyone.AI anticipates and educates about the opportunities and risks of AI for children. Through research, collaboration, and advocacy.">
+<meta property="og:image" content="https://everyone.ai/assets/og-cover.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="en_US">
+<meta property="og:locale:alternate" content="fr_FR">
+<meta property="og:locale:alternate" content="es_ES">
+<meta property="og:locale:alternate" content="de_DE">
+<meta property="og:locale:alternate" content="nl_NL">
+<meta property="og:locale:alternate" content="it_IT">
+<meta property="og:locale:alternate" content="pt_PT">
+<meta property="og:locale:alternate" content="zh_CN">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Everyone.AI — Shaping Beneficial AI for Children">
+<meta name="twitter:description" content="everyone.AI anticipates and educates about the opportunities and risks of AI for children. Through research, collaboration, and advocacy.">
+<meta name="twitter:image" content="https://everyone.ai/assets/og-cover.png">
+<link rel="icon" type="image/png" href="assets/logo-everyone-ai.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,300&family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"NGO","@id":"https://everyone.ai/#org","name":"everyone.AI","alternateName":"Everyone.AI","url":"https://everyone.ai/","logo":"https://everyone.ai/assets/logo-everyone-ai.png","image":"https://everyone.ai/assets/og-cover.png","description":"everyone.AI anticipates, educates, and evaluates the risks and opportunities of Artificial Intelligence for children, adolescents, and young adults (0–25). Grounded in research from developmental neuroscience, psychology, science of learning, and AI, it moves from evidence to practical action.","slogan":"Shaping Beneficial AI for children today, for everyone tomorrow.","nonprofitStatus":"Nonprofit501c3","taxID":"99-2317785","areaServed":"Worldwide","knowsLanguage":["en","fr","es","de","nl","it","pt","zh"],"knowsAbout":["Artificial Intelligence","Child development","AI safety for children","Developmental neuroscience","AI evaluation frameworks","AI education","Digital safety policy"],"sameAs":["https://www.linkedin.com/company/everyone-ai/","https://www.instagram.com/everyoneai_official/"],"founder":[{"@type":"Person","name":"Anne-Sophie Seret","jobTitle":"Executive Director, Cofounder","sameAs":"https://www.linkedin.com/in/annesophieseret/"},{"@type":"Person","name":"Gregory Renard","jobTitle":"Fellow AI Architect, Applied Gen AI, Board President, Cofounder","sameAs":"https://www.linkedin.com/in/gregoryrenard/"},{"@type":"Person","name":"Mathilde Cerioli","honorificSuffix":"Ph.D","jobTitle":"Chief Scientist, Cofounder","sameAs":"https://www.linkedin.com/in/mathilde-neugnot-cerioli/"},{"@type":"Person","name":"Céline Malvoisin","jobTitle":"Head of Operations & Programs, Cofounder","sameAs":"https://www.linkedin.com/in/celinemalvoisin/"}]},{"@type":"WebSite","@id":"https://everyone.ai/#website","url":"https://everyone.ai/","name":"everyone.AI","publisher":{"@id":"https://everyone.ai/#org"},"inLanguage":["en","fr","es","de","nl","it","pt","zh"]},{"@type":"WebPage","@id":"https://everyone.ai/#webpage","url":"https://everyone.ai/","name":"Everyone.AI — Shaping Beneficial AI for Children","isPartOf":{"@id":"https://everyone.ai/#website"},"about":{"@id":"https://everyone.ai/#org"},"primaryImageOfPage":"https://everyone.ai/assets/og-cover.png","inLanguage":"en"}]}</script>
+<script src="image-slot.js"></script>
+<style>
+body{margin:0;background:#f0f2f6;color:#222;font-family:'Open Sans',system-ui,sans-serif;-webkit-font-smoothing:antialiased;text-wrap:pretty}
+a{color:#829bcb}a:hover{color:#f8903e}
+input::placeholder,textarea::placeholder{color:#8a93a6}
+@media (max-width:980px){
+#eai-nav,#eai-lang{display:none!important}
+#eai-burger{display:inline-flex!important}
+#eai-header-inner{min-height:76px!important}
+#eai-topbar-inner{flex-direction:column!important;gap:12px!important;text-align:center!important}
+#eai-mission-photos{grid-template-columns:repeat(2,1fr)!important;gap:20px!important}
+#eai-pillars{grid-template-columns:1fr!important;gap:48px!important}
+#eai-connector,#eai-ticks{display:none!important}
+#eai-pub,#eai-why,#eai-featured,#eai-form-grid{grid-template-columns:1fr!important}
+#eai-team,#eai-footer-grid{grid-template-columns:repeat(2,1fr)!important}
+}
+@media (max-width:640px){
+#eai-hero{height:300px!important}
+#eai-hero-img{height:70%!important;top:auto!important;bottom:0!important}
+#eai-hero-img::before{content:'';position:absolute;left:0;right:0;top:0;height:30%;background:linear-gradient(180deg,#35425b,rgba(53,66,91,0))}
+#eai-hero-text{max-width:58%!important;font-size:18px!important;line-height:1.6!important;padding-right:16px!important}
+#eai-team,#eai-footer-grid,#eai-mission-photos{grid-template-columns:1fr!important}
+[data-h2]{font-size:28px!important}
+}
+</style>
+</helmet>
+<div data-screen-label="Home" style="min-height:100vh;display:flex;flex-direction:column;background:#f0f2f6;color:#222;font-family:'Open Sans',system-ui,sans-serif">
+
+<sc-if value="{{ showAnnouncement }}" hint-placeholder-val="{{ true }}">
+<div id="eai-topbar" style="background:#829bcb">
+<div id="eai-topbar-inner" style="max-width:1080px;margin:0 auto;padding:14px 20px;box-sizing:border-box;display:flex;align-items:center;justify-content:center;gap:28px;min-height:62px">
+<span style="color:#fff;font:400 16px/1.4 'Open Sans',sans-serif">{{ t.ann.text }}</span>
+<a href="AIA.dc.html" style="display:inline-block;background:#f8903e;color:#fff;font:500 15px/1 Poppins,sans-serif;padding:12px 20px;border-radius:999px;text-decoration:none;white-space:nowrap" style-hover="background:#e97f2d;color:#fff">{{ t.ann.cta }}</a>
+</div>
+</div>
+</sc-if>
+
+<header id="eai-header" style="background:#fff;position:relative;z-index:50;border-bottom:1px solid #e9ecf3">
+<div id="eai-header-inner" style="max-width:1080px;margin:0 auto;padding:12px 20px;box-sizing:border-box;display:flex;align-items:center;justify-content:space-between;gap:24px;min-height:96px">
+<a href="./" style="display:block;flex:none"><img src="assets/logo-everyone-ai.png" alt="everyone.AI" width="64" height="64" style="height:64px;width:auto;display:block"></a>
+<nav id="eai-nav" aria-label="Main" style="display:flex;align-items:center;gap:20px">
+<a href="#mission" style="font:400 15px/1.4 'Open Sans',sans-serif;color:#829bcb;text-decoration:none;padding:6px 0" style-hover="color:#829bcb">{{ t.nav.home }}</a>
+<a href="Research.dc.html" style="font:400 15px/1.4 'Open Sans',sans-serif;color:#333;text-decoration:none;padding:6px 0" style-hover="color:#829bcb">{{ t.nav.research }}</a>
+<div style="position:relative" onMouseEnter="{{ openInit }}" onMouseLeave="{{ closeInit }}">
+<button type="button" onClick="{{ toggleInit }}" aria-haspopup="true" style="display:inline-flex;align-items:center;gap:6px;background:none;border:0;padding:6px 0;cursor:pointer;font:400 15px/1.4 'Open Sans',sans-serif;color:#333" style-hover="color:#829bcb">{{ t.nav.initiatives }}<svg width="10" height="10" viewBox="0 0 10 10" aria-hidden="true"><path d="M2 3.5l3 3 3-3" fill="none" stroke="currentColor" strokeWidth="1.5"></path></svg></button>
+<sc-if value="{{ initOpen }}" hint-placeholder-val="{{ false }}">
+<div style="position:absolute;top:100%;left:-14px;padding-top:8px;z-index:60">
+<div style="background:#fff;box-shadow:0 10px 30px rgba(53,66,91,.18);border-radius:6px;padding:8px 0;min-width:230px">
+<div style="position:relative" onMouseEnter="{{ openAia }}" onMouseLeave="{{ closeAia }}">
+<a href="AIA.dc.html" style="display:flex;align-items:center;justify-content:space-between;gap:16px;padding:10px 18px;font:400 14px/1.4 'Open Sans',sans-serif;color:#333;text-decoration:none;white-space:nowrap" style-hover="background:#f0f2f6;color:#829bcb">{{ t.nav.aiaEval }}<svg width="10" height="10" viewBox="0 0 10 10" aria-hidden="true"><path d="M3.5 2l3 3-3 3" fill="none" stroke="currentColor" strokeWidth="1.5"></path></svg></a>
+<sc-if value="{{ aiaOpen }}" hint-placeholder-val="{{ false }}">
+<div style="position:absolute;left:100%;top:0;padding-left:6px">
+<div style="background:#fff;box-shadow:0 10px 30px rgba(53,66,91,.18);border-radius:6px;padding:8px 0;min-width:200px">
+<a href="AIA Method.dc.html" style="display:block;padding:10px 18px;font:400 14px/1.4 'Open Sans',sans-serif;color:#333;text-decoration:none;white-space:nowrap" style-hover="background:#f0f2f6;color:#829bcb">{{ t.nav.caliber }}</a>
+<a href="AIA Service.dc.html" style="display:block;padding:10px 18px;font:400 14px/1.4 'Open Sans',sans-serif;color:#333;text-decoration:none;white-space:nowrap" style-hover="background:#f0f2f6;color:#829bcb">{{ t.nav.safetyBuilder }}</a>
+</div>
+</div>
+</sc-if>
+</div>
+<a href="Education.dc.html" style="display:block;padding:10px 18px;font:400 14px/1.4 'Open Sans',sans-serif;color:#333;text-decoration:none;white-space:nowrap" style-hover="background:#f0f2f6;color:#829bcb">{{ t.nav.education }}</a>
+<a href="Coalition.dc.html" style="display:block;padding:10px 18px;font:400 14px/1.4 'Open Sans',sans-serif;color:#333;text-decoration:none;white-space:nowrap" style-hover="background:#f0f2f6;color:#829bcb">{{ t.nav.coalition }}</a>
+<a href="Open Letter.dc.html" style="display:block;padding:10px 18px;font:400 14px/1.4 'Open Sans',sans-serif;color:#333;text-decoration:none;white-space:nowrap" style-hover="background:#f0f2f6;color:#829bcb">{{ t.nav.openLetter }}</a>
+</div>
+</div>
+</sc-if>
+</div>
+<a href="Newsroom.dc.html" style="font:400 15px/1.4 'Open Sans',sans-serif;color:#333;text-decoration:none;padding:6px 0" style-hover="color:#829bcb">{{ t.nav.newsroom }}</a>
+<a href="About.dc.html" style="font:400 15px/1.4 'Open Sans',sans-serif;color:#333;text-decoration:none;padding:6px 0" style-hover="color:#829bcb">{{ t.nav.about }}</a>
+</nav>
+<div style="display:flex;align-items:center;gap:14px;flex:none">
+<a id="eai-donate" href="Donate.dc.html" style="display:inline-block;background:#f8903e;color:#fff;font:500 14px/1 Poppins,sans-serif;padding:10px 18px;border-radius:999px;text-decoration:none;white-space:nowrap" style-hover="background:#e97f2d;color:#fff">{{ t.nav.donate }}</a>
+<div id="eai-lang" style="position:relative">
+<button type="button" onClick="{{ toggleLang }}" aria-label="{{ t.nav.language }}" aria-haspopup="listbox" style="display:inline-flex;align-items:center;gap:6px;background:none;border:1px solid #dfe4ee;border-radius:999px;padding:7px 10px;cursor:pointer;font:600 12px/1 'Open Sans',sans-serif;color:#333;letter-spacing:.04em" style-hover="border-color:#829bcb;color:#829bcb"><svg width="14" height="14" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" strokeWidth="1.6"></circle><path d="M2 12h20M12 2c3 3.5 3 16.5 0 20M12 2c-3 3.5-3 16.5 0 20" fill="none" stroke="currentColor" strokeWidth="1.6"></path></svg>{{ langCode }}<svg width="9" height="9" viewBox="0 0 10 10" aria-hidden="true"><path d="M2 3.5l3 3 3-3" fill="none" stroke="currentColor" strokeWidth="1.5"></path></svg></button>
+<sc-if value="{{ langOpen }}" hint-placeholder-val="{{ false }}">
+<div role="listbox" style="position:absolute;top:calc(100% + 8px);right:0;background:#fff;box-shadow:0 10px 30px rgba(53,66,91,.18);border-radius:6px;padding:6px 0;min-width:160px;z-index:60">
+<sc-for list="{{ languages }}" as="l" hint-placeholder-count="8">
+<button type="button" role="option" onClick="{{ l.select }}" style="display:flex;align-items:center;justify-content:space-between;gap:12px;width:100%;background:none;border:0;padding:9px 16px;cursor:pointer;font:400 14px/1.3 'Open Sans',sans-serif;color:#333;text-align:left" style-hover="background:#f0f2f6;color:#829bcb"><span>{{ l.name }}</span><span style="color:#829bcb;font-weight:700">{{ l.mark }}</span></button>
+</sc-for>
+</div>
+</sc-if>
+</div>
+<button id="eai-burger" type="button" onClick="{{ toggleMenu }}" aria-label="{{ t.nav.menu }}" style="display:none;align-items:center;justify-content:center;width:44px;height:44px;background:none;border:0;cursor:pointer;color:#35425b"><svg width="26" height="26" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round"></path></svg></button>
+</div>
+</div>
+<sc-if value="{{ menuOpen }}" hint-placeholder-val="{{ false }}">
+<div id="eai-mobile-menu" style="background:#fff;border-top:1px solid #e9ecf3;padding:4px 20px 20px;display:flex;flex-direction:column">
+<a href="#mission" onClick="{{ closeMenu }}" style="padding:14px 0;border-bottom:1px solid #eef1f6;font:600 16px/1.3 'Open Sans',sans-serif;color:#829bcb;text-decoration:none">{{ t.nav.home }}</a>
+<a href="Research.dc.html" style="padding:14px 0;border-bottom:1px solid #eef1f6;font:600 16px/1.3 'Open Sans',sans-serif;color:#333;text-decoration:none">{{ t.nav.research }}</a>
+<button type="button" onClick="{{ toggleInitMobile }}" style="display:flex;justify-content:space-between;align-items:center;width:100%;background:none;border:0;border-bottom:1px solid #eef1f6;padding:14px 0;cursor:pointer;font:600 16px/1.3 'Open Sans',sans-serif;color:#333;text-align:left">{{ t.nav.initiatives }}<svg width="12" height="12" viewBox="0 0 10 10" aria-hidden="true"><path d="M2 3.5l3 3 3-3" fill="none" stroke="currentColor" strokeWidth="1.5"></path></svg></button>
+<sc-if value="{{ initMobileOpen }}" hint-placeholder-val="{{ false }}">
+<div style="display:flex;flex-direction:column;padding:4px 0 8px 16px;border-bottom:1px solid #eef1f6">
+<a href="AIA.dc.html" style="padding:11px 0;font:400 15px/1.3 'Open Sans',sans-serif;color:#333;text-decoration:none">{{ t.nav.aiaEval }}</a>
+<a href="AIA Method.dc.html" style="padding:9px 0 9px 16px;font:400 14px/1.3 'Open Sans',sans-serif;color:#555;text-decoration:none">{{ t.nav.caliber }}</a>
+<a href="AIA Service.dc.html" style="padding:9px 0 9px 16px;font:400 14px/1.3 'Open Sans',sans-serif;color:#555;text-decoration:none">{{ t.nav.safetyBuilder }}</a>
+<a href="Education.dc.html" style="padding:11px 0;font:400 15px/1.3 'Open Sans',sans-serif;color:#333;text-decoration:none">{{ t.nav.education }}</a>
+<a href="Coalition.dc.html" style="padding:11px 0;font:400 15px/1.3 'Open Sans',sans-serif;color:#333;text-decoration:none">{{ t.nav.coalition }}</a>
+<a href="Open Letter.dc.html" style="padding:11px 0;font:400 15px/1.3 'Open Sans',sans-serif;color:#333;text-decoration:none">{{ t.nav.openLetter }}</a>
+</div>
+</sc-if>
+<a href="Newsroom.dc.html" style="padding:14px 0;border-bottom:1px solid #eef1f6;font:600 16px/1.3 'Open Sans',sans-serif;color:#333;text-decoration:none">{{ t.nav.newsroom }}</a>
+<a href="About.dc.html" style="padding:14px 0;border-bottom:1px solid #eef1f6;font:600 16px/1.3 'Open Sans',sans-serif;color:#333;text-decoration:none">{{ t.nav.about }}</a>
+<div id="eai-lang-m" style="display:flex;flex-wrap:wrap;gap:8px;margin-top:18px">
+<sc-for list="{{ languages }}" as="l" hint-placeholder-count="8">
+<button type="button" onClick="{{ l.select }}" style="background:#f0f2f6;border:1px solid #dfe4ee;border-radius:999px;padding:8px 14px;cursor:pointer;font:400 13px/1 'Open Sans',sans-serif;color:#333">{{ l.name }} {{ l.mark }}</button>
+</sc-for>
+</div>
+</div>
+</sc-if>
+</header>
+
+<section id="eai-hero" aria-label="Shaping Beneficial AI for children today, for everyone tomorrow" style="position:relative;overflow:hidden;background:#35425b;height:clamp(240px,30.6vw,470px);display:flex;align-items:center">
+<div id="eai-hero-img" style="position:absolute;left:0;top:0;height:100%;display:flex" style-after="content:'';position:absolute;top:0;right:0;bottom:0;width:22%;background:linear-gradient(90deg,rgba(53,66,91,0),#35425b)"><img src="assets/hero-child.jpg" alt="" style="height:100%;width:auto;display:block"></div>
+<div id="eai-hero-text" style="position:relative;z-index:1;margin-left:auto;text-align:right;max-width:62%;padding-right:4.1vw;font-family:Poppins,sans-serif;font-weight:300;font-size:clamp(18px,2.06vw,74px);line-height:1.8;text-transform:uppercase;letter-spacing:.01em">
+<h1 style="margin:0;font:inherit"><span style="color:#fff">{{ t.hero.l1 }}</span> <span style="color:#829bcb">{{ t.hero.l1b }}</span><br><span style="color:#829bcb">{{ t.hero.l2 }}</span></h1>
+</div>
+</section>
+
+<main style="flex:1">
+<section id="mission" style="padding:64px 0 0">
+<div style="max-width:1080px;margin:0 auto;padding:0 20px;box-sizing:border-box">
+<h2 data-h2="" style="margin:0;font:600 36px/1.2 'Open Sans',sans-serif;color:#000">{{ t.mission.title }}</h2>
+<div style="height:1px;background:#cdd5e7;margin:22px 0 40px"></div>
+<p style="margin:0 0 20px;font:300 17px/1.75 'Open Sans',sans-serif;color:#222;text-align:justify">{{ t.mission.p1 }}<strong style="color:#829bcb;font-weight:700">{{ t.mission.p1b }}</strong></p>
+<p style="margin:0;font:300 17px/1.75 'Open Sans',sans-serif;color:#222;text-align:justify">{{ t.mission.p2 }}</p>
+<p style="margin:48px 0 0;font:300 17px/1.75 'Open Sans',sans-serif;color:#222">{{ t.mission.visionLabel }}<strong style="color:#829bcb;font-weight:700">{{ t.mission.vision }}</strong></p>
+<div id="eai-mission-photos" style="display:grid;grid-template-columns:repeat(4,1fr);gap:42px;margin-top:40px">
+<img src="assets/mission-1.jpg" alt="everyone.AI keynote in front of a full auditorium" loading="lazy" style="width:100%;aspect-ratio:3/2;object-fit:cover;display:block">
+<img src="assets/mission-2.jpg" alt="Toward Beneficial AI for Children — talk at the AI for Good Global Summit, Geneva 2026" loading="lazy" style="width:100%;aspect-ratio:3/2;object-fit:cover;display:block">
+<img src="assets/mission-3.jpg" alt="Policy workshop with institutional partners" loading="lazy" style="width:100%;aspect-ratio:3/2;object-fit:cover;display:block">
+<img src="assets/mission-4.jpg" alt="The everyone.AI team at an international event" loading="lazy" style="width:100%;aspect-ratio:3/2;object-fit:cover;display:block">
+</div>
+</div>
+</section>
+
+<section id="actions" style="padding:64px 0 0">
+<div style="max-width:1080px;margin:0 auto;padding:0 20px;box-sizing:border-box">
+<h2 data-h2="" style="margin:0;font:600 36px/1.2 'Open Sans',sans-serif;color:#000">{{ t.actions.title }}</h2>
+<div style="height:1px;background:#cdd5e7;margin:22px 0 48px"></div>
+<div style="text-align:center">
+<h3 style="margin:0;font:600 28px/1.3 'Open Sans',sans-serif;color:#000">{{ t.actions.applied }}</h3>
+<p style="margin:10px 0 0;font:italic 300 16px/1.5 'Open Sans',sans-serif;color:#333">{{ t.actions.feeds }}</p>
+</div>
+<div id="eai-connector" style="position:relative;height:28px;margin-top:8px;border-bottom:1px solid #829bcb"><div style="position:absolute;left:50%;top:0;width:1px;height:100%;background:#829bcb"></div></div>
+<div id="eai-ticks" style="position:relative;height:22px"><div style="position:absolute;left:0;top:0;width:1px;height:100%;background:#829bcb"></div><div style="position:absolute;left:50%;top:0;width:1px;height:100%;background:#829bcb"></div><div style="position:absolute;right:0;top:0;width:1px;height:100%;background:#829bcb"></div></div>
+<div id="eai-pillars" style="display:grid;grid-template-columns:repeat(3,1fr);gap:40px;margin-top:44px;text-align:center">
+<a href="Coalition.dc.html" style="display:flex;flex-direction:column;align-items:center;text-decoration:none;color:inherit">
+<div style="height:150px;display:flex;align-items:center;justify-content:center"><img src="assets/logo-iraise.png" alt="iRAISE" style="height:112px;width:auto;display:block"></div>
+<h3 style="margin:24px 0 0;font:700 22px/1.4 'Open Sans',sans-serif;color:#000">{{ t.actions.p1t1 }}<br>{{ t.actions.p1t2 }}</h3>
+<p style="margin:18px 0 0;font:300 16px/1.65 'Open Sans',sans-serif;color:#222">{{ t.actions.p1d }}</p>
+</a>
+<a href="Education.dc.html" style="display:flex;flex-direction:column;align-items:center;text-decoration:none;color:inherit">
+<div style="height:150px;display:flex;align-items:center;justify-content:center"><img src="assets/site/2026-06-everyone-Education.webp" alt="Education" style="height:150px;width:auto;display:block"></div>
+<h3 style="margin:24px 0 0;font:700 22px/1.4 'Open Sans',sans-serif;color:#000">{{ t.actions.p2t1 }}</h3>
+<p style="margin:18px 0 0;font:300 16px/1.65 'Open Sans',sans-serif;color:#222">{{ t.actions.p2d }}</p>
+</a>
+<a href="AIA.dc.html" style="display:flex;flex-direction:column;align-items:center;text-decoration:none;color:inherit">
+<div style="height:150px;display:flex;align-items:center;justify-content:center"><img src="assets/site/2026-06-Logo-AiA-seul-fond-transparent.webp" alt="AïA Safety Builder" style="height:150px;width:auto;display:block"></div>
+<h3 style="margin:24px 0 0;font:700 22px/1.4 'Open Sans',sans-serif;color:#000">{{ t.actions.p3t1 }}<br>{{ t.actions.p3t2 }}</h3>
+<p style="margin:18px 0 0;font:300 16px/1.65 'Open Sans',sans-serif;color:#222">{{ t.actions.p3d }}</p>
+</a>
+</div>
+</div>
+</section>
+
+<section id="publication" style="padding:80px 0 0">
+<div style="max-width:1080px;margin:0 auto;padding:0 20px;box-sizing:border-box">
+<h2 data-h2="" style="margin:0;font:600 36px/1.2 'Open Sans',sans-serif;color:#000">{{ t.pub.title }}</h2>
+<h3 style="margin:12px 0 0;font:600 24px/1.35 'Open Sans',sans-serif;color:#829bcb">{{ t.pub.subtitle }}</h3>
+<div id="eai-pub" style="display:grid;grid-template-columns:300px minmax(0,1fr);gap:48px;align-items:center;margin-top:36px">
+<div style="width:100%;max-width:300px;aspect-ratio:1/1.3;position:relative"><image-slot id="pub-cover" shape="rect" src="assets/report-mapping-genai-cover.webp" placeholder="Report cover — Mapping of GenAI impacts on child development"></image-slot></div>
+<div>
+<p style="margin:0;font:300 17px/1.75 'Open Sans',sans-serif;color:#222;text-align:justify">{{ t.pub.body }}</p>
+<a href="Report Mapping GenAI.dc.html" style="display:inline-block;margin-top:28px;background:#f8903e;color:#fff;font:500 15px/1 Poppins,sans-serif;padding:13px 24px;border-radius:999px;text-decoration:none" style-hover="background:#e97f2d;color:#fff">{{ t.pub.cta }}</a>
+</div>
+</div>
+</div>
+</section>
+
+<section id="why-now" style="padding:80px 0 0">
+<div style="max-width:1080px;margin:0 auto;padding:0 20px;box-sizing:border-box">
+<div id="eai-why" style="display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:48px;align-items:center">
+<div style="width:100%;aspect-ratio:4/3;position:relative"><image-slot id="why-now-photo" shape="rect" src="assets/why-now-barbara-zandoval.webp" placeholder="Photo — Why Now"></image-slot></div>
+<div>
+<h2 data-h2="" style="margin:0;font:600 36px/1.2 'Open Sans',sans-serif;color:#000">{{ t.why.title }}</h2>
+<p style="margin:24px 0 0;font:300 17px/1.75 'Open Sans',sans-serif;color:#222;text-align:justify">{{ t.why.p1 }}</p>
+<p style="margin:18px 0 0;font:300 17px/1.75 'Open Sans',sans-serif;color:#222;text-align:justify">{{ t.why.p2 }}</p>
+</div>
+</div>
+</div>
+</section>
+
+<section id="team" style="padding:80px 0 0">
+<div style="max-width:1080px;margin:0 auto;padding:0 20px;box-sizing:border-box;text-align:center">
+<h2 data-h2="" style="margin:0;font:600 36px/1.2 'Open Sans',sans-serif;color:#000">{{ t.team.title }}</h2>
+<p style="margin:12px 0 0;font:300 17px/1.6 'Open Sans',sans-serif;color:#333">{{ t.team.subtitle }}</p>
+<div id="eai-team" style="display:grid;grid-template-columns:repeat(4,1fr);gap:32px;margin-top:48px">
+<sc-for list="{{ team }}" as="m" hint-placeholder-count="4">
+<div style="display:flex;flex-direction:column;align-items:center">
+<image-slot id="{{ m.slot }}" shape="circle" src="{{ m.photo }}" placeholder="{{ m.photoPh }}" style="width:180px;height:180px"></image-slot>
+<h3 style="margin:20px 0 0;font:600 18px/1.3 'Open Sans',sans-serif;color:#000">{{ m.name }}</h3>
+<p style="margin:8px 0 0;font:300 14px/1.5 'Open Sans',sans-serif;color:#444">{{ m.role }}</p>
+<div style="display:flex;gap:14px;margin-top:12px">
+<a href="{{ m.linkedin }}" target="_blank" rel="noopener" aria-label="LinkedIn" style="display:inline-flex;align-items:center;justify-content:center;width:34px;height:34px;border-radius:50%;background:#829bcb;color:#fff" style-hover="background:#f8903e;color:#fff"><svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 110 5 2.5 2.5 0 010-5zM3 9h4v12H3zM10 9h3.8v1.7h.1c.5-1 1.8-2 3.7-2 4 0 4.7 2.6 4.7 6V21h-4v-5.5c0-1.3 0-3-1.9-3s-2.1 1.4-2.1 2.9V21h-4z" fill="currentColor"></path></svg></a>
+<a href="{{ m.mail }}" aria-label="Email" style="display:inline-flex;align-items:center;justify-content:center;width:34px;height:34px;border-radius:50%;background:#829bcb;color:#fff" style-hover="background:#f8903e;color:#fff"><svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5h18v14H3z" fill="none" stroke="currentColor" strokeWidth="2"></path><path d="M3 6l9 7 9-7" fill="none" stroke="currentColor" strokeWidth="2"></path></svg></a>
+</div>
+</div>
+</sc-for>
+</div>
+<a href="About.dc.html" style="display:inline-block;margin-top:44px;background:#f8903e;color:#fff;font:500 15px/1 Poppins,sans-serif;padding:13px 24px;border-radius:999px;text-decoration:none" style-hover="background:#e97f2d;color:#fff">{{ t.team.cta }}</a>
+</div>
+</section>
+
+<section id="featured" style="padding:80px 0 0">
+<div style="max-width:1080px;margin:0 auto;padding:0 20px;box-sizing:border-box">
+<h2 data-h2="" style="margin:0;font:600 36px/1.2 'Open Sans',sans-serif;color:#000">{{ t.featured.title }}</h2>
+<p style="margin:10px 0 0;font:600 14px/1.4 'Open Sans',sans-serif;color:#829bcb;text-transform:uppercase;letter-spacing:.06em">{{ t.featured.all }}</p>
+<div id="eai-featured" style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:32px;margin-top:28px">
+<sc-for list="{{ featured }}" as="f" hint-placeholder-count="3">
+<a href="{{ f.href }}" target="_blank" rel="noopener" style="display:block;text-decoration:none;color:inherit">
+<div style="width:100%;aspect-ratio:16/10;position:relative"><image-slot id="{{ f.slot }}" shape="rect" src="{{ f.src }}" placeholder="{{ f.ph }}"></image-slot></div>
+<p style="margin:16px 0 0;font:700 15px/1.5 'Open Sans',sans-serif;color:#222">{{ f.date }}</p>
+<p style="margin:6px 0 0;font:700 17px/1.45 'Open Sans',sans-serif;color:#000">{{ f.title }} {{ f.flag }}</p>
+</a>
+</sc-for>
+</div>
+<div style="text-align:center;margin-top:40px"><a href="Newsroom.dc.html" style="display:inline-block;background:#f8903e;color:#fff;font:500 15px/1 Poppins,sans-serif;padding:13px 24px;border-radius:999px;text-decoration:none" style-hover="background:#e97f2d;color:#fff">{{ t.featured.cta }}</a></div>
+</div>
+</section>
+
+<section id="contact" style="padding:80px 0 0">
+<div style="max-width:1080px;margin:0 auto;padding:0 20px;box-sizing:border-box">
+<h2 data-h2="" style="margin:0;font:600 36px/1.2 'Open Sans',sans-serif;color:#000">{{ t.contact.title }}</h2>
+<p style="margin:12px 0 0;font:300 17px/1.6 'Open Sans',sans-serif;color:#333">{{ t.contact.intro }}</p>
+<form onSubmit="{{ submitContact }}" style="margin-top:32px;background:#fff;border:1px solid #e3e7f0;border-radius:8px;padding:32px;box-sizing:border-box">
+<div id="eai-form-grid" style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px 24px">
+<label style="display:flex;flex-direction:column;gap:6px;font:600 14px/1.4 'Open Sans',sans-serif;color:#333"><span>{{ t.contact.firstName }} *</span><input name="firstName" type="text" required="required" autoComplete="given-name" style="width:100%;box-sizing:border-box;padding:12px 14px;border:1px solid #cdd5e7;border-radius:4px;background:#fff;font:400 15px/1.4 'Open Sans',sans-serif;color:#222" style-focus="border-color:#829bcb;outline:none"></label>
+<label style="display:flex;flex-direction:column;gap:6px;font:600 14px/1.4 'Open Sans',sans-serif;color:#333"><span>{{ t.contact.lastName }} *</span><input name="lastName" type="text" required="required" autoComplete="family-name" style="width:100%;box-sizing:border-box;padding:12px 14px;border:1px solid #cdd5e7;border-radius:4px;background:#fff;font:400 15px/1.4 'Open Sans',sans-serif;color:#222" style-focus="border-color:#829bcb;outline:none"></label>
+<label style="display:flex;flex-direction:column;gap:6px;font:600 14px/1.4 'Open Sans',sans-serif;color:#333"><span>{{ t.contact.email }} *</span><input name="email" type="email" required="required" autoComplete="email" style="width:100%;box-sizing:border-box;padding:12px 14px;border:1px solid #cdd5e7;border-radius:4px;background:#fff;font:400 15px/1.4 'Open Sans',sans-serif;color:#222" style-focus="border-color:#829bcb;outline:none"></label>
+<label style="display:flex;flex-direction:column;gap:6px;font:600 14px/1.4 'Open Sans',sans-serif;color:#333"><span>{{ t.contact.linkedin }}</span><input name="linkedin" type="url" placeholder="https://www.linkedin.com/in/…" style="width:100%;box-sizing:border-box;padding:12px 14px;border:1px solid #cdd5e7;border-radius:4px;background:#fff;font:400 15px/1.4 'Open Sans',sans-serif;color:#222" style-focus="border-color:#829bcb;outline:none"></label>
+<label style="display:flex;flex-direction:column;gap:6px;font:600 14px/1.4 'Open Sans',sans-serif;color:#333"><span>{{ t.contact.profile }} *</span><select name="profile" required="required" style="width:100%;box-sizing:border-box;padding:12px 14px;border:1px solid #cdd5e7;border-radius:4px;background:#fff;font:400 15px/1.4 'Open Sans',sans-serif;color:#222" style-focus="border-color:#829bcb;outline:none"><option value="">{{ t.contact.profileType }}</option><sc-for list="{{ profileOptions }}" as="o" hint-placeholder-count="9"><option value="{{ o.v }}">{{ o.v }}</option></sc-for></select></label>
+<label style="display:flex;flex-direction:column;gap:6px;font:600 14px/1.4 'Open Sans',sans-serif;color:#333"><span>{{ t.contact.city }}</span><input name="city" type="text" autoComplete="address-level2" style="width:100%;box-sizing:border-box;padding:12px 14px;border:1px solid #cdd5e7;border-radius:4px;background:#fff;font:400 15px/1.4 'Open Sans',sans-serif;color:#222" style-focus="border-color:#829bcb;outline:none"></label>
+<label style="display:flex;flex-direction:column;gap:6px;font:600 14px/1.4 'Open Sans',sans-serif;color:#333"><span>{{ t.contact.state }}</span><input name="state" type="text" autoComplete="address-level1" style="width:100%;box-sizing:border-box;padding:12px 14px;border:1px solid #cdd5e7;border-radius:4px;background:#fff;font:400 15px/1.4 'Open Sans',sans-serif;color:#222" style-focus="border-color:#829bcb;outline:none"></label>
+<label style="display:flex;flex-direction:column;gap:6px;font:600 14px/1.4 'Open Sans',sans-serif;color:#333"><span>{{ t.contact.country }}</span><select name="country" autoComplete="country-name" style="width:100%;box-sizing:border-box;padding:12px 14px;border:1px solid #cdd5e7;border-radius:4px;background:#fff;font:400 15px/1.4 'Open Sans',sans-serif;color:#222" style-focus="border-color:#829bcb;outline:none"><option value="">{{ t.contact.countryPh }}</option><sc-for list="{{ countries }}" as="c" hint-placeholder-count="1"><option value="{{ c.v }}">{{ c.v }}</option></sc-for></select></label>
+</div>
+<label style="display:flex;align-items:center;gap:10px;margin-top:22px;font:400 15px/1.4 'Open Sans',sans-serif;color:#333;cursor:pointer"><input name="newsletter" type="checkbox" value="yes" style="width:18px;height:18px;accent-color:#829bcb;margin:0"><span>{{ t.contact.newsletter }}</span><strong style="font-weight:700">{{ t.contact.yes }}</strong></label>
+<label style="display:flex;flex-direction:column;gap:6px;margin-top:22px;font:600 14px/1.4 'Open Sans',sans-serif;color:#333"><span>{{ t.contact.message }}</span><textarea name="message" rows="4" maxLength="180" onChange="{{ onMsgChange }}" style="width:100%;box-sizing:border-box;padding:12px 14px;border:1px solid #cdd5e7;border-radius:4px;background:#fff;font:400 15px/1.5 'Open Sans',sans-serif;color:#222;resize:vertical" style-focus="border-color:#829bcb;outline:none"></textarea><span style="align-self:flex-end;font:400 12px/1 'Open Sans',sans-serif;color:#8a93a6">{{ msgLen }} / 180</span></label>
+<div style="display:flex;align-items:center;gap:20px;flex-wrap:wrap;margin-top:24px">
+<button type="submit" style="background:#f8903e;color:#fff;border:0;font:500 15px/1 Poppins,sans-serif;padding:14px 32px;border-radius:999px;cursor:pointer" style-hover="background:#e97f2d">{{ t.contact.submit }}</button>
+<sc-if value="{{ contactSent }}" hint-placeholder-val="{{ false }}"><p style="margin:0;font:600 15px/1.4 'Open Sans',sans-serif;color:#2f855a">{{ t.contact.success }}</p></sc-if>
+</div>
+</form>
+</div>
+</section>
+</main>
+
+<footer style="background:#35425b;color:#fff;margin-top:88px;padding:56px 0 32px">
+<div style="max-width:1080px;margin:0 auto;padding:0 20px;box-sizing:border-box">
+<div id="eai-footer-grid" style="display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:40px;align-items:start">
+<div>
+<a href="./" style="display:inline-block"><img src="assets/logo-everyone-ai-white.png" alt="everyone.AI" width="72" height="72" style="height:72px;width:auto;display:block"></a>
+<h4 style="margin:24px 0 0;font:600 18px/1.3 'Open Sans',sans-serif;color:#fff">{{ t.footer.subscribe }}</h4>
+<p style="margin:4px 0 0;font:300 14px/1.5 'Open Sans',sans-serif;color:rgba(255,255,255,.9)">{{ t.footer.subscribeSub }}</p>
+<form onSubmit="{{ submitNewsletter }}" style="display:flex;gap:8px;margin-top:14px;max-width:360px">
+<input name="email" type="email" required="required" placeholder="{{ t.footer.emailPh }}" aria-label="{{ t.footer.emailPh }}" style="flex:1;min-width:0;box-sizing:border-box;padding:11px 14px;border:1px solid rgba(255,255,255,.3);border-radius:4px;background:rgba(255,255,255,.08);font:400 14px/1.4 'Open Sans',sans-serif;color:#fff" style-focus="border-color:#829bcb;outline:none">
+<button type="submit" style="background:#f8903e;color:#fff;border:0;font:500 14px/1 Poppins,sans-serif;padding:12px 18px;border-radius:999px;cursor:pointer;white-space:nowrap" style-hover="background:#e97f2d">{{ t.footer.subscribeBtn }}</button>
+</form>
+<sc-if value="{{ newsSent }}" hint-placeholder-val="{{ false }}"><p style="margin:12px 0 0;font:300 14px/1.5 'Open Sans',sans-serif;color:#fff"><strong style="font-weight:700">{{ t.footer.thanks }}</strong> {{ t.footer.thanksSub }}</p></sc-if>
+</div>
+<div style="display:flex;flex-direction:column;gap:10px">
+<h5 style="margin:0 0 6px;font:600 16px/1.3 'Open Sans',sans-serif;color:#fff">{{ t.footer.quick }}</h5>
+<a href="./" style="font:300 15px/1.4 'Open Sans',sans-serif;color:#fff;text-decoration:none" style-hover="color:#f8903e">{{ t.footer.home }}</a>
+<a href="About.dc.html" style="font:300 15px/1.4 'Open Sans',sans-serif;color:#fff;text-decoration:none" style-hover="color:#f8903e">{{ t.footer.about }}</a>
+<a href="#contact" style="font:300 15px/1.4 'Open Sans',sans-serif;color:#fff;text-decoration:none" style-hover="color:#f8903e">{{ t.footer.contact }}</a>
+<a href="Donate.dc.html" style="font:300 15px/1.4 'Open Sans',sans-serif;color:#fff;text-decoration:none" style-hover="color:#f8903e">{{ t.footer.donate }}</a>
+</div>
+<div style="display:flex;flex-direction:column;gap:10px">
+<h5 style="margin:0 0 6px;font:600 16px/1.3 'Open Sans',sans-serif;color:#fff">{{ t.footer.important }}</h5>
+<a href="https://everyone.ai/privacy-policy/" style="font:300 15px/1.4 'Open Sans',sans-serif;color:#fff;text-decoration:none" style-hover="color:#f8903e">{{ t.footer.privacy }}</a>
+<a href="https://everyone.ai/accessibility-statement/" style="font:300 15px/1.4 'Open Sans',sans-serif;color:#fff;text-decoration:none" style-hover="color:#f8903e">{{ t.footer.accessibility }}</a>
+</div>
+<div><a href="Donate.dc.html" style="display:inline-block;background:#f8903e;color:#fff;font:500 15px/1 Poppins,sans-serif;padding:13px 24px;border-radius:999px;text-decoration:none" style-hover="background:#e97f2d;color:#fff">{{ t.footer.support }}</a></div>
+</div>
+<div style="text-align:center;margin-top:56px;padding-top:36px;border-top:1px solid rgba(255,255,255,.15)">
+<p style="margin:0;font:600 22px/1.35 'Open Sans',sans-serif;color:#fff">{{ t.footer.hashtag }}</p>
+<div style="display:flex;justify-content:center;gap:16px;margin-top:22px">
+<a href="https://www.instagram.com/everyoneai_official/" target="_blank" rel="noopener" aria-label="{{ t.footer.followIg }}" title="{{ t.footer.followIg }}" style="display:inline-flex;align-items:center;justify-content:center;width:40px;height:40px;border-radius:50%;border:1px solid rgba(255,255,255,.4);color:#fff" style-hover="background:#f8903e;border-color:#f8903e;color:#fff"><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" strokeWidth="2"></rect><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" strokeWidth="2"></circle><circle cx="17.3" cy="6.7" r="1.2" fill="currentColor"></circle></svg></a>
+<a href="https://www.linkedin.com/company/everyone-ai/" target="_blank" rel="noopener" aria-label="{{ t.footer.followLi }}" title="{{ t.footer.followLi }}" style="display:inline-flex;align-items:center;justify-content:center;width:40px;height:40px;border-radius:50%;border:1px solid rgba(255,255,255,.4);color:#fff" style-hover="background:#f8903e;border-color:#f8903e;color:#fff"><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 110 5 2.5 2.5 0 010-5zM3 9h4v12H3zM10 9h3.8v1.7h.1c.5-1 1.8-2 3.7-2 4 0 4.7 2.6 4.7 6V21h-4v-5.5c0-1.3 0-3-1.9-3s-2.1 1.4-2.1 2.9V21h-4z" fill="currentColor"></path></svg></a>
+</div>
+<p style="margin:30px auto 0;max-width:860px;font:300 13px/1.7 'Open Sans',sans-serif;color:rgba(255,255,255,.88)">{{ t.footer.disclaimer }}</p>
+</div>
+</div>
+</footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;formEndpoint&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Forms&quot;},&quot;showAnnouncement&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Header&quot;},&quot;defaultLang&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;default&quot;:&quot;auto&quot;,&quot;options&quot;:[&quot;auto&quot;,&quot;en&quot;,&quot;fr&quot;,&quot;es&quot;,&quot;de&quot;,&quot;nl&quot;,&quot;it&quot;,&quot;pt&quot;,&quot;zh&quot;],&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Language&quot;}}">
+const LANGS = [
+  { code: 'en', name: 'English' }, { code: 'fr', name: 'Français' }, { code: 'es', name: 'Español' }, { code: 'de', name: 'Deutsch' },
+  { code: 'nl', name: 'Nederlands' }, { code: 'it', name: 'Italiano' }, { code: 'pt', name: 'Português' }, { code: 'zh', name: '中文' }
+];
+const EN = {
+  meta: { title: 'Everyone.AI — Shaping Beneficial AI for Children', description: 'everyone.AI anticipates and educates about the opportunities and risks of AI for children. Through research, collaboration, and advocacy.' },
+  ann: { text: 'AïA Safety Builders expands its reach via Open Source', cta: 'Learn more' },
+  nav: { home: 'Home', research: 'Research', initiatives: 'Our Initiatives', aiaEval: 'AïA Evaluation', caliber: 'AïA / CALIBER', safetyBuilder: 'AïA Safety Builder', education: 'Education', coalition: 'International Coalition', openLetter: 'Open Letter', newsroom: 'Newsroom', about: 'About Us', donate: 'Donate', menu: 'Menu', language: 'Language' },
+  hero: { l1: 'Shaping Beneficial AI', l1b: 'for children today,', l2: 'for everyone tomorrow.' },
+  mission: { title: 'Our Mission', p1: 'Our mission is to ', p1b: 'anticipate, educate, and evaluate the risks and opportunities of Artificial Intelligence for children, adolescents, and young adults (0–25).', p2: 'Grounded in research from developmental neuroscience, psychology, science of learning, and AI, we move from evidence to practical action, to ensure that AI supports healthy cognitive, social, and emotional development for the next generation.', visionLabel: 'Our Vision: ', vision: 'A future where Beneficial AI supports the healthy development of every child, everywhere.' },
+  actions: { title: 'Our Actions', applied: 'Applied Science', feeds: 'Feeds our three pillars', p1t1: 'iRAISE', p1t2: 'International Coalition', p1d: 'Bringing together researchers, industry leaders, governments, educators, and civil society to advance responsible AI and promote child-centered policies, standards, and best practices.', p2t1: 'Education', p2d: 'Providing training, workshops, conferences, and resources that help companies, educators, parents, and young people navigate the opportunities and challenges of AI.', p3t1: 'AïA', p3t2: 'Evaluation Framework', p3d: 'Enabling AI developers and decision makers to make AI systems safer for children, teenagers and young adults.' },
+  pub: { title: 'Our latest publication:', subtitle: 'Mapping of GenAI impacts on child development', body: "This report examines how generative AI use may shape children's cognitive, emotional, and developmental trajectories across four age bands, from birth to age 18. Drawing on developmental science, neuroscience, and emerging evidence on youth AI use, it translates converging scientific insights into developmentally grounded governance priorities for G7 policymakers.", cta: 'Read More' },
+  why: { title: 'Why Now?', p1: "The rapid evolution of AI technologies is outpacing the development of child-specific safeguards. As AI's adoption accelerates, waiting to course-correct could have irreversible impacts.", p2: "It's imperative to anticipate potential pitfalls and proactively establish guidelines for our young users, ensuring their safety and well-being in the digital age." },
+  team: { title: 'Our Founding Team', subtitle: 'Bridging our multi-disciplinary experiences and expertises for a better AI', r1: 'Executive Director - Cofounder', r2: 'Fellow AI Architect - Applied Gen AI - Board President - Cofounder', r3: 'Chief Scientist - Cofounder', r4: 'Head of Operations & Programs - Cofounder', cta: 'Meet the rest of the team' },
+  featured: { title: 'Featured', all: 'All categories', d1: 'May 2026 - The Observer', t1: "'An experiment on kids without safety tests': the rise of AI toys", d2: 'April 2026 - New York Times', t2: 'What teens are doing with those Role-Playing Chatbots', d3: 'Feb 2025 TV5 Monde:', t3: 'TV Interview during Paris AI Action Summit', cta: 'See more media' },
+  contact: { title: 'Join the conversation', intro: 'If you want to learn more or have any question, Contact us!', firstName: 'First Name', lastName: 'Last Name', email: 'Email Address', linkedin: 'LinkedIn profile', profile: 'Profile', profileType: 'Profile Type', options: ['Government / Policy Maker', 'NGO', 'Researchers', 'AI Developer (Toy Maker, Chat Bot, ...)', 'Parents', 'Teachers / School / University', 'AI Industry / Startup', 'Youth / Students', 'Other'], city: 'City', state: 'State/Province', country: 'Country', countryPh: 'Select a country', newsletter: 'Click here if you want to receive our news', yes: 'Yes', message: 'Message', submit: 'Submit', success: 'Thank you! Your message has been sent.' },
+  footer: { subscribe: 'Subscribe', subscribeSub: 'to stay informed on news and updates', emailPh: 'Email', subscribeBtn: 'Subscribe', thanks: 'Thank you!', thanksSub: 'You have successfully joined our subscriber list.', quick: 'Quick Links', home: 'Home', about: 'About', contact: 'Contact', donate: 'Donate', important: 'Important Links', privacy: 'Privacy Policy and GDPR', accessibility: 'Accessibility Statement', support: 'Support our mission', hashtag: 'Use #BeneficialAIforChildren in your social communication', followIg: 'Follow on Instagram', followLi: 'Follow on LinkedIn', disclaimer: 'everyone.AI is a 501(c)(3) nonprofit organization recognized as a public charity under the Internal Revenue Code. Contributions to everyone.AI are tax-deductible to the extent permitted by law. Please consult your tax advisor regarding the deductibility of your donation. Our EIN is 99-2317785.' }
+};
+const TEAM = [
+  { name: 'Anne-Sophie Seret', linkedin: 'https://www.linkedin.com/in/annesophieseret/', mail: 'mailto:annesophie@everyone.ai', slot: 'team-anne-sophie-seret', photo: 'assets/team-anne-sophie-seret.webp', photoPh: 'Photo — Anne-Sophie Seret' },
+  { name: 'Gregory Renard', linkedin: 'https://www.linkedin.com/in/gregoryrenard/', mail: 'mailto:greg@everyone.ai', slot: 'team-gregory-renard', photo: 'assets/team-gregory-renard.webp', photoPh: 'Photo — Gregory Renard' },
+  { name: 'Mathilde Cerioli, Ph.D', linkedin: 'https://www.linkedin.com/in/mathilde-neugnot-cerioli/', mail: 'mailto:mathilde@everyone.ai', slot: 'team-mathilde-cerioli', photo: 'assets/team-mathilde-cerioli.webp', photoPh: 'Photo — Mathilde Cerioli' },
+  { name: 'Céline Malvoisin', linkedin: 'https://www.linkedin.com/in/celinemalvoisin/', mail: 'mailto:celine@everyone.ai', slot: 'team-celine-malvoisin', photo: 'assets/team-celine-malvoisin.webp', photoPh: 'Photo — Céline Malvoisin' }
+];
+const FEATURED = [
+  { href: 'https://observer.co.uk/news/science-technology/article/an-experiment-on-kids-without-safety-tests-the-rise-of-ai-toys', flag: '🇺🇸', slot: 'featured-observer-2026', src: 'assets/site/2026-05-Page-Newsroom-20.webp', ph: 'Image — The Observer, May 2026' },
+  { href: 'https://www.nytimes.com/2026/04/04/technology/ai-chatbots-teen-roleplay.html', flag: '🇺🇸', slot: 'featured-nyt-2026', src: 'assets/site/2026-07-Page-Newsroom-22.webp', ph: 'Image — New York Times, April 2026' },
+  { href: 'https://www.youtube.com/watch?v=ML2EG0ebaAE', flag: '🇺🇸🇫🇷', slot: 'featured-tv5monde-2025', src: 'assets/site/2025-06-Sans-titre-1599-x-971-px-14.png', ph: 'Video thumbnail — TV5 Monde, Feb 2025' }
+];
+
+class Component extends DCLogic {
+  state = { lang: 'en', dict: {}, countries: [], menuOpen: false, initOpen: false, aiaOpen: false, initMobileOpen: false, langOpen: false, msgLen: 0, contactSent: false, newsSent: false };
+
+  componentDidMount() {
+    let l = null;
+    try { const q = new URLSearchParams(location.search).get('lang'); if (q) l = q.toLowerCase().slice(0, 2); } catch (e) {}
+    if (!l) { try { l = localStorage.getItem('eai_lang'); } catch (e) {} }
+    if (!l) { const d = this.props.defaultLang; if (d && d !== 'auto') l = d; }
+    if (!l) { try { l = (navigator.languages || [navigator.language]).map(x => (x || '').slice(0, 2).toLowerCase()).find(c => LANGS.some(y => y.code === c)); } catch (e) {} }
+    if (!LANGS.some(x => x.code === l)) l = 'en';
+    this.applyLang(l, false);
+    import('./i18n-home.js').then(m => {
+      this.setState({ dict: m.translations || {}, countries: m.countries || [] }, () => this.applyLang(this.state.lang, false));
+    }).catch(() => {});
+    this._onDoc = (e) => { const t = e.target; if (!(t && t.closest && t.closest('#eai-lang'))) { if (this.state.langOpen) this.setState({ langOpen: false }); } };
+    document.addEventListener('click', this._onDoc);
+  }
+  componentWillUnmount() { document.removeEventListener('click', this._onDoc); }
+
+  dictFor(l) { return (this.state.dict && this.state.dict[l]) || EN; }
+  applyLang(l, persist) {
+    this.setState({ lang: l, langOpen: false, menuOpen: false });
+    if (persist) { try { localStorage.setItem('eai_lang', l); } catch (e) {} }
+    try { document.documentElement.lang = l === 'zh' ? 'zh-Hans' : l; } catch (e) {}
+    const d = this.dictFor(l);
+    try { document.title = d.meta.title; const m = document.querySelector('meta[name="description"]'); if (m) m.setAttribute('content', d.meta.description); } catch (e) {}
+  }
+
+  post(payload) {
+    const url = this.props.formEndpoint;
+    if (!url) return Promise.resolve();
+    const body = new URLSearchParams(payload);
+    return fetch(url, { method: 'POST', mode: 'no-cors', body }).catch(() => {});
+  }
+
+  renderVals() {
+    const s = this.state, t = this.dictFor(s.lang);
+    return {
+      t, lang: s.lang, langCode: s.lang.toUpperCase(),
+      languages: LANGS.map(x => ({ code: x.code, name: x.name, mark: x.code === s.lang ? '✓' : '', select: () => this.applyLang(x.code, true) })),
+      showAnnouncement: this.props.showAnnouncement ?? true,
+      menuOpen: s.menuOpen, initOpen: s.initOpen, aiaOpen: s.aiaOpen, initMobileOpen: s.initMobileOpen, langOpen: s.langOpen,
+      msgLen: s.msgLen, contactSent: s.contactSent, newsSent: s.newsSent,
+      countries: s.countries.map(v => ({ v })),
+      profileOptions: (t.contact.options || EN.contact.options).map(v => ({ v })),
+      team: TEAM.map((m, i) => ({ ...m, role: t.team['r' + (i + 1)] })),
+      featured: FEATURED.map((f, i) => ({ ...f, date: t.featured['d' + (i + 1)], title: t.featured['t' + (i + 1)] })),
+      toggleMenu: () => this.setState(st => ({ menuOpen: !st.menuOpen, langOpen: false })),
+      closeMenu: () => this.setState({ menuOpen: false }),
+      toggleInit: () => this.setState(st => ({ initOpen: !st.initOpen })),
+      openInit: () => this.setState({ initOpen: true }),
+      closeInit: () => this.setState({ initOpen: false, aiaOpen: false }),
+      openAia: () => this.setState({ aiaOpen: true }),
+      closeAia: () => this.setState({ aiaOpen: false }),
+      toggleInitMobile: () => this.setState(st => ({ initMobileOpen: !st.initMobileOpen })),
+      toggleLang: (e) => { e.stopPropagation(); this.setState(st => ({ langOpen: !st.langOpen })); },
+      onMsgChange: (e) => this.setState({ msgLen: (e.target.value || '').length }),
+      submitContact: (e) => {
+        e.preventDefault(); const form = e.currentTarget; const data = Object.fromEntries(new FormData(form).entries());
+        data.form = 'contact'; data.lang = s.lang; data.page = location.href;
+        this.post(data).then(() => { this.setState({ contactSent: true, msgLen: 0 }); try { form.reset(); } catch (err) {} });
+      },
+      submitNewsletter: (e) => {
+        e.preventDefault(); const form = e.currentTarget; const data = Object.fromEntries(new FormData(form).entries());
+        data.form = 'newsletter'; data.lang = s.lang; data.page = location.href;
+        this.post(data).then(() => { this.setState({ newsSent: true }); try { form.reset(); } catch (err) {} });
+      }
+    };
+  }
+}
+</script>
+</body>
+</html>

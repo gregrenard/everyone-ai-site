@@ -1,0 +1,102 @@
+{
+  "_comment": [
+    "Single source of truth for the site's page list (same schema as gregrenard/gregory-renard-site).",
+    "role: home -> deployed as index.html; content -> static SEO head, pre-render, sitemap, llms.txt; stub -> redirect only.",
+    "Adding a page: add ONE entry here, then its URL to sitemap.xml and a line to llms.txt (verify gate (i)).",
+    "Non-page files the deploy must also pull from Design: i18n-home.js, image-slot.js, .image-slots.state.json, assets/*.",
+    "Deploy must rewrite inter-page links (e.g. \"About.dc.html\" -> \"/about/\") using this slug map; Home is the only page with in-page translations."
+  ],
+  "site": "https://everyone.ai",
+  "languages": [
+    "en",
+    "fr",
+    "es",
+    "de",
+    "nl",
+    "it",
+    "pt",
+    "zh"
+  ],
+  "languageParam": "lang",
+  "pages": [
+    {
+      "design": "Home.dc.html",
+      "slug": "index",
+      "role": "home"
+    },
+    {
+      "design": "Research.dc.html",
+      "slug": "research",
+      "role": "content"
+    },
+    {
+      "design": "Report Mapping GenAI.dc.html",
+      "slug": "research/mapping-of-genai-impacts",
+      "role": "content"
+    },
+    {
+      "design": "AIA.dc.html",
+      "slug": "aia-safety-builder",
+      "role": "content"
+    },
+    {
+      "design": "AIA Method.dc.html",
+      "slug": "aia-safety-builder/method",
+      "role": "content"
+    },
+    {
+      "design": "AIA Service.dc.html",
+      "slug": "aia-safety-builder/service",
+      "role": "content"
+    },
+    {
+      "design": "Education.dc.html",
+      "slug": "formation",
+      "role": "content"
+    },
+    {
+      "design": "Coalition.dc.html",
+      "slug": "international-coalition",
+      "role": "content"
+    },
+    {
+      "design": "Open Letter.dc.html",
+      "slug": "open-letter",
+      "role": "content"
+    },
+    {
+      "design": "Newsroom.dc.html",
+      "slug": "newsroom",
+      "role": "content"
+    },
+    {
+      "design": "About.dc.html",
+      "slug": "about",
+      "role": "content"
+    },
+    {
+      "design": "Donate.dc.html",
+      "slug": "donate",
+      "role": "content"
+    },
+    {
+      "design": "Report Adolescents.dc.html",
+      "slug": "research/adolescents-and-anthropomorphic-ai",
+      "role": "content"
+    },
+    {
+      "design": "Report Future.dc.html",
+      "slug": "research/the-future-of-child-development-in-the-ai-era",
+      "role": "content"
+    },
+    {
+      "design": "Policy RPD.dc.html",
+      "slug": "research/relational-positioning-dependency-exclusivity-policy-rpd",
+      "role": "content"
+    }
+  ],
+  "components": [
+    "SiteHeader.dc.html",
+    "SiteFooter.dc.html"
+  ]
+}

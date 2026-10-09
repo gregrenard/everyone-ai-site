@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Page not found — everyone.AI</title>
+<script>
+/* Migration redirect: map old WordPress paths to the new GitHub Pages URLs.
+   Works both under a project path (https://<user>.github.io/<repo>/) and at a custom-domain
+   root: BASE is derived from the first path segment when the host ends with github.io.
+   Known slug renames first, then a generic case-insensitive match to a real page.
+   Unknown paths fall through to the 404 UI. Guard: never redirect to the same path. */
+var EAI_BASE = (function () {
+  if (/github\.io$/i.test(location.hostname)) {
+    var seg = location.pathname.split('/')[1];
+    return seg ? '/' + seg + '/' : '/';
+  }
+  return '/';
+})();
+(function () {
+  var MAP = {};            // e.g. 'old-wordpress-slug': 'new-slug/' once a page is renamed
+  var PAGES = ["research", "research/mapping-of-genai-impacts", "aia-safety-builder", "aia-safety-builder/method", "aia-safety-builder/service", "formation", "international-coalition", "open-letter", "newsroom", "about", "donate", "research/adolescents-and-anthropomorphic-ai", "research/the-future-of-child-development-in-the-ai-era", "research/relational-positioning-dependency-exclusivity-policy-rpd"];          // real page slugs — keep in sync with pages.json
+  var raw = location.pathname;
+  if (raw.indexOf(EAI_BASE) === 0) raw = raw.slice(EAI_BASE.length);
+  raw = raw.replace(/^\/+/, '').replace(/\/+$/, '').replace(/\.html$/i, '').replace(/\/index$/i, '');
+  var key = raw.toLowerCase();
+  var dest = MAP[key] || null;
+  if (!dest) {
+    for (var i = 0; i < PAGES.length; i++) {
+      if (PAGES[i].toLowerCase() === key) { dest = PAGES[i] + '/'; break; }
+    }
+  }
+  if (dest) {
+    var target = EAI_BASE + dest;
+    if (target !== location.pathname) { location.replace(target + location.search + location.hash); }
+  }
+})();
+document.addEventListener('DOMContentLoaded', function () {
+  var links = document.querySelectorAll('a[href^="https://everyone.ai/"]');
+  for (var i = 0; i < links.length; i++) {
+    var h = links[i].getAttribute('href').slice('https://everyone.ai/'.length);
+    if (h.indexOf('wp-content/') === 0 || h.indexOf('privacy-policy') === 0 || h.indexOf('accessibility-statement') === 0) continue;
+    links[i].setAttribute('href', EAI_BASE + h);
+  }
+  var hm = document.getElementById('eai-404-home'); if (hm) hm.setAttribute('href', EAI_BASE);
+});
+</script>
+<style>
+  :root { --bg:#35425b; --fg:#ffffff; --muted:rgba(255,255,255,.78); --accent:#f8903e; --blue:#829bcb; }
+  * { box-sizing:border-box; }
+  html,body { margin:0; height:100%; }
+  body { background:var(--bg); color:var(--fg); font-family:"Open Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+         display:flex; align-items:center; justify-content:center; padding:2rem; text-align:center; line-height:1.6; }
+  .wrap { max-width:600px; }
+  .code { font-size:.85rem; letter-spacing:.25em; text-transform:uppercase; color:var(--blue); margin-bottom:1rem; }
+  h1 { font-size:1.9rem; margin:0 0 .75rem; font-weight:600; }
+  p { color:var(--muted); margin:0 0 1.75rem; }
+  nav a { color:var(--fg); text-decoration:none; border:1px solid rgba(255,255,255,.25); border-radius:999px;
+          padding:.5rem 1rem; margin:.25rem; display:inline-block; font-size:.95rem; transition:.15s; }
+  nav a:hover { border-color:var(--accent); color:var(--accent); }
+  .home { margin-top:1.75rem; }
+  .home a { color:var(--accent); text-decoration:none; font-weight:600; }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="code">404 — Page not found</div>
+    <h1>This page has moved or doesn't exist</h1>
+    <p>If you followed an old link, try one of the sections below.</p>
+    <nav>
+      <a href="https://everyone.ai/research/">Research</a>
+      <a href="https://everyone.ai/aia-safety-builder/">AïA Evaluation</a>
+      <a href="https://everyone.ai/formation/">Education</a>
+      <a href="https://everyone.ai/international-coalition/">International Coalition</a>
+      <a href="https://everyone.ai/open-letter/">Open Letter</a>
+      <a href="https://everyone.ai/newsroom/">Newsroom</a>
+      <a href="https://everyone.ai/about/">About Us</a>
+      <a href="https://everyone.ai/donate/">Donate</a>
+    </nav>
+    <div class="home"><a href="./" id="eai-404-home">← Back to everyone.ai</a></div>
+  </div>
+</body>
+</html>

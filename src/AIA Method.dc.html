@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<title>AïA - Benchmark Tool Method | Everyone.AI</title>
+<meta name="description" content="AïA Technical Method including CALIBER. Scientific lead: Dr. Mathilde Cerioli. Framework implementation, ßeta version.">
+<link rel="canonical" href="https://everyone.ai/aia-safety-builder/method/">
+<link rel="icon" type="image/png" href="assets/logo-everyone-ai.png">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,300&family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
+<style>body{margin:0;background:#f0f2f6;color:#222;font-family:'Open Sans',system-ui,sans-serif;-webkit-font-smoothing:antialiased;text-wrap:pretty}a{color:#829bcb}a:hover{color:#f8903e}html{scroll-behavior:smooth}@media (max-width:900px){[data-doc]{grid-template-columns:1fr!important}[data-toc]{position:static!important}}</style>
+</helmet>
+<div data-screen-label="AïA Method" style="min-height:100vh;display:flex;flex-direction:column;background:#f0f2f6">
+<dc-import name="SiteHeader" active="initiatives" hint-size="100%,158px"></dc-import>
+<section style="background:#35425b;padding:56px 20px;text-align:center">
+<img src="assets/site/2026-06-Logo-AiA-seul-fond-transparent.webp" alt="AïA" style="height:100px;width:auto;display:block;margin:0 auto 16px">
+<p style="margin:0;font:400 17px/1.4 'Open Sans',sans-serif;color:#cfd8ea">AïA Technical Method including CALIBER</p>
+<h1 style="margin:10px 0 0;font:300 clamp(26px,3.4vw,42px)/1.2 Poppins,sans-serif;color:#fff;text-transform:uppercase;letter-spacing:.04em">Framework Implementation - ßeta version</h1>
+</section>
+<main style="flex:1;max-width:1180px;width:100%;margin:0 auto;padding:64px 20px 88px;box-sizing:border-box">
+<div data-doc="" style="display:grid;grid-template-columns:260px minmax(0,1fr);gap:48px;align-items:start">
+<aside data-toc="" style="position:sticky;top:20px;background:#fff;border-radius:8px;padding:22px">
+<h5 style="margin:0 0 10px;font:700 13px/1.3 'Open Sans',sans-serif;letter-spacing:.08em;color:#35425b">TABLE OF CONTENTS</h5>
+<sc-for list="{{ toc }}" as="t" hint-placeholder-count="6"><a href="{{ t.href }}" style="display:block;padding:6px 0;font:600 14px/1.4 'Open Sans',sans-serif;color:#333;text-decoration:none" style-hover="color:#829bcb">{{ t.l }}</a></sc-for>
+</aside>
+<article style="min-width:0">
+<section style="background:#fff;border-radius:8px;padding:26px">
+<h2 style="margin:0;font:600 24px/1.3 'Open Sans',sans-serif;color:#000">Contributors</h2>
+<p style="margin:12px 0 0;font:300 16px/1.7 'Open Sans',sans-serif">Scientific lead: Dr. Mathilde Cerioli</p>
+<p style="margin:4px 0 0;font:300 16px/1.7 'Open Sans',sans-serif">Research team: Olga Muss and Maxime Le Bourgeois</p>
+<p style="margin:4px 0 0;font:300 16px/1.7 'Open Sans',sans-serif">Technical team: Laurent Vernhes Chief Technical Officer, Marc Ballavoine Development Lead, and Greg Renard Technical Architect</p>
+</section>
+<sc-for list="{{ sections }}" as="s" hint-placeholder-count="6">
+<section id="{{ s.id }}" style="margin-top:48px;scroll-margin-top:20px">
+<h2 style="margin:0;font:600 30px/1.25 'Open Sans',sans-serif;color:#000">{{ s.h }}</h2>
+<sc-for list="{{ s.blocks }}" as="b" hint-placeholder-count="2">
+<sc-if value="{{ b.isH }}" hint-placeholder-val="{{ false }}"><h3 style="margin:28px 0 0;font:700 21px/1.35 'Open Sans',sans-serif;color:#829bcb">{{ b.t }}</h3></sc-if>
+<sc-if value="{{ b.isP }}" hint-placeholder-val="{{ true }}"><p style="margin:14px 0 0;font:300 17px/1.8 'Open Sans',sans-serif">{{ b.t }}</p></sc-if>
+<sc-if value="{{ b.isL }}" hint-placeholder-val="{{ false }}"><ul style="margin:14px 0 0;padding-left:22px;display:flex;flex-direction:column;gap:8px"><sc-for list="{{ b.items }}" as="i" hint-placeholder-count="4"><li style="font:300 17px/1.7 'Open Sans',sans-serif"><strong style="font-weight:700">{{ i.k }}</strong> {{ i.v }}</li></sc-for></ul></sc-if>
+</sc-for>
+</section>
+</sc-for>
+<section style="margin-top:56px;background:#35425b;border-radius:8px;padding:32px;color:#fff">
+<h3 style="margin:0;font:600 22px/1.3 'Open Sans',sans-serif;color:#fff">Full technical documentation</h3>
+<p style="margin:10px 0 0;font:300 16px/1.7 'Open Sans',sans-serif;color:#fff">Part I (SRL4Children), Part II (CALIBER Framework, human validation and DECT pilot), Part III (judge operationalization), Part IV (Benchmark), Part V (Report generation) and Future Directions, including all tables and figures.</p>
+<a href="https://everyone.ai/aia-safety-builder/method/#part-I" style="display:inline-block;margin-top:18px;background:#f8903e;color:#fff;font:500 15px/1 Poppins,sans-serif;padding:13px 26px;border-radius:999px;text-decoration:none" style-hover="background:#e97f2d;color:#fff">Read Parts I–V</a>
+</section>
+<p style="margin:36px 0 0;font:300 16px/1.7 'Open Sans',sans-serif">Researchers interested in using AIA or contributing to this research program can contact <a href="mailto:mathilde@everyone.ai" style="font-weight:700">mathilde@everyone.ai</a>.</p>
+</article>
+</div>
+</main>
+<dc-import name="SiteFooter" hint-size="100%,520px"></dc-import>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+const P = t => ({ isP: true, t }), H = t => ({ isH: true, t }), L = items => ({ isL: true, items: items.map(([k, v]) => ({ k, v })) });
+const SECTIONS = [
+  { id: 'executive-summary', h: 'Executive Summary', blocks: [
+    H('What AïA does'),
+    P('AïA Safety Builder is a black-box evaluation and reporting tool for conversational AI systems, developed initially for products used by adolescents. It assesses observable endpoint responses under controlled test conditions, allowing content safety, interaction behavior, and their context-dependent interpretation to be examined separately. The tool is designed for product teams evaluating design choices and guardrails, public authorities reviewing alignment with defined requirements, and researchers who need reproducible measures of AI behavior for experimental or longitudinal studies.'),
+    P('Its operation combines three components with distinct roles. SRL4Children provides methodology-agnostic technical infrastructure for applying evaluation criteria and automated judges at scale. CALIBER provides the research framework and assessment method that defines constructs, translates them into observable variables and graded measures, tests their reliability, and structures expert calibration. AïA combines selected CALIBER frameworks with SRL4Children to test external endpoints and generate interpretable reports.'),
+    P("The beta implements two of CALIBER's five layers: a content-safety gate covering 25 youth-relevant sub-risks and a first interaction-appropriateness domain focused on socioaffective pull. The behavioral framework measures 15 anthropomorphic, interactional, and relational cues on five-level presence scales. Its current scope is English-language, text-based, single-turn interaction with adolescents aged 13 to 18 in educational, entertainment, and emotional-support contexts. Capability assessment, composite content-behavior patterns, and developmental outcomes remain outside the current scores."),
+    H('Evaluation flow'),
+    L([
+      ['1. Connect and collect.', 'AïA sends an adolescent-facing prompt to the model or application under assessment and records the endpoint response together with the relevant model, configuration, context, sensitivity, and benchmark versions.'],
+      ['2. Apply the content-safety gate.', 'The response is evaluated against 25 youth-relevant content sub-risks. Confirmed failures are gated before behavioral interpretation, while refusals, technical failures, and unparsable judge outputs remain visible as inconclusive results.'],
+      ['3. Measure observable behavior.', 'Responses that pass the content gate are scored against the 15 socioaffective behaviors, with each behavior assigned a level from 1 to 5 according to its operational definition and presence anchors.'],
+      ['4. Interpret the score in context.', 'Behavioral presence is mapped to pilot-derived interpretive ranges for the relevant use context and sensitivity condition, preserving the distinction between the measured cue and the expert judgment applied to it.'],
+      ['5. Aggregate and report.', 'AïA reports content findings, behavior-level scores, cue-family patterns, examples, uncertainty, exclusions, and version information so that results remain interpretable and comparable over time.']
+    ]),
+    H('How the CALIBER implementation was developed'),
+    P('The socioaffective implementation was developed through a staged process that links theoretical definition, measurement construction, human testing, expert calibration, and technical deployment.'),
+    L([
+      ['Theoretical derivation.', 'Research from developmental psychology, neuroscience, anthropomorphism, parasocial interaction, human-computer interaction, and AI safety informed the selection of observable behaviors relevant to adolescent-facing AI.'],
+      ['Operationalization.', 'Each behavior received a bounded definition and a five-level ladder describing increasing presence and explicitness in a model response.'],
+      ['Controlled reference dataset.', 'Synthetic prompt-response examples were constructed across behaviors, levels, contexts, and sensitivity conditions, then independently generated and reviewed by two researchers.'],
+      ['Human validation.', 'Trained adult raters tested whether the constructs could be identified and whether the five presence levels could be distinguished consistently.'],
+      ['Developmental expert calibration.', 'A separate feasibility pilot examined whether contributors with relevant expertise could identify preferred and potentially high-risk regions of the scale across contexts.'],
+      ['Automated judge alignment.', 'Human-agreement examples were used to align an LLM-based judge, followed by held-out agreement and repeated-scoring checks.']
+    ]),
+    H('Evidence generated to date'),
+    P('The validation program separates evidence about content classification, behavioral measurement, automated scoring, and developmental calibration because each supports a different inference. The human validation used an earlier 16-dimension instrument; the current beta retains 15 behaviors after Self-Reference was removed because of overlap with other cues.'),
+    L([
+      ['Content gate.', 'Across 403 validation cases, the content judge agreed with the reference classification in 97.3% of cases and detected 95.5% of unsafe responses. In three repeated runs, 401 of 403 verdicts were identical.'],
+      ['Behavior identification and level discrimination.', "For behavior identification, 12 raters achieved 79% correct classification and pooled Fleiss' κ = 0.669. For level discrimination, 11 raters produced pooled ordinal Krippendorff's α = 0.834, with most disagreement occurring between adjacent levels."],
+      ['Automated behavioral judge.', 'The judge was aligned using examples that met a 70% human-agreement criterion. The reported held-out agreement is 84%, subject to final confirmation of the evaluation partition and agreement definition, while repeated scoring showed an absolute-agreement intraclass correlation of 0.996.'],
+      ['Developmental threshold pilot.', 'Six contributors completed all 90 behavior-condition cells. Exact modal agreement averaged 64.1% for preferred levels and 63.1% for upper-risk onset, while adjacent-band agreement averaged 91.9% and 88.1%, respectively. Exploratory context effects were concentrated in particular behaviors rather than supporting a uniform adjustment across the framework.']
+    ]),
+    H('Interpretation and current limits'),
+    P('AïA characterizes the outputs produced by a specified endpoint under stated test conditions. It can identify content failures, quantify observable socioaffective cues, compare behavioral profiles across models or configurations, and provide documented variables for research. Its current thresholds are expert-informed, pilot-derived hypotheses rather than validated developmental safety standards or certification boundaries.'),
+    P('The current results do not establish that a behavior or model causes attachment, reliance, disclosure, learning effects, changes in wellbeing, or harm. The next phase will expand calibration through larger and more diverse panels, narrower developmental age bands, multicultural and multilingual testing, multi-turn evaluation, additional domains including cognitive agency, and empirical studies linking measured behavior and composite patterns to developmental outcomes.')
+  ] },
+  { id: 'introduction', h: 'Introduction', blocks: [
+    P('AïA Safety Builder was developed to make the observable behavior of conversational AI systems measurable and comparable, with an initial focus on systems used by children and adolescents. Youth-focused evaluations commonly examine either what a model says, through content-safety testing, or how young users are affected, through developmental and outcome research. Between those levels lies a necessary measurement problem: identifying what the system does during an interaction, representing those behaviors consistently, and determining how their interpretation changes with age and context.'),
+    P('This work brings together three distinct components. SRL4Children is the methodology-agnostic technical evaluation infrastructure. CALIBER is the research framework and assessment methodology. AïA Safety Builder is the product implementation that combines selected CALIBER frameworks with SRL4Children to test AI endpoints and produce interpretable reports for product teams, researchers, and public-interest stakeholders.'),
+    P('Keeping these roles separate is important. SRL4Children can operationalize frameworks other than CALIBER. CALIBER can be used independently of AïA or a particular automated judge. AïA is the current implementation through which selected CALIBER layers and SRL4Children capabilities are made usable in practice.'),
+    H('CALIBER: from model properties to developmental outcomes'),
+    P("CALIBER provides a staged architecture for connecting what an AI system can do and how it responds with what its use may eventually mean for a developing user. Its five layers require progressively stronger forms of evidence:"),
+    L([['1.', 'What can the model do? Assess the capabilities available to the user.'], ['2.', 'Is the content safe? Assess whether model outputs contain inappropriate or harmful content.'], ['3.', "Is the interaction appropriate? Evaluate the observable interaction behaviors and their intensity in relation to the user's age and context."], ['4.', 'What benefit or risk patterns are these behaviors creating? Examine how combinations of content and behaviors may form broader interaction patterns, such as socioaffective dependence risk or support for cognitive autonomy.'], ['5.', 'What developmental impact may build over time? Test how these patterns influence longer-term beneficial or adverse outcomes for young users.']]),
+    H('First implementation of CALIBER: Socioaffective pull framework'),
+    P('For this first beta release, we focused the behavioral layer on socioaffective pull, meaning AI behaviors that may, over time, contribute to a sense that the system cares, understands, or relates personally to the user, potentially increasing intimacy and trust.'),
+    P('The current beta operationalizes 15 socioaffective behaviors across anthropomorphic, interactional, and relational domains, each measured on a graded scale of presence. Future CALIBER domains will extend this measurement layer beyond socioaffective interaction, including cognitive agency, and will test how combinations of behaviors can form higher-order benefit and risk patterns.')
+  ] }
+];
+class Component extends DCLogic {
+  renderVals() {
+    const sections = SECTIONS.map(s => ({ ...s, blocks: s.blocks.map(b => ({ isH: !!b.isH, isP: !!b.isP, isL: !!b.isL, t: b.t || '', items: b.items || [] })) }));
+    return {
+      sections,
+      toc: [{ l: 'Contributors', href: '#top' }, { l: 'Executive summary', href: '#executive-summary' }, { l: 'Introduction', href: '#introduction' }, { l: 'Parts I–V (full document)', href: 'https://everyone.ai/aia-safety-builder/method/#part-I' }]
+    };
+  }
+}
+</script>
+</body>
+</html>

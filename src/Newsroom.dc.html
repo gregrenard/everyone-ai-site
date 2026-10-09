@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<title>Newsroom | Everyone.AI</title>
+<meta name="description" content="Press, podcasts, events, webinars and awards featuring everyone.AI's work on beneficial AI for children.">
+<link rel="canonical" href="https://everyone.ai/newsroom/">
+<link rel="icon" type="image/png" href="assets/logo-everyone-ai.png">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,300&family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
+<script src="image-slot.js"></script>
+<style>body{margin:0;background:#f0f2f6;color:#222;font-family:'Open Sans',system-ui,sans-serif;-webkit-font-smoothing:antialiased;text-wrap:pretty}a{color:#829bcb}a:hover{color:#f8903e}html{scroll-behavior:smooth}@media (max-width:980px){[data-g3]{grid-template-columns:repeat(2,minmax(0,1fr))!important}}@media (max-width:640px){[data-g3]{grid-template-columns:1fr!important}}</style>
+</helmet>
+<div data-screen-label="Newsroom" style="min-height:100vh;display:flex;flex-direction:column;background:#f0f2f6">
+<dc-import name="SiteHeader" active="newsroom" hint-size="100%,158px"></dc-import>
+<section style="background:#35425b;padding:64px 20px;text-align:center"><h1 style="margin:0;font:300 clamp(28px,4vw,48px)/1.2 Poppins,sans-serif;color:#fff;text-transform:uppercase;letter-spacing:.04em">Newsroom</h1></section>
+<main style="flex:1;max-width:1080px;width:100%;margin:0 auto;padding:64px 20px 88px;box-sizing:border-box">
+<h2 style="margin:0;font:600 36px/1.2 'Open Sans',sans-serif;color:#000">Featured</h2>
+<div data-g3="" style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px;margin-top:28px">
+<sc-for list="{{ featured }}" as="f" hint-placeholder-count="3"><a href="{{ f.href }}" target="_blank" rel="noopener" style="display:block;text-decoration:none;color:inherit"><img src="{{ f.img }}" alt="{{ f.d }}" loading="lazy" style="width:100%;aspect-ratio:1599/971;object-fit:cover;display:block"><p style="margin:14px 0 0;font:700 15px/1.5 'Open Sans',sans-serif;color:#222">{{ f.d }}</p><p style="margin:4px 0 0;font:400 16px/1.5 'Open Sans',sans-serif;color:#000">{{ f.t }} {{ f.flag }}</p></a></sc-for>
+</div>
+<nav aria-label="Categories" style="display:flex;flex-wrap:wrap;gap:12px;margin-top:56px">
+<sc-for list="{{ cats }}" as="c" hint-placeholder-count="6"><a href="{{ c.href }}" style="background:#fff;border:1px solid #cdd5e7;color:#35425b;font:500 14px/1 Poppins,sans-serif;padding:11px 20px;border-radius:999px;text-decoration:none" style-hover="background:#829bcb;border-color:#829bcb;color:#fff">{{ c.label }} ▾</a></sc-for>
+</nav>
+<sc-for list="{{ sections }}" as="s" hint-placeholder-count="5">
+<section id="{{ s.id }}" style="margin-top:72px;scroll-margin-top:20px">
+<h2 style="margin:0;font:600 32px/1.2 'Open Sans',sans-serif;color:#000">{{ s.title }}</h2>
+<div data-g3="" style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:32px 28px;margin-top:28px">
+<sc-for list="{{ s.items }}" as="i" hint-placeholder-count="6">
+<a href="{{ i.href }}" target="_blank" rel="noopener" style="display:block;text-decoration:none;color:inherit">
+<div style="width:100%;aspect-ratio:1599/971;position:relative"><image-slot id="{{ i.slot }}" shape="rect" src="{{ i.img }}" placeholder="{{ i.d }}"></image-slot></div>
+<p style="margin:12px 0 0;font:700 15px/1.5 'Open Sans',sans-serif;color:#222">{{ i.d }}</p>
+<p style="margin:4px 0 0;font:400 15px/1.5 'Open Sans',sans-serif;color:#000">{{ i.t }} {{ i.flag }}</p>
+</a>
+</sc-for>
+</div>
+</section>
+</sc-for>
+<section id="media-inquiries" style="margin-top:80px;background:#fff;border:1px solid #e3e7f0;border-radius:8px;padding:36px">
+<h2 style="margin:0;font:600 30px/1.25 'Open Sans',sans-serif;color:#000">Help Us Spread the Word!</h2>
+<p style="margin:14px 0 0;font:300 16px/1.75 'Open Sans',sans-serif">If you are a member of the media and wish to connect with us regarding coverage, interviews, or inquiries, we invite you to reach out through the form provided; we value your interest and look forward to collaborating on meaningful stories that highlight our mission and initiatives aimed at ensuring a safe and beneficial use of AI for children around the globe.</p>
+<form onSubmit="{{ submit }}" style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px 22px;margin-top:22px">
+<sc-for list="{{ fields }}" as="f" hint-placeholder-count="4"><label style="display:flex;flex-direction:column;gap:6px;font:600 14px/1.4 'Open Sans',sans-serif"><span>{{ f.label }}</span><input name="{{ f.name }}" type="{{ f.type }}" required="{{ f.req }}" style="padding:12px 14px;border:1px solid #cdd5e7;border-radius:4px;font:400 15px/1.4 'Open Sans',sans-serif" style-focus="border-color:#829bcb;outline:none"></label></sc-for>
+<label style="grid-column:1/-1;display:flex;flex-direction:column;gap:6px;font:600 14px/1.4 'Open Sans',sans-serif"><span>Your Message *</span><textarea name="message" required="required" rows="4" maxLength="180" style="padding:12px 14px;border:1px solid #cdd5e7;border-radius:4px;font:400 15px/1.5 'Open Sans',sans-serif;resize:vertical" style-focus="border-color:#829bcb;outline:none"></textarea></label>
+<label style="grid-column:1/-1;display:flex;gap:10px;align-items:flex-start;font:300 14px/1.5 'Open Sans',sans-serif"><input name="consent" type="checkbox" value="yes" style="width:18px;height:18px;accent-color:#829bcb;margin:2px 0 0"><span>I'd like to receive occasional updates from Everyone.AI. You can unsubscribe at any time. See our privacy policy for more details.</span></label>
+<div style="display:flex;align-items:center;gap:16px"><button type="submit" style="background:#f8903e;color:#fff;border:0;font:500 15px/1 Poppins,sans-serif;padding:14px 32px;border-radius:999px;cursor:pointer" style-hover="background:#e97f2d">Send Message</button><sc-if value="{{ sent }}" hint-placeholder-val="{{ false }}"><span style="font:600 15px/1.4 'Open Sans',sans-serif;color:#2f855a">Thank you!</span></sc-if></div>
+</form>
+</section>
+</main>
+<dc-import name="SiteFooter" hint-size="100%,520px"></dc-import>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;formEndpoint&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Forms&quot;}}">
+const W = 'assets/site/';
+const OBS = W + '2026-05-Page-Newsroom-20.webp', NYT = W + '2026-07-Page-Newsroom-22.webp', TV5 = W + '2025-06-Sans-titre-1599-x-971-px-14.png';
+const US = '🇺🇸', FR = '🇫🇷';
+const S = {
+  press: ['Press', [
+    ['May 2026 – The Observer', "'An experiment on kids without safety tests': the rise of AI toys", 'https://observer.co.uk/news/science-technology/article/an-experiment-on-kids-without-safety-tests-the-rise-of-ai-toys', US, OBS],
+    ['April 2026 – New York Times', 'What teens are doing with those Role-Playing Chatbots', 'https://www.nytimes.com/2026/04/04/technology/ai-chatbots-teen-roleplay.html', US, NYT],
+    ['Sept 2025 – TIME – 100/AI', '10 AI Applications Shaping the Future', 'https://time.com/7312183/general-catalyst-ai-apps/', US, 'assets/site/news-Page-Newsroom-15.webp'],
+    ['Feb 2025 – AI Action Summit', 'Press Release – Beneficial AI for Children Coalition Launch', 'https://parispeaceforum.org/press-releases/paris-peace-forum-launches-global-coalition-to-safeguard-children-in-the-age-of-ai/', US, 'assets/site/news-Sans-titre-1599-x-971-px-17.webp'],
+    ['Feb 2025 – TV5 Monde', 'TV Interview during Paris AI Action Summit', 'https://www.youtube.com/watch?v=ML2EG0ebaAE', US + ' ' + FR, TV5],
+    ['March 2025 – Merci SF', 'Everyone.AI – Advocating for a Beneficial AI for Children', 'https://mercisf.com/2025/03/12/everyone-ai-advocating-for-a-beneficial-ai-for-children/', US, 'assets/site/news-Sans-titre-1599-x-971-px-19.webp'],
+    ['Feb 2025 – Media India Group', 'Paris Peace Forum launches AI Coalition for Child Development', 'https://mediaindia.eu/technology/paris-peace-forum-launches-ai-coalition-for-child-development/', US, 'assets/site/news-Page-Newsroom-13.webp'],
+    ['Feb 2025 – Sri Lanka Guardian', 'Paris Peace Forum Launches Global Coalition for Child-Safe AI', 'https://slguardian.org/paris-peace-forum-launches-global-coalition-for-child-safe-ai/', US, 'assets/site/news-Page-Newsroom-14.webp'],
+    ['Sept 2025 – Le Monde – Chronique', "Un chatbot déguisé en doudou : « Après avoir colonisé le monde des adultes, l'IA pénètre celui des enfants »", 'assets/site/2025-10-Article-Le-Monde.jpeg', FR, 'assets/site/news-Page-Newsroom-17.webp'],
+    ['Feb 2025 – Interview Radio France', "Que fait l'Intelligence artificielle à nos enfants ?", 'https://www.radiofrance.fr/franceinfo/podcasts/question-d-education/que-fait-l-intelligence-artificielle-a-nos-enfants-6464914', FR, 'assets/site/news-Sans-titre-1599-x-971-px-18.webp'],
+    ['Feb 2025 – Interview TV5 Monde', "L'interface artificielle : une menace pour les enfants ?", 'https://www.instagram.com/reel/DGLvyEnowAe/', FR, 'assets/site/news-Page-Newsroom-10.webp'],
+    ['Feb 2025 – industries.ma', 'Une coalition mondiale pour une intelligence artificielle au service des enfants', 'https://industries.ma/en/une-coalition-mondiale-pour-une-intelligence-artificielle-au-service-des-enfants/', FR, 'assets/site/news-Page-Newsroom-11.webp'],
+    ['Feb 2025 – Digital Business Africa', "Le Forum de Paris sur la Paix lance une coalition mondiale pour protéger les enfants à l'ère de l'IA", 'https://www.digitalbusiness.africa/le-forum-de-paris-sur-la-paix-lance-une-coalition-mondiale-pour-proteger-les-enfants-a-lere-de-lia/', FR, 'assets/site/news-Page-Newsroom-12.webp'],
+    ['Feb 2025 – Le Monde – Open Letter', "L'intelligence artificielle révolutionnera la façon dont les enfants apprennent et se connectent, la question est de savoir comment.", 'https://everyone.ai/wp-content/uploads/2025/06/Lintelligence-artificielle-revolutionnera-la-facon-dont-les-enfants-apprennent-et-se-connec.pdf', FR, 'assets/site/news-Sans-titre-1599-x-971-px-16.webp']
+  ]],
+  podcast: ['Podcast', [
+    ['The AI Educator', 'Collaborative Path to Proactive Policy with Anne-Sophie Seret', 'https://aieducator.podbean.com/e/moving-beyond-engagement/', US],
+    ['Le Futurologue', "Neuroscientist: AI is wrecking our children's brains", 'https://www.youtube.com/watch?v=FdQgY80Kta4', US],
+    ['Mindset Neuroscience Podcast', 'Artificial Intelligence, Disembodied Wisdom', 'https://podcasts.apple.com/us/podcast/artificial-intelligence-disembodied-wisdom-with-dr/id1366359821?i=1000705397511', US],
+    ['Scrolling to death', "AI's Impact on Children", 'https://www.youtube.com/watch?v=XxOWT_yvdqM', US],
+    ["Woman talkin' about AI", 'Brain, Bias and Bedtime, Raising Kids in the age of AI', 'https://www.youtube.com/watch?v=bw1OKr5KHAg', US],
+    ['July 2026 – Education Futures', 'Ep 55: Why kids & teens get attached to AI, and the risks', 'https://podcasts.apple.com/us/podcast/why-kids-teens-get-attached-to-ai-and-the-risks/id1847420474?i=1000776539081', US],
+    ['June 2026 – Education Futures', "Ep 47: Making AI safe for children before it's too late", 'https://podcasts.apple.com/us/podcast/making-ai-safe-for-children-before-its-too-late/id1847420474?i=1000772716990', US],
+    ['April 2026 – AI Governance with Dr. Freddie Seba', 'Episode #13: AI Governance for Children and Adolescents — Why Safety Cannot Be an Afterthought', 'https://podcasts.apple.com/us/podcast/episode-13-ai-governance-for-children-and-adolescents/id1868844464?i=1000760555218', US],
+    ['Wide Walls Podcast', "AI's Impact on Children's Development, Age appropriate Tech and AI Ethics", 'https://www.youtube.com/watch?v=zZ-9Cs2WPic', US],
+    ['Sept 2026 – Notélé.be', "Ils ont 15 ans et des questions sur leur avenir : Grégory Renard, pionnier de l'IA, leur répond", 'https://www.notele.be/si115-media167838-ils-ont-15-ans-et-des-questions-sur-leur-avenir-gregory-renard-pionnier-de-l-ia-leur-repond.html', FR],
+    ['June 2026 – UPLOAD', "Comment l'IA modifie-t-elle et comment va-t-elle modifier le monde dans lequel nous vivons ?", 'https://www.youtube.com/watch?v=Kd731_8HpkU', FR],
+    ['Dec 2025 – Silicon Carne', 'Chat-GPT 5.2 | Disney vend Mickey à OpenAI | Suicide assisté par Chatbot', 'https://podcasts.apple.com/us/podcast/chat-gpt-5-2-disney-vend-mickey-%C3%A0-openai-suicide-assist%C3%A9/id1485527777?i=1000741645729', FR],
+    ['Nov 2025 – Monde Numérique', 'Interview: Face à l\'IA, il faut créer des "ceintures de sécurité cognitive"', 'https://podcasts.apple.com/us/podcast/monde-num%C3%A9rique-actu-tech/id1572124982?i=1000735011227', FR],
+    ['Sept 2025 – Silicon Carne', 'Scandales & Milliards: Meta, Open AI, Trump et la Tech!', 'https://podcasts.apple.com/us/podcast/scandales-milliards-meta-openai-trump-et-la-tech/id1485527777?i=1000725846043', FR],
+    ['Jul 2025 – Silicon Carne', "L'intelligence Artificielle nous rend-elle plus con?", 'https://podcasts.apple.com/us/podcast/lintelligence-artificielle-nous-rend-elle-plus-con/id1485527777?i=1000715696093', FR],
+    ['Jun 2025 – VLAN!', "Partie 2 : #357 Eduquer nos enfants à l'ère de l'intelligence artificielle", 'https://podcasts.apple.com/us/podcast/357-eduquer-nos-enfants-%C3%A0-l%C3%A8re-de-lintelligence/id1233992877?i=1000715241513', FR],
+    ['Jun 2025 – VLAN!', "Partie 1 : #357 Eduquer nos enfants à l'ère de l'intelligence artificielle", 'https://podcasts.apple.com/us/podcast/357-eduquer-nos-enfants-%C3%A0-l%C3%A8re-de-lintelligence/id1233992877?i=1000715233469', FR],
+    ['Jun 2025 – Grand Angle', "Ce que l'IA fait au cerveau des jeunes et des enfants", 'https://podcasts.apple.com/us/podcast/ce-que-lia-fait-au-cerveau-des-jeunes-et-des-enfants/id1612473112?i=1000711006611', FR],
+    ['Feb 2025 – Monde Numérique', "Sommet IA – L'impact de l'IA sur le cerveau des enfants", 'https://podcasts.apple.com/us/podcast/sommet-ia-limpact-de-lia-sur-le-cerveau-des-enfants/id1572124982?i=1000693869177', FR],
+    ['Feb 2025 – Soft Kid', "Faut-il laisser l'IA éduquer nos enfants ? Décryptage avec une neuroscientifique", 'https://www.youtube.com/watch?v=Wc68rUeGKMA', FR],
+    ['Feb 2025 – Live Silicon Carne', 'AI Summit', 'https://www.youtube.com/watch?v=HIlqDuflXF4', FR],
+    ['Jan 2025 – Soft Kid', 'IA & Education : Revolution ou danger pour nos enfants?', 'https://www.youtube.com/watch?v=vare11j2n5I', FR],
+    ["Nov 2024 – Mon Carnet, l'actu numérique", "Impact de l'IA sur les enfants", 'https://podcasts.apple.com/us/podcast/entrevue-impact-de-lia-sur-les-enfants/id1160898999?i=1000677399391', FR],
+    ['Jul 2024 – AI MY JOB', "Peut-on éduquer avec l'IA", 'https://podcasts.apple.com/us/podcast/peut-on-%C3%A9duquer-avec-lia-mathide-cerioli-phd-neurosciences/id1739681457?i=1000661869754', FR],
+    ['Jul 2024 – AI MY JOB', 'Neurosciences et IA : ce que vous ignorez sur les applis éducatives', 'https://podcasts.apple.com/us/podcast/neurosciences-et-ia-ce-que-vous-ignorez-sur-les-applis/id1739681457?i=1000663239547', FR]
+  ]],
+  event: ['Event', [
+    ['June 2026 – Building Beneficial GenAI for Children', 'Launching a Youth Manifesto and Advancing an International Roadmap', 'https://youtu.be/yDIcJPX5zTA', US],
+    ['April 2026 – International Association for Safe & Ethical AI', 'AI and the Rights of Children', '#event', US],
+    ['January 2026 – FOSI', 'AI Companion', 'https://www.youtube.com/watch?v=72_xiQClrLE', US],
+    ['October 2025 – Panel Paris Peace Forum', 'What does AI Owe Children? iRAISE Proactive Approach for Beneficial AI for Children', 'https://www.youtube.com/watch?v=PATIcrLP_J0', US + ' ' + FR],
+    ['October 2025 – Roundtable Paris Peace Forum', 'Forging the Future: A Dialogue on Beneficial AI for Children, Starting with Principles', 'https://www.youtube.com/watch?v=Obs-Lo_4kCw', US + ' ' + FR],
+    ['April 2025 – Science Diplomacy Summit', "Keynote – Shaping Tomorrow's Mind: Advancing Beneficial AI for Children", 'https://web.cvent.com/event/2b73fb7f-ee09-4120-8e5f-5ff98a5dd022/websitePage:6e992aff-ed46-4a83-95e4-e8a043858443?session=db2d35fa-b479-44cb-b0e3-ef3f57f23e4a', ''],
+    ['Feb 2025 – Launched during the AI Action Summit', 'International Coalition for Beneficial AI for Children', 'Coalition.dc.html', ''],
+    ['Feb 2025 – Global AI Forum on Children, Education, and Youth Wellbeing, CSM, Lego, NSPCC (France)', 'Fireside Chat – Reimagining Education in the AI Era', '#event', ''],
+    ['Nov 2024 – Conference with French Minister of AI (San Francisco)', 'Keynote – Child Development in the AI Era', 'https://www.youtube.com/watch?v=7TgpaflLzKc', '']
+  ]],
+  webinar: ['Webinar', [
+    ['Sept 2026 – Webinar', 'Evaluation and Making Ed Tech Tools Safe by Design', 'https://www.youtube.com/watch?v=blMR3kRnRlE', ''],
+    ['May 2026 – iRAISE Webinar', "Shaping GenAI's Impacts on Child Development – a Scientific Contribution to the G7", 'https://www.youtube.com/watch?v=E8ou1h-NAwQ', ''],
+    ['March 2025 – Children & Screens Ask the Expert Webinar', 'Panel – New School? Promises and Risks of AI in the Classroom', 'https://www.youtube.com/watch?v=qsDulxPFKFc&t=2032s', '']
+  ]],
+  award: ['Award', [
+    ['2025 – ASU+GSV', 'Award Leading Woman AI', '#award', ''],
+    ['2025 – Walloon Merit Awards', 'Grégory Renard received the Walloon Merit Awards in 2025 for his pioneering work in conversational AI and his commitment to ethical, human-centered innovation.', 'https://connaitrelawallonie.wallonie.be/fr/wallons-marquants/distinction-du-merite-wallon/merites-wallons/renard-gregory', ''],
+    ['December 2024 – Berkeley World Business Analytics Award', 'Project of the year', '#award', ''],
+    ["2022 – NASA's Merit Award", "Grégory Renard received NASA's 2022 Merit Award for his applied artificial intelligence contributions to space and earth sciences.", '#award', '']
+  ]]
+};
+class Component extends DCLogic {
+  state = { sent: false };
+  renderVals() {
+    const sections = Object.entries(S).map(([id, [title, items]]) => ({
+      id, title, items: items.map((r, n) => ({ d: r[0], t: r[1], href: r[2], flag: r[3], img: r[4] || '', slot: 'news-' + id + '-' + n }))
+    }));
+    return {
+      featured: [
+        { d: 'May 2026 - The Observer', t: "'An experiment on kids without safety tests': the rise of AI toys", href: S.press[1][0][2], flag: US, img: OBS },
+        { d: 'April 2026 - New York Times', t: 'What teens are doing with those Role-Playing Chatbots', href: S.press[1][1][2], flag: US, img: NYT },
+        { d: 'Feb 2025 TV5 Monde', t: 'TV Interview during Paris AI Action Summit', href: 'https://www.youtube.com/watch?v=ML2EG0ebaAE', flag: US + FR, img: TV5 }
+      ],
+      cats: [...sections.map(s => ({ label: s.title, href: '#' + s.id })), { label: 'Media Inquiries', href: '#media-inquiries' }],
+      sections,
+      sent: this.state.sent,
+      fields: [
+        { label: 'Name *', name: 'name', type: 'text', req: true },
+        { label: 'Email Address *', name: 'email', type: 'email', req: true },
+        { label: 'Website', name: 'website', type: 'url', req: false },
+        { label: 'Company', name: 'company', type: 'text', req: false }
+      ],
+      submit: e => {
+        e.preventDefault();
+        const ep = this.props.formEndpoint;
+        if (ep) { const fd = new FormData(e.target); fd.append('form', 'media'); fetch(ep, { method: 'POST', mode: 'no-cors', body: new URLSearchParams(fd) }).catch(() => {}); }
+        e.target.reset(); this.setState({ sent: true });
+      }
+    };
+  }
+}
+</script>
+</body>
+</html>
