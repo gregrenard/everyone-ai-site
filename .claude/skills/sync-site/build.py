@@ -30,7 +30,8 @@ Transforms, in order (each exists because the raw Design export is not deployabl
                           already translates matches no key, so Design stays authoritative.
   7. text fixes         - typos of the Design sources listed in text-fixes.json are corrected
                           in the published pages until they are fixed in Design.
-  8. sidecar + .nojekyll - an empty .image-slots.state.json (image-slot.js fetches it) and
+  8. mobile CSS         - justified paragraphs are left-aligned below 640 px.
+  9. sidecar + .nojekyll - an empty .image-slots.state.json (image-slot.js fetches it) and
                           .nojekyll so dotfiles/underscored paths are served as-is.
 
 Usage (from the repo root):
@@ -94,6 +95,12 @@ def fix_text(html):
     return html
 
 
+# Justified paragraphs open wide gaps between words on a phone-width column
+# (worst with long German words); align them left below 640 px.
+MOBILE_CSS = (
+    '<style id="eai-mobile">@media (max-width:640px){#dc-root [style*="text-align: justify"],'
+    '#dc-root [style*="text-align:justify"]{text-align:left!important}}</style>'
+)
 I18N_TAG = '<script src="eai-i18n.js" defer></script>'
 
 
@@ -185,6 +192,7 @@ def build_page(page):
     if slot_shim(src):
         head_extra.append(slot_shim(src))
     head_extra.append(I18N_TAG)
+    head_extra.append(MOBILE_CSS)
 
     html = html.replace("<html>", '<html lang="en">', 1)
     html = re.sub(

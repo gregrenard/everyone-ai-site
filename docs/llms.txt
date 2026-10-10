@@ -31,7 +31,7 @@ Why now: the rapid evolution of AI technologies is outpacing the development of 
 - [Relational Positioning, Dependency & Exclusivity Policy (#RPD)](https://everyone.ai/research/relational-positioning-dependency-exclusivity-policy-rpd/): model policy addressing the structural gap between child-development experts and those drafting the technical rules that govern AI systems, with PDF download.
 - [AïA Evaluation Framework](https://everyone.ai/aia-safety-builder/): mission, goals, CALIBER methodology, Open Source / Safety Builder / White Label.
 - [AïA Technical Method (CALIBER)](https://everyone.ai/aia-safety-builder/method/): executive summary, evaluation flow, validation evidence and limits.
-- [AïA Safety Builder Service ßeta](https://everyone.ai/aia-safety-builder/service/): features, how it works, offers (Freemium, Pro, Enterprise).
+- [AïA Safety Builder Service βeta](https://everyone.ai/aia-safety-builder/service/): features, how it works, offers (Freemium, Pro, Enterprise).
 - [Education](https://everyone.ai/formation/): workshops, interactive talks, keynotes and speakers (English and French).
 - [International Coalition (iRAISE)](https://everyone.ai/international-coalition/): participants, experts, guiding principles, objectives, join form.
 - [Open Letter](https://everyone.ai/open-letter/): full letter, signatories, pledge form.
