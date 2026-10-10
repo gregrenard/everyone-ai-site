@@ -11,6 +11,10 @@
 # (404.html, robots.txt, llms.txt, sitemap.xml, support.js, i18n-*.js, image-slot.js,
 # CNAME, .nojekyll).
 #
+# Translations: build.py publishes i18n/<lang>.json through the overlay. After a sync
+# that changes page text, run extract-i18n.py to refresh i18n/en.json and list the
+# strings that need translating (verify gate (k) warns about them).
+#
 # Usage:  bash .claude/skills/sync-site/deploy.sh [--media] [--preview]   (run from anywhere)
 #   --media    also download hotlinked videos (large; default: leave external + WARN)
 #   --preview  mark every page noindex (use while served from a github.io project path)

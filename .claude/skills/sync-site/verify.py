@@ -13,6 +13,9 @@ Gates:
   (g) shared components are published at the site root and marked noindex
   (h) every page carries a pre-render mirror with zero unresolved {{ }}
   (i) pages.json urls == sitemap.xml locs == llms.txt Pages links
+  (k) every page loads the translation overlay; every string of i18n/en.json is
+      translated in every language (WARN per language otherwise: the string falls
+      back to English), and no translation changes the segment count of its key
 External links to the live WordPress site are reported as WARN, not BAD: they
 keep working until the DNS switch but must be localized before it.
 """
@@ -238,6 +241,29 @@ for f in scan_files:
     for u, n in sorted(__import__("collections").Counter(
             re.findall(r"https://everyone\.ai/wp-content/[^\"' )<>\\\\]+", t)).items()):
         warning("%s -> %s" % (os.path.relpath(f, REPO), u))
+
+print("--- (k) translations")
+cat_file = os.path.join(HERE, "i18n", "en.json")
+if not os.path.exists(os.path.join(OUT, "eai-i18n.js")):
+    bad("missing docs/eai-i18n.js")
+for s in SLUGS:
+    if os.path.exists(page_file(s)) and 'src="eai-i18n.js"' not in head_of(read(page_file(s))):
+        bad("no translation overlay in " + os.path.relpath(page_file(s), REPO))
+if os.path.exists(cat_file):
+    catalog = json.load(open(cat_file, encoding="utf-8"))["units"]
+    for lang in DATA.get("languages", [])[1:]:
+        f = os.path.join(HERE, "i18n", lang + ".json")
+        have = json.load(open(f, encoding="utf-8")) if os.path.exists(f) else {}
+        lack = [k for k in catalog if k not in have]
+        broken = [k for k in catalog if k in have and have[k].count("\n") != k.count("\n")]
+        if broken:
+            bad("%s: %d translations with a wrong segment count, e.g. %r" % (lang, len(broken), broken[0][:60]))
+        if lack:
+            warning("%s: %d of %d strings untranslated (run extract-i18n.py --missing %s)" % (lang, len(lack), len(catalog), lang))
+        elif not broken:
+            ok("%s: %d strings" % (lang, len(catalog)))
+else:
+    warning("no i18n/en.json: run extract-i18n.py")
 
 print()
 if fail:

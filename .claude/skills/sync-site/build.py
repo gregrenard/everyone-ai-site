@@ -22,7 +22,13 @@ Transforms, in order (each exists because the raw Design export is not deployabl
                           get the local image listed in slot-images.json, set at runtime on
                           <image-slot> elements whose src is empty. A slot that has a src in
                           Design is never touched, so Design stays authoritative.
-  6. sidecar + .nojekyll - an empty .image-slots.state.json (image-slot.js fetches it) and
+  6. translation overlay - Design translates only Home and the header. i18n-overlay.js is
+                          published as eai-i18n.js and loaded on every page; it translates the
+                          rendered text from docs/i18n/<lang>.json, which is emitted here from
+                          the reviewed maps in i18n/<lang>.json, restricted to the strings
+                          extract-i18n.py found on the site (i18n/en.json). Text that Design
+                          already translates matches no key, so Design stays authoritative.
+  7. sidecar + .nojekyll - an empty .image-slots.state.json (image-slot.js fetches it) and
                           .nojekyll so dotfiles/underscored paths are served as-is.
 
 Usage (from the repo root):
@@ -72,6 +78,30 @@ def slot_shim(src):
     if not mine:
         return ""
     return SLOT_SHIM % json.dumps(mine, ensure_ascii=False, sort_keys=True, separators=(",", ":"))
+
+
+I18N_TAG = '<script src="eai-i18n.js" defer></script>'
+
+
+def emit_i18n():
+    """Publish the overlay and one English->translation map per language."""
+    src_dir = os.path.join(_HERE, "i18n")
+    out_dir = os.path.join(OUT, "i18n")
+    shutil.rmtree(out_dir, ignore_errors=True)
+    os.makedirs(out_dir)
+    shutil.copyfile(os.path.join(_HERE, "i18n-overlay.js"), os.path.join(OUT, "eai-i18n.js"))
+    catalog = None
+    if os.path.exists(os.path.join(src_dir, "en.json")):
+        catalog = set(json.load(open(os.path.join(src_dir, "en.json"), encoding="utf-8"))["units"])
+    for lang in DATA.get("languages", [])[1:]:
+        f = os.path.join(src_dir, lang + ".json")
+        full = json.load(open(f, encoding="utf-8")) if os.path.exists(f) else {}
+        # A translation must keep the segment count of its key or the overlay ignores it.
+        keep = {k: v for k, v in full.items()
+                if (catalog is None or k in catalog) and v and v != k and k.count("\n") == v.count("\n")}
+        with open(os.path.join(out_dir, lang + ".json"), "w", encoding="utf-8") as fh:
+            json.dump(keep, fh, ensure_ascii=False, sort_keys=True, separators=(",", ":"))
+        print("i18n      docs/i18n/%s.json  %d strings" % (lang, len(keep)))
 
 
 LINK_RE = re.compile(r"""(["'])([^"'#?{}<>]+)\.dc\.html((?:#[^"'{}<>]*)?)\1""")
@@ -140,6 +170,7 @@ def build_page(page):
         head_extra.append(SHIM)
     if slot_shim(src):
         head_extra.append(slot_shim(src))
+    head_extra.append(I18N_TAG)
 
     html = html.replace("<html>", '<html lang="en">', 1)
     html = re.sub(
@@ -187,6 +218,7 @@ def main():
             f.write(html)
         print("component %s" % os.path.join("docs", comp))
 
+    emit_i18n()
     open(os.path.join(OUT, ".nojekyll"), "w").close()
     with open(os.path.join(OUT, ".image-slots.state.json"), "w") as f:
         f.write("{}\n")
