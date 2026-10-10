@@ -4,7 +4,7 @@
 # Idempotent.
 #
 # Pipeline order is critical (see SKILL.md):
-#   fetch-wp-assets -> build (clean URLs, static SEO head, <base>, hash shim)
+#   fetch-wp-assets + fetch-slot-images -> build (clean URLs, static SEO head, <base>, hash shim)
 #   -> bump sitemap -> prerender (LAST: mirror must carry final clean URLs) -> verify
 #
 # Does NOT touch src/ (Design snapshot, read-only here) or the repo-only files
@@ -34,6 +34,7 @@ done
 
 echo "==> 1/5  localize hotlinked wp-content files"
 python3 "$SKILL_DIR/fetch-wp-assets.py" $MEDIA_FLAG
+python3 "$SKILL_DIR/fetch-slot-images.py"
 
 echo "==> 2/5  build docs/ from src/ (clean URLs, static SEO head, <base>, hash shim)"
 python3 "$SKILL_DIR/build.py" $PREVIEW_FLAG

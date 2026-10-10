@@ -83,8 +83,8 @@ def resolve(slug, ref):
     ref = unquote(ref)
     if ref.startswith("/"):
         return ref.lstrip("/")
-    while ref.startswith("./"):
-        ref = ref[2:]
+    while ref.startswith(("./", "../")):  # "../" only occurs as the root-pointing <base href>
+        ref = ref[3:] if ref.startswith("../") else ref[2:]
     return ref
 
 

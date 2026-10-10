@@ -18,7 +18,11 @@ Transforms, in order (each exists because the raw Design export is not deployabl
                           <html lang>, and noindex on shared components and on preview builds.
   4. hash-link shim     - with <base>, a bare href="#x" would navigate to the site root; a small
                           capture-phase listener keeps in-page anchors in-page.
-  5. sidecar + .nojekyll - an empty .image-slots.state.json (image-slot.js fetches it) and
+  5. slot images        - slots the Design project leaves empty (team photos, newsroom cards)
+                          get the local image listed in slot-images.json, set at runtime on
+                          <image-slot> elements whose src is empty. A slot that has a src in
+                          Design is never touched, so Design stays authoritative.
+  6. sidecar + .nojekyll - an empty .image-slots.state.json (image-slot.js fetches it) and
                           .nojekyll so dotfiles/underscored paths are served as-is.
 
 Usage (from the repo root):
@@ -48,6 +52,28 @@ SHIM = (
     "if(el)el.scrollIntoView();}else{window.scrollTo(0,0);}"
     'history.replaceState(null,"",location.pathname+location.search+h);},true);</script>'
 )
+SLOTS = {}
+_slots_file = os.path.join(_HERE, "slot-images.json")
+if os.path.exists(_slots_file):
+    SLOTS = {k: v["file"] for k, v in json.load(open(_slots_file, encoding="utf-8")).items()
+             if os.path.exists(os.path.join(OUT, v["file"]))}
+SLOT_SHIM = (
+    '<script id="eai-slot-images">(function(){var M=%s;function fill(){'
+    'var s=document.querySelectorAll("image-slot[id]");for(var i=0;i<s.length;i++){'
+    'var u=M[s[i].id];if(u&&!s[i].getAttribute("src"))s[i].setAttribute("src",u);}}'
+    'new MutationObserver(fill).observe(document.documentElement,{childList:true,subtree:true});'
+    'fill();})();</script>'
+)
+
+
+def slot_shim(src):
+    """Shim for the slot ids this page can render (ids are built as '<prefix>-...' in its script)."""
+    mine = {k: v for k, v in SLOTS.items() if "'%s-'" % k.split("-", 1)[0] in src}
+    if not mine:
+        return ""
+    return SLOT_SHIM % json.dumps(mine, ensure_ascii=False, sort_keys=True, separators=(",", ":"))
+
+
 LINK_RE = re.compile(r"""(["'])([^"'#?{}<>]+)\.dc\.html((?:#[^"'{}<>]*)?)\1""")
 SITE_RE = re.compile(r"""(["'])https://everyone\.ai/([^"'#?{}<> ]*?)/?((?:[#?][^"'{}<> ]*)?)\1""")
 WP_RE = re.compile(r"""https://everyone\.ai/(wp-content/uploads/[^"'\\ )<>]+)""")
@@ -112,6 +138,8 @@ def build_page(page):
         head_extra.append('<meta name="robots" content="noindex">')
     if depth:
         head_extra.append(SHIM)
+    if slot_shim(src):
+        head_extra.append(slot_shim(src))
 
     html = html.replace("<html>", '<html lang="en">', 1)
     html = re.sub(
