@@ -28,7 +28,9 @@ Transforms, in order (each exists because the raw Design export is not deployabl
                           the reviewed maps in i18n/<lang>.json, restricted to the strings
                           extract-i18n.py found on the site (i18n/en.json). Text that Design
                           already translates matches no key, so Design stays authoritative.
-  7. sidecar + .nojekyll - an empty .image-slots.state.json (image-slot.js fetches it) and
+  7. text fixes         - typos of the Design sources listed in text-fixes.json are corrected
+                          in the published pages until they are fixed in Design.
+  8. sidecar + .nojekyll - an empty .image-slots.state.json (image-slot.js fetches it) and
                           .nojekyll so dotfiles/underscored paths are served as-is.
 
 Usage (from the repo root):
@@ -78,6 +80,18 @@ def slot_shim(src):
     if not mine:
         return ""
     return SLOT_SHIM % json.dumps(mine, ensure_ascii=False, sort_keys=True, separators=(",", ":"))
+
+
+TEXT_FIXES = {}
+if os.path.exists(os.path.join(_HERE, "text-fixes.json")):
+    TEXT_FIXES = json.load(open(os.path.join(_HERE, "text-fixes.json"), encoding="utf-8"))["fixes"]
+
+
+def fix_text(html):
+    """Correct known typos of the Design sources (text-fixes.json)."""
+    for wrong, right in TEXT_FIXES.items():
+        html = html.replace(wrong, right)
+    return html
 
 
 I18N_TAG = '<script src="eai-i18n.js" defer></script>'
@@ -155,7 +169,7 @@ def build_page(page):
     slug = page["slug"]
     src = open(os.path.join(SRC, page["design"]), encoding="utf-8").read()
     depth = 0 if slug == "index" else slug.count("/") + 1
-    html = rewrite_links(src, slug)
+    html = fix_text(rewrite_links(src, slug))
 
     m = re.search(r"<helmet>(.*?)</helmet>", html, re.S)
     helmet = m.group(1).strip("\n") if m else ""
