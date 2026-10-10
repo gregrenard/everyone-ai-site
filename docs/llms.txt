@@ -17,7 +17,7 @@ Why now: the rapid evolution of AI technologies is outpacing the development of 
 ## Founding team
 
 - Anne-Sophie Seret — Executive Director, Cofounder
-- Gregory Renard — Fellow AI Architect, Applied Gen AI, Board President, Cofounder
+- Grégory Renard — Fellow AI Architect, Applied Gen AI, Board President, Cofounder
 - Mathilde Cerioli, Ph.D — Chief Scientist, Cofounder
 - Céline Malvoisin — Head of Operations & Programs, Cofounder
 

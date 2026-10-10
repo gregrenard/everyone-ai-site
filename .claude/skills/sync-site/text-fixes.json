@@ -1,7 +1,8 @@
 {
- "_comment": "Typos in the Claude Design sources, corrected at build time until they are fixed in Design (confirmed by Gregory Renard, 2026-10-10). Plain substring replacement on page sources; an entry is a no-op once Design is fixed.",
+ "_comment": "Typos and spelling decisions corrected at build time until they are fixed in Claude Design (confirmed by Grégory Renard, 2026-10-10). Plain substring replacement on page sources; an entry is a no-op once Design is fixed.",
  "fixes": {
   "Researcher at CRNS": "Researcher at CNRS",
-  "Marc Ballavoine": "Marc Baillavoine"
+  "Marc Ballavoine": "Marc Baillavoine",
+  "Gregory Renard": "Grégory Renard"
  }
 }
