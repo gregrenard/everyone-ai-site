@@ -241,6 +241,10 @@ for f in scan_files:
     for u, n in sorted(__import__("collections").Counter(
             re.findall(r"https://everyone\.ai/wp-content/[^\"' )<>\\\\]+", t)).items()):
         warning("%s -> %s" % (os.path.relpath(f, REPO), u))
+    # build.py leaves a link on the live site when its anchor is missing from the Design
+    # page (AIA Method "Parts I-V"); it breaks at the DNS switch like the hotlinks above.
+    for u in sorted(set(re.findall(r"""href\s*[=:]\s*["'](https://everyone\.ai/[^"'?]*#[^"']+)""", t))):
+        warning("%s -> %s (anchor only exists on the live site)" % (os.path.relpath(f, REPO), u))
 
 print("--- (k) translations")
 cat_file = os.path.join(HERE, "i18n", "en.json")
