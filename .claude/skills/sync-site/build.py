@@ -58,8 +58,23 @@ SHIM = (
     'var a=e.target.closest&&e.target.closest(\'a[href^="#"]\');if(!a)return;'
     'var h=a.getAttribute("href");e.preventDefault();'
     'if(h.length>1){var el=document.getElementById(decodeURIComponent(h.slice(1)));'
-    "if(el)el.scrollIntoView();}else{window.scrollTo(0,0);}"
+    'if(el)el.scrollIntoView();else if(h==="#top")window.scrollTo(0,0);}else{window.scrollTo(0,0);}'
     'history.replaceState(null,"",location.pathname+location.search+h);},true);</script>'
+)
+# Arriving with a fragment (Home / Contact from another page): the browser scrolls
+# before the runtime has replaced the pre-rendered mirror, and the page lands one
+# viewport too low. Re-align on the rendered target for 4 s, until the visitor scrolls.
+# On every page, Home included (it has no <base>, so it does not carry SHIM). The id
+# exists twice (mirror/template and live render): take the last one that has a box.
+LAND = (
+    '<script id="eai-hash-land">(function(){if(location.hash.length<2)return;var n=0,stop=false,id;'
+    'try{id=decodeURIComponent(location.hash.slice(1));}catch(e){return;}'
+    'function off(){stop=true;}'
+    '["wheel","touchstart","keydown","mousedown"].forEach(function(t){addEventListener(t,off,{passive:true,once:true});});'
+    'var iv=setInterval(function(){if(stop||++n>16){clearInterval(iv);return;}'
+    'var all=document.querySelectorAll("[id]"),el=null;'
+    'for(var i=0;i<all.length;i++)if(all[i].id===id&&all[i].getClientRects().length)el=all[i];'
+    'if(el&&Math.abs(el.getBoundingClientRect().top)>2)el.scrollIntoView();},250);})();</script>'
 )
 SLOTS = {}
 _slots_file = os.path.join(_HERE, "slot-images.json")
@@ -128,7 +143,24 @@ def emit_i18n():
 LINK_RE = re.compile(r"""(["'])([^"'#?{}<>]+)\.dc\.html((?:#[^"'{}<>]*)?)\1""")
 SITE_RE = re.compile(r"""(["'])https://everyone\.ai/([^"'#?{}<> ]*?)/?((?:[#?][^"'{}<> ]*)?)\1""")
 WP_RE = re.compile(r"""https://everyone\.ai/(wp-content/uploads/[^"'\\ )<>]+)""")
-PROTECT_RE = re.compile(r"<helmet>.*?</helmet>|<script type=\"application/ld\+json\">.*?</script>", re.S)
+# Left absolute: SEO head, JSON-LD, and a page URL held in a JS constant (the Open Letter
+# share buttons pass it to LinkedIn / Facebook / X, which need a full URL).
+PROTECT_RE = re.compile(
+    r"<helmet>.*?</helmet>|<script type=\"application/ld\+json\">.*?</script>"
+    r"|\b(?:const|let|var)\s+\w+\s*=\s*[\"']https://everyone\.ai/[^\"']*[\"']", re.S)
+
+
+_SRC_CACHE = {}
+
+
+def has_anchor(slug, anchor):
+    """True when the Design source of `slug` declares id=<anchor>."""
+    if slug not in _SRC_CACHE:
+        design = next(p["design"] for p in PAGES if p["slug"] == slug)
+        with open(os.path.join(SRC, design), encoding="utf-8") as f:
+            _SRC_CACHE[slug] = f.read()
+    t = _SRC_CACHE[slug]
+    return bool(re.search(r"""id\s*[=:]\s*["']%s["']""" % re.escape(anchor), t))
 
 
 def out_path(slug):
@@ -142,9 +174,10 @@ def rewrite_links(html, slug):
     def rel(target, frag):
         # Every nested page carries <base href="../"...> pointing at the site root,
         # so links are written root-relative with NO per-page prefix.
-        url = "" if target == "index" else target + "/"
-        dest = url + frag
-        return dest if dest else "./"
+        # A fragment on Home keeps its "./": a bare "#mission" is caught by the hash
+        # shim as an in-page anchor and does nothing on any page but Home.
+        url = "./" if target == "index" else target + "/"
+        return url + frag
 
     def dc_link(m):
         name = unquote(m.group(2))
@@ -163,6 +196,10 @@ def rewrite_links(html, slug):
     def site_link(m):
         target = m.group(2)
         if target != "" and target not in SLUGS:
+            return m.group(0)
+        frag = m.group(3)
+        if frag.startswith("#") and not has_anchor(target or "index", frag[1:]):
+            # e.g. AIA Method "Read Parts I-V": the parts only exist on the live page.
             return m.group(0)
         return m.group(1) + rel(target or "index", m.group(3)) + m.group(1)
 
@@ -189,6 +226,8 @@ def build_page(page):
         head_extra.append('<meta name="robots" content="noindex">')
     if depth:
         head_extra.append(SHIM)
+    if slug not in COMPONENT_SLUGS:
+        head_extra.append(LAND)
     if slot_shim(src):
         head_extra.append(slot_shim(src))
     head_extra.append(I18N_TAG)
