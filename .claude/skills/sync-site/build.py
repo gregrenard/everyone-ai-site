@@ -171,6 +171,48 @@ def has_anchor(slug, anchor):
     return bool(re.search(r"""id\s*[=:]\s*["']%s["']""" % re.escape(anchor), t))
 
 
+LANG_CHEVRON = ('<svg width="9" height="9" viewBox="0 0 10 10" aria-hidden="true"><path d="M2 3.5l3 3 3-3" '
+                'fill="none" stroke="currentColor" strokeWidth="1.5"></path></svg>')
+
+
+def unify_header(html):
+    """Give the shared SiteHeader the same desktop "Our Initiatives" menu as Home.
+
+    Design ships two menus: Home opens "AIA / CALIBER" and "AIA Safety Builder" in a
+    fly-out next to "AIA Evaluation"; SiteHeader (the 14 other pages) lists them indented
+    in one column. The Home version is the reference. Its dropdown markup is copied from
+    Home.dc.html at build time, so a change to the Home menu in Design carries over, and
+    the three state hooks it needs (aiaOpen / openAia / closeAia) are added to the
+    SiteHeader logic. Inert once SiteHeader has the fly-out itself.
+    """
+    if "aiaOpen" in html:
+        return html
+    home = open(os.path.join(SRC, "Home.dc.html"), encoding="utf-8").read()
+    m = re.search(r'<sc-if value="\{\{ initOpen \}\}".*?</sc-if>(?=\n</div>\n<a href="Newsroom\.dc\.html")', home, re.S)
+    if not m or "aiaOpen" not in m.group(0):
+        raise SystemExit("unify_header: Initiatives dropdown not found in Home.dc.html")
+    block = m.group(0)
+    html, n = re.subn(r'<sc-if value="\{\{ initOpen \}\}".*?</sc-if>', lambda _: block, html, count=1, flags=re.S)
+    edits = [
+        ("initOpen: false,", "initOpen: false, aiaOpen: false,"),
+        ("initOpen: s.initOpen,", "initOpen: s.initOpen, aiaOpen: s.aiaOpen,"),
+        ("closeInit: () => this.setState({ initOpen: false }),",
+         "closeInit: () => this.setState({ initOpen: false, aiaOpen: false }),\n"
+         "      openAia: () => this.setState({ aiaOpen: true }),\n"
+         "      closeAia: () => this.setState({ aiaOpen: false }),"),
+    ]
+    for old, new in edits:
+        if html.count(old) != 1:
+            raise SystemExit("unify_header: expected exactly one %r in SiteHeader.dc.html" % old)
+        html = html.replace(old, new)
+    if n != 1:
+        raise SystemExit("unify_header: Initiatives dropdown not found in SiteHeader.dc.html")
+    # Home shows a chevron on the language button; SiteHeader does not.
+    html = html.replace("{{ langCode }}</button>", "{{ langCode }}" + LANG_CHEVRON + "</button>", 1)
+    return html
+
+
+
 def out_path(slug):
     return "index.html" if slug == "index" else slug + "/index.html"
 
@@ -282,6 +324,8 @@ def main():
     for comp in COMPONENTS:
         slug = comp[: -len(".dc.html")]
         src = open(os.path.join(SRC, comp), encoding="utf-8").read()
+        if slug == "SiteHeader":
+            src = unify_header(src)
         html = rewrite_links(src, "index")
         html = html.replace("<html>", '<html lang="en">', 1)
         html = html.replace("<meta charset=\"utf-8\">\n", '<meta charset="utf-8">\n<meta name="robots" content="noindex">\n', 1)
