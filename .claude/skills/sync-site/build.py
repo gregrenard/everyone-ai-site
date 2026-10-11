@@ -63,18 +63,23 @@ SHIM = (
 )
 # Arriving with a fragment (Home / Contact from another page): the browser scrolls
 # before the runtime has replaced the pre-rendered mirror, and the page lands one
-# viewport too low. Re-align on the rendered target for 4 s, until the visitor scrolls.
+# viewport too low. Re-align on the rendered target for 10 s (late images still shift
+# long pages such as Newsroom), until the visitor scrolls.
 # On every page, Home included (it has no <base>, so it does not carry SHIM). The id
 # exists twice (mirror/template and live render): take the last one that has a box.
+# The expected position is below the sticky header (scroll-padding-top, set by
+# sticky-header.js) plus the section's own scroll-margin-top.
 LAND = (
     '<script id="eai-hash-land">(function(){if(location.hash.length<2)return;var n=0,stop=false,id;'
     'try{id=decodeURIComponent(location.hash.slice(1));}catch(e){return;}'
     'function off(){stop=true;}'
     '["wheel","touchstart","keydown","mousedown"].forEach(function(t){addEventListener(t,off,{passive:true,once:true});});'
-    'var iv=setInterval(function(){if(stop||++n>16){clearInterval(iv);return;}'
+    'var iv=setInterval(function(){if(stop||++n>40){clearInterval(iv);return;}'
     'var all=document.querySelectorAll("[id]"),el=null;'
     'for(var i=0;i<all.length;i++)if(all[i].id===id&&all[i].getClientRects().length)el=all[i];'
-    'if(el&&Math.abs(el.getBoundingClientRect().top)>2)el.scrollIntoView();},250);})();</script>'
+    'if(!el)return;var want=(parseFloat(getComputedStyle(document.documentElement).scrollPaddingTop)||0)'
+    '+(parseFloat(getComputedStyle(el).scrollMarginTop)||0);'
+    'if(Math.abs(el.getBoundingClientRect().top-want)>2)el.scrollIntoView({behavior:"instant"});},250);})();</script>'
 )
 SLOTS = {}
 _slots_file = os.path.join(_HERE, "slot-images.json")
@@ -117,6 +122,8 @@ MOBILE_CSS = (
     '#dc-root [style*="text-align:justify"]{text-align:left!important}}</style>'
 )
 I18N_TAG = '<script src="eai-i18n.js" defer></script>'
+# Keeps the menu bar visible while scrolling (sticky-header.js, published as eai-sticky.js).
+STICKY_TAG = '<script src="eai-sticky.js" defer></script>'
 
 
 def emit_i18n():
@@ -126,6 +133,7 @@ def emit_i18n():
     shutil.rmtree(out_dir, ignore_errors=True)
     os.makedirs(out_dir)
     shutil.copyfile(os.path.join(_HERE, "i18n-overlay.js"), os.path.join(OUT, "eai-i18n.js"))
+    shutil.copyfile(os.path.join(_HERE, "sticky-header.js"), os.path.join(OUT, "eai-sticky.js"))
     catalog = None
     if os.path.exists(os.path.join(src_dir, "en.json")):
         catalog = set(json.load(open(os.path.join(src_dir, "en.json"), encoding="utf-8"))["units"])
@@ -231,6 +239,8 @@ def build_page(page):
     if slot_shim(src):
         head_extra.append(slot_shim(src))
     head_extra.append(I18N_TAG)
+    if slug not in COMPONENT_SLUGS:
+        head_extra.append(STICKY_TAG)
     head_extra.append(MOBILE_CSS)
 
     html = html.replace("<html>", '<html lang="en">', 1)
