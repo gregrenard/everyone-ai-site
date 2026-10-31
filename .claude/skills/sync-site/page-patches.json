@@ -69,9 +69,33 @@
     },
     {
       "file": "AIA Service.dc.html",
-      "why": "Public page showed an internal instruction ('Demo video - set the video URL ... in Tweaks'). Remove this patch when Design has the video.",
-      "find": "<h2[^>]*>See it in action</h2>\\n<div [^\\n]*\\n<sc-if value=\"\\{\\{ hasVideo[^\\n]*\\n<sc-if value=\"\\{\\{ noVideo[^\\n]*\\n</div>\\n",
-      "replace": ""
+      "why": "Demo video set in Design's Tweaks panel, not in the source.",
+      "find": "\\(this\\.props\\.demoVideoUrl \\|\\| ''\\)",
+      "replace": "(this.props.demoVideoUrl || 'https://youtu.be/Qia_h9cUH8I')"
+    },
+    {
+      "file": "About.dc.html",
+      "why": "No LinkedIn icon for a person without a profile link.",
+      "find": "(<a href=\"\\{\\{ m\\.li \\}\\}\".*?</a>)",
+      "replace": "<sc-if value=\"{{ m.hasLi }}\" hint-placeholder-val=\"{{ true }}\">\\1</sc-if>"
+    },
+    {
+      "file": "About.dc.html",
+      "why": "No LinkedIn icon for a person without a profile link.",
+      "find": "name: p\\[0\\], role,",
+      "replace": "name: p[0], role, hasLi: !!p[1],"
+    },
+    {
+      "file": "Newsroom.dc.html",
+      "why": "French versions of the two Paris Peace Forum videos, linked on the live site.",
+      "find": "(\\['October 2025 – Panel Paris Peace Forum', [^\\n]*?), US \\+ ' ' \\+ FR\\],",
+      "replace": "\\1, US],\n    ['October 2025 – Panel Paris Peace Forum', \"Que doit l'IA aux enfants ? L'approche proactive de l'iRAISE pour une IA bénéfique pour les enfants\", 'https://www.youtube.com/watch?v=iPOfofVJRng', FR],"
+    },
+    {
+      "file": "Newsroom.dc.html",
+      "why": "French versions of the two Paris Peace Forum videos, linked on the live site.",
+      "find": "(\\['October 2025 – Roundtable Paris Peace Forum', [^\\n]*?), US \\+ ' ' \\+ FR\\],",
+      "replace": "\\1, US],\n    ['October 2025 – Roundtable Paris Peace Forum', \"Concevoir une IA bénéfique pour les enfants fondée sur des principes: table ronde multidisciplinaire\", 'https://www.youtube.com/watch?v=_3pNf8yDNrg', FR],"
     }
   ]
 }

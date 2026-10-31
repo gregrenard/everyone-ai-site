@@ -1,6 +1,10 @@
 {
   "_comment": "Language corrections from the editorial reviews of 2026-10-31, applied by build.py to the published translations and to the Home dictionary. Substring replacements, longest first. English corrections are in text-fixes.json.",
-  "all": {"AïA Safety Builders": "AïA Safety Builder"},
+  "all": {
+    "AïA Safety Builders": "AïA Safety Builder",
+    "Everyone.AI": "everyone.AI",
+    " TV5 Monde:": " - TV5 Monde"
+  },
   "fr": {
     "Demander un accès βeta": "Demander un accès à la version bêta",
     "βeta": "bêta",

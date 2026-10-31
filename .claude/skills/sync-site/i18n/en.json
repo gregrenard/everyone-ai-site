@@ -80,7 +80,7 @@
   "AïA\nEvaluation Framework": [
    "index"
   ],
-  "Enabling AI developers and decision makers to make AI systems safer for children, teenagers and young adults.": [
+  "Enabling AI developers and decision-makers to make AI systems safer for children, teenagers and young adults.": [
    "index"
   ],
   "Our latest publication:": [
@@ -130,7 +130,7 @@
    "index",
    "about"
   ],
-  "Mathilde Cerioli, Ph.D": [
+  "Mathilde Cerioli, Ph.D.": [
    "index",
    "formation",
    "about"
@@ -174,7 +174,7 @@
    "index",
    "newsroom"
   ],
-  "Feb 2025 TV5 Monde:": [
+  "Feb 2025 - TV5 Monde": [
    "index"
   ],
   "TV Interview during Paris AI Action Summit\n🇺🇸🇫🇷": [
@@ -187,7 +187,7 @@
   "Join the conversation": [
    "index"
   ],
-  "If you want to learn more or have any question, Contact us!": [
+  "If you want to learn more or have any questions, contact us!": [
    "index"
   ],
   "First Name\n*": [
@@ -1384,10 +1384,10 @@
    "privacy-policy",
    "accessibility-statement"
   ],
-  "Everyone.AI — Shaping Beneficial AI for Children": [
+  "everyone.AI — Shaping Beneficial AI for Children": [
    "index"
   ],
-  "everyone.AI anticipates and educates about the opportunities and risks of AI for children. Through research, collaboration, and advocacy.": [
+  "everyone.AI anticipates, educates on and evaluates the opportunities and risks of AI for children. Through research, collaboration, and advocacy.": [
    "index"
   ],
   "Research": [
@@ -1450,7 +1450,7 @@
    "privacy-policy",
    "accessibility-statement"
   ],
-  "Research | Everyone.AI": [
+  "Research | everyone.AI": [
    "research"
   ],
   "Reports and model policies from everyone.AI on how generative AI shapes children's cognitive, emotional, and developmental trajectories.": [
@@ -1461,7 +1461,7 @@
    "research/adolescents-and-anthropomorphic-ai",
    "research/the-future-of-child-development-in-the-ai-era"
   ],
-  "Author:\nMathilde Cerioli, Ph.D and Daniel Hipp, Ph.D.": [
+  "Author:\nMathilde Cerioli, Ph.D. and Daniel Hipp, Ph.D.": [
    "research/mapping-of-genai-impacts"
   ],
   "Abstract": [
@@ -1475,7 +1475,7 @@
   "Rather than treating AI's impacts on young people as uniformly beneficial or harmful, the mapping identifies where potential benefits and risks emerge along the same developmental continuum. It highlights how effects depend on the child's age, the purpose of use, the design of the system, the intensity and repetition of interaction, the presence of adult mediation, and the broader educational, social, and cultural context. The work surfaces areas of emerging scientific convergence, areas of uncertainty, and priority questions requiring further evidence, structured expert review, and international coordination.": [
    "research/mapping-of-genai-impacts"
   ],
-  "The mapping is intended as a scientific contribution to G7 discussions on generative AI and youth, supporting policy conversations that move online safety conversations toward a more precise understanding of children's cognitive, socioemotional, relational, and developmental needs in AI-mediated environments. Its purpose is not to provide a final or exhaustive assessment, but to establish a shared evidence-informed foundation for future research, governance, product evaluation, and international cooperation.": [
+  "The mapping is intended as a scientific contribution to G7 discussions on generative AI and youth, supporting policy discussions that move online safety conversations toward a more precise understanding of children's cognitive, socioemotional, relational, and developmental needs in AI-mediated environments. Its purpose is not to provide a final or exhaustive assessment, but to establish a shared evidence-informed foundation for future research, governance, product evaluation, and international cooperation.": [
    "research/mapping-of-genai-impacts"
   ],
   "Download Research Report": [
@@ -1513,10 +1513,10 @@
   "Report cover — Mapping of GenAI impacts on child development": [
    "research/mapping-of-genai-impacts"
   ],
-  "Mapping of GenAI impacts on child development | Everyone.AI": [
+  "Mapping of GenAI impacts on child development | everyone.AI": [
    "research/mapping-of-genai-impacts"
   ],
-  "Author: Mathilde Cerioli, Ph.D and Daniel Hipp, Ph.D. Developed in response to the French G7 Presidency's call for scientific contributions on generative AI and minors.": [
+  "Author: Mathilde Cerioli, Ph.D. and Daniel Hipp, Ph.D. Developed in response to the French G7 Presidency's call for scientific contributions on generative AI and minors.": [
    "research/mapping-of-genai-impacts"
   ],
   "AïA Evaluation Framework": [
@@ -1528,7 +1528,7 @@
   "Mission": [
    "aia-safety-builder"
   ],
-  "AIA is a way to test how AI interacts with young people. Experts identify what to look for, and we create the\nopen source\ninfrastructure to measure how the AI behaves, for example, whether it encourages someone to think for themselves or makes decisions for them.": [
+  "AïA is a way to test how AI interacts with young people. Experts identify what to look for, and we create the\nopen source\ninfrastructure to measure how the AI behaves, for example, whether it encourages someone to think for themselves or makes decisions for them.": [
    "aia-safety-builder"
   ],
   "Goals": [
@@ -1593,7 +1593,7 @@
   "VivaTech Tech for Change award": [
    "aia-safety-builder"
   ],
-  "AïA - Evaluation Framework | Everyone.AI": [
+  "AïA - Evaluation Framework | everyone.AI": [
    "aia-safety-builder"
   ],
   "AïA Evaluation Framework: when young people talk to AI, how do we know whether it's helping them or could be causing harm? We answer that question by measuring what AI systems do.": [
@@ -1602,7 +1602,7 @@
   "AïA Technical Method including CALIBER": [
    "aia-safety-builder/method"
   ],
-  "Framework Implementation - βeta version": [
+  "Framework Implementation - beta version": [
    "aia-safety-builder/method"
   ],
   "TABLE OF CONTENTS": [
@@ -1623,7 +1623,7 @@
   "Scientific lead: Dr. Mathilde Cerioli": [
    "aia-safety-builder/method"
   ],
-  "Research team: Olga Muss and Maxime Le Bourgeois": [
+  "Research team: Olga Muss Laurenty and Maxime Le Bourgeois": [
    "aia-safety-builder/method"
   ],
   "Technical team: Laurent Vernhes Chief Technical Officer, Marc Baillavoine Development Lead, and Greg Renard Technical Architect": [
@@ -1761,22 +1761,22 @@
   "Read Parts I–V": [
    "aia-safety-builder/method"
   ],
-  "Researchers interested in using AIA or contributing to this research program can contact\nmathilde@everyone.ai\n.": [
+  "Researchers interested in using AïA or contributing to this research program can contact\nmathilde@everyone.ai\n.": [
    "aia-safety-builder/method"
   ],
-  "AïA - Benchmark Tool Method | Everyone.AI": [
+  "AïA - Benchmark Tool Method | everyone.AI": [
    "aia-safety-builder/method"
   ],
-  "AïA Technical Method including CALIBER. Scientific lead: Dr. Mathilde Cerioli. Framework implementation, βeta version.": [
+  "AïA Technical Method including CALIBER. Scientific lead: Dr. Mathilde Cerioli. Framework implementation, beta version.": [
    "aia-safety-builder/method"
   ],
-  "AïA Safety Builder Service βeta": [
+  "AïA Safety Builder Service beta": [
    "aia-safety-builder/service"
   ],
   "Built for developers who care about the impact of AI on children": [
    "aia-safety-builder/service"
   ],
-  "Apply for βeta access": [
+  "Apply for beta access": [
    "aia-safety-builder/service"
   ],
   "Available AI safety tools miss how children actually form trust and attachment with conversational AI. AïA Safety Builder will help AI systems stakeholders not only check for harmful content but also identify behavioral risks.": [
@@ -1785,7 +1785,7 @@
   "Go beyond content moderation": [
    "aia-safety-builder/service"
   ],
-  "Most AI safety tools focus only on screening harmful content. AïA Safety Builder also evaluates AI powered responses for child developmental behavioral risk.": [
+  "Most AI safety tools focus only on screening harmful content. AïA Safety Builder also evaluates AI-powered responses for child developmental behavioral risk.": [
    "aia-safety-builder/service"
   ],
   "AïA Safety Builder helps AI companies by:": [
@@ -1899,6 +1899,9 @@
   "An AI-powered execution and assessment engine operationalizing large-scale behavioral evaluation, safety scoring, and monitoring of conversational AI systems.": [
    "aia-safety-builder/service"
   ],
+  "See it in action": [
+   "aia-safety-builder/service"
+  ],
   "Our Offers": [
    "aia-safety-builder/service"
   ],
@@ -1968,10 +1971,13 @@
   "Scoring sample — anthropomorphic, interactional and relational cues": [
    "aia-safety-builder/service"
   ],
-  "AïA - Safety Builder Beta Service | Everyone.AI": [
+  "AïA Safety Builder demo": [
    "aia-safety-builder/service"
   ],
-  "AïA Safety Builder Service βeta — built for developers who care about the impact of AI on children.": [
+  "AïA - Safety Builder Beta Service | everyone.AI": [
+   "aia-safety-builder/service"
+  ],
+  "AïA Safety Builder Service beta — built for developers who care about the impact of AI on children.": [
    "aia-safety-builder/service"
   ],
   "Contact Us": [
@@ -1983,7 +1989,7 @@
   "Schools / Educators / Parents / Students": [
    "formation"
   ],
-  "–\nHuman & Artificial Intelligences Workshop": [
+  "–\nHuman and Artificial Intelligences Workshop": [
    "formation"
   ],
   "–\nThe Future of Child Development in the AI Era": [
@@ -2007,7 +2013,7 @@
   "–\nEngineering Responsibility: Integrating Human Insights into AI Development": [
    "formation"
   ],
-  "–\nAnticipating AI: An Introduction to Future Challenges and Responsible Innovation.": [
+  "–\nAnticipating AI: An Introduction to Future Challenges and Responsible Innovation": [
    "formation"
   ],
   "Artificial Intelligence (AI) has the power to transform our world in meaningful and positive ways. To ensure this transformation is truly beneficial, it is essential to understand AI and its effects — particularly for younger generations (0–25 years old), whose cognitive development makes them more vulnerable to the risks linked to technology and screen use.": [
@@ -2028,7 +2034,7 @@
   "Human and Artificial Intelligences Workshop": [
    "formation"
   ],
-  "Audience:\nCollege students, learning expedition, product developers, AI curious thinkers": [
+  "Audience:\nCollege students, learning expeditions, product developers, AI-curious thinkers": [
    "formation"
   ],
   "Topic:\nDiscover human and artificial intelligence in a whole new light!": [
@@ -2055,7 +2061,7 @@
   "Topic:\nJoin us as we journey through a typical day in the life of an adolescent, examining the pervasive role of AI in social media, video games, and streaming services. We'll delve into both the positive and negative impacts these technologies have on teenagers' lives. This talk aims to equip both parents and children with the same foundational knowledge, fostering open, collaborative conversations. Attendees will leave with a deeper understanding of the underlying mechanisms of AI and receive practical advice on maintaining control in the digital realm.": [
    "formation"
   ],
-  "Anticipating AI: An Introduction to Future Challenges and Responsible Innovation.": [
+  "Anticipating AI: An Introduction to Future Challenges and Responsible Innovation": [
    "formation"
   ],
   "Topic:\nAI is advancing faster than ever, rapidly integrating into every aspect of our lives. As it becomes omnipresent, it's crucial to consider: How do we fully embrace its potential? This talk delves into the essential knowledge and critical questions we must address as both users and developers of AI technologies. Using real-world examples to identify opportunities and foresee potential risks, you are invited to engage in rethinking how to navigate the expanding landscape of AI.": [
@@ -2091,7 +2097,7 @@
   "Topic:\nIn this talk, we'll uncover the AI driving the apps, video games, and streaming services that captivate our children. We'll explore practical strategies for regaining control over our screen time and enriching our lives. The goal is to support youth wellbeing by providing clear, actionable strategies that empower families. Join us as we navigate the digital landscape, making informed choices to positively impact our daily routines and enhance the overall health of our youth.": [
    "formation"
   ],
-  "Audience:\nAI curious thinkers, product developers, parents and schools, institutions": [
+  "Audience:\nAI-curious thinkers, product developers, parents and schools, institutions": [
    "formation"
   ],
   "Topic:\nAs artificial intelligence becomes more woven into the fabric of daily life, it introduces both transformative opportunities and significant challenges, especially for children and young adults in the critical phases of brain development. In this enlightening session, we will unveil the crucial findings from our May 2024 Research Report. By examining how AI impacts young minds, the discussion will delve into the essential qualities that define and shape human development, addressing the inherent risks and outlining the potential for responsible AI to enrich and safeguard our children's futures. Join us to learn how these insights can drive the creation of AI that is not only technologically proficient but also nurtures and respects the complexities of human development.": [
@@ -2103,10 +2109,10 @@
   "Speakers": [
    "formation"
   ],
-  "Mathilde Cerioli, Ph.D\nholds a doctorate degree in Cognitive Neuroscience and a Master's Degree in Psychology, with a strong focus on child development. She specializes in the intersection of AI and child cognition, consulting for top EdTech and gaming companies. As the Chief Scientist at everyone.AI, Mathilde is dedicated to integrating responsible, safe, and ethical technology to benefit children's development.": [
+  "Mathilde Cerioli, Ph.D.\nholds a doctorate degree in Cognitive Neuroscience and a Master's Degree in Psychology, with a strong focus on child development. She specializes in the intersection of AI and child cognition, consulting for top EdTech and gaming companies. As the Chief Scientist at everyone.AI, Mathilde is dedicated to integrating responsible, safe, and ethical technology to benefit children's development.": [
    "formation"
   ],
-  "Anne-Sophie Seret\nis the Executive Director of everyone.AI. With a background in sales and entrepreneurship, she is passionate about using design thinking to understand users' needs and pain points. Through her work with Edtech companies, she recognized the transformative capabilities of AI and is dedicated to advocating for its ethical use while safeguarding future generations.": [
+  "Anne-Sophie Seret\nis the Executive Director of everyone.AI. With a background in sales and entrepreneurship, she is passionate about using design thinking to understand users' needs and pain points. Through her work with EdTech companies, she recognized the transformative capabilities of AI and is dedicated to advocating for its ethical use while safeguarding future generations.": [
    "formation"
   ],
   "Céline Malvoisin\nis a speech therapist and has worked with children and adults to help them overcome challenges related to speech, language, written expression or neurological disorders. Passionate about education, she works as Chief Learning Officer of everyone.AI for a responsible, safe and ethical integration of AI in order to ensure the well-being and development of children.": [
@@ -2115,7 +2121,7 @@
   "Grégory Renard\nis an expert in applied artificial intelligence (NLP, conversational AI, and foundation models) with over 20 years of experience. Recognized for his contributions, he received NASA's merit award in 2022 for AI applied to Earth and Space sciences. He has advised several governments, including France where he initiated and collaborated on the AI for Humanity project in 2018. He has an informed strategic vision and focuses particularly on the ethical and social impacts of AI.": [
    "formation"
   ],
-  "Education | Everyone.AI": [
+  "Education | everyone.AI": [
    "formation"
   ],
   "Conferences, interactive talks, keynotes and workshops by everyone.AI for schools, educators, parents, students, companies and product developers.": [
@@ -2127,7 +2133,7 @@
   "i-raise.org": [
    "international-coalition"
   ],
-  "The Challenge & Our Mission :": [
+  "The Challenge & Our Mission:": [
    "international-coalition"
   ],
   "iRAISE is a global initiative to ensure that AI supports the healthy cognitive and emotional development of children. Led by everyone.AI and the\nParis Peace Forum\n, it brings together researchers, industry, governments, and civil society to design AI with young people in mind—right from the start.": [
@@ -2145,7 +2151,7 @@
   "3 Pillars": [
    "international-coalition"
   ],
-  "The Coalition's Participants :": [
+  "The Coalition's Participants:": [
    "international-coalition"
   ],
   "Governments": [
@@ -2379,7 +2385,7 @@
   "Dr. Luc Julia\n,\nChief Scientific Officer Renault Group": [
    "international-coalition"
   ],
-  "Grégory Renard\n,\nHead Applied ML, Board President of everyone.AI": [
+  "Grégory Renard\n,\nFellow AI Architect - Applied Gen AI - Board President - Cofounder, everyone.AI": [
    "international-coalition"
   ],
   "Pr. Laurence Devillers\n,\nResearcher at CNRS, President of the Blaise Pascal Foundation, Author, Sorbonne": [
@@ -2406,7 +2412,7 @@
   "Dr. Sara Grimes\n,\nWolfe Chair in Scientific and Technological Literacy and Professor in Communication Studies, McGill University": [
    "international-coalition"
   ],
-  "Dr. Mathilde Cerioli\n,\nChief Scientific Officer everyone.AI": [
+  "Dr. Mathilde Cerioli\n,\nChief Scientist - Cofounder, everyone.AI": [
    "international-coalition"
   ],
   "Dr. Maxime Derian\n,\nResearch Associate at the C²DH – Digital Anthropology & Environmental History, Université du Luxembourg": [
@@ -2418,25 +2424,25 @@
   "Dr. Jeff Hancock\n,\nDirector Social Media Lab Stanford University": [
    "international-coalition"
   ],
-  "Dr. Jodi Halpern\n,\nPh.D, Chancellor's Chair, UC Berkeley": [
+  "Dr. Jodi Halpern\n,\nPh.D., Chancellor's Chair, UC Berkeley": [
    "international-coalition"
   ],
-  "Dr. Mizuko Ito\n,\nPh.D, Director Connected Learning Lab and Professor in Residence, University of California – Irvine": [
+  "Dr. Mizuko Ito\n,\nPh.D., Director Connected Learning Lab and Professor in Residence, University of California – Irvine": [
    "international-coalition"
   ],
-  "Dr. Amin Marei\n,\nPh.D, Lecturer at Harvard Graduate School of Education": [
+  "Dr. Amin Marei\n,\nPh.D., Lecturer at Harvard Graduate School of Education": [
    "international-coalition"
   ],
-  "Dr. Caroline Lancelot Miltgen\n,\nPh.D, Professor Audencia": [
+  "Dr. Caroline Lancelot Miltgen\n,\nPh.D., Professor Audencia": [
    "international-coalition"
   ],
-  "Pr. Eglė Celiesienė\n,\nPh.D, Research Fellow, Lithuanian College of Democracy": [
+  "Pr. Eglė Celiesienė\n,\nPh.D., Research Fellow, Lithuanian College of Democracy": [
    "international-coalition"
   ],
   "Evren Yiğit\n,\nFounder of Mako Kids, Consultant at KidsAI": [
    "international-coalition"
   ],
-  "Pr. Adam Dubé\n,\nPh.D, Experimental Psychology – Associate Professor McGill University": [
+  "Pr. Adam Dubé\n,\nPh.D., Experimental Psychology – Associate Professor McGill University": [
    "international-coalition"
   ],
   "Allison Langer, PhD\n,\nPostdoctoral Fellow, University of Pennsylvania": [
@@ -2535,7 +2541,7 @@
   "Dr. Teddy Nalubega\n,\nHead of AI Division, Knowledge Consulting Limited": [
    "international-coalition"
   ],
-  "Dr. Vera Radeva\n,\nPh.D Lecturer at Sciences Po Paris, Affiliated PhD at CERI": [
+  "Dr. Vera Radeva\n,\nPh.D., Lecturer at Sciences Po Paris, Affiliated PhD at CERI": [
    "international-coalition"
   ],
   "Barbara Janta, PhD.\n,\nTechnical Director, Risk & Policy Analysts Ltd": [
@@ -2625,10 +2631,10 @@
   "AI is rapidly reshaping our world and how we interact with our environment. For children, however, those changes present unique challenges, as their brains are still developing.\nFrom birth to around 25 years of age, the brain experiences sensitive periods when learning is at its peak for specific skills, making it exceptionally adaptable but also leaving it particularly vulnerable in inadequately stimulating environments. AI holds significant potential in this context—it can either enhance development, notably through educational tools, or hinder it by reshaping the experiences that influence how children engage with the world and those around them.": [
    "international-coalition"
   ],
-  "To ensure AI supports rather than disrupts development, we must integrate deep human insight with technical innovation. AI can foster cognitive and socio-emotional growth, but only when it is designed with a deep understanding of human functioning.\nUnlocking its potential while minimizing harm requires building transdisciplinary collaborations across all stakeholders—including governments, international organizations, tech companies, investors, researchers, civil society representatives – NGOs, educators, families —to ensure the development, deployment and adoption of beneficial AI for children.": [
+  "To ensure AI supports rather than disrupts development, we must integrate deep human insight with technical innovation. AI can foster cognitive and socio-emotional growth, but only when it is designed with a deep understanding of human functioning.\nUnlocking its potential while minimizing harm requires building transdisciplinary collaborations across all stakeholders—including governments, international organizations, tech companies, investors, researchers, civil society representatives – NGOs, educators, families — to ensure the development, deployment and adoption of beneficial AI for children.": [
    "international-coalition"
   ],
-  "Everyone.ai and the Paris Peace Forum are co-launching a multistakeholder international coalition at the Paris AI Action Summit.": [
+  "everyone.AI and the Paris Peace Forum co-launched a multistakeholder international coalition at the Paris AI Action Summit.": [
    "international-coalition"
   ],
   "Launched during the AI Action Summit": [
@@ -2709,14 +2715,14 @@
    "newsroom",
    "contact"
   ],
-  "Once you click on submit, your email will be part of our email list, you can unsubscribe at any times. Please check our privacy policy for more details. *": [
+  "Once you click on submit, your email will be part of our email list, you can unsubscribe at any time. Please check our privacy policy for more details. *": [
    "international-coalition"
   ],
   "Send Message": [
    "international-coalition",
    "newsroom"
   ],
-  "International Coalition | Everyone.AI": [
+  "International Coalition | everyone.AI": [
    "international-coalition"
   ],
   "iRAISE is a global initiative to ensure that AI supports the healthy cognitive and emotional development of children. Led by everyone.AI and the Paris Peace Forum.": [
@@ -2731,7 +2737,7 @@
   "Shape Beneficial AI for children": [
    "open-letter"
   ],
-  "This open letter seeks to draw critical attention to the impact of AI on children and adolescents–a vital issue that has been widely overlooked in discussions about the future of AI. Our goals are clear:": [
+  "This open letter seeks to draw critical attention to the impact of AI on children and adolescents — a vital issue that has been widely overlooked in discussions about the future of AI. Our goals are clear:": [
    "open-letter"
   ],
   "Define the issues we're facing": [
@@ -2791,9 +2797,6 @@
   "We need your voice. This letter is a rallying call — to AI practitioners, policymakers, and civil society — to recognize, prioritize, and act now to protect children in AI development. Sign and share widely. Every signature strengthens this movement. Let's build an AI future that truly serves the next generation.": [
    "open-letter"
   ],
-  "I want to sign the Pledge asking for Responsible AI for Children.": [
-   "open-letter"
-  ],
   "Organization / Title": [
    "open-letter"
   ],
@@ -2833,7 +2836,7 @@
   "Human Sciences & Education Experts": [
    "open-letter"
   ],
-  "Mathilde Cerioli\n,\nChief Scientific Officer everyone.AI": [
+  "Mathilde Cerioli\n,\nChief Scientist - Cofounder, everyone.AI": [
    "open-letter"
   ],
   "Michael Preston\n,\nExecutive Director Joan Ganz Cooney Center": [
@@ -2848,19 +2851,19 @@
   "Deborah Elalouf-Lewiner\n,\nExpert EdTech, CEO at Tralalère": [
    "open-letter"
   ],
-  "Axelle Desaint\n,\nDirector of Internet Sans Crainte at tralalère": [
+  "Axelle Desaint\n,\nDirector of Internet Sans Crainte at Tralalère": [
    "open-letter"
   ],
   "Policy Experts": [
    "open-letter"
   ],
-  "Florence G'Sell\n,\nVisiting professor of Law at Stanford University": [
+  "Florence G'Sell\n,\nVisiting Professor of Law at Stanford University": [
    "open-letter"
   ],
-  "Others Experts": [
+  "Other Experts": [
    "open-letter"
   ],
-  "Medhi Benhabri-Dubois\n,\nFrench High Official": [
+  "Mehdi Benhabri-Dubois\n,\nFrench High Official": [
    "open-letter"
   ],
   "Arnaud Auger\n,\nDirector, Deputy Head of C.Lab, Enterprise": [
@@ -2896,7 +2899,7 @@
   "Read the sponsorship brochure": [
    "open-letter"
   ],
-  "Open Letter | Everyone.AI": [
+  "Open Letter | everyone.AI": [
    "open-letter"
   ],
   "Shape Beneficial AI for children. This open letter seeks to draw critical attention to the impact of AI on children and adolescents.": [
@@ -2956,7 +2959,7 @@
   "March 2025 – Merci SF": [
    "newsroom"
   ],
-  "Everyone.AI – Advocating for a Beneficial AI for Children\n🇺🇸": [
+  "everyone.AI – Advocating for a Beneficial AI for Children\n🇺🇸": [
    "newsroom"
   ],
   "Feb 2025 – Media India Group": [
@@ -3079,7 +3082,7 @@
   "Dec 2025 – Silicon Carne": [
    "newsroom"
   ],
-  "Chat-GPT 5.2 | Disney vend Mickey à OpenAI | Suicide assisté par Chatbot\n🇫🇷": [
+  "ChatGPT 5.2 | Disney vend Mickey à OpenAI | Suicide assisté par Chatbot\n🇫🇷": [
    "newsroom"
   ],
   "Nov 2025 – Monde Numérique": [
@@ -3091,22 +3094,22 @@
   "Sept 2025 – Silicon Carne": [
    "newsroom"
   ],
-  "Scandales & Milliards: Meta, Open AI, Trump et la Tech!\n🇫🇷": [
+  "Scandales & Milliards: Meta, OpenAI, Trump et la Tech !\n🇫🇷": [
    "newsroom"
   ],
   "Jul 2025 – Silicon Carne": [
    "newsroom"
   ],
-  "L'intelligence Artificielle nous rend-elle plus con?\n🇫🇷": [
+  "L'intelligence artificielle nous rend-elle plus con ?\n🇫🇷": [
    "newsroom"
   ],
   "Jun 2025 – VLAN!": [
    "newsroom"
   ],
-  "Partie 2 : #357 Eduquer nos enfants à l'ère de l'intelligence artificielle\n🇫🇷": [
+  "Partie 2 : #357 Éduquer nos enfants à l'ère de l'intelligence artificielle\n🇫🇷": [
    "newsroom"
   ],
-  "Partie 1 : #357 Eduquer nos enfants à l'ère de l'intelligence artificielle\n🇫🇷": [
+  "Partie 1 : #357 Éduquer nos enfants à l'ère de l'intelligence artificielle\n🇫🇷": [
    "newsroom"
   ],
   "Jun 2025 – Grand Angle": [
@@ -3136,7 +3139,7 @@
   "Jan 2025 – Soft Kid": [
    "newsroom"
   ],
-  "IA & Education : Revolution ou danger pour nos enfants?\n🇫🇷": [
+  "IA & Éducation : Révolution ou danger pour nos enfants ?\n🇫🇷": [
    "newsroom"
   ],
   "Nov 2024 – Mon Carnet, l'actu numérique": [
@@ -3178,13 +3181,19 @@
   "October 2025 – Panel Paris Peace Forum": [
    "newsroom"
   ],
-  "What does AI Owe Children? iRAISE Proactive Approach for Beneficial AI for Children\n🇺🇸 🇫🇷": [
+  "What does AI Owe Children? iRAISE Proactive Approach for Beneficial AI for Children\n🇺🇸": [
+   "newsroom"
+  ],
+  "Que doit l'IA aux enfants ? L'approche proactive de l'iRAISE pour une IA bénéfique pour les enfants\n🇫🇷": [
    "newsroom"
   ],
   "October 2025 – Roundtable Paris Peace Forum": [
    "newsroom"
   ],
-  "Forging the Future: A Dialogue on Beneficial AI for Children, Starting with Principles\n🇺🇸 🇫🇷": [
+  "Forging the Future: A Dialogue on Beneficial AI for Children, Starting with Principles\n🇺🇸": [
+   "newsroom"
+  ],
+  "Concevoir une IA bénéfique pour les enfants fondée sur des principes: table ronde multidisciplinaire\n🇫🇷": [
    "newsroom"
   ],
   "April 2025 – Science Diplomacy Summit": [
@@ -3214,7 +3223,7 @@
   "Sept 2026 – Webinar": [
    "newsroom"
   ],
-  "Evaluation and Making Ed Tech Tools Safe by Design": [
+  "Evaluation and Making EdTech Tools Safe by Design": [
    "newsroom"
   ],
   "May 2026 – iRAISE Webinar": [
@@ -3238,10 +3247,10 @@
   "Award Leading Woman AI": [
    "newsroom"
   ],
-  "2025 – Walloon Merit Awards": [
+  "2025 – Walloon Merit Award (Mérite wallon)": [
    "newsroom"
   ],
-  "Grégory Renard received the Walloon Merit Awards in 2025 for his pioneering work in conversational AI and his commitment to ethical, human-centered innovation.": [
+  "Grégory Renard received the Walloon Merit Award (Mérite wallon) in 2025 for his pioneering work in conversational AI and his commitment to ethical, human-centered innovation.": [
    "newsroom"
   ],
   "December 2024 – Berkeley World Business Analytics Award": [
@@ -3271,13 +3280,13 @@
   "Your Message *": [
    "newsroom"
   ],
-  "I'd like to receive occasional updates from Everyone.AI. You can unsubscribe at any time. See our privacy policy for more details.": [
+  "I'd like to receive occasional updates from everyone.AI. You can unsubscribe at any time. See our privacy policy for more details.": [
    "newsroom"
   ],
   "Categories": [
    "newsroom"
   ],
-  "Newsroom | Everyone.AI": [
+  "Newsroom | everyone.AI": [
    "newsroom"
   ],
   "Press, podcasts, events, webinars and awards featuring everyone.AI's work on beneficial AI for children.": [
@@ -3316,9 +3325,6 @@
   "Research Team": [
    "about"
   ],
-  "Chief Scientist": [
-   "about"
-  ],
   "Olga Muss Laurenty": [
    "about"
   ],
@@ -3334,13 +3340,13 @@
   "Child Experienced Researcher Youth Voices": [
    "about"
   ],
-  "Sonia Tiwari, Ph.D": [
+  "Sonia Tiwari, Ph.D.": [
    "about"
   ],
   "Children's Media Researcher": [
    "about"
   ],
-  "Nandini Asavari Bharadwaj, Ph.D": [
+  "Nandini Asavari Bharadwaj, Ph.D.": [
    "about"
   ],
   "AI in Education and Child Development Researcher": [
@@ -3365,9 +3371,6 @@
    "about"
   ],
   "Full Stack Builder": [
-   "about"
-  ],
-  "Fellow Chief AI Officer - Board President": [
    "about"
   ],
   "US Contributors": [
@@ -3550,10 +3553,10 @@
   "Email Grégory Renard": [
    "about"
   ],
-  "Mathilde Cerioli, Ph.D on LinkedIn": [
+  "Mathilde Cerioli, Ph.D. on LinkedIn": [
    "about"
   ],
-  "Email Mathilde Cerioli, Ph.D": [
+  "Email Mathilde Cerioli, Ph.D.": [
    "about"
   ],
   "Céline Malvoisin on LinkedIn": [
@@ -3586,16 +3589,16 @@
   "Email Polina Lulu": [
    "about"
   ],
-  "Sonia Tiwari, Ph.D on LinkedIn": [
+  "Sonia Tiwari, Ph.D. on LinkedIn": [
    "about"
   ],
-  "Email Sonia Tiwari, Ph.D": [
+  "Email Sonia Tiwari, Ph.D.": [
    "about"
   ],
-  "Nandini Asavari Bharadwaj, Ph.D on LinkedIn": [
+  "Nandini Asavari Bharadwaj, Ph.D. on LinkedIn": [
    "about"
   ],
-  "Email Nandini Asavari Bharadwaj, Ph.D": [
+  "Email Nandini Asavari Bharadwaj, Ph.D.": [
    "about"
   ],
   "Hannah Griswold on LinkedIn": [
@@ -3629,12 +3632,6 @@
    "about"
   ],
   "Email Julien Etienne": [
-   "about"
-  ],
-  "Laura Berton on LinkedIn": [
-   "about"
-  ],
-  "Email Laura Berton": [
    "about"
   ],
   "Jean-Pierre Levieux on LinkedIn": [
@@ -3757,31 +3754,31 @@
   "Thaïs Artaud on LinkedIn": [
    "about"
   ],
-  "About | Everyone.AI": [
+  "About | everyone.AI": [
    "about"
   ],
   "Our values and our team: bridging multi-disciplinary experiences and expertise for a better AI for children.": [
    "about"
   ],
-  "Make a Tax-Deductible donation": [
+  "Make a Tax-Deductible Donation": [
    "donate"
   ],
   "Make a donation in Euros": [
    "donate"
   ],
-  "Your donation is tax deductible in France for French tax payers.": [
+  "Your donation is tax-deductible in France for French taxpayers.": [
    "donate"
   ],
   "Donate in Euros": [
    "donate"
   ],
-  "Tax deductible donation in Dollars": [
+  "Tax-deductible donation in Dollars": [
    "donate"
   ],
-  "Your donation is tax deductible in Dollars for US tax payers.": [
+  "Your donation is tax-deductible in Dollars for US taxpayers.": [
    "donate"
   ],
-  "Donate | Everyone.AI": [
+  "Donate | everyone.AI": [
    "donate"
   ],
   "Support everyone.AI, a 501(c)(3) nonprofit. Make a tax-deductible donation in Euros or Dollars.": [
@@ -3790,7 +3787,7 @@
   "An evidence-informed synthesis for youth wellbeing and safety, bridging science, product design, and governance.": [
    "research/adolescents-and-anthropomorphic-ai"
   ],
-  "Author:\nMathilde Cerioli, Ph.D": [
+  "Author:\nMathilde Cerioli, Ph.D.": [
    "research/adolescents-and-anthropomorphic-ai"
   ],
   "Conversational AI is now embedded in adolescents' daily lives, supporting tasks that range from homework to emotional reassurance. Regardless of intent, adolescents tend to relate to these systems socially. This creates a core question for governance and design: do AI interactions support adolescents' development toward autonomy, resilience, and independent thinking, or do they foster reliance patterns that displace real relationships and weaken critical skills?": [
@@ -3815,13 +3812,13 @@
   "Report cover — Adolescents & Anthropomorphic AI: Rethinking Design for Wellbeing": [
    "research/adolescents-and-anthropomorphic-ai"
   ],
-  "Adolescents & Anthropomorphic AI: Rethinking Design for Wellbeing | Everyone.AI": [
+  "Adolescents & Anthropomorphic AI: Rethinking Design for Wellbeing | everyone.AI": [
    "research/adolescents-and-anthropomorphic-ai"
   ],
   "Author: Mathilde Cerioli, Ph.D. Conversational AI is now embedded in adolescents' daily lives, supporting tasks that range from homework to emotional reassurance.": [
    "research/adolescents-and-anthropomorphic-ai"
   ],
-  "This report explores the potential implications of rapidly integrating Artificial Intelligence (AI) applications into children's environments. The introduction of AI in our daily lives necessitates scrutiny considering the significant role of the environment in shaping cognition, socio-emotional skills, and behaviors, especially during the first 25 years of cerebral development. As AI becomes prevalent in educational and leisure activities, it will significantly modify the experiences of children and adolescents, presenting both challenges and opportunities for their developmental trajectories. This analysis was informed by consulting with 15 experts from pertinent disciplines (AI, product development, child development, and neurosciences), along with a comprehensive review of scientific literature on children development and child-technology interactions. Overall, AI experts anticipate that AI will transform leisure activities, revolutionize education, and redefine human-machine interactions. While AI offers substantial benefits in fostering interactive engagement for example, it also poses risks that require careful considerations, especially during sensitive developmental periods. The report advocates for proactive international collaboration across multiple disciplines and increased research into how technological innovations affect child development. Such efforts are crucial for designing a sustainable and ethical future for the next generation through specific child-centered regulations, and helping to educate all potential stakeholders, (regulators, developers, parents and educators, children) about responsible AI use and its potential impacts on child development.": [
+  "This report explores the potential implications of rapidly integrating Artificial Intelligence (AI) applications into children's environments. The introduction of AI in our daily lives necessitates scrutiny considering the significant role of the environment in shaping cognition, socio-emotional skills, and behaviors, especially during the first 25 years of cerebral development. As AI becomes prevalent in educational and leisure activities, it will significantly modify the experiences of children and adolescents, presenting both challenges and opportunities for their developmental trajectories. This analysis was informed by consulting with 15 experts from pertinent disciplines (AI, product development, child development, and neurosciences), along with a comprehensive review of scientific literature on child development and child-technology interactions. Overall, AI experts anticipate that AI will transform leisure activities, revolutionize education, and redefine human-machine interactions. While AI offers substantial benefits in fostering interactive engagement for example, it also poses risks that require careful consideration, especially during sensitive developmental periods. The report advocates for proactive international collaboration across multiple disciplines and increased research into how technological innovations affect child development. Such efforts are crucial for designing a sustainable and ethical future for the next generation through specific child-centered regulations, and helping to educate all potential stakeholders (regulators, developers, parents and educators, children) about responsible AI use and its potential impacts on child development.": [
    "research/the-future-of-child-development-in-the-ai-era"
   ],
   "Download the Executive Summary (English)": [
@@ -3842,7 +3839,7 @@
   "Webinar invitation — The Future of Child Development in the AI Era": [
    "research/the-future-of-child-development-in-the-ai-era"
   ],
-  "The Future of Child Development in the AI Era | Everyone.AI": [
+  "The Future of Child Development in the AI Era | everyone.AI": [
    "research/the-future-of-child-development-in-the-ai-era"
   ],
   "This report explores the potential implications of rapidly integrating Artificial Intelligence (AI) applications into children's environments.": [
@@ -3857,7 +3854,7 @@
   "One of the core challenges in youth AI safety is structural: experts in child and adolescent development are often not the ones drafting the technical rules that govern AI systems, while the teams building those systems do not always have sufficient developmental or psychosocial expertise to define those risks on their own.": [
    "research/relational-positioning-dependency-exclusivity-policy-rpd"
   ],
-  "At everyone.ai, our work is designed to help close that gap. Through our research, our operationalisation tools and through the iRAISE coalition, we bring together expertise across child development, psychology, education, neuroscience, behavior, and AI so that youth-relevant risks can inform product design and policy in more direct and operational ways, including through AI tools. Our aim is to move the field from broad conceptual principles toward guidance that can be implemented and monitored in real systems, while anticipating emerging risks and equipping stakeholders to address them.": [
+  "At everyone.ai, our work is designed to help close that gap. Through our research, our operationalization tools and through the iRAISE coalition, we bring together expertise across child development, psychology, education, neuroscience, behavior, and AI so that youth-relevant risks can inform product design and policy in more direct and operational ways, including through AI tools. Our aim is to move the field from broad conceptual principles toward guidance that can be implemented and monitored in real systems, while anticipating emerging risks and equipping stakeholders to address them.": [
    "research/relational-positioning-dependency-exclusivity-policy-rpd"
   ],
   "OpenAI's recent release of prompt-based teen safety policies for gpt-oss-safeguard, their open-weight safety model, is a meaningful step in this direction, and one that points to a broader need. One of the longstanding weaknesses in this field has been the difficulty of translating research and expert judgment into standards that technical teams can actually use. Policy formats of this kind are valuable because they create a more practical bridge between multidisciplinary expertise and technical implementation.": [
@@ -3881,7 +3878,7 @@
   "Download the Policy": [
    "research/relational-positioning-dependency-exclusivity-policy-rpd"
   ],
-  "Relational Positioning, Dependency & Exclusivity Policy (#RPD) | Everyone.AI": [
+  "Relational Positioning, Dependency & Exclusivity Policy (#RPD) | everyone.AI": [
    "research/relational-positioning-dependency-exclusivity-policy-rpd"
   ],
   "One of the core challenges in youth AI safety is structural: experts in child and adolescent development are often not the ones drafting the technical rules that govern AI systems.": [
@@ -3911,7 +3908,7 @@
   "Send": [
    "contact"
   ],
-  "Contact | Everyone.AI": [
+  "Contact | everyone.AI": [
    "contact"
   ],
   "Contact everyone.AI, a 501(c)(3) nonprofit working for beneficial AI for children: send us a message or write to us.": [
@@ -4109,7 +4106,7 @@
   "Address\n: everyone.AI, 1259 El Camino Real, Unit #1042, Menlo Park, CA 94025": [
    "privacy-policy"
   ],
-  "Privacy Policy | Everyone.AI": [
+  "Privacy Policy | everyone.AI": [
    "privacy-policy"
   ],
   "How everyone.AI collects, uses and protects your personal information.": [
@@ -4121,7 +4118,7 @@
   "We believe everyone should have access to digital experiences and continually strive to enhance the accessibility of our website. Everyone AI commitment is guided by our accessibility policy to ensure that people with disabilities have full and equal opportunity to access and benefit from the experiences / content, products, services, information offered by Everyone AI through\neveryone.ai": [
    "accessibility-statement"
   ],
-  "Accessibility Statement | Everyone.AI": [
+  "Accessibility Statement | everyone.AI": [
    "accessibility-statement"
   ],
   "The commitment of everyone.AI to an accessible website for all users.": [
