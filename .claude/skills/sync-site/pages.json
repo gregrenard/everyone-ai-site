@@ -108,6 +108,41 @@
       "design": "Accessibility Statement.dc.html",
       "slug": "accessibility-statement",
       "role": "content"
+    },
+    {
+      "design": "Terms and Conditions.dc.html",
+      "slug": "terms-and-conditions",
+      "role": "content"
+    },
+    {
+      "design": "AIA Info.dc.html",
+      "slug": "aia-safety-builder/info",
+      "role": "content"
+    },
+    {
+      "design": "Workshop Dec 10.dc.html",
+      "slug": "workshop-dec10th",
+      "role": "content"
+    },
+    {
+      "design": "Thank You Open Letter.dc.html",
+      "slug": "thank-you-open-letter-le-monde",
+      "role": "content"
+    },
+    {
+      "design": "Thank You Webinar.dc.html",
+      "slug": "thank-you-access-webinar",
+      "role": "content"
+    },
+    {
+      "design": "Events.dc.html",
+      "slug": "events",
+      "role": "content"
+    },
+    {
+      "design": "Blog.dc.html",
+      "slug": "blog",
+      "role": "content"
     }
   ],
   "components": [

@@ -215,42 +215,6 @@
   "file": "assets/slots/news-202602-Page-Newsroom-20.webp",
   "from": "wp-content/uploads/2026/02/Page-Newsroom-20.png"
  },
- "news-event-0": {
-  "file": "assets/slots/news-202607-Page-Newsroom-25.webp",
-  "from": "wp-content/uploads/2026/07/Page-Newsroom-25.webp"
- },
- "news-event-1": {
-  "file": "assets/slots/news-202606-maxresdefault.webp",
-  "from": "wp-content/uploads/2026/06/maxresdefault.jpg"
- },
- "news-event-2": {
-  "file": "assets/slots/news-202606-maxresdefault-2.webp",
-  "from": "wp-content/uploads/2026/06/maxresdefault-2.webp"
- },
- "news-event-3": {
-  "file": "assets/slots/news-202511-1-1.webp",
-  "from": "wp-content/uploads/2025/11/1-1.png"
- },
- "news-event-4": {
-  "file": "assets/slots/news-202511-1.webp",
-  "from": "wp-content/uploads/2025/11/1.png"
- },
- "news-event-5": {
-  "file": "assets/slots/news-202506-Sans-titre-1599-x-971-px-2.webp",
-  "from": "wp-content/uploads/2025/06/Sans-titre-1599-x-971-px-2.png"
- },
- "news-event-6": {
-  "file": "assets/slots/news-202506-Sans-titre-1599-x-971-px-15.webp",
-  "from": "wp-content/uploads/2025/06/Sans-titre-1599-x-971-px-15.png"
- },
- "news-event-7": {
-  "file": "assets/slots/news-202506-Sans-titre-1599-x-971-px-3.webp",
-  "from": "wp-content/uploads/2025/06/Sans-titre-1599-x-971-px-3.png"
- },
- "news-event-8": {
-  "file": "assets/slots/news-202506-Sans-titre-1599-x-971-px-13.webp",
-  "from": "wp-content/uploads/2025/06/Sans-titre-1599-x-971-px-13.png"
- },
  "news-podcast-0": {
   "file": "assets/slots/news-202610-Page-Newsroom-28.webp",
   "from": "wp-content/uploads/2026/10/Page-Newsroom-28.webp"
@@ -362,5 +326,49 @@
  "news-webinar-2": {
   "file": "assets/slots/news-202506-Sans-titre-1599-x-971-px-7.webp",
   "from": "wp-content/uploads/2025/06/Sans-titre-1599-x-971-px-7.png"
+ },
+ "news-event-0": {
+  "file": "assets/slots/news-202607-Page-Newsroom-25.webp",
+  "from": "wp-content/uploads/2026/07/Page-Newsroom-25.webp"
+ },
+ "news-event-1": {
+  "file": "assets/slots/news-202606-maxresdefault.webp",
+  "from": "wp-content/uploads/2026/06/maxresdefault.jpg"
+ },
+ "news-event-2": {
+  "file": "assets/slots/news-202606-maxresdefault-2.webp",
+  "from": "wp-content/uploads/2026/06/maxresdefault-2.webp"
+ },
+ "news-event-3": {
+  "file": "assets/slots/news-202511-1-1.webp",
+  "from": "wp-content/uploads/2025/11/1-1.png"
+ },
+ "news-event-4": {
+  "file": "assets/slots/news-202511-1-1.webp",
+  "from": "wp-content/uploads/2025/11/1-1.png"
+ },
+ "news-event-5": {
+  "file": "assets/slots/news-202511-1.webp",
+  "from": "wp-content/uploads/2025/11/1.png"
+ },
+ "news-event-6": {
+  "file": "assets/slots/news-202511-1.webp",
+  "from": "wp-content/uploads/2025/11/1.png"
+ },
+ "news-event-7": {
+  "file": "assets/slots/news-202506-Sans-titre-1599-x-971-px-2.webp",
+  "from": "wp-content/uploads/2025/06/Sans-titre-1599-x-971-px-2.png"
+ },
+ "news-event-8": {
+  "file": "assets/slots/news-202506-Sans-titre-1599-x-971-px-15.webp",
+  "from": "wp-content/uploads/2025/06/Sans-titre-1599-x-971-px-15.png"
+ },
+ "news-event-9": {
+  "file": "assets/slots/news-202506-Sans-titre-1599-x-971-px-3.webp",
+  "from": "wp-content/uploads/2025/06/Sans-titre-1599-x-971-px-3.png"
+ },
+ "news-event-10": {
+  "file": "assets/slots/news-202506-Sans-titre-1599-x-971-px-13.webp",
+  "from": "wp-content/uploads/2025/06/Sans-titre-1599-x-971-px-13.png"
  }
 }

@@ -48,3 +48,10 @@ Social hashtag: #BeneficialAIforChildren
 - [Contact](https://everyone.ai/contact/): email, postal address and contact form
 - [Privacy Policy](https://everyone.ai/privacy-policy/): how personal information is handled
 - [Accessibility Statement](https://everyone.ai/accessibility-statement/): commitment to WCAG 2.1 AA
+- [Terms and Conditions](https://everyone.ai/terms-and-conditions/): The terms that apply to the use of the everyone.AI website.
+- [How to read this beta report](https://everyone.ai/aia-safety-builder/info/): What AïA measures, how scores work and how to read the priority levels of the AïA Safety Builder beta report.
+- [Beneficial AI for Children: Kickoff with Workshop](https://everyone.ai/workshop-dec10th/): Workshop of December 10 in San Francisco, an official partner event of the Paris AI Action Summit.
+- [So what's next?](https://everyone.ai/thank-you-open-letter-le-monde/): Thank you for signing our open letter.
+- [Please watch the Webinar](https://everyone.ai/thank-you-access-webinar/): Webinar: The Future of Child Development in the AI Era.
+- [Events](https://everyone.ai/events/): Past and upcoming events of everyone.AI.
+- [Blog](https://everyone.ai/blog/): News and updates from everyone.AI.

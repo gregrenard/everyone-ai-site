@@ -5,7 +5,7 @@
       "file": "Donate.dc.html",
       "why": "The USD button linked to the page itself; the live site uses this Givebutter widget.",
       "find": "<a href=\"https://everyone\\.ai/donate/\"[^>]*>Donate in USD</a>",
-      "replace": "<givebutter-widget id=\"LPqXkg\"></givebutter-widget>"
+      "replace": "<givebutter-widget id=\"LPqXkg\" style=\"display:block;min-height:640px\"></givebutter-widget>"
     },
     {
       "file": "Donate.dc.html",
@@ -96,6 +96,230 @@
       "why": "French versions of the two Paris Peace Forum videos, linked on the live site.",
       "find": "(\\['October 2025 – Roundtable Paris Peace Forum', [^\\n]*?), US \\+ ' ' \\+ FR\\],",
       "replace": "\\1, US],\n    ['October 2025 – Roundtable Paris Peace Forum', \"Concevoir une IA bénéfique pour les enfants fondée sur des principes: table ronde multidisciplinaire\", 'https://www.youtube.com/watch?v=_3pNf8yDNrg', FR],"
+    },
+    {
+      "file": "AIA Method.dc.html",
+      "why": "Full document of the live page: Design has about 15 percent of it.",
+      "find": "<sc-for list=\"\\{\\{ sections \\}\\}\".*?(<p [^>]*>Researchers interested)",
+      "replace_file": "extra-pages/fragments/method-document.html",
+      "method": true
+    },
+    {
+      "file": "AIA Method.dc.html",
+      "why": "Full table of contents.",
+      "find": "toc: \\[.*?\\]\\n",
+      "replace": "toc: [{\"l\": \"Contributors\", \"href\": \"#top\"}, {\"l\": \"Executive Summary\", \"href\": \"#executive-summary\"}, {\"l\": \"Introduction\", \"href\": \"#introduction\"}, {\"l\": \"CALIBER: from model properties to developmental outcomes\", \"href\": \"#caliber\"}, {\"l\": \"First implementation of CALIBER: Socioaffective pull framework\", \"href\": \"#socioaffective\"}, {\"l\": \"Part I: SRL4Children\", \"href\": \"#part-I\"}, {\"l\": \"1. The Core engine of SRL4Children\", \"href\": \"#the-core\"}, {\"l\": \"2. CALIBER as a configurable framework\", \"href\": \"#configurable-framework\"}, {\"l\": \"3. Conditions for faithful technical implementation\", \"href\": \"#technical-implementation\"}, {\"l\": \"Part II: CALIBER Framework\", \"href\": \"#Part-II\"}, {\"l\": \"1. Content Layer\", \"href\": \"#content-layer\"}, {\"l\": \"2. Single behavior layer\", \"href\": \"#single-behavior-layer\"}, {\"l\": \"3. Controlled CALIBER reference dataset\", \"href\": \"#controlled-caliber\"}, {\"l\": \"4. Human validation of the reference dataset\", \"href\": \"#human\"}, {\"l\": \"5. Setting developmental expert-calibrated thresholds (DECT): a pilot\", \"href\": \"#expert-calibrated\"}, {\"l\": \"Part III: AïA Safety Builder: Integrating SRL4Children with CALIBER\", \"href\": \"#part-III\"}, {\"l\": \"1. Content Operationalization\", \"href\": \"#operationalization\"}, {\"l\": \"2. Behavior operationalization\", \"href\": \"#behavior-operationalization\"}, {\"l\": \"Part IV: Benchmark\", \"href\": \"#part-IV\"}, {\"l\": \"1. Selection of the source benchmark\", \"href\": \"#source-benchmark\"}, {\"l\": \"2. Review for adolescent applicability\", \"href\": \"#adolescent\"}, {\"l\": \"3. Context assignment and benchmark supplementation\", \"href\": \"#benchmark-supplementation\"}, {\"l\": \"4. Limitations and Future directions\", \"href\": \"#limitation-future-directions\"}, {\"l\": \"Part V: Report generation\", \"href\": \"#part-V\"}, {\"l\": \"1. Runtime scoring sequence\", \"href\": \"#runtime-scoring\"}, {\"l\": \"2. Single-turn endpoint evaluation\", \"href\": \"#single-turn\"}, {\"l\": \"3. Threshold mapping\", \"href\": \"#mapping\"}, {\"l\": \"4. Safeguards\", \"href\": \"#safeguards\"}, {\"l\": \"Future directions\", \"href\": \"#future-directions\"}, {\"l\": \"1. Strengthening validation and methodological robustness\", \"href\": \"#strengthening\"}, {\"l\": \"2. Expanding developmental and cultural validity\", \"href\": \"#expanding\"}, {\"l\": \"3. Expanding the scope of interaction assessed\", \"href\": \"#scope\"}, {\"l\": \"4. Expanding what AïA measures\", \"href\": \"#aia-measures\"}, {\"l\": \"5. Moving from behavioral measurement to empirical evidence\", \"href\": \"#empirical-evidence\"}]\n",
+      "method": true
+    },
+    {
+      "file": "AIA Method.dc.html",
+      "why": "Document styles.",
+      "find": "</helmet>",
+      "replace": "<style>[data-eai-doc] h2{margin:56px 0 0;font:600 30px/1.25 'Open Sans',sans-serif;color:#000;scroll-margin-top:110px}[data-eai-doc] h3{margin:36px 0 0;font:700 21px/1.35 'Open Sans',sans-serif;color:#829bcb;scroll-margin-top:110px}[data-eai-doc] h4{margin:28px 0 0;font:700 18px/1.35 'Open Sans',sans-serif;color:#35425b;scroll-margin-top:110px}[data-eai-doc] h5{margin:22px 0 0;font:700 16px/1.35 'Open Sans',sans-serif;color:#35425b;scroll-margin-top:110px}[data-eai-doc] p,[data-eai-doc] li{font:300 17px/1.8 'Open Sans',sans-serif}[data-eai-doc] p{margin:14px 0 0}[data-eai-doc] ul,[data-eai-doc] ol{margin:14px 0 0;padding-left:22px}[data-eai-doc] strong{font-weight:700}[data-eai-doc] img{display:block;max-width:100%;height:auto;margin:24px auto 0;border-radius:6px}[data-eai-doc] [data-eai-table]{margin:20px 0 0;overflow-x:auto}[data-eai-doc] table{border-collapse:collapse;width:100%;background:#fff;font:400 14px/1.5 'Open Sans',sans-serif}[data-eai-doc] th,[data-eai-doc] td{border:1px solid #dfe4ee;padding:8px 10px;text-align:left;vertical-align:top}[data-eai-doc] th{background:#35425b;color:#fff;font-weight:600}</style>\n</helmet>",
+      "method": true
+    },
+    {
+      "file": "AIA Method.dc.html",
+      "why": "Long table of contents below the sticky menu.",
+      "find": "(<aside data-toc=\"\" style=\")position:sticky;top:20px;",
+      "replace": "\\1position:sticky;top:110px;max-height:calc(100vh - 130px);overflow-y:auto;",
+      "method": true
+    },
+    {
+      "file": "Home.dc.html",
+      "why": "Current wording of the live home page (audit of 2026-10-30).",
+      "find": "feeds: '[^']*'",
+      "ported": true,
+      "replace": "feeds: 'The Scientific Foundation of our Three Pillars'"
+    },
+    {
+      "file": "Home.dc.html",
+      "why": "Current wording of the live home page (audit of 2026-10-30).",
+      "find": "p1d: '[^']*'",
+      "ported": true,
+      "replace": "p1d: 'Bringing together researchers, industry leaders, governments, international organizations, and civil society to advance Beneficial AI for Children. Through scientific collaboration, policy dialogue, and youth participation, iRAISE translates research into actionable recommendations, standards, and best practices.'"
+    },
+    {
+      "file": "Home.dc.html",
+      "why": "Current wording of the live home page (audit of 2026-10-30).",
+      "find": "p2d: '[^']*'",
+      "ported": true,
+      "replace": "p2d: \"Translating neuroscience and AI research into practical knowledge through interactive workshops, training sessions, conferences, and educational resources. Our programs help educators, families, companies, and young people understand AI's opportunities and challenges, with a focus on learning, critical thinking, and well-being.\""
+    },
+    {
+      "file": "Home.dc.html",
+      "why": "Current wording of the live home page (audit of 2026-10-30).",
+      "find": "p3d: '[^']*'",
+      "ported": true,
+      "replace": "p3d: 'Advancing independent, science-based evaluation of how AI systems interact with children and young people. Through AïA Safety Builder, we assess developmental risk signals and provide measurable indicators to help AI developers and decision-makers improve AI safety and accountability.'"
+    },
+    {
+      "file": "Home.dc.html",
+      "why": "Current wording of the live home page (audit of 2026-10-30).",
+      "find": "mission: \\{ title:",
+      "ported": true,
+      "replace": "mission: { status: '501(c)(3) Nonprofit Organization', title:"
+    },
+    {
+      "file": "Home.dc.html",
+      "why": "Current wording of the live home page (audit of 2026-10-30).",
+      "find": "(\\{\\{ t\\.mission\\.title \\}\\}</h2>\\n)",
+      "ported": true,
+      "replace": "\\1<p style=\"margin:8px 0 0;font:600 14px/1.4 'Open Sans',sans-serif;color:#829bcb;text-transform:uppercase;letter-spacing:.06em\">{{ t.mission.status }}</p>\n"
+    },
+    {
+      "file": "Home.dc.html",
+      "why": "Link to the Newsroom, as on the live site.",
+      "find": "(<p style=\\\"margin:10px 0 0;font:600 14px/1\\.4 'Open Sans',sans-serif;color:#829bcb;text-transform:uppercase;letter-spacing:\\.06em\\\">)\\{\\{ t\\.featured\\.all \\}\\}</p>",
+      "ported": true,
+      "replace": "\\1<a href=\"Newsroom.dc.html\" style=\"color:inherit;text-decoration:none\">{{ t.featured.all }}</a></p>"
+    },
+    {
+      "file": "About.dc.html",
+      "why": "Sections of the live About page missing from Design.",
+      "find": "<h2 [^>]*>Our Values</h2>\\n<p [^\\n]*\\n<p [^\\n]*\\n",
+      "ported": true,
+      "replace_file": "extra-pages/fragments/about-intro.html"
+    },
+    {
+      "file": "About.dc.html",
+      "why": "13 Youth Contributors of the live page missing from Design.",
+      "find": "(\\[\\['Victor Delvat', 'delvatvictor'\\], ''\\])\\]\\]",
+      "ported": true,
+      "replace": "\\1, [['Alex King', 'alex-king-61340b363', '', 'assets/ported/team/alex-king.webp'], ''], [['Isabella Schlarb', 'isabella-schlarb-916863277', '', 'assets/ported/team/isabella-schlarb.webp'], ''], [['Cece Sharp', 'cece-sharp-7538773a3', '', 'assets/ported/team/cece-sharp.webp'], ''], [['Annika Singh', 'annika-singh-459363359', '', 'assets/ported/team/annika-singh.webp'], ''], [['Erika Khov', 'erikamolikhov', '', 'assets/ported/team/erika-khov.webp'], ''], [['Deborah Hanoh', 'deborah-hanoh-39055b238', '', 'assets/ported/team/deborah-hanoh.webp'], ''], [['Hannah Griswold', 'hannah-griswold', '', 'assets/ported/team/hannah-griswold.webp'], ''], [['Nino Shamoyan', 'nino-shamoyan-85b120387', '', 'assets/ported/team/nino-shamoyan.webp'], ''], [['Upendo Naware', 'upendonawire', '', 'assets/ported/team/upendo-naware.webp'], ''], [['Ombeline Latour', 'ombeline-latour-696829341', '', 'assets/ported/team/ombeline-latour.webp'], ''], [['Allegra Cuomo', 'allegracuomo', '', 'assets/ported/team/allegra-cuomo.webp'], ''], [['Alan Gourvès', 'alan-gourvès', '', 'assets/ported/team/alan-gourv-s.webp'], ''], [['Tom Jouvet', 'tom-jouvet', '', 'assets/ported/team/tom-jouvet.webp'], '']]]"
+    },
+    {
+      "file": "Donate.dc.html",
+      "why": "The live page shows the dollar card first.",
+      "find": "(<div [^\\n]*Make a donation in Euros[^\\n]*)\\n(<div [^\\n]*Donation in Dollars[^\\n]*|<div [^\\n]*donation in Dollars[^\\n]*)\\n",
+      "ported": true,
+      "replace": "\\2\n\\1\n"
+    },
+    {
+      "file": "Donate.dc.html",
+      "why": "Anchor for the Donate button.",
+      "find": "<div data-g2=\"\" style=\"display:grid;grid-template-columns:repeat\\(2",
+      "ported": true,
+      "replace": "<div id=\"donate\" data-g2=\"\" style=\"display:grid;grid-template-columns:repeat(2"
+    },
+    {
+      "file": "Donate.dc.html",
+      "why": "Sections of the live Donate page missing from Design. The 501(c)(3) paragraph is already in the footer.",
+      "find": "<p [^\\n]*<strong [^>]*>everyone\\.AI</strong> is a 501[^\\n]*\\n",
+      "ported": true,
+      "replace_file": "extra-pages/fragments/donate-sections.html"
+    },
+    {
+      "file": "Open Letter.dc.html",
+      "why": "Supporter logos and share block of the live page.",
+      "find": "(<section style=\"margin-top:\\d+px[^\"]*\">\\n<h2 [^>]*>How to contribute\\?)",
+      "ported": true,
+      "replace_file": "extra-pages/fragments/open-letter-logos.html"
+    },
+    {
+      "file": "Open Letter.dc.html",
+      "why": "Donate call of the live page.",
+      "find": "(<h3 [^>]*>Become a Donor</h3><a [^>]*>)Donate</a>",
+      "ported": true,
+      "replace": "\\1Make a Tax-Deductible Donation</a>"
+    },
+    {
+      "file": "AIA.dc.html",
+      "why": "AI4Good logo of the live gallery.",
+      "find": "(<div[^\\n]*<image-slot id=\"aia-photo-3\"[^\\n]*\\n)",
+      "ported": true,
+      "replace": "\\1<div style=\"display:flex;align-items:center;justify-content:center;background:#fff;border-radius:8px;padding:20px\"><img src=\"assets/ported/logos/ai4good-aia.webp\" alt=\"AI for Good\" loading=\"lazy\" style=\"max-width:100%;max-height:160px;object-fit:contain\"></div>\n"
+    },
+    {
+      "file": "AIA.dc.html",
+      "why": "White Label had no contact link.",
+      "find": "If interested, contact us\\.",
+      "ported": true,
+      "replace": "If interested, <a href=\"mailto:partners@everyone.ai\">contact us</a>."
+    },
+    {
+      "file": "Coalition.dc.html",
+      "why": "Logos, LinkedIn links of the live page.",
+      "find": "const o = \\(n, href\\) => \\(\\{ n, href \\}\\);\\nconst ex = s => s\\.split\\('\\|'\\)\\.map\\(x => \\{ const \\[n, r\\] = x\\.split\\('~'\\); return \\{ n, r \\}; \\}\\);",
+      "ported": true,
+      "replace": "const LOGO = {\"sml.stanford.edu\": \"assets/ported/logos/sml-stanford-edu.webp\", \"business.aucegypt.edu\": \"assets/ported/logos/business-aucegypt-edu.webp\", \"sbs.ethz.ch\": \"assets/ported/logos/sbs-ethz-ch.webp\", \"kidsplaytech.com\": \"assets/ported/logos/kidsplaytech-com.webp\", \"digitalwellnesslab.org\": \"assets/ported/logos/digitalwellnesslab-org.webp\", \"a-i.swiss\": \"assets/ported/logos/a-i-swiss.webp\", \"contentandsociety.org\": \"assets/ported/logos/contentandsociety-org.webp\", \"lisn.upsaclay.fr\": \"assets/ported/logos/lisn-upsaclay-fr.webp\", \"psychology.clas.asu.edu\": \"assets/ported/logos/psychology-clas-asu-edu.webp\", \"humancompatible.ai\": \"assets/ported/logos/humancompatible-ai.webp\", \"sorbonne-universite.fr\": \"assets/ported/logos/sorbonne-universite-fr.webp\", \"baic.center\": \"assets/ported/logos/baic-center.webp\", \"cyberbullying.org\": \"assets/ported/logos/cyberbullying-org.webp\", \"commonsensemedia.org\": \"assets/ported/logos/commonsensemedia-org.webp\", \"paxtechnologica.com\": \"assets/ported/logos/paxtechnologica-com.svg\", \"mcgovern.org\": \"assets/ported/logos/mcgovern-org.webp\", \"keepaisafe.org\": \"assets/ported/logos/keepaisafe-org.webp\", \"sesameworkshop.org\": \"assets/ported/logos/sesameworkshop-org.webp\", \"nspcc.org.uk\": \"assets/ported/logos/nspcc-org-uk.webp\", \"childrenandscreens.org\": \"assets/ported/logos/childrenandscreens-org.webp\", \"weprotect.org\": \"assets/ported/logos/weprotect-org.svg\", \"icmec.org\": \"assets/ported/logos/icmec-org.webp\", \"e-enfance.org\": \"assets/ported/logos/e-enfance-org.webp\", \"girleffect.org\": \"assets/ported/logos/girleffect-org.webp\", \"ai4good.org\": \"assets/ported/logos/ai4good-org.webp\", \"tralalere.com\": \"assets/ported/logos/tralalere-com.webp\", \"edtechfrance.fr\": \"assets/ported/logos/edtechfrance-fr.webp\", \"respectzone.org\": \"assets/ported/logos/respectzone-org.webp\", \"realgoodai.org\": \"assets/ported/logos/realgoodai-org.webp\", \"thefuturesociety.org\": \"assets/ported/logos/thefuturesociety-org.webp\", \"securite-ia.fr\": \"assets/ported/logos/securite-ia-fr.webp\", \"alana.org.br\": \"assets/ported/logos/alana-org-br.webp\", \"fondation-enfance.org\": \"assets/ported/logos/fondation-enfance-org.webp\", \"innovateedunyc.org\": \"assets/ported/logos/innovateedunyc-org.webp\", \"safeaiforchildren.org\": \"assets/ported/logos/safeaiforchildren-org.webp\", \"childrennow.org\": \"assets/ported/logos/childrennow-org.svg\", \"gsolen.ucsd.edu\": \"assets/ported/logos/gsolen-ucsd-edu.webp\", \"internetwithoutborders.org\": \"assets/ported/logos/internetwithoutborders-org.webp\", \"aiforeducation.io\": \"assets/ported/logos/aiforeducation-io.webp\", \"technorealisme.org\": \"assets/ported/logos/technorealisme-org.svg\", \"alltechishuman.org\": \"assets/ported/logos/alltechishuman-org.webp\", \"fosi.org\": \"assets/ported/logos/fosi-org.webp\", \"tdh.org\": \"assets/ported/logos/tdh-org.webp\", \"siia.net\": \"assets/ported/logos/siia-net.webp\", \"iaseai.org\": \"assets/ported/logos/iaseai-org.webp\", \"fpf.org\": \"assets/ported/logos/fpf-org.webp\", \"mtotonews.com\": \"assets/ported/logos/mtotonews-com.webp\", \"aiyouthcouncil.org\": \"assets/ported/logos/aiyouthcouncil-org.webp\", \"turing.ac.uk\": \"assets/ported/logos/turing-ac-uk.webp\", \"designathonworks.com\": \"assets/ported/logos/designathonworks-com.webp\", \"simppl.org\": \"assets/ported/logos/simppl-org.webp\", \"shieldthefuture.com\": \"assets/ported/logos/shieldthefuture-com.webp\", \"thedatasphere.org\": \"assets/ported/logos/thedatasphere-org.webp\", \"in-tandem.org\": \"assets/ported/logos/in-tandem-org.webp\", \"safe-eg.org\": \"assets/ported/logos/safe-eg-org.webp\", \"generationremix.org\": \"assets/ported/logos/generationremix-org.webp\", \"unesco.org\": \"assets/ported/logos/unesco-org.webp\", \"unicri.org\": \"assets/ported/logos/unicri-org.webp\", \"about.google\": \"assets/ported/logos/google.webp\", \"openai.com\": \"assets/ported/logos/openai.webp\", \"microsoft.com\": \"assets/ported/logos/microsoft.webp\", \"anthropic.com\": \"assets/ported/logos/anthropic.webp\", \"plugandplaytechcenter.com\": \"assets/ported/logos/plug-and-play.webp\", \"huggingface.co\": \"assets/ported/logos/hugging-face.webp\", \"vivendi.com\": \"assets/ported/logos/vivendi.webp\", \"orange.com\": \"assets/ported/logos/orange.webp\"};\nconst LI = {\"stuart russell\": \"https://www.linkedin.com/in/stuartjonathanrussell/\", \"luc julia\": \"https://www.linkedin.com/in/lucjulia/\", \"grégory renard\": \"https://www.linkedin.com/in/gregoryrenard/\", \"laurence devillers\": \"https://www.linkedin.com/in/laurence-devillers-09679a237/\", \"anthony bridgen\": \"https://www.linkedin.com/in/anthony-bridgen/\", \"irakli beridze\": \"https://www.linkedin.com/in/irakliberidze/\", \"pierre-yves oudeyer\": \"https://www.linkedin.com/in/pierreyvesoudeyer/\", \"scott traylor\": \"https://www.linkedin.com/in/straylor/\", \"vivian chong\": \"https://www.linkedin.com/in/vchong112/\", \"sara grimes\": \"https://www.linkedin.com/in/saramgrimes/\", \"mathilde cerioli\": \"https://www.linkedin.com/in/mathilde-neugnot-cerioli/\", \"maxime derian\": \"https://www.linkedin.com/in/maxime-derian/\", \"isabelle hau\": \"https://www.linkedin.com/in/isabelle-hau-a57175/\", \"jeff hancock\": \"https://www.linkedin.com/in/jeff-hancock-3a2a783/\", \"jodi halpern\": \"https://www.linkedin.com/in/jodi-halpern-26183210/\", \"mizuko ito\": \"https://www.linkedin.com/in/mizuko-ito-17b2/\", \"amin marei\": \"https://www.linkedin.com/in/amin-marei/\", \"caroline lancelot miltgen\": \"https://www.linkedin.com/in/carolinelancelotmiltgen/\", \"eglė celiesienė\": \"https://www.linkedin.com/in/egleceliesiene/\", \"evren yiğit\": \"https://www.linkedin.com/in/evren-yiğit-25160450/\", \"adam dubé\": \"https://www.linkedin.com/in/adam-dubé-1b9b679/\", \"allison langer\": \"https://www.linkedin.com/in/allison-langer-phd-19a4ba158\", \"jennifer heifferon\": \"https://www.linkedin.com/in/jenniferheifferon\", \"jenny radesky\": \"https://www.linkedin.com/in/jenny-radesky-849298296\", \"judith danovitch\": \"https://www.linkedin.com/in/judith-danovitch\", \"kate blocker\": \"https://www.linkedin.com/in/kmblocker\", \"kris perry\": \"https://www.linkedin.com/in/kris-perry\", \"mitch prinstein\": \"https://www.linkedin.com/in/mitchprinstein\", \"nicole hipp\": \"https://www.linkedin.com/in/nicole-hipp-psy-d-81032015\", \"nina vasan\": \"https://www.linkedin.com/in/ninavasan\", \"pilyoung kim\": \"https://www.linkedin.com/in/pilyoung-kim\", \"simar singh\": \"https://www.linkedin.com/in/simar-singh-phd-92895a139\", \"sonia tiwari\": \"https://www.linkedin.com/in/soniastic\", \"sunny xun liu.\": \"https://www.linkedin.com/in/sunny-liu-961a9134\", \"thao ha\": \"https://www.linkedin.com/in/phuong-thao-ha\", \"tracy dennis-tiwary\": \"https://www.linkedin.com/in/tracydennistiwary\", \"dan hipp\": \"https://www.linkedin.com/in/daniel-hipp-phd/\", \"evrim baran\": \"https://www.linkedin.com/in/evrimbaran/\", \"hamilton morrin\": \"https://www.linkedin.com/in/hamilton-morrin-08b996125/\", \"nandini asavari bharadwaj\": \"https://www.linkedin.com/in/nandini-asavari-bharadwaj-phd-a5336810b/\", \"david harris\": \"https://www.linkedin.com/in/davidevanharris/\", \"florence g’sell\": \"https://www.linkedin.com/in/flogsell/\", \"teddy nalubega\": \"https://www.linkedin.com/in/teddy-nalubega-phd/\", \"vera radeva\": \"https://www.linkedin.com/in/dr-vera-radeva-hadjieva-0a12ab11/\", \"hannah griswold\": \"https://www.linkedin.com/in/hannah-griswold\", \"tara steele\": \"https://www.linkedin.com/in/tara-steele/\", \"angelika sharygina\": \"https://www.linkedin.com/in/angelika-sharygina-7923b183/\"};\nconst host = h => h.replace(/^(https?:\\/\\/)+(www\\.)?/, '').split('/')[0].toLowerCase();\nconst o = (n, href) => { const logo = LOGO[host(href)] || ''; return { n, href, logo, hasLogo: !!logo, noLogo: !logo }; };\nconst ex = s => s.split('|').map(x => { const [n, r] = x.split('~'); const li = LI[n.replace(/^(Dr|Pr|Prof)[.] */, '').trim().toLowerCase()] || ''; return { n, r, li, hasLi: !!li, noLi: !li }; });"
+    },
+    {
+      "file": "Coalition.dc.html",
+      "why": "Company links and the Orange logo.",
+      "find": "items: \\[o\\('Google', '#'\\).*?o\\('Vivendi', '#'\\)\\]",
+      "ported": true,
+      "replace": "items: [o('Google', 'https://about.google'), o('OpenAI', 'https://openai.com'), o('Microsoft', 'https://www.microsoft.com'), o('Anthropic', 'https://www.anthropic.com'), o('Plug and Play', 'https://www.plugandplaytechcenter.com'), o('Hugging Face', 'https://huggingface.co'), o('Vivendi', 'https://www.vivendi.com'), o('Orange', 'https://www.orange.com')]"
+    },
+    {
+      "file": "Coalition.dc.html",
+      "why": "Logos instead of text chips.",
+      "find": "(<a href=\"\\{\\{ o\\.href \\}\\}\"[^>]*?)style=\"[^\"]*\"([^>]*>)\\{\\{ o\\.n \\}\\}</a>",
+      "ported": true,
+      "replace": "\\1aria-label=\"{{ o.n }}\" style=\"display:flex;align-items:center;justify-content:center;background:#fff;border-radius:8px;padding:12px;height:76px;box-sizing:border-box;font:400 14px/1.3 'Open Sans',sans-serif;color:#333;text-decoration:none;text-align:center\"\\2<sc-if value=\"{{ o.hasLogo }}\" hint-placeholder-val=\"{{ true }}\"><img src=\"{{ o.logo }}\" alt=\"{{ o.n }}\" loading=\"lazy\" style=\"max-width:100%;max-height:100%;object-fit:contain\"></sc-if><sc-if value=\"{{ o.noLogo }}\" hint-placeholder-val=\"{{ false }}\">{{ o.n }}</sc-if></a>"
+    },
+    {
+      "file": "Coalition.dc.html",
+      "why": "LinkedIn links of the experts.",
+      "find": "<strong([^>]*)>\\{\\{ p\\.n \\}\\}</strong>",
+      "ported": true,
+      "replace": "<sc-if value=\"{{ p.hasLi }}\" hint-placeholder-val=\"{{ true }}\"><a href=\"{{ p.li }}\" target=\"_blank\" rel=\"noopener\"><strong\\1>{{ p.n }}</strong></a></sc-if><sc-if value=\"{{ p.noLi }}\" hint-placeholder-val=\"{{ false }}\"><strong\\1>{{ p.n }}</strong></sc-if>"
+    },
+    {
+      "file": "Coalition.dc.html",
+      "why": "Photo of the quoted person.",
+      "find": "\\{ n: 'Stuart\\ Russell', r:",
+      "ported": true,
+      "replace": "{ n: 'Stuart Russell', photo: 'assets/ported/people/stuart-russell.webp', r:"
+    },
+    {
+      "file": "Coalition.dc.html",
+      "why": "Photo of the quoted person.",
+      "find": "\\{ n: 'Isabelle\\ C\\.\\ Hau', r:",
+      "ported": true,
+      "replace": "{ n: 'Isabelle C. Hau', photo: 'assets/ported/people/isabelle-c-hau.webp', r:"
+    },
+    {
+      "file": "Coalition.dc.html",
+      "why": "Photo of the quoted person.",
+      "find": "\\{ n: 'Teddy\\ Nalubega', r:",
+      "ported": true,
+      "replace": "{ n: 'Teddy Nalubega', photo: 'assets/ported/people/teddy-nalubega.webp', r:"
+    },
+    {
+      "file": "Coalition.dc.html",
+      "why": "Photo of the quoted person.",
+      "find": "\\{ n: 'Michael\\ Preston', r:",
+      "ported": true,
+      "replace": "{ n: 'Michael Preston', photo: 'assets/ported/people/michael-preston.webp', r:"
+    },
+    {
+      "file": "Coalition.dc.html",
+      "why": "Photo of the quoted person.",
+      "find": "\\{ n: 'Laurence\\ Devillers', r:",
+      "ported": true,
+      "replace": "{ n: 'Laurence Devillers', photo: 'assets/ported/people/laurence-devillers.webp', r:"
+    },
+    {
+      "file": "Coalition.dc.html",
+      "why": "Photo of the quoted person.",
+      "find": "\\{ n: 'David\\ Evan\\ Harris', r:",
+      "ported": true,
+      "replace": "{ n: 'David Evan Harris', photo: 'assets/ported/people/david-evan-harris.webp', r:"
+    },
+    {
+      "file": "Coalition.dc.html",
+      "why": "Photo of the quoted person.",
+      "find": "\\{ n: 'Isabella\\ Henriques', r:",
+      "ported": true,
+      "replace": "{ n: 'Isabella Henriques', photo: 'assets/ported/people/isabella-henriques.webp', r:"
+    },
+    {
+      "file": "Coalition.dc.html",
+      "why": "Photo of the quoted person.",
+      "find": "(<figcaption[^>]*>)",
+      "ported": true,
+      "replace": "\\1<img src=\"{{ q.photo }}\" alt=\"{{ q.n }}\" loading=\"lazy\" style=\"width:72px;height:72px;border-radius:50%;object-fit:cover;display:block;margin:0 0 10px\">"
     }
   ]
 }

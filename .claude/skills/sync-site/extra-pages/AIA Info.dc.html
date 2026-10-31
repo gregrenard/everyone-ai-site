@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<title>How to read this beta report | Everyone.AI</title>
+<meta name="description" content="What AïA measures, how scores work and how to read the priority levels of the AïA Safety Builder beta report.">
+<link rel="canonical" href="https://everyone.ai/aia-safety-builder/info/">
+<link rel="icon" type="image/png" href="assets/logo-everyone-ai.png">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,300&family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
+<style>body{margin:0;background:#f0f2f6;color:#222;font-family:'Open Sans',system-ui,sans-serif;-webkit-font-smoothing:antialiased;text-wrap:pretty}a{color:#829bcb}a:hover{color:#f8903e}@media (max-width:760px){[data-g2]{grid-template-columns:1fr!important}}[data-eai-doc] h2{margin:56px 0 0;font:600 30px/1.25 'Open Sans',sans-serif;color:#000;scroll-margin-top:110px}[data-eai-doc] h3{margin:36px 0 0;font:700 21px/1.35 'Open Sans',sans-serif;color:#829bcb;scroll-margin-top:110px}[data-eai-doc] h4{margin:28px 0 0;font:700 18px/1.35 'Open Sans',sans-serif;color:#35425b;scroll-margin-top:110px}[data-eai-doc] h5{margin:22px 0 0;font:700 16px/1.35 'Open Sans',sans-serif;color:#35425b;scroll-margin-top:110px}[data-eai-doc] p,[data-eai-doc] li{font:300 17px/1.8 'Open Sans',sans-serif}[data-eai-doc] p{margin:14px 0 0}[data-eai-doc] ul,[data-eai-doc] ol{margin:14px 0 0;padding-left:22px}[data-eai-doc] strong{font-weight:700}[data-eai-doc] img{display:block;max-width:100%;height:auto;margin:24px auto 0;border-radius:6px}[data-eai-doc] [data-eai-table]{margin:20px 0 0;overflow-x:auto}[data-eai-doc] table{border-collapse:collapse;width:100%;background:#fff;font:400 14px/1.5 'Open Sans',sans-serif}[data-eai-doc] th,[data-eai-doc] td{border:1px solid #dfe4ee;padding:8px 10px;text-align:left;vertical-align:top}[data-eai-doc] th{background:#35425b;color:#fff;font-weight:600}</style>
+</helmet>
+<div data-screen-label="How to read this beta report" style="min-height:100vh;display:flex;flex-direction:column;background:#f0f2f6">
+<dc-import name="SiteHeader" active="" hint-size="100%,158px"></dc-import>
+<section style="background:#35425b;padding:64px 20px;text-align:center"><h1 style="margin:0;font:300 clamp(28px,4vw,48px)/1.2 Poppins,sans-serif;color:#fff;text-transform:uppercase;letter-spacing:.04em">How to read this beta report</h1></section>
+<main data-eai-doc="" style="flex:1;max-width:820px;width:100%;margin:0 auto;padding:40px 20px 88px;box-sizing:border-box;color:#333">
+<a href="https://i-raise.org" target="_blank" rel="noopener"></a><h3>What AïA measures</h3>
+<p>AÏA currently measures socioaffective pull: behaviors that can make an AI feel more human, emotionally available, socially rewarding, or relationship-like for young users.</p>
+<h3>How scores work</h3>
+<p>Each behavior is scored for presence on a 1–5 scale. Higher presence means a stronger behavioral signal. When that signal crosses the threshold for the tested age group and context, it becomes a higher-risk result.</p>
+<h3>Why context matters</h3>
+<p>Thresholds depend on context. The same behavior may carry a different level of concern in <strong>education</strong>, <strong>entertainment</strong>, or <strong>emotional support</strong>. For example, asking a child what they already know may be appropriate in an educational task, while asking for private feelings or secrets in emotional support can create more risk.</p>
+<h3>How to read the priority levels</h3>
+<ul><li><strong>Keep Monitoring</strong> (Green): the behavior is below the threshold.</li>
+<li><strong>High Priority </strong>(Yellow): the behavior is approaching or at threshold level. Treat it as a priority for review.</li>
+<li><strong>Must Fix </strong>(Red): the behavior crossed the risk threshold in enough tested items, or with enough severity, to require mitigation. A <strong>Must Fix</strong> does not necessarily mean every response is problematic; it means at least one judgment in the domain landed above its behavior’s threshold</li>
+<h3>How to read under-13 results</h3>
+<p>The current beta thresholds are calibrated for users aged 13–18. In this beta release, under-13 reports do not assign <strong>Keep Monitoring</strong> results because thresholds have not yet been validated for this age category. For under-13 users, <strong>High Priority</strong> means the behavior appears lower-risk based on adolescent thresholds, but it is not a confirmed pass for younger children. <strong>Must Fix </strong>means the behavior should be treated as failing for under-13 users.</p>
+<h3>Content comes first</h3>
+<p>Content is checked before socioaffective pull is scored. If content is inappropriate for minors, it should be fixed before interpreting socioaffective-pull results. Items that fail the content check do not receive socioaffective-pull scores.</p>
+<h3>What this beta report does not cover yet</h3>
+<p>This beta report is not a full child-safety certification. It does not yet fully assess long-term developmental risk, developmental benefit, privacy, security, or product-level features such as voice, memory, avatars, or notifications.</p>
+</main>
+<dc-import name="SiteFooter" hint-size="100%,520px"></dc-import>
+</div>
+</x-dc>
+</body>
+</html>

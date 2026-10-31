@@ -190,6 +190,8 @@ PUB_CTA = {"fr": "Lire le rapport Mapping", "es": "Leer el informe Mapping", "de
            "pt": "Ler o relatório Mapping", "zh": "阅读 Mapping 报告"}
 
 
+# Home wording that Design has not caught up with, per language (see port-live-content.py).
+HOME_DICT = json.load(open(os.path.join(_HERE, "home-dict.json"), encoding="utf-8"))
 LANGUAGE_FIXES = json.load(open(os.path.join(_HERE, "language-fixes.json"), encoding="utf-8"))
 
 
@@ -204,7 +206,11 @@ def apply_patches(html, design):
     for p in PATCHES:
         if p["file"] != design:
             continue
-        html, n = re.subn(p["find"], p["replace"], html, flags=re.S)
+        if "replace_file" in p:
+            body = open(os.path.join(_HERE, p["replace_file"]), encoding="utf-8").read()
+            html, n = re.subn(p["find"], lambda m: body + (m.group(1) if m.re.groups else ""), html, flags=re.S)
+        else:
+            html, n = re.subn(p["find"], p["replace"], html, flags=re.S)
         if not n:
             print("patch inert (%s): %s" % (design, p["find"][:60]))
     if design in ("Home.dc.html", "SiteHeader.dc.html", "SiteFooter.dc.html"):
@@ -269,6 +275,14 @@ def patch_runtime():
                       lambda x: x.group(1) + repr(BANNER_CTA[lang]), tail, count=1)
         tail = re.sub(r"(\n\s*pub: \{[^\n]*?cta: )(?:'[^']*'|\"[^\"]*\")",
                       lambda x: x.group(1) + repr(PUB_CTA[lang]), tail, count=1)
+        fields = HOME_DICT.get(lang, {})
+        for field, value in fields.items():
+            if field == "status":
+                if "mission: { status:" not in tail:
+                    tail = tail.replace("mission: {", "mission: { status: %r," % value, 1)
+                continue
+            tail = re.sub(r"\b%s: (?:'(?:[^'\\]|\\.)*'|\"(?:[^\"\\]|\\.)*\")" % field,
+                          lambda x: "%s: %r" % (field, value), tail, count=1)
         next_lang = re.search(r"\n\s*'?(?:%s)'?: \{" % "|".join(NAV_LABELS), tail[2:])
         cut = next_lang.start() + 2 if next_lang else len(tail)
         t = head + fix_language(tail[:cut], lang) + tail[cut:]

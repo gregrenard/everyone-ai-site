@@ -26,7 +26,7 @@ bash .claude/skills/sync-site/deploy.sh --preview
 python3 .claude/skills/sync-site/extract-i18n.py
 ```
 
-Drop `--preview` only when the site is served from its final domain. `verify.py` must end with no BAD, apart from the accepted items below. Read every WARN.
+If page text changed, run the build, then `extract-i18n.py`, then the build again: the build filters published translations against the catalog, so a catalog refreshed after the build leaves renamed strings out until the next build. Drop `--preview` only when the site is served from its final domain. `verify.py` must end with no BAD, apart from the accepted items below. Read every WARN.
 
 Accepted until decided otherwise: `assets/og-cover.png` is missing until someone exports it from Claude Design (`DesignSync` truncates it at 256 KiB).
 
@@ -40,7 +40,7 @@ mkdir -p /tmp/eai-srv && ln -sfn "$PWD/docs" /tmp/eai-srv/everyone-ai-site
 node .claude/skills/site-release-check/audit.mjs http://127.0.0.1:8791/everyone-ai-site/
 ```
 
-After publishing, run it again on `https://gregrenard.github.io/everyone-ai-site/`. All pages at 1280, 390 and 360 px, in English, French and German. A run takes about 6 minutes for 18 pages.
+After publishing, run it again on `https://gregrenard.github.io/everyone-ai-site/`. All pages at 1280, 390 and 360 px, in English, French and German. A run takes about 10 minutes for 25 pages, so start it in the background. `--pages slug,slug` checks a subset after a small change.
 
 It fails on: horizontal overflow, H1 count other than one, menu not sticky, pre-render mirror still present, wrong `<html lang>`, empty image slots, text under 12 px, broken images, missing alt text, unresolved `{{ }}`, any console error or failed request, links without a name, dead anchors, dead internal links, CLS over 0.1.
 
@@ -78,31 +78,46 @@ Team rule of 2026-10-29: at most 1600 px on the long side, WebP, under 200 KiB; 
 ## 6. Donations, forms, translations
 
 - USD: `<givebutter-widget>` renders on `/donate/`.
+- Donate: the widget reserves its height (`min-height`), otherwise it adds about 0.12 of layout shift.
 - EUR: the link lands on the campaign page of Globale Philanthropie and not on a 404.
 - Newsletter: the request goes to MailerLite with `fields[email]`.
 - Contact, press and open-letter forms: `formEndpoint` in `site-config.json`. While it is empty they open the visitor's email app, which is not good enough for a Google submission.
-- Every page exists in the 8 languages. `extract-i18n.py --missing <lang>` lists what is left. Legal text stays in English until a human validates it.
+- Every page exists in the 8 languages. `extract-i18n.py --missing <lang>` lists what is left. Expected English for now: the AïA method document (about 500 strings), the privacy policy and the terms, until a scientific or legal owner validates a translation. Anything else left in English is a defect.
+- After changing English text, check the translations too. Renaming a key keeps the translation, including a wording that the change was meant to remove ("Our Esteemed Signatories", "Head of ML").
 
-## 7. Before the DNS switch
+## 7. Comparison with the live site
+
+While WordPress is up, compare each page with its original, section by section: text, images, links, forms. The audit of 2026-10-30 found gaps that none of the automated checks can see, because a missing section is not an error. Repeat this comparison after each new Design export, since a new export can bring back older text.
+
+Pages that exist only here are in `sync-site/extra-pages/`. Content ported from WordPress is listed in `page-patches.json` and comes from `port-live-content.py` and `port-live-pages.py`. Those two scripts stop working at the DNS switch, so their output is what is committed.
+
+## 8. Before the DNS switch
 
 These break or change when `everyone.ai` stops pointing at WordPress:
 
-- Launch video: hotlinked to `everyone.ai/wp-content`. Move it to YouTube first.
-- "Parts I–V" on the AïA method: only exists on the WordPress page (verify gate (j) warns).
+- Launch video: hotlinked to `everyone.ai/wp-content`. Move it to YouTube first. The file is 77 MB: do not commit it.
+- PDFs still served from `everyone.ai/wp-content`, if verify gate (j) lists any.
+- Old URL `/accesibility-statement/`: add a redirect to `/accessibility-statement/`.
 - Any other link reported by the audit as depending on the old site.
 - Run `deploy.sh` without `--preview`, otherwise every page stays `noindex`.
 - Add `CNAME`, then check the sitemap, `robots.txt` and `llms.txt` on the final domain.
 
 The DNS switch, a CNAME and any change of repository need an explicit go from the user.
 
-## 8. Human review
+## 9. Human review
 
 - Native reading of the machine translations, including the AïA method vocabulary and gendered job titles.
 - Team and partner lists up to date.
 - External links that automated checks cannot confirm.
+- Hand-written wording that did not come from the site: the short Events and Blog pages, the button labels, and the DE, NL and IT hero lines.
+- Anything a team decision settled stays settled. See `CHANGES-2026-10.md` in `.works/changelogs/` before reopening a role title or a name.
 - One pass on a real iPhone and a real Android phone. Everything above is emulation.
 
 ## Known traps
+
+- Newsroom image slots are numbered by position (`news-event-3`). Inserting an entry shifts every photo after it, silently, unless `slot-images.json` is renumbered. The audit only catches the two new empty slots, not the shifted ones: look at the page.
+- Two images from the same site must not share a file name. Porting logos by host name overwrote one logo with another.
+- Before adding a block, check the page does not already have it under a different section.
 
 - The ids of sections exist twice before the runtime mounts. Measure after mount.
 - `<base href="../">` makes `a.href` of a bare `#anchor` resolve to the site root. Compare the raw `href` with the current page's ids.
