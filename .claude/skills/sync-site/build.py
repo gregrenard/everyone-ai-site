@@ -153,6 +153,7 @@ def emit_i18n():
         # A translation must keep the segment count of its key or the overlay ignores it.
         keep = {k: v for k, v in full.items()
                 if (catalog is None or k in catalog) and v and v != k and k.count("\n") == v.count("\n")}
+        keep = {k: fix_language(v, lang) for k, v in keep.items()}
         with open(os.path.join(out_dir, lang + ".json"), "w", encoding="utf-8") as fh:
             json.dump(keep, fh, ensure_ascii=False, sort_keys=True, separators=(",", ":"))
         print("i18n      docs/i18n/%s.json  %d strings" % (lang, len(keep)))
@@ -189,6 +190,16 @@ PUB_CTA = {"fr": "Lire le rapport Mapping", "es": "Leer el informe Mapping", "de
            "pt": "Ler o relatório Mapping", "zh": "阅读 Mapping 报告"}
 
 
+LANGUAGE_FIXES = json.load(open(os.path.join(_HERE, "language-fixes.json"), encoding="utf-8"))
+
+
+def fix_language(text, lang):
+    for table in (LANGUAGE_FIXES["all"], LANGUAGE_FIXES[lang]):
+        for old in sorted(table, key=len, reverse=True):
+            text = text.replace(old, table[old])
+    return text
+
+
 def apply_patches(html, design):
     for p in PATCHES:
         if p["file"] != design:
@@ -219,6 +230,8 @@ def apply_patches(html, design):
 def add_contact_links(html):
     """Add Contact to the main menu (Google Ad Grants: Contact one click from every page)."""
     html = html.replace("nav: { home: 'Home',", "nav: { contact: 'Contact', home: 'Home',")
+    html = html.replace("['zh', '中文']", "['zh', '简体中文']")
+    html = html.replace("code: 'zh', name: '中文'", "code: 'zh', name: '简体中文'")
     html = re.sub(r'<a href="About\.dc\.html"[^>]*>\{\{ t\.nav\.about \}\}</a>',
                   lambda m: m.group(0) + "\n" + m.group(0).replace("About.dc.html", "Contact.dc.html")
                   .replace("t.nav.about", "t.nav.contact"), html)
@@ -240,6 +253,9 @@ def patch_runtime():
             raise SystemExit("patch_runtime: template compile not found in support.js")
         t = t.replace(old, 'tpl.innerHTML = encodeCase(html).replace(/\\bdata-eai-src=/g, "src=");')
         open(path, "w", encoding="utf-8", newline="").write(t)
+    path = os.path.join(OUT, "i18n-site.js")
+    t = open(path, encoding="utf-8").read()
+    open(path, "w", encoding="utf-8", newline="").write(t.replace("name: '中文'", "name: '简体中文'"))
     path = os.path.join(OUT, "i18n-home.js")
     t = open(path, encoding="utf-8").read()
     for lang, label in NAV_LABELS.items():
@@ -253,7 +269,9 @@ def patch_runtime():
                       lambda x: x.group(1) + repr(BANNER_CTA[lang]), tail, count=1)
         tail = re.sub(r"(\n\s*pub: \{[^\n]*?cta: )(?:'[^']*'|\"[^\"]*\")",
                       lambda x: x.group(1) + repr(PUB_CTA[lang]), tail, count=1)
-        t = head + tail
+        next_lang = re.search(r"\n\s*'?(?:%s)'?: \{" % "|".join(NAV_LABELS), tail[2:])
+        cut = next_lang.start() + 2 if next_lang else len(tail)
+        t = head + fix_language(tail[:cut], lang) + tail[cut:]
     open(path, "w", encoding="utf-8", newline="").write(t)
 
 
@@ -432,6 +450,7 @@ def main():
         if slug == "SiteHeader":
             src = unify_header(src)
         src = apply_patches(src, comp)
+        src = fix_text(src)
         html = rewrite_links(src, "index")
         html = html.replace("<html>", '<html lang="en">', 1)
         html = html.replace("<meta charset=\"utf-8\">\n", '<meta charset="utf-8">\n<meta name="robots" content="noindex">\n', 1)

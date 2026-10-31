@@ -2,7 +2,7 @@
 // Language source order: ?lang= → localStorage 'eai_lang' → browser → 'en'. Persisted on switch.
 export const LANGS = [
   { code: 'en', name: 'English' }, { code: 'fr', name: 'Français' }, { code: 'es', name: 'Español' }, { code: 'de', name: 'Deutsch' },
-  { code: 'nl', name: 'Nederlands' }, { code: 'it', name: 'Italiano' }, { code: 'pt', name: 'Português' }, { code: 'zh', name: '中文' }
+  { code: 'nl', name: 'Nederlands' }, { code: 'it', name: 'Italiano' }, { code: 'pt', name: 'Português' }, { code: 'zh', name: '简体中文' }
 ];
 const ok = l => LANGS.some(x => x.code === l);
 let current = null;

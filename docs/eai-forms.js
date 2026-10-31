@@ -9,7 +9,7 @@
   var NOTE = {
     en: 'Your email app has opened with your message. Please press Send there to finish.',
     fr: 'Votre messagerie s’est ouverte avec votre message. Cliquez sur Envoyer pour terminer.',
-    es: 'Su aplicación de correo se ha abierto con su mensaje. Pulse Enviar para terminar.',
+    es: 'Tu aplicación de correo se ha abierto con tu mensaje. Pulsa Enviar para terminar.',
     de: 'Ihr E-Mail-Programm wurde mit Ihrer Nachricht geöffnet. Klicken Sie dort auf Senden.',
     nl: 'Uw e-mailprogramma is geopend met uw bericht. Klik daar op Verzenden om af te ronden.',
     it: 'La sua app di posta si è aperta con il messaggio. Prema Invia per completare.',

@@ -1,0 +1,84 @@
+{
+  "_comment": "Language corrections from the editorial reviews of 2026-10-31, applied by build.py to the published translations and to the Home dictionary. Substring replacements, longest first. English corrections are in text-fixes.json.",
+  "all": {"AïA Safety Builders": "AïA Safety Builder"},
+  "fr": {
+    "Demander un accès βeta": "Demander un accès à la version bêta",
+    "βeta": "bêta",
+    "Notre politique modèle": "Notre modèle de politique",
+    "à naviguer dans les opportunités et les défis de l'IA": "à comprendre les possibilités et les risques de l'IA",
+    "S'appuyer sur les preuves scientifiques": "S'appuyer sur les données scientifiques",
+    "éclairée par les preuves": "éclairée par les données scientifiques",
+    "éclairé par les preuves": "éclairé par les données scientifiques",
+    "nous passons des preuves à l'action": "nous passons des connaissances à l'action",
+    "davantage de preuves": "davantage de données"
+  },
+  "es": {
+    "βeta": "beta",
+    "Hazte donante": "Hacer una donación",
+    "Conoce al resto del equipo": "Conocer al resto del equipo",
+    "Únete a la conversación": "Unirse a la conversación",
+    "¡Únete al movimiento!": "Unirse al movimiento",
+    "a navegar las oportunidades": "a comprender las oportunidades",
+    "responsables de decisiones": "responsables de la toma de decisiones",
+    "Contáctenos": "Contactar con nosotros",
+    "Contacte con everyone.AI": "Contacta con everyone.AI",
+    "envíenos un mensaje o escríbanos": "envíanos un mensaje o escríbenos"
+  },
+  "de": {
+    "βeta": "Beta",
+    "Nutzbringende KI für Kinder gestalten": "KI gestalten, die Kindern zugutekommt",
+    "Nutzbringende KI für Kinder": "KI, die Kindern zugutekommt",
+    "Nutzbringende KI gestalten": "KI zum Guten gestalten",
+    "für nutzbringende KI in der kindlichen Entwicklung": "für KI im Dienst der kindlichen Entwicklung",
+    "in der nutzbringende KI die gesunde": "in der KI die gesunde",
+    "für nutzbringende KI für Kinder": "für KI, die Kindern zugutekommt",
+    "Einführung nutzbringender KI für Kinder sicherzustellen": "Einführung von KI, die Kindern zugutekommt, sicherzustellen",
+    "Auf dem Weg zu nutzbringender KI für Kinder": "Auf dem Weg zu KI, die Kindern zugutekommt",
+    "nutzbringende KI-Produkte": "KI-Produkte zum Wohl von Kindern",
+    "Industrieführer": "führende Unternehmen",
+    "Monat pro Platz": "Monat pro Nutzerlizenz",
+    "Auf begutachteter (peer-reviewter) Wissenschaft": "Auf begutachteter Forschung"
+  },
+  "nl": {
+    "βeta-toegang": "bèta-toegang",
+    "βeta-versie": "bètaversie",
+    "βeta": "bèta",
+    "Heilzame AI voor kinderen vormgeven": "AI vormgeven die kinderen ten goede komt",
+    "Geef heilzame AI voor kinderen vorm": "Geef vorm aan AI die kinderen ten goede komt",
+    "Heilzame AI voor kinderen": "AI die kinderen ten goede komt",
+    "Heilzame AI vormgeven": "Goede AI vormgeven",
+    "voor heilzame AI in de ontwikkeling van kinderen": "voor AI ten dienste van de ontwikkeling van kinderen",
+    "heilzame AI-producten vorm krijgen": "AI-producten vorm krijgen die kinderen ten goede komen",
+    "waarin heilzame AI de": "waarin AI de",
+    "aan heilzame AI voor kinderen": "aan AI die kinderen ten goede komt",
+    "adoptie van heilzame AI voor kinderen": "adoptie van AI die kinderen ten goede komt",
+    "Naar heilzame AI voor kinderen": "Naar AI die kinderen ten goede komt",
+    "heilzame toepassingen": "nuttige toepassingen",
+    "Een door neurowetenschap geleide technologie": "Een technologie gebaseerd op neurowetenschap"
+  },
+  "it": {
+    "βeta": "beta",
+    "Plasmare un’IA benefica per i bambini oggi, per tutti domani": "Plasmare un’IA al servizio dei bambini oggi, di tutti domani",
+    "Plasmare un’IA benefica\nper i bambini oggi,\nper tutti domani": "Plasmare un’IA al servizio\ndei bambini oggi,\ndi tutti domani",
+    "l1: 'Plasmare un’IA benefica', l1b: 'per i bambini oggi,', l2: 'per tutti domani": "l1: 'Plasmare un’IA al servizio', l1b: 'dei bambini oggi,', l2: 'di tutti domani",
+    "un’IA benefica per i bambini": "un’IA al servizio dello sviluppo dei bambini",
+    "Un’IA benefica per i bambini": "Un’IA al servizio dello sviluppo dei bambini",
+    "un'IA benefica per i bambini": "un'IA al servizio dello sviluppo dei bambini",
+    "un’IA benefica nello sviluppo dell’infanzia": "un’IA al servizio dello sviluppo dell’infanzia",
+    "in cui un’IA benefica sostenga": "in cui l’IA sostenga",
+    "in cui un’IA benefica sostiene": "in cui l’IA sostiene",
+    "una scienza sottoposta a revisione paritaria": "una ricerca sottoposta a revisione tra pari"
+  },
+  "pt": {
+    "βeta": "beta",
+    "A AïA Safety Builder amplia o seu alcance através do Open Source": "O AïA Safety Builder amplia o seu alcance através de código aberto",
+    "Torne-se doador": "Fazer um donativo",
+    "ciência revista por pares": "ciência sujeita a revisão por pares"
+  },
+  "zh": {
+    "申请 βeta 版使用资格": "申请测试版使用资格",
+    "服务 βeta 版": "服务测试版",
+    "，βeta 版": "，测试版",
+    "- βeta 版": "- 测试版"
+  }
+}

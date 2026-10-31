@@ -66,6 +66,12 @@
       "why": "Link had no accessible name.",
       "find": "(<a href=\"https://challenges-awards\\.vivatech\\.com/awards/tech-for-change-award\" )",
       "replace": "\\1aria-label=\"VivaTech Tech for Change award\" "
+    },
+    {
+      "file": "AIA Service.dc.html",
+      "why": "Public page showed an internal instruction ('Demo video - set the video URL ... in Tweaks'). Remove this patch when Design has the video.",
+      "find": "<h2[^>]*>See it in action</h2>\\n<div [^\\n]*\\n<sc-if value=\"\\{\\{ hasVideo[^\\n]*\\n<sc-if value=\"\\{\\{ noVideo[^\\n]*\\n</div>\\n",
+      "replace": ""
     }
   ]
 }
