@@ -43,10 +43,16 @@ from urllib.parse import unquote
 _HERE = os.path.dirname(os.path.abspath(__file__))
 REPO = os.getcwd()
 SRC = os.path.join(REPO, "src")
+EXTRA = os.path.join(_HERE, "extra-pages")  # pages Design does not have yet (same format as src/)
 OUT = os.path.join(REPO, "docs")
 PREVIEW = "--preview" in sys.argv
 
 DATA = json.load(open(os.path.join(_HERE, "pages.json"), encoding="utf-8"))
+CONFIG = json.load(open(os.path.join(_HERE, "site-config.json"), encoding="utf-8"))
+IMAGE_MAP = {}
+_map_file = os.path.join(_HERE, "image-map.json")
+if os.path.exists(_map_file):
+    IMAGE_MAP = json.load(open(_map_file, encoding="utf-8"))
 SITE = DATA["site"].rstrip("/")
 PAGES = DATA["pages"]
 COMPONENTS = DATA.get("components", [])
@@ -122,6 +128,9 @@ MOBILE_CSS = (
     '#dc-root [style*="text-align:justify"]{text-align:left!important}}</style>'
 )
 I18N_TAG = '<script src="eai-i18n.js" defer></script>'
+FORMS_TAG = ('<script>window.EAI_FORMS=%s;</script><script src="eai-forms.js" defer></script>'
+             % json.dumps({k: CONFIG[k] for k in ("contactEmail", "formEndpoint", "newsletter")}))
+GIVEBUTTER_TAG = '<script async src="https://widgets.givebutter.com/latest.umd.cjs?acct=%s&p=wordpress"></script>' % CONFIG["givebutterAccount"]
 # Keeps the menu bar visible while scrolling (sticky-header.js, published as eai-sticky.js).
 STICKY_TAG = '<script src="eai-sticky.js" defer></script>'
 
@@ -134,6 +143,7 @@ def emit_i18n():
     os.makedirs(out_dir)
     shutil.copyfile(os.path.join(_HERE, "i18n-overlay.js"), os.path.join(OUT, "eai-i18n.js"))
     shutil.copyfile(os.path.join(_HERE, "sticky-header.js"), os.path.join(OUT, "eai-sticky.js"))
+    shutil.copyfile(os.path.join(_HERE, "forms-overlay.js"), os.path.join(OUT, "eai-forms.js"))
     catalog = None
     if os.path.exists(os.path.join(src_dir, "en.json")):
         catalog = set(json.load(open(os.path.join(src_dir, "en.json"), encoding="utf-8"))["units"])
@@ -158,6 +168,95 @@ PROTECT_RE = re.compile(
     r"|\b(?:const|let|var)\s+\w+\s*=\s*[\"']https://everyone\.ai/[^\"']*[\"']", re.S)
 
 
+def source_path(design):
+    """Design snapshot first, so a page added in Design replaces its extra-pages copy."""
+    path = os.path.join(SRC, design)
+    return path if os.path.exists(path) else os.path.join(EXTRA, design)
+
+
+# Content overrides that belong in Design. Each one goes inert once Design has the new
+# text: a pattern that no longer matches is only reported.
+PATCHES = json.load(open(os.path.join(_HERE, "page-patches.json"), encoding="utf-8"))["patches"]
+NAV_LABELS = {"fr": "Contact", "es": "Contacto", "de": "Kontakt", "nl": "Contact",
+              "it": "Contatti", "pt": "Contacto", "zh": "联系我们"}
+BANNER_CTA = {"fr": "Découvrir AïA Safety Builder", "es": "Descubrir AïA Safety Builder",
+              "de": "AïA Safety Builder entdecken", "nl": "Ontdek AïA Safety Builder",
+              "it": "Scopri AïA Safety Builder", "pt": "Descobrir o AïA Safety Builder",
+              "zh": "了解 AïA Safety Builder"}
+
+PUB_CTA = {"fr": "Lire le rapport Mapping", "es": "Leer el informe Mapping", "de": "Mapping-Bericht lesen",
+           "nl": "Lees het Mapping-rapport", "it": "Leggi il report Mapping",
+           "pt": "Ler o relatório Mapping", "zh": "阅读 Mapping 报告"}
+
+
+def apply_patches(html, design):
+    for p in PATCHES:
+        if p["file"] != design:
+            continue
+        html, n = re.subn(p["find"], p["replace"], html, flags=re.S)
+        if not n:
+            print("patch inert (%s): %s" % (design, p["find"][:60]))
+    if design in ("Home.dc.html", "SiteHeader.dc.html", "SiteFooter.dc.html"):
+        html = add_contact_links(html)
+    html = html.replace("mailto:eai-contact-email", "mailto:" + CONFIG["contactEmail"])
+    html = html.replace(">eai-contact-email<", ">" + CONFIG["contactEmail"] + "<")
+    address = CONFIG["address"]
+    html = html.replace("<!--eai-address-->", (
+        '<h2 style="margin:28px 0 0;font:600 18px/1.3 \'Open Sans\',sans-serif;color:#000">Postal address</h2>'
+        '<p style="margin:10px 0 0;font:300 16px/1.7 \'Open Sans\',sans-serif">%s</p>' % address) if address else "")
+    if address and design in ("Home.dc.html", "SiteFooter.dc.html"):
+        html = html.replace("</footer>", (
+            '<p style="margin:16px auto 0;text-align:center;font:300 13px/1.7 \'Open Sans\',sans-serif;'
+            'color:rgba(255,255,255,.88)">%s</p>\n</footer>' % address), 1)
+    # By file name: some pages join a base path and a name in JS.
+    for old, new in IMAGE_MAP.items():
+        html = html.replace(os.path.basename(old), os.path.basename(new))
+    # Hidden <x-dc> templates are real HTML: the browser fetched src="{{ m.photo }}" and
+    # logged 404s. support.js restores the attribute when it reads the template.
+    return re.sub(r'\bsrc="(\{\{[^"]*\}\})"', r'data-eai-src="\1"', html)
+
+
+def add_contact_links(html):
+    """Add Contact to the main menu (Google Ad Grants: Contact one click from every page)."""
+    html = html.replace("nav: { home: 'Home',", "nav: { contact: 'Contact', home: 'Home',")
+    html = re.sub(r'<a href="About\.dc\.html"[^>]*>\{\{ t\.nav\.about \}\}</a>',
+                  lambda m: m.group(0) + "\n" + m.group(0).replace("About.dc.html", "Contact.dc.html")
+                  .replace("t.nav.about", "t.nav.contact"), html)
+    html = re.sub(r"(\{ label: n\.about, href: '[^']*', k: 'about' \})",
+                  r"\1,\n      { label: n.contact, href: 'Contact.dc.html', k: 'contact' }", html)
+    html = html.replace('href="Home.dc.html#contact"', 'href="Contact.dc.html"')
+    html = re.sub(r'href="#contact"( style="[^"]*" style-hover="[^"]*">\{\{ t\.footer\.contact)',
+                  r'href="Contact.dc.html"\1', html)
+    return html
+
+
+def patch_runtime():
+    """Patch the two runtime files published as they are by the Design export."""
+    path = os.path.join(OUT, "support.js")
+    t = open(path, encoding="utf-8").read()
+    if "data-eai-src" not in t:
+        old = "tpl.innerHTML = encodeCase(html);"
+        if t.count(old) != 1:
+            raise SystemExit("patch_runtime: template compile not found in support.js")
+        t = t.replace(old, 'tpl.innerHTML = encodeCase(html).replace(/\\bdata-eai-src=/g, "src=");')
+        open(path, "w", encoding="utf-8", newline="").write(t)
+    path = os.path.join(OUT, "i18n-home.js")
+    t = open(path, encoding="utf-8").read()
+    for lang, label in NAV_LABELS.items():
+        m = re.search(r"\n\s*'?%s'?: \{" % lang, t)
+        if not m:
+            raise SystemExit("patch_runtime: language %s not found in i18n-home.js" % lang)
+        head, tail = t[:m.start()], t[m.start():]
+        if "nav: { contact:" not in tail.split("nav: {", 1)[0] + tail[tail.find("nav: {"):tail.find("nav: {") + 20]:
+            tail = tail.replace("nav: {", "nav: { contact: '%s'," % label, 1)
+        tail = re.sub(r"(ann: \{ text: (?:'[^']*'|\"[^\"]*\"), cta: )(?:'[^']*'|\"[^\"]*\")",
+                      lambda x: x.group(1) + repr(BANNER_CTA[lang]), tail, count=1)
+        tail = re.sub(r"(\n\s*pub: \{[^\n]*?cta: )(?:'[^']*'|\"[^\"]*\")",
+                      lambda x: x.group(1) + repr(PUB_CTA[lang]), tail, count=1)
+        t = head + tail
+    open(path, "w", encoding="utf-8", newline="").write(t)
+
+
 _SRC_CACHE = {}
 
 
@@ -165,7 +264,7 @@ def has_anchor(slug, anchor):
     """True when the Design source of `slug` declares id=<anchor>."""
     if slug not in _SRC_CACHE:
         design = next(p["design"] for p in PAGES if p["slug"] == slug)
-        with open(os.path.join(SRC, design), encoding="utf-8") as f:
+        with open(source_path(design), encoding="utf-8") as f:
             _SRC_CACHE[slug] = f.read()
     t = _SRC_CACHE[slug]
     return bool(re.search(r"""id\s*[=:]\s*["']%s["']""" % re.escape(anchor), t))
@@ -255,13 +354,16 @@ def rewrite_links(html, slug):
 
     body = PROTECT_RE.sub(hold, html)
     body = SITE_RE.sub(site_link, body)
-    body = WP_RE.sub(lambda m: "assets/" + m.group(1), body)
+    # A file that was not localized stays hotlinked (the launch video, until it moves to
+    # YouTube): rewriting it anyway pointed the player at a local 404.
+    body = WP_RE.sub(lambda m: "assets/" + m.group(1)
+                     if os.path.exists(os.path.join(OUT, "assets", unquote(m.group(1)))) else m.group(0), body)
     return re.sub("\x00(\\d+)\x00", lambda m: held[int(m.group(1))], body)
 
 
 def build_page(page):
     slug = page["slug"]
-    src = open(os.path.join(SRC, page["design"]), encoding="utf-8").read()
+    src = apply_patches(open(source_path(page["design"]), encoding="utf-8").read(), page["design"])
     depth = 0 if slug == "index" else slug.count("/") + 1
     html = fix_text(rewrite_links(src, slug))
 
@@ -283,6 +385,9 @@ def build_page(page):
     head_extra.append(I18N_TAG)
     if slug not in COMPONENT_SLUGS:
         head_extra.append(STICKY_TAG)
+        head_extra.append(FORMS_TAG)
+    if slug == "donate":
+        head_extra.append(GIVEBUTTER_TAG)
     head_extra.append(MOBILE_CSS)
 
     html = html.replace("<html>", '<html lang="en">', 1)
@@ -326,6 +431,7 @@ def main():
         src = open(os.path.join(SRC, comp), encoding="utf-8").read()
         if slug == "SiteHeader":
             src = unify_header(src)
+        src = apply_patches(src, comp)
         html = rewrite_links(src, "index")
         html = html.replace("<html>", '<html lang="en">', 1)
         html = html.replace("<meta charset=\"utf-8\">\n", '<meta charset="utf-8">\n<meta name="robots" content="noindex">\n', 1)
@@ -334,6 +440,7 @@ def main():
         print("component %s" % os.path.join("docs", comp))
 
     emit_i18n()
+    patch_runtime()
     open(os.path.join(OUT, ".nojekyll"), "w").close()
     with open(os.path.join(OUT, ".image-slots.state.json"), "w") as f:
         f.write("{}\n")

@@ -246,6 +246,32 @@ for f in scan_files:
     for u in sorted(set(re.findall(r"""href\s*[=:]\s*["'](https://everyone\.ai/[^"'?]*#[^"']+)""", t))):
         warning("%s -> %s (anchor only exists on the live site)" % (os.path.relpath(f, REPO), u))
 
+print("--- (l) image weight and template images")
+for f in glob.glob(os.path.join(OUT, "assets", "**", "*"), recursive=True):
+    if f.lower().endswith((".png", ".jpg", ".jpeg", ".webp")) and os.path.getsize(f) > 200 * 1024:
+        bad("image over 200 KiB: %s (%d KiB)" % (os.path.relpath(f, OUT), os.path.getsize(f) // 1024))
+for s_ in SLUGS:
+    if os.path.exists(page_file(s_)) and re.search(r'(?<![-\w])src="\{\{', read(page_file(s_))):
+        bad("template image would 404 in the console: " + s_)
+
+print("--- (m) Google Ad Grants requirements")
+_cfg = json.load(open(os.path.join(HERE, "site-config.json"), encoding="utf-8"))
+if not _cfg["address"]:
+    bad("no postal address in site-config.json")
+for s_ in SLUGS:
+    if os.path.exists(page_file(s_)) and s_ != "contact" and _cfg["address"] and _cfg["address"] not in read(os.path.join(OUT, "SiteFooter.dc.html")) + read(page_file(s_)):
+        bad("no postal address on " + s_)
+_contact = page_file("contact")
+if not os.path.exists(_contact):
+    bad("no /contact/ page")
+if '"Contact.dc.html"' in read(os.path.join(OUT, "SiteHeader.dc.html")) or "contact/" not in read(os.path.join(OUT, "SiteHeader.dc.html")):
+    bad("Contact missing from the main menu")
+if not _cfg["formEndpoint"]:
+    warning("forms open the visitor's email app: set formEndpoint in site-config.json")
+_donate = read(page_file("donate"))
+if "givebutter-widget" not in _donate or "faire-un-don" not in _donate:
+    bad("donate page lost a donation route")
+
 print("--- (k) translations")
 cat_file = os.path.join(HERE, "i18n", "en.json")
 if not os.path.exists(os.path.join(OUT, "eai-i18n.js")):

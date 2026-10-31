@@ -39,6 +39,7 @@ done
 echo "==> 1/5  localize hotlinked wp-content files"
 python3 "$SKILL_DIR/fetch-wp-assets.py" $MEDIA_FLAG
 python3 "$SKILL_DIR/fetch-slot-images.py"
+python3 "$SKILL_DIR/optimize-images.py"
 
 echo "==> 2/5  build docs/ from src/ (clean URLs, static SEO head, <base>, hash shim)"
 python3 "$SKILL_DIR/build.py" $PREVIEW_FLAG

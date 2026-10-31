@@ -85,8 +85,8 @@
 </x-dc>
 <script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1200,&quot;height&quot;:170},&quot;active&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;home&quot;,&quot;research&quot;,&quot;initiatives&quot;,&quot;newsroom&quot;,&quot;about&quot;,&quot;&quot;],&quot;default&quot;:&quot;&quot;,&quot;tsType&quot;:&quot;string&quot;}}">
 const EN = {
-  ann: { text: 'AïA Safety Builders expands its reach via Open Source', cta: 'Learn more' },
-  nav: { home: 'Home', research: 'Research', initiatives: 'Our Initiatives', aiaEval: 'AïA Evaluation', caliber: 'AïA / CALIBER', safetyBuilder: 'AïA Safety Builder', education: 'Education', coalition: 'International Coalition', openLetter: 'Open Letter', newsroom: 'Newsroom', about: 'About Us', donate: 'Donate', language: 'Language', menu: 'Menu' }
+  ann: { text: 'AïA Safety Builders expands its reach via Open Source', cta: 'Discover AïA Safety Builder' },
+  nav: { contact: 'Contact', home: 'Home', research: 'Research', initiatives: 'Our Initiatives', aiaEval: 'AïA Evaluation', caliber: 'AïA / CALIBER', safetyBuilder: 'AïA Safety Builder', education: 'Education', coalition: 'International Coalition', openLetter: 'Open Letter', newsroom: 'Newsroom', about: 'About Us', donate: 'Donate', language: 'Language', menu: 'Menu' }
 };
 const LANGS = [['en', 'English'], ['fr', 'Français'], ['es', 'Español'], ['de', 'Deutsch'], ['nl', 'Nederlands'], ['it', 'Italiano'], ['pt', 'Português'], ['zh', '中文']];
 class Component extends DCLogic {
@@ -110,7 +110,8 @@ class Component extends DCLogic {
       { label: n.research, href: 'research/', k: 'research' },
       { label: n.initiatives, menu: true, k: 'initiatives' },
       { label: n.newsroom, href: 'newsroom/', k: 'newsroom' },
-      { label: n.about, href: 'about/', k: 'about' }
+      { label: n.about, href: 'about/', k: 'about' },
+      { label: n.contact, href: 'contact/', k: 'contact' }
     ].map(x => ({ ...x, isMenu: !!x.menu, isLink: !x.menu, color: c(x.k) }));
     const sub = [
       { label: n.aiaEval, href: 'aia-safety-builder/', pad: '18px' },

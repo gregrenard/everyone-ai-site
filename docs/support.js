@@ -467,7 +467,7 @@
   function compileTemplate(html, host) {
     const tpl = document.createElement("template");
     //! nosemgrep: direct-inner-html-assignment
-    tpl.innerHTML = encodeCase(html);
+    tpl.innerHTML = encodeCase(html).replace(/\bdata-eai-src=/g, "src=");
     let tplN = 0;
     (function stamp(node) {
       if (node.nodeType === Node.ELEMENT_NODE) {

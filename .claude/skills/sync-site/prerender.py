@@ -40,8 +40,15 @@ DATA = json.load(open(os.path.join(HERE, "pages.json"), encoding="utf-8"))
 SLUGS = [p["slug"] for p in DATA["pages"] if not p.get("_comment")]
 
 CHROME = os.environ.get("CHROME") or "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
-SWAP_CSS = "x-dc{display:none}#dc-root:not(:empty)~#dc-prerender{display:none}"
+SWAP_CSS = "x-dc{display:none}#dc-prerender{position:absolute;top:0;left:0;width:100%}#dc-root:not(:empty)~#dc-prerender{display:none}"
 STYLE = '<style id="dc-prerender-css">' + SWAP_CSS + "</style>"
+# The runtime fills #dc-root above the mirror and lays out before the mirror goes away, so
+# the mirror was pushed out of the viewport: a layout shift of 1.0, the whole CLS on
+# PageSpeed. Out of flow it cannot be pushed, and it is removed in the mutation callback.
+SWAP_JS = ('<script id="eai-mirror-swap">new MutationObserver(function(l,o){'
+           'var r=document.getElementById("dc-root"),m=document.getElementById("dc-prerender");'
+           'if(r&&r.firstChild&&m){o.disconnect();m.remove();}})'
+           '.observe(document.documentElement,{childList:true,subtree:true});</script>')
 MARK_A, MARK_B = "<!--dc-prerender-start-->", "<!--dc-prerender-end-->"
 MEDIA_EXT = (".mp4", ".webm", ".mov", ".m4v", ".ogv")
 
@@ -141,7 +148,7 @@ def main():
                 skipped.append(slug + " (no </x-dc> or </head> anchor)")
                 continue
             s = s.replace("</head>", STYLE + "\n</head>", 1)
-            block = MARK_A + '<div id="dc-prerender">' + inner + "</div>" + MARK_B
+            block = MARK_A + '<div id="dc-prerender">' + inner + "</div>" + SWAP_JS + MARK_B
             s = s.replace("</x-dc>", "</x-dc>\n" + block, 1)
             with open(f, "w", encoding="utf-8", newline="") as fh:
                 fh.write(s)

@@ -45,3 +45,6 @@ Why now: the rapid evolution of AI technologies is outpacing the development of 
 - [Instagram](https://www.instagram.com/everyoneai_official/)
 
 Social hashtag: #BeneficialAIforChildren
+- [Contact](https://everyone.ai/contact/): email, postal address and contact form
+- [Privacy Policy](https://everyone.ai/privacy-policy/): how personal information is handled
+- [Accessibility Statement](https://everyone.ai/accessibility-statement/): commitment to WCAG 2.1 AA

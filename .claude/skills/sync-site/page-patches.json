@@ -1,0 +1,71 @@
+{
+  "_comment": "Content overrides applied by build.py to the Design sources. 'find' is a regular expression. All of these should move into Claude Design; each goes inert when Design has the new text.",
+  "patches": [
+    {
+      "file": "Donate.dc.html",
+      "why": "The USD button linked to the page itself; the live site uses this Givebutter widget.",
+      "find": "<a href=\"https://everyone\\.ai/donate/\"[^>]*>Donate in USD</a>",
+      "replace": "<givebutter-widget id=\"LPqXkg\"></givebutter-widget>"
+    },
+    {
+      "file": "Donate.dc.html",
+      "why": "The euro link returned a 404; this page carries the 'Devenez acteur de l'IA responsable' campaign.",
+      "find": "https://globale-philanthropie\\.org/2024/06/18/ensemble-pour-une-ia-plus-sure-responsable-pour-tous/",
+      "replace": "https://globale-philanthropie.org/faire-un-don/"
+    },
+    {
+      "file": "Donate.dc.html",
+      "why": "Generic button label.",
+      "find": ">Learn More</a>",
+      "replace": ">Donate in Euros</a>"
+    },
+    {
+      "file": "AIA.dc.html",
+      "why": "Generic button label.",
+      "find": "(<a href=\"AIA Method\\.dc\\.html\"[^>]*>)Learn more</a>",
+      "replace": "\\1Discover the AïA method</a>"
+    },
+    {
+      "file": "AIA.dc.html",
+      "why": "Generic button label.",
+      "find": "(<a href=\"AIA Service\\.dc\\.html\"[^>]*>)Learn more</a>",
+      "replace": "\\1Discover AïA Safety Builder</a>"
+    },
+    {
+      "file": "AIA Service.dc.html",
+      "why": "Generic button label.",
+      "find": "(<a href=\"AIA Method\\.dc\\.html\"[^>]*>)Learn more</a>",
+      "replace": "\\1Discover the AïA method</a>"
+    },
+    {
+      "file": "Open Letter.dc.html",
+      "why": "Generic button label.",
+      "find": ">Learn More</a>",
+      "replace": ">Read the sponsorship brochure</a>"
+    },
+    {
+      "file": "Home.dc.html",
+      "why": "Generic banner label.",
+      "find": "cta: 'Learn more'",
+      "replace": "cta: 'Discover AïA Safety Builder'"
+    },
+    {
+      "file": "SiteHeader.dc.html",
+      "why": "Generic banner label.",
+      "find": "cta: 'Learn more'",
+      "replace": "cta: 'Discover AïA Safety Builder'"
+    },
+    {
+      "file": "Home.dc.html",
+      "why": "Generic button label.",
+      "find": "(pub: \\{[^\\n]*?cta: )'Read More'",
+      "replace": "\\1'Read the Mapping report'"
+    },
+    {
+      "file": "AIA.dc.html",
+      "why": "Link had no accessible name.",
+      "find": "(<a href=\"https://challenges-awards\\.vivatech\\.com/awards/tech-for-change-award\" )",
+      "replace": "\\1aria-label=\"VivaTech Tech for Change award\" "
+    }
+  ]
+}

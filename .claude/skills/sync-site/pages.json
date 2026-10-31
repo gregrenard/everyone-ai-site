@@ -93,6 +93,21 @@
       "design": "Policy RPD.dc.html",
       "slug": "research/relational-positioning-dependency-exclusivity-policy-rpd",
       "role": "content"
+    },
+    {
+      "design": "Contact.dc.html",
+      "slug": "contact",
+      "role": "content"
+    },
+    {
+      "design": "Privacy Policy.dc.html",
+      "slug": "privacy-policy",
+      "role": "content"
+    },
+    {
+      "design": "Accessibility Statement.dc.html",
+      "slug": "accessibility-statement",
+      "role": "content"
     }
   ],
   "components": [

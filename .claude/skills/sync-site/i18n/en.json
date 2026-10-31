@@ -15,9 +15,12 @@
    "donate",
    "research/adolescents-and-anthropomorphic-ai",
    "research/the-future-of-child-development-in-the-ai-era",
-   "research/relational-positioning-dependency-exclusivity-policy-rpd"
+   "research/relational-positioning-dependency-exclusivity-policy-rpd",
+   "contact",
+   "privacy-policy",
+   "accessibility-statement"
   ],
-  "Learn more": [
+  "Discover AïA Safety Builder": [
    "index",
    "research",
    "research/mapping-of-genai-impacts",
@@ -32,7 +35,10 @@
    "donate",
    "research/adolescents-and-anthropomorphic-ai",
    "research/the-future-of-child-development-in-the-ai-era",
-   "research/relational-positioning-dependency-exclusivity-policy-rpd"
+   "research/relational-positioning-dependency-exclusivity-policy-rpd",
+   "contact",
+   "privacy-policy",
+   "accessibility-statement"
   ],
   "Shaping Beneficial AI\nfor children today,\nfor everyone tomorrow.": [
    "index"
@@ -87,7 +93,7 @@
    "index",
    "research"
   ],
-  "Read More": [
+  "Read the Mapping report": [
    "index"
   ],
   "Why Now?": [
@@ -1023,7 +1029,10 @@
    "donate",
    "research/adolescents-and-anthropomorphic-ai",
    "research/the-future-of-child-development-in-the-ai-era",
-   "research/relational-positioning-dependency-exclusivity-policy-rpd"
+   "research/relational-positioning-dependency-exclusivity-policy-rpd",
+   "contact",
+   "privacy-policy",
+   "accessibility-statement"
   ],
   "to stay informed on news and updates": [
    "index",
@@ -1040,7 +1049,10 @@
    "donate",
    "research/adolescents-and-anthropomorphic-ai",
    "research/the-future-of-child-development-in-the-ai-era",
-   "research/relational-positioning-dependency-exclusivity-policy-rpd"
+   "research/relational-positioning-dependency-exclusivity-policy-rpd",
+   "contact",
+   "privacy-policy",
+   "accessibility-statement"
   ],
   "Quick Links": [
    "index",
@@ -1057,7 +1069,10 @@
    "donate",
    "research/adolescents-and-anthropomorphic-ai",
    "research/the-future-of-child-development-in-the-ai-era",
-   "research/relational-positioning-dependency-exclusivity-policy-rpd"
+   "research/relational-positioning-dependency-exclusivity-policy-rpd",
+   "contact",
+   "privacy-policy",
+   "accessibility-statement"
   ],
   "Home": [
    "index",
@@ -1074,7 +1089,10 @@
    "donate",
    "research/adolescents-and-anthropomorphic-ai",
    "research/the-future-of-child-development-in-the-ai-era",
-   "research/relational-positioning-dependency-exclusivity-policy-rpd"
+   "research/relational-positioning-dependency-exclusivity-policy-rpd",
+   "contact",
+   "privacy-policy",
+   "accessibility-statement"
   ],
   "About": [
    "index",
@@ -1091,7 +1109,10 @@
    "donate",
    "research/adolescents-and-anthropomorphic-ai",
    "research/the-future-of-child-development-in-the-ai-era",
-   "research/relational-positioning-dependency-exclusivity-policy-rpd"
+   "research/relational-positioning-dependency-exclusivity-policy-rpd",
+   "contact",
+   "privacy-policy",
+   "accessibility-statement"
   ],
   "Contact": [
    "index",
@@ -1108,7 +1129,10 @@
    "donate",
    "research/adolescents-and-anthropomorphic-ai",
    "research/the-future-of-child-development-in-the-ai-era",
-   "research/relational-positioning-dependency-exclusivity-policy-rpd"
+   "research/relational-positioning-dependency-exclusivity-policy-rpd",
+   "contact",
+   "privacy-policy",
+   "accessibility-statement"
   ],
   "Donate": [
    "index",
@@ -1125,7 +1149,10 @@
    "donate",
    "research/adolescents-and-anthropomorphic-ai",
    "research/the-future-of-child-development-in-the-ai-era",
-   "research/relational-positioning-dependency-exclusivity-policy-rpd"
+   "research/relational-positioning-dependency-exclusivity-policy-rpd",
+   "contact",
+   "privacy-policy",
+   "accessibility-statement"
   ],
   "Important Links": [
    "index",
@@ -1142,7 +1169,10 @@
    "donate",
    "research/adolescents-and-anthropomorphic-ai",
    "research/the-future-of-child-development-in-the-ai-era",
-   "research/relational-positioning-dependency-exclusivity-policy-rpd"
+   "research/relational-positioning-dependency-exclusivity-policy-rpd",
+   "contact",
+   "privacy-policy",
+   "accessibility-statement"
   ],
   "Privacy Policy and GDPR": [
    "index",
@@ -1159,7 +1189,10 @@
    "donate",
    "research/adolescents-and-anthropomorphic-ai",
    "research/the-future-of-child-development-in-the-ai-era",
-   "research/relational-positioning-dependency-exclusivity-policy-rpd"
+   "research/relational-positioning-dependency-exclusivity-policy-rpd",
+   "contact",
+   "privacy-policy",
+   "accessibility-statement"
   ],
   "Accessibility Statement": [
    "index",
@@ -1176,7 +1209,10 @@
    "donate",
    "research/adolescents-and-anthropomorphic-ai",
    "research/the-future-of-child-development-in-the-ai-era",
-   "research/relational-positioning-dependency-exclusivity-policy-rpd"
+   "research/relational-positioning-dependency-exclusivity-policy-rpd",
+   "contact",
+   "privacy-policy",
+   "accessibility-statement"
   ],
   "Support our mission": [
    "index",
@@ -1193,7 +1229,10 @@
    "donate",
    "research/adolescents-and-anthropomorphic-ai",
    "research/the-future-of-child-development-in-the-ai-era",
-   "research/relational-positioning-dependency-exclusivity-policy-rpd"
+   "research/relational-positioning-dependency-exclusivity-policy-rpd",
+   "contact",
+   "privacy-policy",
+   "accessibility-statement"
   ],
   "Use #BeneficialAIforChildren in your social communication": [
    "index",
@@ -1210,10 +1249,33 @@
    "donate",
    "research/adolescents-and-anthropomorphic-ai",
    "research/the-future-of-child-development-in-the-ai-era",
-   "research/relational-positioning-dependency-exclusivity-policy-rpd"
+   "research/relational-positioning-dependency-exclusivity-policy-rpd",
+   "contact",
+   "privacy-policy",
+   "accessibility-statement"
   ],
   "everyone.AI is a 501(c)(3) nonprofit organization recognized as a public charity under the Internal Revenue Code. Contributions to everyone.AI are tax-deductible to the extent permitted by law. Please consult your tax advisor regarding the deductibility of your donation. Our EIN is 99-2317785.": [
    "index"
+  ],
+  "everyone.AI, 1259 El Camino Real, Unit #1042, Menlo Park, CA 94025": [
+   "index",
+   "research",
+   "research/mapping-of-genai-impacts",
+   "aia-safety-builder",
+   "aia-safety-builder/method",
+   "aia-safety-builder/service",
+   "formation",
+   "international-coalition",
+   "open-letter",
+   "newsroom",
+   "about",
+   "donate",
+   "research/adolescents-and-anthropomorphic-ai",
+   "research/the-future-of-child-development-in-the-ai-era",
+   "research/relational-positioning-dependency-exclusivity-policy-rpd",
+   "contact",
+   "privacy-policy",
+   "accessibility-statement"
   ],
   "Shaping Beneficial AI for children today, for everyone tomorrow": [
    "index"
@@ -1257,7 +1319,10 @@
    "donate",
    "research/adolescents-and-anthropomorphic-ai",
    "research/the-future-of-child-development-in-the-ai-era",
-   "research/relational-positioning-dependency-exclusivity-policy-rpd"
+   "research/relational-positioning-dependency-exclusivity-policy-rpd",
+   "contact",
+   "privacy-policy",
+   "accessibility-statement"
   ],
   "everyone.AI": [
    "index",
@@ -1274,7 +1339,10 @@
    "donate",
    "research/adolescents-and-anthropomorphic-ai",
    "research/the-future-of-child-development-in-the-ai-era",
-   "research/relational-positioning-dependency-exclusivity-policy-rpd"
+   "research/relational-positioning-dependency-exclusivity-policy-rpd",
+   "contact",
+   "privacy-policy",
+   "accessibility-statement"
   ],
   "Follow on Instagram": [
    "index",
@@ -1291,7 +1359,10 @@
    "donate",
    "research/adolescents-and-anthropomorphic-ai",
    "research/the-future-of-child-development-in-the-ai-era",
-   "research/relational-positioning-dependency-exclusivity-policy-rpd"
+   "research/relational-positioning-dependency-exclusivity-policy-rpd",
+   "contact",
+   "privacy-policy",
+   "accessibility-statement"
   ],
   "Follow on LinkedIn": [
    "index",
@@ -1308,7 +1379,10 @@
    "donate",
    "research/adolescents-and-anthropomorphic-ai",
    "research/the-future-of-child-development-in-the-ai-era",
-   "research/relational-positioning-dependency-exclusivity-policy-rpd"
+   "research/relational-positioning-dependency-exclusivity-policy-rpd",
+   "contact",
+   "privacy-policy",
+   "accessibility-statement"
   ],
   "Everyone.AI — Shaping Beneficial AI for Children": [
    "index"
@@ -1371,7 +1445,10 @@
    "donate",
    "research/adolescents-and-anthropomorphic-ai",
    "research/the-future-of-child-development-in-the-ai-era",
-   "research/relational-positioning-dependency-exclusivity-policy-rpd"
+   "research/relational-positioning-dependency-exclusivity-policy-rpd",
+   "contact",
+   "privacy-policy",
+   "accessibility-statement"
   ],
   "Research | Everyone.AI": [
    "research"
@@ -1472,6 +1549,10 @@
   "The CALIBER methodology assesses a range of parasocial behaviors to ensure that when a child or teen has a conversation with an AI system, we can measure whether the conversation could lead to an unhealthy relationship between the child and the AI chatbot. These measurements are designed to help conversational AI application builders to design safer applications for children and teens.": [
    "aia-safety-builder"
   ],
+  "Discover the AïA method": [
+   "aia-safety-builder",
+   "aia-safety-builder/service"
+  ],
   "AïA Open Source": [
    "aia-safety-builder"
   ],
@@ -1508,6 +1589,9 @@
   "AïA": [
    "aia-safety-builder",
    "aia-safety-builder/method"
+  ],
+  "VivaTech Tech for Change award": [
+   "aia-safety-builder"
   ],
   "AïA - Evaluation Framework | Everyone.AI": [
    "aia-safety-builder"
@@ -2628,7 +2712,8 @@
   ],
   "Name *": [
    "international-coalition",
-   "newsroom"
+   "newsroom",
+   "contact"
   ],
   "Once you click on submit, your email will be part of our email list, you can unsubscribe at any times. Please check our privacy policy for more details. *": [
    "international-coalition"
@@ -2814,9 +2899,8 @@
   "Sponsor Our Events": [
    "open-letter"
   ],
-  "Learn More": [
-   "open-letter",
-   "donate"
+  "Read the sponsorship brochure": [
+   "open-letter"
   ],
   "Open Letter | Everyone.AI": [
    "open-letter"
@@ -3694,13 +3778,13 @@
   "Your donation is tax deductible in France for French tax payers.": [
    "donate"
   ],
+  "Donate in Euros": [
+   "donate"
+  ],
   "Tax deductible donation in Dollars": [
    "donate"
   ],
   "Your donation is tax deductible in Dollars for US tax payers.": [
-   "donate"
-  ],
-  "Donate in USD": [
    "donate"
   ],
   "Donate | Everyone.AI": [
@@ -3808,6 +3892,246 @@
   ],
   "One of the core challenges in youth AI safety is structural: experts in child and adolescent development are often not the ones drafting the technical rules that govern AI systems.": [
    "research/relational-positioning-dependency-exclusivity-policy-rpd"
+  ],
+  "Contact us": [
+   "contact"
+  ],
+  "Reach us": [
+   "contact"
+  ],
+  "Questions, partnerships, press or research: we read every message.": [
+   "contact"
+  ],
+  "Postal address": [
+   "contact"
+  ],
+  "Send a message": [
+   "contact"
+  ],
+  "Email *": [
+   "contact"
+  ],
+  "Message *": [
+   "contact"
+  ],
+  "Send": [
+   "contact"
+  ],
+  "Contact | Everyone.AI": [
+   "contact"
+  ],
+  "Contact everyone.AI, a 501(c)(3) nonprofit working for beneficial AI for children: send us a message or write to us.": [
+   "contact"
+  ],
+  "Privacy Policy": [
+   "privacy-policy"
+  ],
+  "Effective Date:\n11/20/2024": [
+   "privacy-policy"
+  ],
+  "Last Updated:\n11/18/2024": [
+   "privacy-policy"
+  ],
+  "This Privacy Policy (“Policy”) applies to\nhttps://everyone.ai/\nand Everyone AI (“Company”). It governs the collection, use, and disclosure of your personal information. For the purposes of this Privacy Policy, unless otherwise noted, all references to the Company include\nhttps://everyone.ai/\n. The Company’s website is a news and information site. By using our website, you agree to the data practices described in this Policy.": [
+   "privacy-policy"
+  ],
+  "Collection of Personal Information": [
+   "privacy-policy"
+  ],
+  "We may collect the following types of personal information:": [
+   "privacy-policy"
+  ],
+  "Identifiers\n: First and last name, email address, job title, country, and profile signature.": [
+   "privacy-policy"
+  ],
+  "Demographics\n: Age, gender (optional).": [
+   "privacy-policy"
+  ],
+  "Internet Activity\n: Browsing history, search history, IP address, browser type, and device information.": [
+   "privacy-policy"
+  ],
+  "We collect personal information only when you provide it voluntarily, such as:": [
+   "privacy-policy"
+  ],
+  "Registering for an account.": [
+   "privacy-policy"
+  ],
+  "Entering contests or promotions.": [
+   "privacy-policy"
+  ],
+  "Purchasing products or services.": [
+   "privacy-policy"
+  ],
+  "Submitting inquiries or feedback.": [
+   "privacy-policy"
+  ],
+  "Children Under Thirteen": [
+   "privacy-policy"
+  ],
+  "The Company does not knowingly collect personally identifiable information from children under the age of 13. If you are under the age of 13, you must ask your parent or guardian for permission to use this website.": [
+   "privacy-policy"
+  ],
+  "Use of Personal Information": [
+   "privacy-policy"
+  ],
+  "Your personal information may be used for the following purposes:": [
+   "privacy-policy"
+  ],
+  "Delivering the services or products you requested.": [
+   "privacy-policy"
+  ],
+  "Providing account-related notices or changes.": [
+   "privacy-policy"
+  ],
+  "Communicating updates, promotional offers, and service improvements.": [
+   "privacy-policy"
+  ],
+  "Ensuring compliance with legal and contractual obligations.": [
+   "privacy-policy"
+  ],
+  "Improving website functionality and user experience.": [
+   "privacy-policy"
+  ],
+  "We may aggregate non-personal information for research and analysis.": [
+   "privacy-policy"
+  ],
+  "Sharing Personal Information": [
+   "privacy-policy"
+  ],
+  "We do not sell, rent, or lease your personal information. We may share your data with trusted service providers for operational purposes (e.g., hosting, analytics, payment processing). All service providers are bound by confidentiality and data protection agreements.": [
+   "privacy-policy"
+  ],
+  "Your Rights": [
+   "privacy-policy"
+  ],
+  "Under the California Consumer Privacy Act (CCPA), you have the following rights:": [
+   "privacy-policy"
+  ],
+  "Right to Know\n: Request details about the personal information we collect and share.": [
+   "privacy-policy"
+  ],
+  "Right to Delete\n: Request deletion of your personal information, subject to exceptions (e.g., completing transactions or legal compliance).": [
+   "privacy-policy"
+  ],
+  "Right to Opt Out\n: If applicable, opt-out of the sale of personal data (we do not sell your data).": [
+   "privacy-policy"
+  ],
+  "Right to Non-Discrimination\n: You will not face discrimination for exercising your privacy rights.": [
+   "privacy-policy"
+  ],
+  "To exercise these rights, contact us at\nwebsite@everyone.ai.": [
+   "privacy-policy"
+  ],
+  "Depending from where you access our website, you may have the following rights under the\nGeneral Data Protection Regulation (GDPR)\n.": [
+   "privacy-policy"
+  ],
+  "Right to Access\n: Request access to your personal data.": [
+   "privacy-policy"
+  ],
+  "Right to Correction\n: Request correction of inaccurate or incomplete data.": [
+   "privacy-policy"
+  ],
+  "Right to Erasure (Right to Be Forgotten)\n: Request deletion of your personal data.": [
+   "privacy-policy"
+  ],
+  "Right to Restriction\n: Request restricted processing of your data.": [
+   "privacy-policy"
+  ],
+  "Right to Data Portability\n: Receive a copy of your data in a structured, machine-readable format.": [
+   "privacy-policy"
+  ],
+  "Right to Object\n: Object to the processing of your personal data for marketing purposes.": [
+   "privacy-policy"
+  ],
+  "Right to Withdraw Consent\n: Withdraw consent for data processing at any time.": [
+   "privacy-policy"
+  ],
+  "To exercise these rights, contact us at\nwebsite@everyone.ai\n.": [
+   "privacy-policy"
+  ],
+  "Cookies and Tracking": [
+   "privacy-policy"
+  ],
+  "We use cookies and similar technologies to:": [
+   "privacy-policy"
+  ],
+  "Enhance your browsing experience.": [
+   "privacy-policy"
+  ],
+  "Store user preferences.": [
+   "privacy-policy"
+  ],
+  "Track website usage for analytics and improvements.": [
+   "privacy-policy"
+  ],
+  "You can control cookie settings in your browser. Declining cookies may impact site functionality.": [
+   "privacy-policy"
+  ],
+  "Data Retention": [
+   "privacy-policy"
+  ],
+  "We retain your personal information for as long as necessary to:": [
+   "privacy-policy"
+  ],
+  "Provide the requested services.": [
+   "privacy-policy"
+  ],
+  "Fulfill legal and contractual obligations.": [
+   "privacy-policy"
+  ],
+  "Conduct audits, resolve disputes, or enforce agreements.": [
+   "privacy-policy"
+  ],
+  "International Data Transfers": [
+   "privacy-policy"
+  ],
+  "If you access our services from outside the United States, your personal data may be transferred to, processed, or stored in the United States. We ensure compliance with applicable laws, including GDPR, for international data transfers.": [
+   "privacy-policy"
+  ],
+  "Security": [
+   "privacy-policy"
+  ],
+  "We use industry-standard measures, such as SSL encryption, to protect your data. While no system is 100% secure, we strive to maintain the highest level of security for your personal information.": [
+   "privacy-policy"
+  ],
+  "In the event of a data breach that affects your personal data, we will notify you promptly in accordance with applicable laws.": [
+   "privacy-policy"
+  ],
+  "Changes to This Policy": [
+   "privacy-policy"
+  ],
+  "We may update this Policy periodically. When changes to this Policy are significant, we will notify you via email or through a prominent notice on our website.": [
+   "privacy-policy"
+  ],
+  "Contact Information": [
+   "privacy-policy"
+  ],
+  "If you have questions or concerns about this Policy, contact us:": [
+   "privacy-policy"
+  ],
+  "Email\n: website@everyone.ai": [
+   "privacy-policy"
+  ],
+  "Address\n: everyone.AI, 1259 El Camino Real, Unit #1042, Menlo Park, CA 94025": [
+   "privacy-policy"
+  ],
+  "Privacy Policy | Everyone.AI": [
+   "privacy-policy"
+  ],
+  "How everyone.AI collects, uses and protects your personal information.": [
+   "privacy-policy"
+  ],
+  "We are committed to providing a fully accessible digital experience for all users, including individuals with disabilities. We adhere to\nWCAG 2.1 AA standards\nand regularly audit our website for compliance.": [
+   "accessibility-statement"
+  ],
+  "We believe everyone should have access to digital experiences and continually strive to enhance the accessibility of our website. Everyone AI commitment is guided by our accessibility policy to ensure that people with disabilities have full and equal opportunity to access and benefit from the experiences / content, products, services, information offered by Everyone AI through\neveryone.ai": [
+   "accessibility-statement"
+  ],
+  "Accessibility Statement | Everyone.AI": [
+   "accessibility-statement"
+  ],
+  "The commitment of everyone.AI to an accessible website for all users.": [
+   "accessibility-statement"
   ]
  }
 }
