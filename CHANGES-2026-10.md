@@ -74,7 +74,7 @@ The postal address (1259 El Camino Real, Unit #1042, Menlo Park, CA 94025) and `
 
 **Technical follow-up**
 
-8. Run PageSpeed again. Newsroom LCP is 3.9 s in the local test (target 2.5 s), and the home page is close to the limit at 2.0 s.
+8. Run PageSpeed again, because it could not be run from here (API quota reached). In our throttled test on the published preview, LCP is 0.9 s on Home, 1.4 s on Contact and 0.5 s on Donate, but 13.5 s on Newsroom (3.9 s from a local server; target 2.5 s). Newsroom loads many large images and needs its own fix, such as smaller thumbnails and lazy loading.
 9. The newsletter thank-you line stays in English on pages other than Home.
 10. Move the deploy-time fixes into Claude Design over time, starting with `page-patches.json`.
 11. Create the everyone.ai repository, give Gaëlle access, then switch the DNS. None of this has been done.
