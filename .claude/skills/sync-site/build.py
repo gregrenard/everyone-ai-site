@@ -53,6 +53,14 @@ IMAGE_MAP = {}
 _map_file = os.path.join(_HERE, "image-map.json")
 if os.path.exists(_map_file):
     IMAGE_MAP = json.load(open(_map_file, encoding="utf-8"))
+HD_MAP = {}
+_hd_file = os.path.join(_HERE, "hd-images.json")
+if os.path.exists(_hd_file):
+    HD_MAP = {k: v["file"] for k, v in json.load(open(_hd_file, encoding="utf-8")).items()
+              if not k.startswith("_") and os.path.exists(os.path.join(REPO, "docs", v["file"]))}
+# Languages hidden from the selector and from hreflang, translations kept (team decision
+# 2026-11-03: no Chinese for now). Re-enable by removing the code from this list.
+DISABLED_LANGS = CONFIG.get("disabledLanguages", [])
 SITE = DATA["site"].rstrip("/")
 PAGES = DATA["pages"]
 COMPONENTS = DATA.get("components", [])
@@ -225,12 +233,33 @@ def apply_patches(html, design):
         html = html.replace("</footer>", (
             '<p style="margin:16px auto 0;text-align:center;font:300 13px/1.7 \'Open Sans\',sans-serif;'
             'color:rgba(255,255,255,.88)">%s</p>\n</footer>' % address), 1)
+    # Sharper originals for images Design exported too small (full path: same base names).
+    for old, new in HD_MAP.items():
+        html = re.sub(r"(?<![\w/.-])%s(?=[\"'?)\s])" % re.escape(old), new, html)
+    html = disable_languages(html)
     # By file name: some pages join a base path and a name in JS.
     for old, new in IMAGE_MAP.items():
         html = html.replace(os.path.basename(old), os.path.basename(new))
     # Hidden <x-dc> templates are real HTML: the browser fetched src="{{ m.photo }}" and
     # logged 404s. support.js restores the attribute when it reads the template.
     return re.sub(r'\bsrc="(\{\{[^"]*\}\})"', r'data-eai-src="\1"', html)
+
+
+def disable_languages(text):
+    """Drop disabled languages from every language list (selector, hreflang, og:locale).
+
+    Only the entries that offer the language go; its translations stay in place, so a
+    language comes back by removing it from site-config.json disabledLanguages.
+    A visitor whose stored or browser language is disabled falls back to English, because
+    both language runtimes accept only codes still listed.
+    """
+    for code in DISABLED_LANGS:
+        c = re.escape(code)
+        text = re.sub(r",\s*\['%s',\s*'[^']*'\]" % c, "", text)
+        text = re.sub(r",\s*\{\s*code:\s*'%s',\s*name:\s*'[^']*'\s*\}" % c, "", text)
+        text = re.sub(r'\s*<link rel="alternate" hreflang="%s"[^>]*>' % c, "", text)
+        text = re.sub(r'\s*<meta property="og:locale:alternate" content="%s_[A-Z]{2}">' % c, "", text)
+    return text
 
 
 def add_contact_links(html):
@@ -261,7 +290,7 @@ def patch_runtime():
         open(path, "w", encoding="utf-8", newline="").write(t)
     path = os.path.join(OUT, "i18n-site.js")
     t = open(path, encoding="utf-8").read()
-    open(path, "w", encoding="utf-8", newline="").write(t.replace("name: '中文'", "name: '简体中文'"))
+    open(path, "w", encoding="utf-8", newline="").write(disable_languages(t.replace("name: '中文'", "name: '简体中文'")))
     path = os.path.join(OUT, "i18n-home.js")
     t = open(path, encoding="utf-8").read()
     for lang, label in NAV_LABELS.items():
@@ -286,7 +315,7 @@ def patch_runtime():
         next_lang = re.search(r"\n\s*'?(?:%s)'?: \{" % "|".join(NAV_LABELS), tail[2:])
         cut = next_lang.start() + 2 if next_lang else len(tail)
         t = head + fix_language(tail[:cut], lang) + tail[cut:]
-    open(path, "w", encoding="utf-8", newline="").write(t)
+    open(path, "w", encoding="utf-8", newline="").write(disable_languages(t))
 
 
 _SRC_CACHE = {}

@@ -73,7 +73,7 @@ Policy: https://support.google.com/nonprofits/answer/1657899
 
 ## 5. Images
 
-Team rule of 2026-10-29: at most 1600 px on the long side, WebP, under 200 KiB; thumbnails at twice their displayed size. `optimize-images.py` and verify gate (l) enforce weight and size. Enlarging a small file adds no detail, so an image that is too small needs its original: list it for the team. Look at the photos on a real phone, because automated checks do not see blur.
+Team rule of 2026-10-29: at most 1600 px on the long side, WebP, under 200 KiB; thumbnails at twice their displayed size. `optimize-images.py` and verify gate (l) enforce weight and size. Enlarging a small file adds no detail, so an image that is too small needs its original: list it for the team. Look at the photos on a real phone, because automated checks do not see blur. Blur comes from pixels, not from file weight: a 10 KiB black-and-white portrait at 600 px is sharp, a 17 KiB photo at 215 px is not, so never set a minimum file size. When the live WordPress site still holds a larger original, add it to `sync-site/hd-images.json` (`fetch-hd-images.py` makes the copy, `build.py` points the pages at it); otherwise ask the team for it. Languages are hidden, never deleted: list a code in `disabledLanguages` of `site-config.json` (Chinese since 2026-11-03) and check that it is gone from the selector, hreflang and og:locale while its translations stay published.
 
 ## 6. Donations, forms, translations
 

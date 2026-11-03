@@ -1,0 +1,19 @@
+{
+  "_comment": [
+    "Sharper copies of images Claude Design exported too small (the team saw them pixelated on mobile, 29 Oct - 2 Nov 2026).",
+    "Key: the asset path the Design pages use. from: the original upload on the live WordPress site. file: the local copy fetch-hd-images.py makes. side: its long side in px (about 3x the largest displayed CSS width, never more than the original).",
+    "build.py rewrites every reference from the key to file once the file exists. Remove an entry when Design ships the image at a proper size.",
+    "Mathilde's Design portrait is a different photo from the WordPress one, and the hero child has no larger original on WordPress: both still need originals from the team."
+  ],
+  "assets/mission-1.jpg": {"from": "wp-content/uploads/2026/06/63f194ba-e76c-40a9-8431-2488e57093a6.jpg", "file": "assets/hd/mission-1.webp", "side": 1200},
+  "assets/mission-2.jpg": {"from": "wp-content/uploads/2026/07/IMG_0095-3-e1784056988453.jpg", "file": "assets/hd/mission-2.webp", "side": 1200},
+  "assets/mission-3.jpg": {"from": "wp-content/uploads/2026/06/WhatsApp-Image-2026-06-12-at-13.24.51.webp", "file": "assets/hd/mission-3.webp", "side": 1200},
+  "assets/mission-4.jpg": {"from": "wp-content/uploads/2026/07/1781849740502-e1784057256993.jpeg", "file": "assets/hd/mission-4.webp", "side": 1200},
+  "assets/team-anne-sophie-seret.webp": {"from": "wp-content/uploads/2023/08/Screen-Shot-2023-08-14-at-3.23.44-PM.png", "file": "assets/hd/team-anne-sophie-seret.webp", "side": 600},
+  "assets/team-gregory-renard.webp": {"from": "wp-content/uploads/2024/11/GREG_BW.png", "file": "assets/hd/team-gregory-renard.webp", "side": 600},
+  "assets/team-celine-malvoisin.webp": {"from": "wp-content/uploads/2023/08/Celine-Sept-2023-edited.jpg", "file": "assets/hd/team-celine-malvoisin.webp", "side": 600},
+  "assets/site/2024-11-anticipating-ai.webp": {"from": "wp-content/uploads/2024/11/anticipating-ai-1.webp", "file": "assets/hd/2024-11-anticipating-ai.webp", "side": 800},
+  "assets/site/2024-11-brain.webp": {"from": "wp-content/uploads/2024/11/brain-1.webp", "file": "assets/hd/2024-11-brain.webp", "side": 800},
+  "assets/site/2024-11-empowering-choices.webp": {"from": "wp-content/uploads/2024/11/empowering-choices-1.webp", "file": "assets/hd/2024-11-empowering-choices.webp", "side": 800},
+  "assets/site/2024-11-the-future-of-chlid.webp": {"from": "wp-content/uploads/2024/11/the-future-of-chlid-1.webp", "file": "assets/hd/2024-11-the-future-of-chlid.webp", "side": 800}
+}
