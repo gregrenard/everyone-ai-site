@@ -63,6 +63,24 @@
     },
     {
       "file": "Home.dc.html",
+      "why": "Messages were cut at 180 characters, too short for a real enquiry (Julien's kanban, D5). The Sheet keeps up to 5000.",
+      "find": "maxLength=\"180\"(.*?)\\{\\{ msgLen \\}\\} / 180",
+      "replace": "maxLength=\"1000\"\\1{{ msgLen }} / 1000"
+    },
+    {
+      "file": "Newsroom.dc.html",
+      "why": "Messages were cut at 180 characters (Julien's kanban, D5).",
+      "find": "maxLength=\"180\"",
+      "replace": "maxLength=\"1000\""
+    },
+    {
+      "file": "Coalition.dc.html",
+      "why": "Messages were cut at 180 characters (Julien's kanban, D5).",
+      "find": "maxLength=\"180\"",
+      "replace": "maxLength=\"1000\""
+    },
+    {
+      "file": "Home.dc.html",
       "why": "Below 980 px the report cover sat on the left of the single column while the other images are centered (Julien, 10 Nov).",
       "find": "(#eai-pub,#eai-why,#eai-featured,#eai-form-grid\\{grid-template-columns:1fr!important\\})",
       "replace": "\\1\n#eai-pub>div:first-child{justify-self:center}"

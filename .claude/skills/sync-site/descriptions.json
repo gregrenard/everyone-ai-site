@@ -1,0 +1,23 @@
+{
+  "_comment": "Meta descriptions that replace the ones Claude Design sets (Julien's kanban, card S2: 150 to 155 characters, one per page, with the query the page answers). build.py applies them to the meta description and to og:description / twitter:description. A new text needs its translations in i18n/<lang>.json, since the overlay looks them up by the English text.",
+  "about": "Meet everyone.AI, an international nonprofit team of experts in neuroscience, AI, education and public policy working for Beneficial AI for all children.",
+  "accessibility-statement": "everyone.AI accessibility statement: our commitment to a website that everyone can fully use, including people with disabilities, following WCAG 2.1 AA.",
+  "aia-safety-builder": "AïA Evaluation Framework by everyone.AI: open source tools that measure how AI systems really behave with children and young people, to help make AI safer.",
+  "aia-safety-builder/info": "How to read the AïA Safety Builder beta report: what AïA measures, how behaviors are scored on a 1 to 5 scale and why thresholds depend on the context.",
+  "aia-safety-builder/method": "AïA technical method and the CALIBER framework: how everyone.AI measures the developmental risks of AI for children. Scientific lead: Mathilde Cerioli.",
+  "aia-safety-builder/service": "AïA Safety Builder beta: test how your AI system behaves with children, beyond content moderation, with behavioral risk signals from child development.",
+  "blog": "News from everyone.AI, the nonprofit for Beneficial AI for children: all our latest press coverage, podcasts, webinars and updates are in the Newsroom.",
+  "contact": "Contact everyone.AI, the 501(c)(3) nonprofit for Beneficial AI for children, with your questions, partnerships, press or research: we read every message.",
+  "donate": "Donate to everyone.AI, a 501(c)(3) nonprofit for Beneficial AI for children. Your donation is tax-deductible in the US in dollars and in France in euros.",
+  "events": "Events by everyone.AI on AI and children: our conferences, workshops, webinars and summits, past and upcoming, are all listed in the everyone.AI Newsroom.",
+  "international-coalition": "iRAISE, the coalition led by everyone.AI and the Paris Peace Forum, brings together researchers, industry and governments for AI that supports children.",
+  "newsroom": "everyone.AI in the news: press articles, podcasts, events, webinars and awards about AI and children, from The Observer to the New York Times and TIME.",
+  "privacy-policy": "everyone.AI privacy policy: what personal information we collect on the everyone.ai website, how we use, share and protect it, and how you can contact us.",
+  "research/adolescents-and-anthropomorphic-ai": "Report by Mathilde Cerioli, Ph.D.: how adolescents relate socially to conversational AI, and how its anthropomorphic design can support their wellbeing.",
+  "research/mapping-of-genai-impacts": "Mapping of GenAI impacts on child development: the emerging scientific consensus on its benefits and risks, written for the French G7 Presidency's call.",
+  "research/relational-positioning-dependency-exclusivity-policy-rpd": "Relational Positioning, Dependency & Exclusivity policy (#RPD): a model youth AI safety policy by everyone.AI that technical teams can actually implement.",
+  "terms-and-conditions": "Terms and conditions for using the everyone.AI website: intellectual property, user responsibilities and the rules that apply when you visit everyone.ai.",
+  "thank-you-access-webinar": "Watch the everyone.AI webinar The Future of Child Development in the AI Era, with the key findings of our May 2024 report on how AI affects young minds.",
+  "thank-you-open-letter-le-monde": "Thank you for signing the everyone.AI open letter on AI and children. See what comes next, watch our video and learn how you can help, including by giving.",
+  "workshop-dec10th": "Beneficial AI for Children kickoff workshop, Dec 10 in San Francisco with the Consulate General of France, a partner event of the Paris AI Action Summit."
+}

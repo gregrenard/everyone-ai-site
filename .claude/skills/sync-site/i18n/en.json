@@ -1388,6 +1388,9 @@
   "Shaping Beneficial AI for children today, for everyone tomorrow": [
    "index"
   ],
+  "A thoughtful child looking up, with a network of points of light drawn across the forehead": [
+   "index"
+  ],
   "everyone.AI keynote in front of a full auditorium": [
    "index"
   ],
@@ -1659,7 +1662,7 @@
   "Mapping of GenAI impacts on child development | everyone.AI": [
    "research/mapping-of-genai-impacts"
   ],
-  "Author: Mathilde Cerioli, Ph.D. and Daniel Hipp, Ph.D. Developed in response to the French G7 Presidency's call for scientific contributions on generative AI and minors.": [
+  "Mapping of GenAI impacts on child development: the emerging scientific consensus on its benefits and risks, written for the French G7 Presidency's call.": [
    "research/mapping-of-genai-impacts"
   ],
   "AïA Evaluation Framework": [
@@ -1742,7 +1745,7 @@
   "AïA - Evaluation Framework | everyone.AI": [
    "aia-safety-builder"
   ],
-  "AïA Evaluation Framework: when young people talk to AI, how do we know whether it's helping them or could be causing harm? We answer that question by measuring what AI systems do.": [
+  "AïA Evaluation Framework by everyone.AI: open source tools that measure how AI systems really behave with children and young people, to help make AI safer.": [
    "aia-safety-builder"
   ],
   "AïA Technical Method including CALIBER": [
@@ -3334,7 +3337,7 @@
   "AïA - Benchmark Tool Method | everyone.AI": [
    "aia-safety-builder/method"
   ],
-  "AïA Technical Method including CALIBER. Scientific lead: Dr. Mathilde Cerioli. Framework implementation, beta version.": [
+  "AïA technical method and the CALIBER framework: how everyone.AI measures the developmental risks of AI for children. Scientific lead: Mathilde Cerioli.": [
    "aia-safety-builder/method"
   ],
   "AïA Safety Builder Service beta": [
@@ -3532,7 +3535,7 @@
   "AïA - Safety Builder Beta Service | everyone.AI": [
    "aia-safety-builder/service"
   ],
-  "AïA Safety Builder Service beta — built for developers who care about the impact of AI on children.": [
+  "AïA Safety Builder beta: test how your AI system behaves with children, beyond content moderation, with behavioral risk signals from child development.": [
    "aia-safety-builder/service"
   ],
   "Contact Us": [
@@ -4284,7 +4287,7 @@
   "International Coalition | everyone.AI": [
    "international-coalition"
   ],
-  "iRAISE is a global initiative to ensure that AI supports the healthy cognitive and emotional development of children. Led by everyone.AI and the Paris Peace Forum.": [
+  "iRAISE, the coalition led by everyone.AI and the Paris Peace Forum, brings together researchers, industry and governments for AI that supports children.": [
    "international-coalition"
   ],
   "Open Letter": [
@@ -4890,7 +4893,7 @@
   "Newsroom | everyone.AI": [
    "newsroom"
   ],
-  "Press, podcasts, events, webinars and awards featuring everyone.AI's work on beneficial AI for children.": [
+  "everyone.AI in the news: press articles, podcasts, events, webinars and awards about AI and children, from The Observer to the New York Times and TIME.": [
    "newsroom"
   ],
   "About Us": [
@@ -5451,7 +5454,7 @@
   "About | everyone.AI": [
    "about"
   ],
-  "Our values and our team: bridging multi-disciplinary experiences and expertise for a better AI for children.": [
+  "Meet everyone.AI, an international nonprofit team of experts in neuroscience, AI, education and public policy working for Beneficial AI for all children.": [
    "about"
   ],
   "Tax-deductible donation in Dollars": [
@@ -5511,7 +5514,7 @@
   "Donate | everyone.AI": [
    "donate"
   ],
-  "Support everyone.AI, a 501(c)(3) nonprofit. Make a tax-deductible donation in Euros or Dollars.": [
+  "Donate to everyone.AI, a 501(c)(3) nonprofit for Beneficial AI for children. Your donation is tax-deductible in the US in dollars and in France in euros.": [
    "donate"
   ],
   "An evidence-informed synthesis for youth wellbeing and safety, bridging science, product design, and governance.": [
@@ -5545,7 +5548,7 @@
   "Adolescents & Anthropomorphic AI: Rethinking Design for Wellbeing | everyone.AI": [
    "research/adolescents-and-anthropomorphic-ai"
   ],
-  "Author: Mathilde Cerioli, Ph.D. Conversational AI is now embedded in adolescents' daily lives, supporting tasks that range from homework to emotional reassurance.": [
+  "Report by Mathilde Cerioli, Ph.D.: how adolescents relate socially to conversational AI, and how its anthropomorphic design can support their wellbeing.": [
    "research/adolescents-and-anthropomorphic-ai"
   ],
   "This report explores the potential implications of rapidly integrating Artificial Intelligence (AI) applications into children's environments. The introduction of AI in our daily lives necessitates scrutiny considering the significant role of the environment in shaping cognition, socio-emotional skills, and behaviors, especially during the first 25 years of cerebral development. As AI becomes prevalent in educational and leisure activities, it will significantly modify the experiences of children and adolescents, presenting both challenges and opportunities for their developmental trajectories. This analysis was informed by consulting with 15 experts from pertinent disciplines (AI, product development, child development, and neurosciences), along with a comprehensive review of scientific literature on child development and child-technology interactions. Overall, AI experts anticipate that AI will transform leisure activities, revolutionize education, and redefine human-machine interactions. While AI offers substantial benefits in fostering interactive engagement for example, it also poses risks that require careful consideration, especially during sensitive developmental periods. The report advocates for proactive international collaboration across multiple disciplines and increased research into how technological innovations affect child development. Such efforts are crucial for designing a sustainable and ethical future for the next generation through specific child-centered regulations, and helping to educate all potential stakeholders (regulators, developers, parents and educators, children) about responsible AI use and its potential impacts on child development.": [
@@ -5611,7 +5614,7 @@
   "Relational Positioning, Dependency & Exclusivity Policy (#RPD) | everyone.AI": [
    "research/relational-positioning-dependency-exclusivity-policy-rpd"
   ],
-  "One of the core challenges in youth AI safety is structural: experts in child and adolescent development are often not the ones drafting the technical rules that govern AI systems.": [
+  "Relational Positioning, Dependency & Exclusivity policy (#RPD): a model youth AI safety policy by everyone.AI that technical teams can actually implement.": [
    "research/relational-positioning-dependency-exclusivity-policy-rpd"
   ],
   "Contact us": [
@@ -5642,7 +5645,7 @@
   "Contact | everyone.AI": [
    "contact"
   ],
-  "Contact everyone.AI, a 501(c)(3) nonprofit working for beneficial AI for children: send us a message or write to us.": [
+  "Contact everyone.AI, the 501(c)(3) nonprofit for Beneficial AI for children, with your questions, partnerships, press or research: we read every message.": [
    "contact"
   ],
   "Privacy Policy": [
@@ -5842,7 +5845,7 @@
   "Privacy Policy | everyone.AI": [
    "privacy-policy"
   ],
-  "How everyone.AI collects, uses and protects your personal information.": [
+  "everyone.AI privacy policy: what personal information we collect on the everyone.ai website, how we use, share and protect it, and how you can contact us.": [
    "privacy-policy"
   ],
   "We are committed to providing a fully accessible digital experience for all users, including individuals with disabilities. We adhere to\nWCAG 2.1 AA standards\nand regularly audit our website for compliance.": [
@@ -5854,7 +5857,7 @@
   "Accessibility Statement | everyone.AI": [
    "accessibility-statement"
   ],
-  "The commitment of everyone.AI to an accessible website for all users.": [
+  "everyone.AI accessibility statement: our commitment to a website that everyone can fully use, including people with disabilities, following WCAG 2.1 AA.": [
    "accessibility-statement"
   ],
   "Terms and Conditions": [
@@ -5923,7 +5926,7 @@
   "Terms and Conditions | everyone.AI": [
    "terms-and-conditions"
   ],
-  "The terms that apply to the use of the everyone.AI website.": [
+  "Terms and conditions for using the everyone.AI website: intellectual property, user responsibilities and the rules that apply when you visit everyone.ai.": [
    "terms-and-conditions"
   ],
   "How to read this beta report": [
@@ -5980,7 +5983,7 @@
   "How to read this beta report | everyone.AI": [
    "aia-safety-builder/info"
   ],
-  "What AïA measures, how scores work and how to read the priority levels of the AïA Safety Builder beta report.": [
+  "How to read the AïA Safety Builder beta report: what AïA measures, how behaviors are scored on a 1 to 5 scale and why thresholds depend on the context.": [
    "aia-safety-builder/info"
   ],
   "Beneficial AI for Children: Kickoff with Workshop": [
@@ -6058,7 +6061,7 @@
   "Beneficial AI for Children: Kickoff with Workshop | everyone.AI": [
    "workshop-dec10th"
   ],
-  "Workshop of December 10 in San Francisco, an official partner event of the Paris AI Action Summit.": [
+  "Beneficial AI for Children kickoff workshop, Dec 10 in San Francisco with the Consulate General of France, a partner event of the Paris AI Action Summit.": [
    "workshop-dec10th"
   ],
   "So what's next?": [
@@ -6074,7 +6077,7 @@
   "So what's next? | everyone.AI": [
    "thank-you-open-letter-le-monde"
   ],
-  "Thank you for signing our open letter.": [
+  "Thank you for signing the everyone.AI open letter on AI and children. See what comes next, watch our video and learn how you can help, including by giving.": [
    "thank-you-open-letter-le-monde"
   ],
   "Please watch the Webinar": [
@@ -6086,7 +6089,7 @@
   "Please watch the Webinar | everyone.AI": [
    "thank-you-access-webinar"
   ],
-  "Webinar: The Future of Child Development in the AI Era.": [
+  "Watch the everyone.AI webinar The Future of Child Development in the AI Era, with the key findings of our May 2024 report on how AI affects young minds.": [
    "thank-you-access-webinar"
   ],
   "Events": [
@@ -6101,7 +6104,7 @@
   "Events | everyone.AI": [
    "events"
   ],
-  "Past and upcoming events of everyone.AI.": [
+  "Events by everyone.AI on AI and children: our conferences, workshops, webinars and summits, past and upcoming, are all listed in the everyone.AI Newsroom.": [
    "events"
   ],
   "Blog": [
@@ -6116,7 +6119,7 @@
   "Blog | everyone.AI": [
    "blog"
   ],
-  "News and updates from everyone.AI.": [
+  "News from everyone.AI, the nonprofit for Beneficial AI for children: all our latest press coverage, podcasts, webinars and updates are in the Newsroom.": [
    "blog"
   ]
  }

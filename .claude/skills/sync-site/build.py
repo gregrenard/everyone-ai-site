@@ -37,6 +37,7 @@ Transforms, in order (each exists because the raw Design export is not deployabl
 Usage (from the repo root):
     python3 .claude/skills/sync-site/build.py [--preview]
 """
+import html as H
 import json, os, re, shutil, sys
 
 from PIL import Image
@@ -319,6 +320,77 @@ def add_social_meta(html):
     return head + sep + rest
 
 
+DESCRIPTIONS = {k: v for k, v in json.load(open(os.path.join(_HERE, "descriptions.json"), encoding="utf-8")).items()
+                if not k.startswith("_")}
+
+
+def set_description(html, slug):
+    """Use the reviewed description from descriptions.json for the page's meta description and
+    its sharing copies (Julien's kanban, card S2). Both copies are rewritten: the static head,
+    and the <helmet> block the runtime mounts into the head again on load, which would otherwise
+    bring the old description back as a second tag."""
+    if slug not in DESCRIPTIONS:
+        return html
+    value = H.escape(DESCRIPTIONS[slug], quote=True)
+    pattern = r'(<meta (?:name="description"|property="og:description"|name="twitter:description") content=")[^"]*(")'
+    head, sep, rest = html.partition("<body")
+    head = re.sub(pattern, lambda m: m.group(1) + value + m.group(2), head)
+    rest = re.sub(r"<helmet>.*?</helmet>",
+                  lambda h: re.sub(pattern, lambda m: m.group(1) + value + m.group(2), h.group(0)), rest, flags=re.S)
+    return head + sep + rest
+
+
+# Report pages: what the page text states. No date where the page gives none; no person where
+# the report names none (the organisation is then the author).
+REPORTS = {
+    "research/mapping-of-genai-impacts": {"authors": ["Mathilde Cerioli", "Daniel Hipp"]},
+    "research/adolescents-and-anthropomorphic-ai": {"authors": ["Mathilde Cerioli"]},
+    "research/the-future-of-child-development-in-the-ai-era": {"date": "2024-05"},
+    "research/relational-positioning-dependency-exclusivity-policy-rpd": {},
+}
+ORG = {"@id": "https://everyone.ai/#org"}
+
+
+def add_structured_data(html, slug):
+    """Give every page a JSON-LD WebPage tied to the organisation, and report pages a Report
+    (Julien's kanban, card G2: only Home had structured data). A page that already has JSON-LD
+    in its head (Home) is left as it is; the NGO node itself is declared on Home only and
+    referenced here by @id.
+    """
+    head, sep, rest = html.partition("<body")
+    if not sep or "application/ld+json" in head:
+        return html
+    title = re.search(r"<title>([^<]*)</title>", head)
+    desc = re.search(r'<meta name="description" content="([^"]*)"', head)
+    url = re.search(r'<link rel="canonical" href="([^"]*)"', head)
+    if not (title and url):
+        return html
+    name = re.sub(r"\s*\|\s*everyone\.AI\s*$", "", H.unescape(title.group(1)).strip(), flags=re.I)
+    page = {"@type": "WebPage", "@id": url.group(1) + "#webpage", "url": url.group(1), "name": name,
+            "inLanguage": "en", "isPartOf": {"@id": "https://everyone.ai/#website"}, "about": ORG,
+            "publisher": ORG}
+    if desc:
+        page["description"] = H.unescape(desc.group(1))
+    graph = [page]
+    if slug in REPORTS:
+        meta = REPORTS[slug]
+        report = {"@type": "Report", "@id": url.group(1) + "#report", "name": name, "url": url.group(1),
+                  "inLanguage": "en", "publisher": ORG, "mainEntityOfPage": {"@id": page["@id"]},
+                  "author": [{"@type": "Person", "name": a} for a in meta.get("authors", [])] or ORG}
+        if desc:
+            report["description"] = page["description"]
+        if meta.get("date"):
+            report["datePublished"] = meta["date"]
+        pdf = re.search(r'href="(assets/wp-content/[^"]+\.pdf)"', rest)
+        if pdf:
+            report["encoding"] = {"@type": "MediaObject", "encodingFormat": "application/pdf",
+                                  "contentUrl": "https://everyone.ai/" + pdf.group(1)}
+        graph.append(report)
+    block = '<script type="application/ld+json">%s</script>' % json.dumps(
+        {"@context": "https://schema.org", "@graph": graph}, ensure_ascii=False).replace("</", "<\\/")
+    return head.replace("</head>", block + "\n</head>", 1) + sep + rest
+
+
 def disable_languages(text):
     """Drop disabled languages from every language list (selector, hreflang, og:locale).
 
@@ -509,6 +581,11 @@ def build_page(page):
         head_extra.append('<base href="%s">' % ("../" * depth))
     if helmet and "<title>" not in html.split("<body", 1)[0]:
         head_extra.append(helmet)
+        # The runtime also mounts <helmet> into <head>, and crawlers read the JSON-LD left in
+        # the body copy, so Home declared its NGO graph twice. The head copy is the one kept.
+        if "application/ld+json" in helmet:
+            html = re.sub(r"(<helmet>.*?)<script type=\"application/ld\+json\">.*?</script>\n?(.*?</helmet>)",
+                          r"\1\2", html, count=1, flags=re.S)
     if PREVIEW or slug in COMPONENT_SLUGS:
         head_extra.append('<meta name="robots" content="noindex">')
     if depth:
@@ -535,7 +612,9 @@ def build_page(page):
     if slug not in COMPONENT_SLUGS and '<title>' not in html.split("<body", 1)[0]:
         raise SystemExit("no <title> in head for %s" % page["design"])
     if slug not in COMPONENT_SLUGS:
+        html = set_description(html, slug)
         html = add_social_meta(html)
+        html = add_structured_data(html, slug)
 
     dest = os.path.join(OUT, out_path(slug))
     os.makedirs(os.path.dirname(dest), exist_ok=True)
