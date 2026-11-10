@@ -62,12 +62,6 @@
       "replace": "\\1'Read the Mapping report'"
     },
     {
-      "file": "Home.dc.html",
-      "why": "Messages were cut at 180 characters, too short for a real enquiry (Julien's kanban, D5). The Sheet keeps up to 5000.",
-      "find": "maxLength=\"180\"(.*?)\\{\\{ msgLen \\}\\} / 180",
-      "replace": "maxLength=\"1000\"\\1{{ msgLen }} / 1000"
-    },
-    {
       "file": "Newsroom.dc.html",
       "why": "Messages were cut at 180 characters (Julien's kanban, D5).",
       "find": "maxLength=\"180\"",
@@ -362,6 +356,12 @@
       "why": "Phone rules of the old hero (300 px height, image in the lower 70%, text at 58%): the banner sizes itself.",
       "find": "#eai-hero\\{height:300px!important\\}\\n#eai-hero-img\\{[^\\n]*\\n#eai-hero-img::before\\{[^\\n]*\\n#eai-hero-text\\{[^\\n]*\\n",
       "replace": ""
+    },
+    {
+      "file": "Home.dc.html",
+      "why": "Julien's kanban, D5: the Home form had 9 fields and a 265-country list. Home now has a one-field newsletter signup (MailerLite, like the footer) and a link to /contact, which carries the full form.",
+      "find": "<p style=\"margin:12px 0 0;font:300 17px/1.6 'Open Sans',sans-serif;color:#333\">\\{\\{ t\\.contact\\.intro \\}\\}</p>\\n<form onSubmit=\"\\{\\{ submitContact \\}\\}\".*?</form>",
+      "replace": "<p style=\"margin:12px 0 0;font:300 17px/1.6 'Open Sans',sans-serif;color:#333\">{{ t.footer.subscribe }} {{ t.footer.subscribeSub }}</p>\n<form onSubmit=\"{{ submitNewsletter }}\" style=\"margin-top:28px;display:flex;flex-wrap:wrap;gap:12px;max-width:560px\"><input name=\"email\" type=\"email\" required=\"required\" autoComplete=\"email\" placeholder=\"{{ t.footer.emailPh }}\" aria-label=\"{{ t.footer.emailPh }}\" style=\"flex:1 1 240px;min-width:0;box-sizing:border-box;padding:13px 16px;border:1px solid #cdd5e7;border-radius:4px;background:#fff;font:400 15px/1.4 'Open Sans',sans-serif;color:#222\" style-focus=\"border-color:#829bcb;outline:none\"><button type=\"submit\" style=\"background:#f8903e;color:#fff;border:0;font:500 15px/1 Poppins,sans-serif;padding:14px 28px;border-radius:999px;cursor:pointer;white-space:nowrap\" style-hover=\"background:#e97f2d\">{{ t.footer.subscribeBtn }}</button></form>\n<sc-if value=\"{{ newsSent }}\" hint-placeholder-val=\"{{ false }}\"><p style=\"margin:12px 0 0;font:600 15px/1.4 'Open Sans',sans-serif;color:#2f855a\">{{ t.footer.thanks }} {{ t.footer.thanksSub }}</p></sc-if>\n<p style=\"margin:24px 0 0;font:300 16px/1.6 'Open Sans',sans-serif;color:#333\"><a href=\"Contact.dc.html\" style=\"display:inline-block;border:1px solid #829bcb;color:#35425b;font:500 15px/1 Poppins,sans-serif;padding:13px 26px;border-radius:999px;text-decoration:none\" style-hover=\"background:#829bcb;color:#fff\">{{ t.footer.contact }}</a></p>"
     }
   ]
 }
