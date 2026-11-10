@@ -11,7 +11,7 @@ Report each section as PASS, FAIL or NOT CHECKED, with the measured number. Neve
 
 ## Rules for running it
 
-- Do not submit a form from a browser on the user's machine. The contact forms open the local mail app (`mailto:`), and this has already opened a real Mail window with test data. `audit.mjs` never submits. To test a form, intercept the request or read the code.
+- Do not submit a form from a browser on the user's machine without saying so. Forms now write real rows to the team's Google Sheet; delete any test row afterwards. `audit.mjs` never submits.
 - Do not subscribe a real address to the MailerLite list. To check that the endpoint is alive, post an invalid email: it answers `"The email field must be a valid email address."`.
 - Measure with an empty cache. A reused Chrome profile hid a CLS of 1.02 and reported 0.
 - A test that does not use the visitor's conditions proves little. Layout shift must be measured on a throttled mobile with the cache disabled.
@@ -28,7 +28,7 @@ python3 .claude/skills/sync-site/extract-i18n.py
 
 If page text changed, run the build, then `extract-i18n.py`, then the build again: the build filters published translations against the catalog, so a catalog refreshed after the build leaves renamed strings out until the next build. Drop `--preview` only when the site is served from its final domain. `verify.py` must end with no BAD, apart from the accepted items below. Read every WARN.
 
-Accepted until decided otherwise: `assets/og-cover.png` is missing until someone exports it from Claude Design (`DesignSync` truncates it at 256 KiB).
+The sharing image is `assets/og-cover.jpg`, made by `sync-site/make-og-cover.py` from the Home hero because `DesignSync` truncates Design's `og-cover.png` at 256 KiB; `build.py` points every page at it (`ogImage` in `site-config.json`) and adds the og: and twitter: tags a page lacks. Delete the file to rebuild it after a hero change. No BAD is accepted any more.
 
 ## 2. Browser audit
 
@@ -73,7 +73,7 @@ Policy: https://support.google.com/nonprofits/answer/1657899
 
 ## 5. Images
 
-Team rule of 2026-10-29: at most 1600 px on the long side, WebP, under 200 KiB; thumbnails at twice their displayed size. `optimize-images.py` and verify gate (l) enforce weight and size. Enlarging a small file adds no detail, so an image that is too small needs its original: list it for the team. Look at the photos on a real phone, because automated checks do not see blur. Blur comes from pixels, not from file weight: a 10 KiB black-and-white portrait at 600 px is sharp, a 17 KiB photo at 215 px is not, so never set a minimum file size. When the live WordPress site still holds a larger original, add it to `sync-site/hd-images.json` (`fetch-hd-images.py` makes the copy, `build.py` points the pages at it); otherwise ask the team for it. Languages are hidden, never deleted: list a code in `disabledLanguages` of `site-config.json` (Chinese since 2026-11-03) and check that it is gone from the selector, hreflang and og:locale while its translations stay published.
+Team rule of 2026-10-29: at most 1600 px on the long side, WebP, under 200 KiB, lowered to 150 KiB on 2026-11-09 (Julien's kanban, card T5); thumbnails at twice their displayed size. `optimize-images.py` and verify gate (l) enforce weight and size. Enlarging a small file adds no detail, so an image that is too small needs its original: list it for the team. Look at the photos on a real phone, because automated checks do not see blur. Blur comes from pixels, not from file weight: a 10 KiB black-and-white portrait at 600 px is sharp, a 17 KiB photo at 215 px is not, so never set a minimum file size. When the live WordPress site still holds a larger original, add it to `sync-site/hd-images.json` (`fetch-hd-images.py` makes the copy, `build.py` points the pages at it); otherwise ask the team for it. Languages are hidden, never deleted: list a code in `disabledLanguages` of `site-config.json` (Chinese since 2026-11-03) and check that it is gone from the selector, hreflang and og:locale while its translations stay published.
 
 ## 6. Donations, forms, translations
 
@@ -81,7 +81,7 @@ Team rule of 2026-10-29: at most 1600 px on the long side, WebP, under 200 KiB; 
 - Donate: the widget reserves its height (`min-height`), otherwise it adds about 0.12 of layout shift.
 - EUR: the link lands on the campaign page of Globale Philanthropie and not on a 404.
 - Newsletter: the request goes to MailerLite with `fields[email]`.
-- Contact, press and open-letter forms: `formEndpoint` in `site-config.json`. While it is empty they open the visitor's email app, which is not good enough for a Google submission.
+- Forms: `formEndpoint` in `site-config.json` is the Apps Script web app (source `sync-site/forms-apps-script.gs`) that writes each form to its tab of the "Website" Google Sheet, chosen by `formTabs`; the Summary tab counts rows. A real submission writes a real row and the team sees it in Summary: test against a local server, then delete the rows. If `formEndpoint` is ever emptied, the forms fall back to the visitor's email app, which is not good enough for a Google submission.
 - Every page exists in the 8 languages. `extract-i18n.py --missing <lang>` lists what is left. Expected English for now: the AïA method document (about 500 strings), the privacy policy and the terms, until a scientific or legal owner validates a translation. Anything else left in English is a defect.
 - After changing English text, check the translations too. Renaming a key keeps the translation, including a wording that the change was meant to remove ("Our Esteemed Signatories", "Head of ML").
 

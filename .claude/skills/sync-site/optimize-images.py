@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
 """Keep every image under docs/assets within the agreed limits (run before build.py).
 
-Rule agreed by the team (2026-10-29): at most 1600 px on the long side, WebP, under 200 KiB.
+Rule agreed by the team (2026-10-29): at most 1600 px on the long side, WebP, under 200 KiB;
+lowered to 150 KiB on 2026-11-09 (Julien's fixes kanban, card T5: about 150 KB per image).
 An oversized .webp is rewritten in place. An oversized .png/.jpg becomes a .webp next to it,
 and the old -> new path is recorded in image-map.json so build.py can rewrite references.
 Quality goes down from 82 to 70, then the image is scaled down, so a large photo loses
@@ -15,7 +16,7 @@ from PIL import Image
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 OUT = os.path.join(os.getcwd(), "docs")
-LIMIT = 200 * 1024
+LIMIT = 150 * 1024
 MAP_FILE = os.path.join(HERE, "image-map.json")
 
 

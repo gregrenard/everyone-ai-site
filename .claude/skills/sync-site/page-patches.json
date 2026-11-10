@@ -320,6 +320,12 @@
       "find": "(<figcaption[^>]*>)",
       "ported": true,
       "replace": "\\1<img src=\"{{ q.photo }}\" alt=\"{{ q.n }}\" loading=\"lazy\" style=\"width:72px;height:72px;border-radius:50%;object-fit:cover;display:block;margin:0 0 10px\">"
+    },
+    {
+      "file": "Home.dc.html",
+      "why": "The hero image had an empty alt and no loading priority (Julien's kanban, cards S5 and T5: it is the page's main image and its LCP element).",
+      "find": "<img src=\"assets/hero-child\\.jpg\" alt=\"\"",
+      "replace": "<img src=\"assets/hero-child.jpg\" alt=\"A thoughtful child looking up, with a network of points of light drawn across the forehead\" fetchpriority=\"high\""
     }
   ]
 }

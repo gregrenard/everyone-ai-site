@@ -4,7 +4,7 @@
 The Home mission photos came out of Design at 215 x 140 px and are shown full width on a
 phone (about 360 CSS px, so 1000+ device pixels): the team saw them pixelated. The live
 WordPress site still holds the originals. Each one is downloaded once, scaled down to the
-entry's "side" (never up) and saved as WebP at quality 85, under the 200 KiB rule of
+entry's "side" (never up) and saved as WebP at quality 85, under the 150 KiB rule of
 optimize-images.py. build.py then points the pages at the copy.
 
 Idempotent: existing files are skipped. Do NOT rely on it after the DNS switch - the source
@@ -26,7 +26,7 @@ OUT = os.path.join(os.getcwd(), "docs")
 # The live site answers 406 (mod_security) to non-browser user agents.
 UA = ("Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 "
       "(KHTML, like Gecko) Chrome/126.0 Safari/537.36")
-LIMIT = 200 * 1024
+LIMIT = 150 * 1024
 
 
 def main():

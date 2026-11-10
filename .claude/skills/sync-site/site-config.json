@@ -4,6 +4,7 @@
     "address: the postal address required by the Google Ad Grants policy. Shown on /contact/ and in the footer of every page. Empty = verify gate (m) fails on purpose.",
     "formEndpoint: the /exec URL of the Google Apps Script web app (source: forms-apps-script.gs) that writes every non-newsletter form to the website forms Google Sheet. Empty = those forms open the visitor's email app, addressed to contactEmail.",
     "formTabs: first segment of a page's canonical path -> sheet tab its form is written to (\"\" is the Home page). Any other page goes to the tab Other.",
+    "ogImage: the social sharing image (og:image, twitter:image) of every page, made by make-og-cover.py. It replaces assets/og-cover.png, which Design references but DesignSync cannot export.",
     "disabledLanguages: languages hidden from the selector, hreflang and og:locale. Their translations stay published, so removing a code turns it back on."
   ],
   "address": "everyone.AI, 1259 El Camino Real, Unit #1042, Menlo Park, CA 94025",
@@ -20,6 +21,7 @@
   "newsletter": "https://assets.mailerlite.com/jsonp/1141313/forms/135300210238686864/subscribe",
   "givebutterAccount": "FfBCCgbG6HBI09p3",
   "givebutterWidget": "LPqXkg",
+  "ogImage": "assets/og-cover.jpg",
   "disabledLanguages": [
     "zh"
   ]

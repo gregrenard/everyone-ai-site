@@ -38,6 +38,8 @@ Usage (from the repo root):
     python3 .claude/skills/sync-site/build.py [--preview]
 """
 import json, os, re, shutil, sys
+
+from PIL import Image
 from urllib.parse import unquote
 
 _HERE = os.path.dirname(os.path.abspath(__file__))
@@ -240,9 +242,81 @@ def apply_patches(html, design):
     # By file name: some pages join a base path and a name in JS.
     for old, new in IMAGE_MAP.items():
         html = html.replace(os.path.basename(old), os.path.basename(new))
+    html = html.replace("assets/og-cover.png", CONFIG["ogImage"])
+    html = add_image_ratios(html)
     # Hidden <x-dc> templates are real HTML: the browser fetched src="{{ m.photo }}" and
     # logged 404s. support.js restores the attribute when it reads the template.
     return re.sub(r'\bsrc="(\{\{[^"]*\}\})"', r'data-eai-src="\1"', html)
+
+
+_RATIO = {}
+
+
+def add_image_ratios(html):
+    """Reserve each local image's box before it loads (Julien's kanban, card T5).
+
+    Only <img> tags with a literal assets/ path and no width attribute or aspect-ratio. It adds
+    the CSS aspect-ratio "auto W / H", not width/height attributes: the attributes also set a
+    height that would stretch the many images styled width:100% without height:auto, while
+    aspect-ratio only applies where the page leaves the height free, and "auto" hands over to
+    the real file once it has loaded. Images whose src is a template ({{ }}) are not touched.
+    """
+    def ratio(path):
+        if path not in _RATIO:
+            try:
+                with Image.open(os.path.join(OUT, path)) as im:
+                    _RATIO[path] = im.size
+            except (OSError, ValueError):
+                _RATIO[path] = None
+        return _RATIO[path]
+
+    def one(m):
+        tag = m.group(0)
+        if re.search(r"\swidth=", tag) or "aspect-ratio" in tag:
+            return tag
+        size = ratio(unquote(m.group(1)))
+        if not size:
+            return tag
+        css = "aspect-ratio:auto %d / %d;" % size
+        if re.search(r'\sstyle="', tag):
+            return re.sub(r'(\sstyle=")', lambda s: s.group(1) + css, tag, count=1)
+        return tag[:4] + ' style="%s"' % css + tag[4:]
+
+    return re.sub(r'<img\b[^>]*?\ssrc="(assets/[^"{}]+)"[^>]*>', one, html)
+
+
+SOCIAL_KEYS = ("og:type", "og:site_name", "og:title", "og:description", "og:url", "og:image",
+               "twitter:card", "twitter:image")
+
+
+def add_social_meta(html):
+    """Give every page the sharing tags the Home page has (Julien's kanban, card S4).
+
+    Only Home carried og: and twitter: tags, so a shared link to any other page showed a bare
+    URL. Each missing tag is built from what the page already has: its <title>, meta
+    description and canonical URL, plus the site's sharing image. Tags a page sets are kept.
+    """
+    head, sep, rest = html.partition("<body")
+    if not sep:
+        return html
+    title = re.search(r"<title>([^<]*)</title>", head)
+    desc = re.search(r'<meta name="description" content="([^"]*)"', head)
+    url = re.search(r'<link rel="canonical" href="([^"]*)"', head)
+    image = "https://everyone.ai/" + CONFIG["ogImage"]
+    values = {"og:type": "website", "og:site_name": "everyone.AI",
+              "og:title": title and title.group(1).strip(), "og:description": desc and desc.group(1),
+              "og:url": url and url.group(1), "og:image": image,
+              "twitter:card": "summary_large_image", "twitter:image": image}
+    tags = []
+    for key in SOCIAL_KEYS:
+        attr = "name" if key.startswith("twitter:") else "property"
+        if not values[key] or re.search(r'<meta (?:property|name)="%s"' % re.escape(key), head):
+            continue
+        tags.append('<meta %s="%s" content="%s">' % (attr, key, values[key].replace('"', "&quot;")))
+    if not tags:
+        return html
+    head = head.replace("</head>", "\n".join(tags) + "\n</head>", 1)
+    return head + sep + rest
 
 
 def disable_languages(text):
@@ -460,6 +534,8 @@ def build_page(page):
     )
     if slug not in COMPONENT_SLUGS and '<title>' not in html.split("<body", 1)[0]:
         raise SystemExit("no <title> in head for %s" % page["design"])
+    if slug not in COMPONENT_SLUGS:
+        html = add_social_meta(html)
 
     dest = os.path.join(OUT, out_path(slug))
     os.makedirs(os.path.dirname(dest), exist_ok=True)

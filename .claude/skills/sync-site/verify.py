@@ -248,8 +248,8 @@ for f in scan_files:
 
 print("--- (l) image weight and template images")
 for f in glob.glob(os.path.join(OUT, "assets", "**", "*"), recursive=True):
-    if f.lower().endswith((".png", ".jpg", ".jpeg", ".webp")) and os.path.getsize(f) > 200 * 1024:
-        bad("image over 200 KiB: %s (%d KiB)" % (os.path.relpath(f, OUT), os.path.getsize(f) // 1024))
+    if f.lower().endswith((".png", ".jpg", ".jpeg", ".webp")) and os.path.getsize(f) > 150 * 1024:
+        bad("image over 150 KiB: %s (%d KiB)" % (os.path.relpath(f, OUT), os.path.getsize(f) // 1024))
 for s_ in SLUGS:
     if os.path.exists(page_file(s_)) and re.search(r'(?<![-\w])src="\{\{', read(page_file(s_))):
         bad("template image would 404 in the console: " + s_)
