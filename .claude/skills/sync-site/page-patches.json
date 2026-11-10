@@ -353,9 +353,15 @@
     },
     {
       "file": "Home.dc.html",
-      "why": "The hero image had an empty alt and no loading priority (Julien's kanban, cards S5 and T5: it is the page's main image and its LCP element).",
-      "find": "<img src=\"assets/hero-child\\.jpg\" alt=\"\"",
-      "replace": "<img src=\"assets/hero-child.jpg\" alt=\"A thoughtful child looking up, with a network of points of light drawn across the forehead\" fetchpriority=\"high\""
+      "why": "Gaelle's Home banner (Doc 'Bandeau Site Internet', file 25) replaces the 1250 x 468 hero: picture on the left at the banner's own ratio, the title centered in the right half, 'Shaping Beneficial AI' in white and the rest in #829BCB. Same i18n keys, so the 7 languages keep their text. The image keeps a description and loads first (kanban S5, T5).",
+      "find": "<section id=\"eai-hero\".*?</section>",
+      "replace": "<section id=\"eai-hero\" aria-label=\"Shaping Beneficial AI for children today, for everyone tomorrow\" style=\"position:relative;overflow:hidden;background:#34435b;min-height:clamp(150px,13.06vw,260px);display:flex;align-items:center;justify-content:flex-end\">\n<img src=\"assets/banners/home.webp\" alt=\"A young child, hand on chin, looking up thoughtfully\" fetchpriority=\"high\" style=\"position:absolute;left:0;top:0;height:100%;width:auto;max-width:none\">\n<div id=\"eai-hero-text\" data-eai-banner-text=\"\" style=\"position:relative;z-index:1;width:50%;padding:16px 24px;box-sizing:border-box;text-align:center;font:600 clamp(16px,1.75vw,30px)/1.35 Poppins,sans-serif;text-transform:uppercase;letter-spacing:.02em\">\n<h1 style=\"margin:0;font:inherit\"><span style=\"color:#fff\">{{ t.hero.l1 }}</span><br><span style=\"color:#829bcb\">{{ t.hero.l1b }}</span><br><span style=\"color:#829bcb\">{{ t.hero.l2 }}</span></h1>\n</div>\n</section>"
+    },
+    {
+      "file": "Home.dc.html",
+      "why": "Phone rules of the old hero (300 px height, image in the lower 70%, text at 58%): the banner sizes itself.",
+      "find": "#eai-hero\\{height:300px!important\\}\\n#eai-hero-img\\{[^\\n]*\\n#eai-hero-img::before\\{[^\\n]*\\n#eai-hero-text\\{[^\\n]*\\n",
+      "replace": ""
     }
   ]
 }

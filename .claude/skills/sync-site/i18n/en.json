@@ -1388,7 +1388,7 @@
   "Shaping Beneficial AI for children today, for everyone tomorrow": [
    "index"
   ],
-  "A thoughtful child looking up, with a network of points of light drawn across the forehead": [
+  "A young child, hand on chin, looking up thoughtfully": [
    "index"
   ],
   "everyone.AI keynote in front of a full auditorium": [
@@ -1404,12 +1404,12 @@
    "index"
   ],
   "iRAISE": [
-   "index",
-   "international-coalition"
+   "index"
   ],
   "AïA Safety Builder": [
    "index",
-   "aia-safety-builder"
+   "aia-safety-builder",
+   "aia-safety-builder/method"
   ],
   "LinkedIn": [
    "index",
@@ -1732,10 +1732,6 @@
    "aia-safety-builder",
    "aia-safety-builder/service"
   ],
-  "AïA": [
-   "aia-safety-builder",
-   "aia-safety-builder/method"
-  ],
   "VivaTech Tech for Change award": [
    "aia-safety-builder"
   ],
@@ -1747,6 +1743,9 @@
   ],
   "AïA Evaluation Framework by everyone.AI: open source tools that measure how AI systems really behave with children and young people, to help make AI safer.": [
    "aia-safety-builder"
+  ],
+  "Methodology": [
+   "aia-safety-builder/method"
   ],
   "AïA Technical Method including CALIBER": [
    "aia-safety-builder/method"
@@ -4085,6 +4084,9 @@
   "Send Message": [
    "international-coalition",
    "newsroom"
+  ],
+  "iRAISE, International Research-driven Alliance for AI Serving Every child, an initiative by the Paris Peace Forum and everyone.AI": [
+   "international-coalition"
   ],
   "Google": [
    "international-coalition"

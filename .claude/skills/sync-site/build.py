@@ -136,7 +136,9 @@ def fix_text(html):
 # (worst with long German words); align them left below 640 px.
 MOBILE_CSS = (
     '<style id="eai-mobile">@media (max-width:640px){#dc-root [style*="text-align: justify"],'
-    '#dc-root [style*="text-align:justify"]{text-align:left!important}}</style>'
+    '#dc-root [style*="text-align:justify"]{text-align:left!important}'
+    # Banners: on a phone the picture keeps its left third, so the title gets a little more room.
+    '[data-eai-banner-text]{width:60%!important;padding:12px 14px!important}}</style>'
 )
 I18N_TAG = '<script src="eai-i18n.js" defer></script>'
 FORMS_TAG = ('<script>window.EAI_FORMS=%s;</script><script src="eai-forms.js" defer></script>'
@@ -318,6 +320,65 @@ def add_social_meta(html):
         return html
     head = head.replace("</head>", "\n".join(tags) + "\n</head>", 1)
     return head + sep + rest
+
+
+BANNERS = {k: v for k, v in json.load(open(os.path.join(_HERE, "banners.json"), encoding="utf-8")).items()
+           if not k.startswith("_")}
+HERO_RE = re.compile(r'(SiteHeader"[^>]*></dc-import>\s*)<section style="background:#35425b;padding:[^"]*;'
+                     r'text-align:center">(.*?)</section>', re.S)
+SR_ONLY = "position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;margin:0"
+
+
+def apply_banner(html, design):
+    """Turn the page's dark title section into Gaelle's banner (banners.json).
+
+    The banner (1455 x 190) is drawn at its own ratio: the section is 13.06vw high, so the
+    picture spans the full width with nothing cropped, down to a 120 px floor on phones where
+    it keeps its left part. The banner colour (#34435b) fills whatever is left. The old H1 text
+    stays the H1 unless banners.json gives another title, in which case it moves under the
+    banner as a subtitle; logos the banner already shows are dropped.
+    """
+    conf = BANNERS.get(design)
+    if not conf:
+        return html
+    m = HERO_RE.search(html)
+    if not m:
+        print("banner inert (%s): no title section found" % design)
+        return html
+    inner = m.group(2)
+    if conf.get("dropLogo"):
+        inner = re.sub(r"\s*<img [^>]*>", "", inner, count=1)
+    h1 = re.search(r"<h1 [^>]*>(.*?)</h1>", inner, re.S)
+    old = h1.group(1).strip() if h1 else ""
+    title = conf.get("title", old)
+    keep = ""
+    if h1 and title != old and not conf.get("full"):
+        keep = ('<p style="margin:0;font:600 clamp(18px,2.2vw,28px)/1.3 Poppins,sans-serif;color:#fff;'
+                'text-transform:uppercase;letter-spacing:.04em">%s</p>' % old)
+    rest = (inner[:h1.start()] + keep + inner[h1.end():]) if h1 else inner
+    if conf.get("full"):
+        banner = ('<section data-eai-banner="" style="position:relative;background:#324973">'
+                  '<h1 style="%s">%s</h1>'
+                  '<img src="%s" alt="iRAISE, International Research-driven Alliance for AI Serving Every child, '
+                  'an initiative by the Paris Peace Forum and everyone.AI" fetchpriority="high" '
+                  'style="display:block;width:100%%;max-width:1455px;height:auto;margin:0 auto"></section>'
+                  % (SR_ONLY, old or "International Coalition", conf["img"]))
+    else:
+        caps = "text-transform:uppercase;" if conf.get("caps") else ""
+        sub = ('<p style="margin:6px 0 0;font:500 clamp(14px,1.5vw,22px)/1.3 Poppins,sans-serif;color:#fff">%s</p>'
+               % conf["sub"]) if conf.get("sub") else ""
+        banner = ('<section data-eai-banner="" style="position:relative;overflow:hidden;background:#34435b;'
+                  'min-height:clamp(120px,13.06vw,260px);display:flex;align-items:center;justify-content:flex-end">'
+                  '<img src="%s" alt="" fetchpriority="high" style="position:absolute;left:0;top:0;height:100%%;'
+                  'width:auto;max-width:none">'
+                  '<div data-eai-banner-text="" style="position:relative;width:50%%;padding:16px 24px;'
+                  'box-sizing:border-box;text-align:center">'
+                  '<h1 style="margin:0;font:600 clamp(22px,2.9vw,46px)/1.15 Poppins,sans-serif;color:#fff;'
+                  'letter-spacing:.03em;%s">%s</h1>%s</div></section>' % (conf["img"], caps, title, sub))
+    if rest.strip():
+        banner += ('\n<section style="background:#35425b;padding:28px 20px 44px;text-align:center">%s</section>'
+                   % rest)
+    return html[:m.start()] + m.group(1) + banner + html[m.end():]
 
 
 DESCRIPTIONS = {k: v for k, v in json.load(open(os.path.join(_HERE, "descriptions.json"), encoding="utf-8")).items()
@@ -570,7 +631,8 @@ def rewrite_links(html, slug):
 
 def build_page(page):
     slug = page["slug"]
-    src = apply_patches(open(source_path(page["design"]), encoding="utf-8").read(), page["design"])
+    src = apply_banner(apply_patches(open(source_path(page["design"]), encoding="utf-8").read(), page["design"]),
+                       page["design"])
     depth = 0 if slug == "index" else slug.count("/") + 1
     html = fix_text(rewrite_links(src, slug))
 
