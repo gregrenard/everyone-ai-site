@@ -2,10 +2,27 @@
 // Design ships forms with an empty endpoint: they showed "Thank you" and dropped the message.
 //  - newsletter forms post to MailerLite, the list the live site already uses; the page's
 //    own handler then shows its thank-you line.
-//  - other forms post to formEndpoint when one is set. Until then they open the visitor's
-//    email app with the message filled in, and no false success is shown.
+//  - other forms post to formEndpoint when one is set (a Google Apps Script web app, source in
+//    forms-apps-script.gs), with _form naming the sheet tab, chosen from the first segment of
+//    the page's canonical path through formTabs. Until it is set they open the visitor's email
+//    app with the message filled in, and no false success is shown.
+//  - a checked "newsletter" box (Home contact form) also subscribes the email to MailerLite.
 (function () {
   var C = window.EAI_FORMS || {};
+  function tabFor() {
+    var c = document.querySelector('link[rel=canonical]');
+    var path = c ? new URL(c.href).pathname : location.pathname;
+    var seg = path.split('/').filter(Boolean)[0] || '';
+    var tabs = C.formTabs || {};
+    return Object.prototype.hasOwnProperty.call(tabs, seg) ? tabs[seg] : 'Other';
+  }
+  function subscribe(email) {
+    var b = new URLSearchParams();
+    b.append('fields[email]', email);
+    b.append('ml-submit', '1');
+    b.append('anticsrf', 'true');
+    fetch(C.newsletter, { method: 'POST', mode: 'no-cors', body: b }).catch(function () {});
+  }
   var NOTE = {
     en: 'Your email app has opened with your message. Please press Send there to finish.',
     fr: 'Votre messagerie s’est ouverte avec votre message. Cliquez sur Envoyer pour terminer.',
@@ -37,16 +54,20 @@
   document.addEventListener('submit', function (e) {
     var f = e.target;
     if (isNewsletter(f)) {
-      if (!C.newsletter) return;
-      var b = new URLSearchParams();
-      b.append('fields[email]', f.querySelector('input[type=email]').value);
-      b.append('ml-submit', '1');
-      b.append('anticsrf', 'true');
-      fetch(C.newsletter, { method: 'POST', mode: 'no-cors', body: b }).catch(function () {});
+      if (C.newsletter) subscribe(f.querySelector('input[type=email]').value);
       return;
     }
     if (C.formEndpoint) {
-      fetch(C.formEndpoint, { method: 'POST', mode: 'no-cors', body: new URLSearchParams(new FormData(f)) }).catch(function () {});
+      var body = new URLSearchParams(new FormData(f));
+      body.append('_form', tabFor());
+      body.append('_page', location.href);
+      body.append('_lang', document.documentElement.lang || '');
+      // Apps Script does not keep the order of posted fields: send it, so sheet columns follow the form.
+      body.append('_fields', Array.prototype.map.call(f.elements, function (el) { return el.name; })
+        .filter(function (n, i, a) { return n && a.indexOf(n) === i; }).join(','));
+      fetch(C.formEndpoint, { method: 'POST', mode: 'no-cors', body: body }).catch(function () {});
+      var opt = f.querySelector('input[name=newsletter]');
+      if (opt && opt.checked && C.newsletter && body.get('email')) subscribe(body.get('email'));
       return;
     }
     e.preventDefault();

@@ -137,7 +137,7 @@ MOBILE_CSS = (
 )
 I18N_TAG = '<script src="eai-i18n.js" defer></script>'
 FORMS_TAG = ('<script>window.EAI_FORMS=%s;</script><script src="eai-forms.js" defer></script>'
-             % json.dumps({k: CONFIG[k] for k in ("contactEmail", "formEndpoint", "newsletter")}))
+             % json.dumps({k: CONFIG[k] for k in ("contactEmail", "formEndpoint", "formTabs", "newsletter")}))
 GIVEBUTTER_TAG = '<script async src="https://widgets.givebutter.com/latest.umd.cjs?acct=%s&p=wordpress"></script>' % CONFIG["givebutterAccount"]
 # Keeps the menu bar visible while scrolling (sticky-header.js, published as eai-sticky.js).
 STICKY_TAG = '<script src="eai-sticky.js" defer></script>'

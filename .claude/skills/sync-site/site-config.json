@@ -2,12 +2,21 @@
   "_comment": [
     "Deploy-time settings that Claude Design does not hold. Read by build.py, forms-overlay.js (through build.py) and verify.py.",
     "address: the postal address required by the Google Ad Grants policy. Shown on /contact/ and in the footer of every page. Empty = verify gate (m) fails on purpose.",
-    "formEndpoint: URL that receives the contact, press and open-letter forms. Empty = those forms open the visitor's email app, addressed to contactEmail.",
+    "formEndpoint: the /exec URL of the Google Apps Script web app (source: forms-apps-script.gs) that writes every non-newsletter form to the website forms Google Sheet. Empty = those forms open the visitor's email app, addressed to contactEmail.",
+    "formTabs: first segment of a page's canonical path -> sheet tab its form is written to (\"\" is the Home page). Any other page goes to the tab Other.",
     "disabledLanguages: languages hidden from the selector, hreflang and og:locale. Their translations stay published, so removing a code turns it back on."
   ],
   "address": "everyone.AI, 1259 El Camino Real, Unit #1042, Menlo Park, CA 94025",
   "contactEmail": "website@everyone.ai",
-  "formEndpoint": "",
+  "formEndpoint": "https://script.google.com/macros/s/AKfycbybDet-C8i-RFHsyikAw_9BVZSExNCkjdHW8HOEEsgTbxVAC4CzX58klvg99jJdaIlf/exec",
+  "formTabs": {
+    "": "Home contact",
+    "contact": "Contact",
+    "newsroom": "Press",
+    "open-letter": "Open Letter",
+    "international-coalition": "Coalition",
+    "research": "Reports"
+  },
   "newsletter": "https://assets.mailerlite.com/jsonp/1141313/forms/135300210238686864/subscribe",
   "givebutterAccount": "FfBCCgbG6HBI09p3",
   "givebutterWidget": "LPqXkg",
