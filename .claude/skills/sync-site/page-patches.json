@@ -416,6 +416,12 @@
       "why": "Same, second photo.",
       "find": "(<image-slot id=\"aia-photo-3\" [^>]*?)>",
       "replace": "\\1 alt=\"everyone.AI presenting Toward Beneficial AI for Children on stage at AI for Good, Geneva 2026\">"
+    },
+    {
+      "file": "About.dc.html",
+      "why": "Julien's new title, and Maï Nguyen added as Risk & Compliance Advisor next to him in EU Contributors (Julien, 11 Nov; Gregory's go). LinkedIn from Gregory; photo from her LinkedIn profile, in black and white like the other portraits; the group is a guess and can move.",
+      "find": "\\[\\['Julien Etienne', 'julienetienne', 'julien@everyone\\.ai'\\], 'Marketing / Communication'\\],",
+      "replace": "[['Julien Etienne', 'julienetienne', 'julien@everyone.ai'], 'Head of Product Marketing / Growth Lead'], [['Maï Nguyen', 'mnguyenconseil', '', 'assets/team-mai-nguyen.webp'], 'Risk & Compliance Advisor'],"
     }
   ]
 }
