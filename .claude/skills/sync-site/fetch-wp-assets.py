@@ -36,7 +36,9 @@ VIDEO_EXT = (".mp4", ".webm", ".mov", ".m4v", ".ogv")
 
 def main():
     urls = set()
-    for f in glob.glob(os.path.join(SRC, "*.dc.html")):
+    # extra-pages/ holds pages ported from WordPress, which link PDFs the same way.
+    extra = os.path.join(os.path.dirname(os.path.abspath(__file__)), "extra-pages")
+    for f in glob.glob(os.path.join(SRC, "*.dc.html")) + glob.glob(os.path.join(extra, "*.dc.html")):
         urls.update(WP_RE.findall(open(f, encoding="utf-8").read()))
     fetched = skipped = failed = 0
     for u in sorted(urls):

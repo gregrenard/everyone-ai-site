@@ -1,11 +1,42 @@
 {
-  "_comment": "Page banners designed by Gaelle (Drive folder 'Bandeau site internet', Doc 'Bandeau Site Internet', 4 Nov 2026; files in docs/assets/banners/, 1455 x 190). build.py replaces each page's dark title section with the banner: picture on the left, title centered in the right half, white Poppins SemiBold (Futura Round is not licensed for the site). Whatever else the old section held (subtitle, buttons) is kept in a band under the banner. 'title' replaces the H1 text, 'sub' adds a smaller second line, 'caps' uppercases the title, 'full' shows the whole image with no visible title (the H1 stays for screen readers and search engines). Home is done by a page patch instead (its hero is built differently).",
-  "Research.dc.html": {"img": "assets/banners/research.webp", "caps": true},
-  "AIA.dc.html": {"img": "assets/banners/aia.webp", "title": "AïA Safety Builder", "dropLogo": true},
-  "AIA Method.dc.html": {"img": "assets/banners/aia.webp", "title": "AïA Safety Builder", "sub": "Methodology", "dropLogo": true},
-  "Coalition.dc.html": {"img": "assets/banners/iraise.webp", "full": true, "dropLogo": true},
-  "Education.dc.html": {"img": "assets/banners/education.webp", "caps": true},
-  "Open Letter.dc.html": {"img": "assets/banners/open-letter.webp", "caps": true},
-  "Newsroom.dc.html": {"img": "assets/banners/newsroom.webp", "caps": true},
-  "About.dc.html": {"img": "assets/banners/about.webp", "caps": true}
+  "_comment": "Page banners designed by Gaelle (Drive folder 'Bandeau site internet', Doc 'Bandeau Site Internet', 4 Nov 2026; files in docs/assets/banners/, 1455 x 190). build.py replaces each page's dark title section with the banner: picture on the left, title right-aligned and vertically centered (Gaelle, 11 Nov), white Poppins SemiBold (Futura Round is not licensed for the site). Whatever else the old section held (subtitle, buttons) is kept in a band under the banner, in the page colour #f0f2f6 (Gaelle, 11 Nov). 'title' replaces the H1 text, 'sub' adds a smaller second line, 'caps' uppercases the title, 'full' shows the whole image with no visible title (the H1 stays for screen readers and search engines). Home is done by a page patch instead (its hero is built differently).",
+  "Research.dc.html": {
+    "img": "assets/banners/research.webp",
+    "caps": true
+  },
+  "AIA.dc.html": {
+    "img": "assets/banners/aia.webp",
+    "title": "AïA Safety Builder",
+    "dropLogo": true
+  },
+  "AIA Method.dc.html": {
+    "img": "assets/banners/aia.webp",
+    "title": "AïA Safety Builder",
+    "sub": "Methodology",
+    "dropLogo": true
+  },
+  "AIA Service.dc.html": {
+    "img": "assets/banners/aia.webp"
+  },
+  "Coalition.dc.html": {
+    "img": "assets/banners/iraise.webp",
+    "full": true,
+    "dropLogo": true
+  },
+  "Education.dc.html": {
+    "img": "assets/banners/education.webp",
+    "caps": true
+  },
+  "Open Letter.dc.html": {
+    "img": "assets/banners/open-letter.webp",
+    "caps": true
+  },
+  "Newsroom.dc.html": {
+    "img": "assets/banners/newsroom.webp",
+    "caps": true
+  },
+  "About.dc.html": {
+    "img": "assets/banners/about.webp",
+    "caps": true
+  }
 }

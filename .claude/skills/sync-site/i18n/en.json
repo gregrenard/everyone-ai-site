@@ -13,6 +13,7 @@
    "newsroom",
    "about",
    "donate",
+   "research/human-centredailiteracy",
    "research/adolescents-and-anthropomorphic-ai",
    "research/the-future-of-child-development-in-the-ai-era",
    "research/relational-positioning-dependency-exclusivity-policy-rpd",
@@ -40,6 +41,7 @@
    "newsroom",
    "about",
    "donate",
+   "research/human-centredailiteracy",
    "research/adolescents-and-anthropomorphic-ai",
    "research/the-future-of-child-development-in-the-ai-era",
    "research/relational-positioning-dependency-exclusivity-policy-rpd",
@@ -103,14 +105,7 @@
   "Our latest publication:": [
    "index"
   ],
-  "Mapping of GenAI impacts on child development": [
-   "index"
-  ],
-  "This report examines how generative AI use may shape children's cognitive, emotional, and developmental trajectories across four age bands, from birth to age 18. Drawing on developmental science, neuroscience, and emerging evidence on youth AI use, it translates converging scientific insights into developmentally grounded governance priorities for G7 policymakers.": [
-   "index",
-   "research"
-  ],
-  "Read the Mapping report": [
+  "Read Our Reports": [
    "index"
   ],
   "Why Now?": [
@@ -204,832 +199,8 @@
   "Join the conversation": [
    "index"
   ],
-  "If you want to learn more or have any questions, contact us!": [
+  "Subscribe\nto stay informed on news and updates": [
    "index"
-  ],
-  "First Name\n*": [
-   "index"
-  ],
-  "Last Name\n*": [
-   "index"
-  ],
-  "Email Address\n*": [
-   "index"
-  ],
-  "LinkedIn profile": [
-   "index"
-  ],
-  "Profile\n*": [
-   "index"
-  ],
-  "Profile Type": [
-   "index"
-  ],
-  "Government / Policy Maker": [
-   "index"
-  ],
-  "NGO": [
-   "index"
-  ],
-  "Researchers": [
-   "index"
-  ],
-  "AI Developer (Toy Maker, Chat Bot, ...)": [
-   "index"
-  ],
-  "Parents": [
-   "index"
-  ],
-  "Teachers / School / University": [
-   "index"
-  ],
-  "AI Industry / Startup": [
-   "index"
-  ],
-  "Youth / Students": [
-   "index"
-  ],
-  "Other": [
-   "index"
-  ],
-  "City": [
-   "index"
-  ],
-  "State/Province": [
-   "index"
-  ],
-  "Country": [
-   "index"
-  ],
-  "Select a country": [
-   "index"
-  ],
-  "Afghanistan": [
-   "index"
-  ],
-  "Albania": [
-   "index"
-  ],
-  "Algeria": [
-   "index"
-  ],
-  "American Samoa": [
-   "index"
-  ],
-  "Andorra": [
-   "index"
-  ],
-  "Angola": [
-   "index"
-  ],
-  "Anguilla": [
-   "index"
-  ],
-  "Antarctica": [
-   "index"
-  ],
-  "Antigua & Barbuda": [
-   "index"
-  ],
-  "Argentina": [
-   "index"
-  ],
-  "Armenia": [
-   "index"
-  ],
-  "Aruba": [
-   "index"
-  ],
-  "Ascension Island": [
-   "index"
-  ],
-  "Australia": [
-   "index"
-  ],
-  "Austria": [
-   "index"
-  ],
-  "Azerbaijan": [
-   "index"
-  ],
-  "Bahamas": [
-   "index"
-  ],
-  "Bahrain": [
-   "index"
-  ],
-  "Bangladesh": [
-   "index"
-  ],
-  "Barbados": [
-   "index"
-  ],
-  "Belarus": [
-   "index"
-  ],
-  "Belgium": [
-   "index"
-  ],
-  "Belize": [
-   "index"
-  ],
-  "Benin": [
-   "index"
-  ],
-  "Bermuda": [
-   "index"
-  ],
-  "Bhutan": [
-   "index"
-  ],
-  "Bolivia": [
-   "index"
-  ],
-  "Bosnia and Herzegovina": [
-   "index"
-  ],
-  "Botswana": [
-   "index"
-  ],
-  "Bouvet Island": [
-   "index"
-  ],
-  "Brazil": [
-   "index"
-  ],
-  "British Indian Ocean Territory": [
-   "index"
-  ],
-  "British Virgin Islands": [
-   "index"
-  ],
-  "Brunei": [
-   "index"
-  ],
-  "Bulgaria": [
-   "index"
-  ],
-  "Burkina Faso": [
-   "index"
-  ],
-  "Burundi": [
-   "index"
-  ],
-  "Cabo Verde": [
-   "index"
-  ],
-  "Cambodia": [
-   "index"
-  ],
-  "Cameroon": [
-   "index"
-  ],
-  "Canada": [
-   "index"
-  ],
-  "Caribbean Netherlands": [
-   "index"
-  ],
-  "Cayman Islands": [
-   "index"
-  ],
-  "Central African Republic": [
-   "index"
-  ],
-  "Chad": [
-   "index"
-  ],
-  "Chile": [
-   "index"
-  ],
-  "China": [
-   "index"
-  ],
-  "Christmas Island": [
-   "index"
-  ],
-  "Cocos Islands": [
-   "index"
-  ],
-  "Colombia": [
-   "index"
-  ],
-  "Comoros": [
-   "index"
-  ],
-  "Congo, Democratic Republic of the": [
-   "index"
-  ],
-  "Congo, Republic of the": [
-   "index"
-  ],
-  "Cook Islands": [
-   "index"
-  ],
-  "Costa Rica": [
-   "index"
-  ],
-  "Croatia": [
-   "index"
-  ],
-  "Cuba": [
-   "index"
-  ],
-  "Curaçao": [
-   "index"
-  ],
-  "Cyprus": [
-   "index"
-  ],
-  "Czechia": [
-   "index"
-  ],
-  "Côte d'Ivoire": [
-   "index"
-  ],
-  "Denmark": [
-   "index"
-  ],
-  "Djibouti": [
-   "index"
-  ],
-  "Dominica": [
-   "index"
-  ],
-  "Dominican Republic": [
-   "index"
-  ],
-  "Ecuador": [
-   "index"
-  ],
-  "Egypt": [
-   "index"
-  ],
-  "El Salvador": [
-   "index"
-  ],
-  "Equatorial Guinea": [
-   "index"
-  ],
-  "Eritrea": [
-   "index"
-  ],
-  "Estonia": [
-   "index"
-  ],
-  "Eswatini": [
-   "index"
-  ],
-  "Ethiopia": [
-   "index"
-  ],
-  "Falkland Islands": [
-   "index"
-  ],
-  "Faroe Islands": [
-   "index"
-  ],
-  "Fiji": [
-   "index"
-  ],
-  "Finland": [
-   "index"
-  ],
-  "France": [
-   "index"
-  ],
-  "French Guiana": [
-   "index"
-  ],
-  "French Polynesia": [
-   "index"
-  ],
-  "French South Territories": [
-   "index"
-  ],
-  "Gabon": [
-   "index"
-  ],
-  "Gambia": [
-   "index"
-  ],
-  "Georgia": [
-   "index"
-  ],
-  "Germany": [
-   "index"
-  ],
-  "Ghana": [
-   "index"
-  ],
-  "Gibraltar": [
-   "index"
-  ],
-  "Greece": [
-   "index"
-  ],
-  "Greenland": [
-   "index"
-  ],
-  "Grenada": [
-   "index"
-  ],
-  "Guadeloupe": [
-   "index"
-  ],
-  "Guam": [
-   "index"
-  ],
-  "Guatemala": [
-   "index"
-  ],
-  "Guernsey": [
-   "index"
-  ],
-  "Guinea": [
-   "index"
-  ],
-  "Guinea-Bissau": [
-   "index"
-  ],
-  "Guyana": [
-   "index"
-  ],
-  "Haiti": [
-   "index"
-  ],
-  "Heard Island And Mcdonald Island": [
-   "index"
-  ],
-  "Honduras": [
-   "index"
-  ],
-  "Hong Kong SAR China": [
-   "index"
-  ],
-  "Hungary": [
-   "index"
-  ],
-  "Iceland": [
-   "index"
-  ],
-  "India": [
-   "index"
-  ],
-  "Indonesia": [
-   "index"
-  ],
-  "Iran": [
-   "index"
-  ],
-  "Iraq": [
-   "index"
-  ],
-  "Ireland": [
-   "index"
-  ],
-  "Isle of Man": [
-   "index"
-  ],
-  "Israel": [
-   "index"
-  ],
-  "Italy": [
-   "index"
-  ],
-  "Jamaica": [
-   "index"
-  ],
-  "Japan": [
-   "index"
-  ],
-  "Jersey": [
-   "index"
-  ],
-  "Jordan": [
-   "index"
-  ],
-  "Kazakhstan": [
-   "index"
-  ],
-  "Kenya": [
-   "index"
-  ],
-  "Kiribati": [
-   "index"
-  ],
-  "Kosovo": [
-   "index"
-  ],
-  "Kuwait": [
-   "index"
-  ],
-  "Kyrgyzstan": [
-   "index"
-  ],
-  "Lao People's Democratic Republic": [
-   "index"
-  ],
-  "Latvia": [
-   "index"
-  ],
-  "Lebanon": [
-   "index"
-  ],
-  "Lesotho": [
-   "index"
-  ],
-  "Liberia": [
-   "index"
-  ],
-  "Libya": [
-   "index"
-  ],
-  "Liechtenstein": [
-   "index"
-  ],
-  "Lithuania": [
-   "index"
-  ],
-  "Luxembourg": [
-   "index"
-  ],
-  "Macao SAR China": [
-   "index"
-  ],
-  "Madagascar": [
-   "index"
-  ],
-  "Malawi": [
-   "index"
-  ],
-  "Malaysia": [
-   "index"
-  ],
-  "Maldives": [
-   "index"
-  ],
-  "Mali": [
-   "index"
-  ],
-  "Malta": [
-   "index"
-  ],
-  "Marshall Islands": [
-   "index"
-  ],
-  "Martinique": [
-   "index"
-  ],
-  "Mauritania": [
-   "index"
-  ],
-  "Mauritius": [
-   "index"
-  ],
-  "Mayotte": [
-   "index"
-  ],
-  "Mexico": [
-   "index"
-  ],
-  "Micronesia": [
-   "index"
-  ],
-  "Moldova": [
-   "index"
-  ],
-  "Monaco": [
-   "index"
-  ],
-  "Mongolia": [
-   "index"
-  ],
-  "Montenegro": [
-   "index"
-  ],
-  "Montserrat": [
-   "index"
-  ],
-  "Morocco": [
-   "index"
-  ],
-  "Mozambique": [
-   "index"
-  ],
-  "Myanmar": [
-   "index"
-  ],
-  "Namibia": [
-   "index"
-  ],
-  "Nauru": [
-   "index"
-  ],
-  "Nepal": [
-   "index"
-  ],
-  "Netherlands": [
-   "index"
-  ],
-  "New Caledonia": [
-   "index"
-  ],
-  "New Zealand": [
-   "index"
-  ],
-  "Nicaragua": [
-   "index"
-  ],
-  "Niger": [
-   "index"
-  ],
-  "Nigeria": [
-   "index"
-  ],
-  "Niue": [
-   "index"
-  ],
-  "Norfolk Island": [
-   "index"
-  ],
-  "North Korea": [
-   "index"
-  ],
-  "North Macedonia": [
-   "index"
-  ],
-  "Northern Mariana Islands": [
-   "index"
-  ],
-  "Norway": [
-   "index"
-  ],
-  "Oman": [
-   "index"
-  ],
-  "Pakistan": [
-   "index"
-  ],
-  "Palau": [
-   "index"
-  ],
-  "Palestinian Territories": [
-   "index"
-  ],
-  "Panama": [
-   "index"
-  ],
-  "Papua New Guinea": [
-   "index"
-  ],
-  "Paraguay": [
-   "index"
-  ],
-  "Peru": [
-   "index"
-  ],
-  "Philippines": [
-   "index"
-  ],
-  "Pitcairn Islands": [
-   "index"
-  ],
-  "Poland": [
-   "index"
-  ],
-  "Portugal": [
-   "index"
-  ],
-  "Puerto Rico": [
-   "index"
-  ],
-  "Qatar": [
-   "index"
-  ],
-  "Romania": [
-   "index"
-  ],
-  "Russia": [
-   "index"
-  ],
-  "Rwanda": [
-   "index"
-  ],
-  "Réunion": [
-   "index"
-  ],
-  "Saint Helena": [
-   "index"
-  ],
-  "Saint Kitts and Nevis": [
-   "index"
-  ],
-  "Saint Lucia": [
-   "index"
-  ],
-  "Saint Vincent and the Grenadines": [
-   "index"
-  ],
-  "Samoa": [
-   "index"
-  ],
-  "San Marino": [
-   "index"
-  ],
-  "Saudi Arabia": [
-   "index"
-  ],
-  "Senegal": [
-   "index"
-  ],
-  "Serbia": [
-   "index"
-  ],
-  "Seychelles": [
-   "index"
-  ],
-  "Sierra Leone": [
-   "index"
-  ],
-  "Singapore": [
-   "index"
-  ],
-  "Sint Maarten": [
-   "index"
-  ],
-  "Slovakia": [
-   "index"
-  ],
-  "Slovenia": [
-   "index"
-  ],
-  "Solomon Islands": [
-   "index"
-  ],
-  "Somalia": [
-   "index"
-  ],
-  "South Africa": [
-   "index"
-  ],
-  "South Georgia and South Sandwich": [
-   "index"
-  ],
-  "South Korea": [
-   "index"
-  ],
-  "South Sudan": [
-   "index"
-  ],
-  "Spain": [
-   "index"
-  ],
-  "Sri Lanka": [
-   "index"
-  ],
-  "St. Barthélemy": [
-   "index"
-  ],
-  "St. Martin": [
-   "index"
-  ],
-  "St. Pierre & Miquelon": [
-   "index"
-  ],
-  "Sudan": [
-   "index"
-  ],
-  "Suriname": [
-   "index"
-  ],
-  "Svalbard and Jan Mayen": [
-   "index"
-  ],
-  "Sweden": [
-   "index"
-  ],
-  "Switzerland": [
-   "index"
-  ],
-  "Syria": [
-   "index"
-  ],
-  "São Tomé & Príncipe": [
-   "index"
-  ],
-  "Taiwan": [
-   "index"
-  ],
-  "Tajikistan": [
-   "index"
-  ],
-  "Tanzania": [
-   "index"
-  ],
-  "Thailand": [
-   "index"
-  ],
-  "Timor-Leste": [
-   "index"
-  ],
-  "Togo": [
-   "index"
-  ],
-  "Tokelau": [
-   "index"
-  ],
-  "Tonga": [
-   "index"
-  ],
-  "Trinidad & Tobago": [
-   "index"
-  ],
-  "Tunisia": [
-   "index"
-  ],
-  "Turkey": [
-   "index"
-  ],
-  "Turkmenistan": [
-   "index"
-  ],
-  "Turks & Caicos Islands": [
-   "index"
-  ],
-  "Tuvalu": [
-   "index"
-  ],
-  "U.S. Virgin Islands": [
-   "index"
-  ],
-  "US Minor Outlying Islands": [
-   "index"
-  ],
-  "Uganda": [
-   "index"
-  ],
-  "Ukraine": [
-   "index"
-  ],
-  "United Arab Emirates": [
-   "index"
-  ],
-  "United Kingdom": [
-   "index"
-  ],
-  "United States of America (USA)": [
-   "index"
-  ],
-  "Uruguay": [
-   "index"
-  ],
-  "Uzbekistan": [
-   "index"
-  ],
-  "Vanuatu": [
-   "index"
-  ],
-  "Vatican City": [
-   "index"
-  ],
-  "Venezuela": [
-   "index"
-  ],
-  "Vietnam": [
-   "index"
-  ],
-  "Wallis And Futuna Islands": [
-   "index"
-  ],
-  "Western Sahara": [
-   "index"
-  ],
-  "Yemen": [
-   "index"
-  ],
-  "Zambia": [
-   "index"
-  ],
-  "Zimbabwe": [
-   "index"
-  ],
-  "Click here if you want to receive our news": [
-   "index"
-  ],
-  "Yes": [
-   "index"
-  ],
-  "Message": [
-   "index",
-   "international-coalition"
-  ],
-  "Submit": [
-   "index",
-   "research/mapping-of-genai-impacts",
-   "research/adolescents-and-anthropomorphic-ai",
-   "research/the-future-of-child-development-in-the-ai-era",
-   "research/relational-positioning-dependency-exclusivity-policy-rpd"
   ],
   "Subscribe": [
    "index",
@@ -1044,114 +215,7 @@
    "newsroom",
    "about",
    "donate",
-   "research/adolescents-and-anthropomorphic-ai",
-   "research/the-future-of-child-development-in-the-ai-era",
-   "research/relational-positioning-dependency-exclusivity-policy-rpd",
-   "contact",
-   "privacy-policy",
-   "accessibility-statement",
-   "terms-and-conditions",
-   "aia-safety-builder/info",
-   "workshop-dec10th",
-   "thank-you-open-letter-le-monde",
-   "thank-you-access-webinar",
-   "events",
-   "blog"
-  ],
-  "to stay informed on news and updates": [
-   "index",
-   "research",
-   "research/mapping-of-genai-impacts",
-   "aia-safety-builder",
-   "aia-safety-builder/method",
-   "aia-safety-builder/service",
-   "formation",
-   "international-coalition",
-   "open-letter",
-   "newsroom",
-   "about",
-   "donate",
-   "research/adolescents-and-anthropomorphic-ai",
-   "research/the-future-of-child-development-in-the-ai-era",
-   "research/relational-positioning-dependency-exclusivity-policy-rpd",
-   "contact",
-   "privacy-policy",
-   "accessibility-statement",
-   "terms-and-conditions",
-   "aia-safety-builder/info",
-   "workshop-dec10th",
-   "thank-you-open-letter-le-monde",
-   "thank-you-access-webinar",
-   "events",
-   "blog"
-  ],
-  "Quick Links": [
-   "index",
-   "research",
-   "research/mapping-of-genai-impacts",
-   "aia-safety-builder",
-   "aia-safety-builder/method",
-   "aia-safety-builder/service",
-   "formation",
-   "international-coalition",
-   "open-letter",
-   "newsroom",
-   "about",
-   "donate",
-   "research/adolescents-and-anthropomorphic-ai",
-   "research/the-future-of-child-development-in-the-ai-era",
-   "research/relational-positioning-dependency-exclusivity-policy-rpd",
-   "contact",
-   "privacy-policy",
-   "accessibility-statement",
-   "terms-and-conditions",
-   "aia-safety-builder/info",
-   "workshop-dec10th",
-   "thank-you-open-letter-le-monde",
-   "thank-you-access-webinar",
-   "events",
-   "blog"
-  ],
-  "Home": [
-   "index",
-   "research",
-   "research/mapping-of-genai-impacts",
-   "aia-safety-builder",
-   "aia-safety-builder/method",
-   "aia-safety-builder/service",
-   "formation",
-   "international-coalition",
-   "open-letter",
-   "newsroom",
-   "about",
-   "donate",
-   "research/adolescents-and-anthropomorphic-ai",
-   "research/the-future-of-child-development-in-the-ai-era",
-   "research/relational-positioning-dependency-exclusivity-policy-rpd",
-   "contact",
-   "privacy-policy",
-   "accessibility-statement",
-   "terms-and-conditions",
-   "aia-safety-builder/info",
-   "workshop-dec10th",
-   "thank-you-open-letter-le-monde",
-   "thank-you-access-webinar",
-   "events",
-   "blog"
-  ],
-  "About": [
-   "index",
-   "research",
-   "research/mapping-of-genai-impacts",
-   "aia-safety-builder",
-   "aia-safety-builder/method",
-   "aia-safety-builder/service",
-   "formation",
-   "international-coalition",
-   "open-letter",
-   "newsroom",
-   "about",
-   "donate",
+   "research/human-centredailiteracy",
    "research/adolescents-and-anthropomorphic-ai",
    "research/the-future-of-child-development-in-the-ai-era",
    "research/relational-positioning-dependency-exclusivity-policy-rpd",
@@ -1179,6 +243,119 @@
    "newsroom",
    "about",
    "donate",
+   "research/human-centredailiteracy",
+   "research/adolescents-and-anthropomorphic-ai",
+   "research/the-future-of-child-development-in-the-ai-era",
+   "research/relational-positioning-dependency-exclusivity-policy-rpd",
+   "contact",
+   "privacy-policy",
+   "accessibility-statement",
+   "terms-and-conditions",
+   "aia-safety-builder/info",
+   "workshop-dec10th",
+   "thank-you-open-letter-le-monde",
+   "thank-you-access-webinar",
+   "events",
+   "blog"
+  ],
+  "to stay informed on news and updates": [
+   "index",
+   "research",
+   "research/mapping-of-genai-impacts",
+   "aia-safety-builder",
+   "aia-safety-builder/method",
+   "aia-safety-builder/service",
+   "formation",
+   "international-coalition",
+   "open-letter",
+   "newsroom",
+   "about",
+   "donate",
+   "research/human-centredailiteracy",
+   "research/adolescents-and-anthropomorphic-ai",
+   "research/the-future-of-child-development-in-the-ai-era",
+   "research/relational-positioning-dependency-exclusivity-policy-rpd",
+   "contact",
+   "privacy-policy",
+   "accessibility-statement",
+   "terms-and-conditions",
+   "aia-safety-builder/info",
+   "workshop-dec10th",
+   "thank-you-open-letter-le-monde",
+   "thank-you-access-webinar",
+   "events",
+   "blog"
+  ],
+  "Quick Links": [
+   "index",
+   "research",
+   "research/mapping-of-genai-impacts",
+   "aia-safety-builder",
+   "aia-safety-builder/method",
+   "aia-safety-builder/service",
+   "formation",
+   "international-coalition",
+   "open-letter",
+   "newsroom",
+   "about",
+   "donate",
+   "research/human-centredailiteracy",
+   "research/adolescents-and-anthropomorphic-ai",
+   "research/the-future-of-child-development-in-the-ai-era",
+   "research/relational-positioning-dependency-exclusivity-policy-rpd",
+   "contact",
+   "privacy-policy",
+   "accessibility-statement",
+   "terms-and-conditions",
+   "aia-safety-builder/info",
+   "workshop-dec10th",
+   "thank-you-open-letter-le-monde",
+   "thank-you-access-webinar",
+   "events",
+   "blog"
+  ],
+  "Home": [
+   "index",
+   "research",
+   "research/mapping-of-genai-impacts",
+   "aia-safety-builder",
+   "aia-safety-builder/method",
+   "aia-safety-builder/service",
+   "formation",
+   "international-coalition",
+   "open-letter",
+   "newsroom",
+   "about",
+   "donate",
+   "research/human-centredailiteracy",
+   "research/adolescents-and-anthropomorphic-ai",
+   "research/the-future-of-child-development-in-the-ai-era",
+   "research/relational-positioning-dependency-exclusivity-policy-rpd",
+   "contact",
+   "privacy-policy",
+   "accessibility-statement",
+   "terms-and-conditions",
+   "aia-safety-builder/info",
+   "workshop-dec10th",
+   "thank-you-open-letter-le-monde",
+   "thank-you-access-webinar",
+   "events",
+   "blog"
+  ],
+  "About": [
+   "index",
+   "research",
+   "research/mapping-of-genai-impacts",
+   "aia-safety-builder",
+   "aia-safety-builder/method",
+   "aia-safety-builder/service",
+   "formation",
+   "international-coalition",
+   "open-letter",
+   "newsroom",
+   "about",
+   "donate",
+   "research/human-centredailiteracy",
    "research/adolescents-and-anthropomorphic-ai",
    "research/the-future-of-child-development-in-the-ai-era",
    "research/relational-positioning-dependency-exclusivity-policy-rpd",
@@ -1206,6 +383,7 @@
    "newsroom",
    "about",
    "donate",
+   "research/human-centredailiteracy",
    "research/adolescents-and-anthropomorphic-ai",
    "research/the-future-of-child-development-in-the-ai-era",
    "research/relational-positioning-dependency-exclusivity-policy-rpd",
@@ -1233,6 +411,7 @@
    "newsroom",
    "about",
    "donate",
+   "research/human-centredailiteracy",
    "research/adolescents-and-anthropomorphic-ai",
    "research/the-future-of-child-development-in-the-ai-era",
    "research/relational-positioning-dependency-exclusivity-policy-rpd",
@@ -1260,6 +439,7 @@
    "newsroom",
    "about",
    "donate",
+   "research/human-centredailiteracy",
    "research/adolescents-and-anthropomorphic-ai",
    "research/the-future-of-child-development-in-the-ai-era",
    "research/relational-positioning-dependency-exclusivity-policy-rpd",
@@ -1287,6 +467,7 @@
    "newsroom",
    "about",
    "donate",
+   "research/human-centredailiteracy",
    "research/adolescents-and-anthropomorphic-ai",
    "research/the-future-of-child-development-in-the-ai-era",
    "research/relational-positioning-dependency-exclusivity-policy-rpd",
@@ -1314,6 +495,7 @@
    "newsroom",
    "about",
    "donate",
+   "research/human-centredailiteracy",
    "research/adolescents-and-anthropomorphic-ai",
    "research/the-future-of-child-development-in-the-ai-era",
    "research/relational-positioning-dependency-exclusivity-policy-rpd",
@@ -1341,6 +523,7 @@
    "newsroom",
    "about",
    "donate",
+   "research/human-centredailiteracy",
    "research/adolescents-and-anthropomorphic-ai",
    "research/the-future-of-child-development-in-the-ai-era",
    "research/relational-positioning-dependency-exclusivity-policy-rpd",
@@ -1371,6 +554,7 @@
    "newsroom",
    "about",
    "donate",
+   "research/human-centredailiteracy",
    "research/adolescents-and-anthropomorphic-ai",
    "research/the-future-of-child-development-in-the-ai-era",
    "research/relational-positioning-dependency-exclusivity-policy-rpd",
@@ -1411,6 +595,25 @@
    "aia-safety-builder",
    "aia-safety-builder/method"
   ],
+  "The Future of Child Development in the AI Era": [
+   "index",
+   "research",
+   "formation",
+   "research/the-future-of-child-development-in-the-ai-era"
+  ],
+  "Adolescents & Anthropomorphic AI: Rethinking Design for Wellbeing": [
+   "index",
+   "research",
+   "research/adolescents-and-anthropomorphic-ai"
+  ],
+  "Mapping of GenAI impacts on child development": [
+   "index"
+  ],
+  "Human-Centered AI Literacy in Schools": [
+   "index",
+   "research",
+   "research/human-centredailiteracy"
+  ],
   "LinkedIn": [
    "index",
    "open-letter"
@@ -1428,6 +631,7 @@
    "newsroom",
    "about",
    "donate",
+   "research/human-centredailiteracy",
    "research/adolescents-and-anthropomorphic-ai",
    "research/the-future-of-child-development-in-the-ai-era",
    "research/relational-positioning-dependency-exclusivity-policy-rpd",
@@ -1455,6 +659,7 @@
    "newsroom",
    "about",
    "donate",
+   "research/human-centredailiteracy",
    "research/adolescents-and-anthropomorphic-ai",
    "research/the-future-of-child-development-in-the-ai-era",
    "research/relational-positioning-dependency-exclusivity-policy-rpd",
@@ -1482,6 +687,7 @@
    "newsroom",
    "about",
    "donate",
+   "research/human-centredailiteracy",
    "research/adolescents-and-anthropomorphic-ai",
    "research/the-future-of-child-development-in-the-ai-era",
    "research/relational-positioning-dependency-exclusivity-policy-rpd",
@@ -1509,6 +715,7 @@
    "newsroom",
    "about",
    "donate",
+   "research/human-centredailiteracy",
    "research/adolescents-and-anthropomorphic-ai",
    "research/the-future-of-child-development-in-the-ai-era",
    "research/relational-positioning-dependency-exclusivity-policy-rpd",
@@ -1535,24 +742,21 @@
   "Our reports": [
    "research"
   ],
-  "Mapping of GenAI impacts on child development: Emerging scientific consensus on anticipated benefits and risks": [
-   "research",
-   "research/mapping-of-genai-impacts"
+  "This report examines how digital and AI literacy can support children's learning, development, and wellbeing in K-12 education. Drawing on developmental science, international policy research, and consultations across four countries, it translates evidence into six actionable priorities for governments, schools, and AI stakeholders, emphasizing the essential role of human relationships in education.": [
+   "research"
   ],
   "Learn more about this report": [
    "research"
   ],
-  "Adolescents & Anthropomorphic AI: Rethinking Design for Wellbeing": [
+  "Mapping of GenAI impacts on child development: Emerging scientific consensus on anticipated benefits and risks": [
    "research",
-   "research/adolescents-and-anthropomorphic-ai"
+   "research/mapping-of-genai-impacts"
+  ],
+  "This report examines how generative AI use may shape children's cognitive, emotional, and developmental trajectories across four age bands, from birth to age 18. Drawing on developmental science, neuroscience, and emerging evidence on youth AI use, it translates converging scientific insights into developmentally grounded governance priorities for G7 policymakers.": [
+   "research"
   ],
   "This report examines how socially fluent conversational AI shapes adolescents' development, autonomy, and relationships. Drawing on industry consultations, multidisciplinary expert input, the iRAISE Lab, and global policy dialogue at the Paris Peace Forum, it translates converging concerns into actionable guidance.": [
    "research"
-  ],
-  "The Future of Child Development in the AI Era": [
-   "research",
-   "formation",
-   "research/the-future-of-child-development-in-the-ai-era"
   ],
   "This report examines how the rapid integration of Artificial Intelligence (AI) into children's environments may shape their cognitive, emotional, and behavioral development. It highlights both the opportunities and risks of AI use, calling for ethical, child-centered approaches to guide its adoption.": [
    "research"
@@ -1582,6 +786,7 @@
    "newsroom",
    "about",
    "donate",
+   "research/human-centredailiteracy",
    "research/adolescents-and-anthropomorphic-ai",
    "research/the-future-of-child-development-in-the-ai-era",
    "research/relational-positioning-dependency-exclusivity-policy-rpd",
@@ -1604,6 +809,7 @@
   ],
   "Research report": [
    "research/mapping-of-genai-impacts",
+   "research/human-centredailiteracy",
    "research/adolescents-and-anthropomorphic-ai",
    "research/the-future-of-child-development-in-the-ai-era"
   ],
@@ -1612,6 +818,7 @@
   ],
   "Abstract": [
    "research/mapping-of-genai-impacts",
+   "research/human-centredailiteracy",
    "research/adolescents-and-anthropomorphic-ai",
    "research/the-future-of-child-development-in-the-ai-era"
   ],
@@ -1629,6 +836,7 @@
   ],
   "Leave your email if you want to receive more information about everyone.ai": [
    "research/mapping-of-genai-impacts",
+   "research/human-centredailiteracy",
    "research/adolescents-and-anthropomorphic-ai",
    "research/the-future-of-child-development-in-the-ai-era",
    "research/relational-positioning-dependency-exclusivity-policy-rpd"
@@ -1636,6 +844,7 @@
   "First Name *": [
    "research/mapping-of-genai-impacts",
    "open-letter",
+   "research/human-centredailiteracy",
    "research/adolescents-and-anthropomorphic-ai",
    "research/the-future-of-child-development-in-the-ai-era",
    "research/relational-positioning-dependency-exclusivity-policy-rpd"
@@ -1643,6 +852,7 @@
   "Last Name *": [
    "research/mapping-of-genai-impacts",
    "open-letter",
+   "research/human-centredailiteracy",
    "research/adolescents-and-anthropomorphic-ai",
    "research/the-future-of-child-development-in-the-ai-era",
    "research/relational-positioning-dependency-exclusivity-policy-rpd"
@@ -1652,6 +862,14 @@
    "international-coalition",
    "open-letter",
    "newsroom",
+   "research/human-centredailiteracy",
+   "research/adolescents-and-anthropomorphic-ai",
+   "research/the-future-of-child-development-in-the-ai-era",
+   "research/relational-positioning-dependency-exclusivity-policy-rpd"
+  ],
+  "Submit": [
+   "research/mapping-of-genai-impacts",
+   "research/human-centredailiteracy",
    "research/adolescents-and-anthropomorphic-ai",
    "research/the-future-of-child-development-in-the-ai-era",
    "research/relational-positioning-dependency-exclusivity-policy-rpd"
@@ -3744,7 +2962,7 @@
   "Pr. Stuart Russell\n,\nProfessor of Computer Science, Cognitive Science, and Computational Precision Health, UC Berkeley, UCSF (US)": [
    "international-coalition"
   ],
-  "Dr. Luc Julia\n,\nChief Scientific Officer Renault Group": [
+  "Dr. Luc Julia\n,\nCo-Founder at ODIA": [
    "international-coalition"
   ],
   "Grégory Renard\n,\nFellow AI Architect - Applied Gen AI - Board President - Cofounder, everyone.AI": [
@@ -4078,6 +3296,9 @@
    "newsroom",
    "contact"
   ],
+  "Message": [
+   "international-coalition"
+  ],
   "Once you click on submit, your email will be part of our email list, you can unsubscribe at any time. Please check our privacy policy for more details. *": [
    "international-coalition"
   ],
@@ -4382,7 +3603,7 @@
   "Aurélie Jean\n,\nChief AI Officer": [
    "open-letter"
   ],
-  "Luc Julia\n,\nScientific Officer Renault Group": [
+  "Luc Julia\n,\nCo-Founder at ODIA": [
    "open-letter"
   ],
   "Grégory Renard\n,\nFellow AI Architect - Applied Gen AI - Board President - Cofounder": [
@@ -5519,6 +4740,37 @@
   "Donate to everyone.AI, a 501(c)(3) nonprofit for Beneficial AI for children. Your donation is tax-deductible in the US in dollars and in France in euros.": [
    "donate"
   ],
+  "Evidence-based Multi-Stakeholder Recommendations for Primary & Secondary (K-12) Education": [
+   "research/human-centredailiteracy"
+  ],
+  "Authors:\nMaxime Le Bourgeois, MSc., Mathilde Cerioli, Ph.D., Yann Bonnet": [
+   "research/human-centredailiteracy"
+  ],
+  "The rapid spread of generative AI (GenAI) in classrooms and homes is intensifying longstanding questions about the role of digital technology in children's learning, development and wellbeing. Governments are split between restricting and expanding it, often before the evidence is in, while school rules rarely reach children's use at home. This leaves open which uses and designs support children's learning, development and wellbeing, at what age, under what conditions, and what governments and schools should do meanwhile.": [
+   "research/human-centredailiteracy"
+  ],
+  "Within this context, this iRAISE report focuses on digital and AI literacy in primary and secondary (K-12) schools, the most universally accessible and accountable institution in children's lives. It takes a human-centred, pragmatic lens grounded in Biesta's three purposes of education: qualification (acquiring knowledge and skills), socialisation (entering a shared culture) and subjectification (learning to think for oneself).": [
+   "research/human-centredailiteracy"
+  ],
+  "Combining developmental and learning science, meta-analyses, international policy evidence and consultations in France, Canada, Egypt and Qatar, its findings move from the human relationships at the heart of learning to the systems that sustain them. Teachers, caregivers and peers, and the shared civic space of school, remain irreplaceable. Sustaining them requires protected teaching time, evaluated curricula, NGOs and universities, and coordinated public systems; in all four countries, human factors matter as much as policy design. We highlight six priorities for governments, schools, regulators, AI developers and funders: teachers and time to teach; wellbeing and time offline; research and assessment; families, communities and NGOs; interoperable, rights-respecting infrastructure; and a free, vendor-neutral international AI Fundamentals Programme and Certification.": [
+   "research/human-centredailiteracy"
+  ],
+  "Download the Full Report": [
+   "research/human-centredailiteracy"
+  ],
+  "Download the Executive Summary": [
+   "research/human-centredailiteracy",
+   "research/adolescents-and-anthropomorphic-ai"
+  ],
+  "Report cover — Human-Centered AI Literacy in Schools": [
+   "research/human-centredailiteracy"
+  ],
+  "Human-Centered AI Literacy in Schools | everyone.AI": [
+   "research/human-centredailiteracy"
+  ],
+  "Human-Centered AI Literacy in Schools: an iRAISE report with six evidence-based priorities for governments, schools and AI developers on K-12 literacy.": [
+   "research/human-centredailiteracy"
+  ],
   "An evidence-informed synthesis for youth wellbeing and safety, bridging science, product design, and governance.": [
    "research/adolescents-and-anthropomorphic-ai"
   ],
@@ -5540,9 +4792,6 @@
   "Download the Research Report": [
    "research/adolescents-and-anthropomorphic-ai",
    "research/the-future-of-child-development-in-the-ai-era"
-  ],
-  "Download the Executive Summary": [
-   "research/adolescents-and-anthropomorphic-ai"
   ],
   "Report cover — Adolescents & Anthropomorphic AI: Rethinking Design for Wellbeing": [
    "research/adolescents-and-anthropomorphic-ai"
@@ -5638,7 +4887,40 @@
   "Email *": [
    "contact"
   ],
+  "Profile Type": [
+   "contact"
+  ],
+  "Government / Policy Maker": [
+   "contact"
+  ],
+  "NGO": [
+   "contact"
+  ],
+  "Researchers": [
+   "contact"
+  ],
+  "AI Developer (Toy Maker, Chat Bot, ...)": [
+   "contact"
+  ],
+  "Parents": [
+   "contact"
+  ],
+  "Teachers / School / University": [
+   "contact"
+  ],
+  "AI Industry / Startup": [
+   "contact"
+  ],
+  "Youth / Students": [
+   "contact"
+  ],
+  "Other": [
+   "contact"
+  ],
   "Message *": [
+   "contact"
+  ],
+  "Click here if you want to receive our news": [
    "contact"
   ],
   "Send": [

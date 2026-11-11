@@ -56,12 +56,6 @@
       "replace": "cta: 'Discover AïA Safety Builder'"
     },
     {
-      "file": "Home.dc.html",
-      "why": "Generic button label.",
-      "find": "(pub: \\{[^\\n]*?cta: )'Read More'",
-      "replace": "\\1'Read the Mapping report'"
-    },
-    {
       "file": "Newsroom.dc.html",
       "why": "Messages were cut at 180 characters (Julien's kanban, D5).",
       "find": "maxLength=\"180\"",
@@ -75,9 +69,9 @@
     },
     {
       "file": "Home.dc.html",
-      "why": "Below 980 px the report cover sat on the left of the single column while the other images are centered (Julien, 10 Nov).",
+      "why": "Below 980 px the four report covers of 'Our latest publication' go two by two.",
       "find": "(#eai-pub,#eai-why,#eai-featured,#eai-form-grid\\{grid-template-columns:1fr!important\\})",
-      "replace": "\\1\n#eai-pub>div:first-child{justify-self:center}"
+      "replace": "\\1\n#eai-pubs{grid-template-columns:repeat(2,minmax(0,1fr))!important}"
     },
     {
       "file": "AIA.dc.html",
@@ -347,9 +341,9 @@
     },
     {
       "file": "Home.dc.html",
-      "why": "Gaelle's Home banner (Doc 'Bandeau Site Internet', file 25) replaces the 1250 x 468 hero: picture on the left at the banner's own ratio, the title centered in the right half, 'Shaping Beneficial AI' in white and the rest in #829BCB. Same i18n keys, so the 7 languages keep their text. The image keeps a description and loads first (kanban S5, T5).",
+      "why": "Gaelle's Home banner (Doc 'Bandeau Site Internet', file 25) replaces the 1250 x 468 hero: picture on the left at the banner's own ratio, the title centered in the right half, 'Shaping Beneficial AI' in white and the rest in #829BCB. Same i18n keys, so the 7 languages keep their text. The image keeps a description and loads first (kanban S5, T5). Title right-aligned on two lines in a light weight, written as on the current site (Gaelle, 11 Nov).",
       "find": "<section id=\"eai-hero\".*?</section>",
-      "replace": "<section id=\"eai-hero\" aria-label=\"Shaping Beneficial AI for children today, for everyone tomorrow\" style=\"position:relative;overflow:hidden;background:#34435b;min-height:clamp(150px,13.06vw,260px);display:flex;align-items:center;justify-content:flex-end\">\n<img src=\"assets/banners/home.webp\" alt=\"A young child, hand on chin, looking up thoughtfully\" fetchpriority=\"high\" style=\"position:absolute;left:0;top:0;height:100%;width:auto;max-width:none\">\n<div id=\"eai-hero-text\" data-eai-banner-text=\"\" style=\"position:relative;z-index:1;width:50%;padding:16px 24px;box-sizing:border-box;text-align:center;font:600 clamp(16px,1.75vw,30px)/1.35 Poppins,sans-serif;text-transform:uppercase;letter-spacing:.02em\">\n<h1 style=\"margin:0;font:inherit\"><span style=\"color:#fff\">{{ t.hero.l1 }}</span><br><span style=\"color:#829bcb\">{{ t.hero.l1b }}</span><br><span style=\"color:#829bcb\">{{ t.hero.l2 }}</span></h1>\n</div>\n</section>"
+      "replace": "<section id=\"eai-hero\" aria-label=\"Shaping Beneficial AI for children today, for everyone tomorrow\" style=\"position:relative;overflow:hidden;background:#34435b;min-height:clamp(150px,13.06vw,260px);display:flex;align-items:center;justify-content:flex-end\">\n<img src=\"assets/banners/home.webp\" alt=\"A young child, hand on chin, looking up thoughtfully\" fetchpriority=\"high\" style=\"position:absolute;left:0;top:0;height:100%;width:auto;max-width:none\">\n<div id=\"eai-hero-text\" data-eai-banner-text=\"\" style=\"position:relative;z-index:1;max-width:66%;padding:12px 4.1vw 12px 24px;box-sizing:border-box;text-align:right;font:300 clamp(15px,2.06vw,40px)/1.6 Poppins,sans-serif;text-transform:uppercase;letter-spacing:.01em\">\n<h1 style=\"margin:0;font:inherit\"><span style=\"color:#fff\">{{ t.hero.l1 }}</span> <span style=\"color:#829bcb\">{{ t.hero.l1b }}</span><br><span style=\"color:#829bcb\">{{ t.hero.l2 }}</span></h1>\n</div>\n</section>"
     },
     {
       "file": "Home.dc.html",
@@ -362,6 +356,66 @@
       "why": "Julien's kanban, D5: the Home form had 9 fields and a 265-country list. Home now has a one-field newsletter signup (MailerLite, like the footer) and a link to /contact, which carries the full form.",
       "find": "<p style=\"margin:12px 0 0;font:300 17px/1.6 'Open Sans',sans-serif;color:#333\">\\{\\{ t\\.contact\\.intro \\}\\}</p>\\n<form onSubmit=\"\\{\\{ submitContact \\}\\}\".*?</form>",
       "replace": "<p style=\"margin:12px 0 0;font:300 17px/1.6 'Open Sans',sans-serif;color:#333\">{{ t.footer.subscribe }} {{ t.footer.subscribeSub }}</p>\n<form onSubmit=\"{{ submitNewsletter }}\" style=\"margin-top:28px;display:flex;flex-wrap:wrap;gap:12px;max-width:560px\"><input name=\"email\" type=\"email\" required=\"required\" autoComplete=\"email\" placeholder=\"{{ t.footer.emailPh }}\" aria-label=\"{{ t.footer.emailPh }}\" style=\"flex:1 1 240px;min-width:0;box-sizing:border-box;padding:13px 16px;border:1px solid #cdd5e7;border-radius:4px;background:#fff;font:400 15px/1.4 'Open Sans',sans-serif;color:#222\" style-focus=\"border-color:#829bcb;outline:none\"><button type=\"submit\" style=\"background:#f8903e;color:#fff;border:0;font:500 15px/1 Poppins,sans-serif;padding:14px 28px;border-radius:999px;cursor:pointer;white-space:nowrap\" style-hover=\"background:#e97f2d\">{{ t.footer.subscribeBtn }}</button></form>\n<sc-if value=\"{{ newsSent }}\" hint-placeholder-val=\"{{ false }}\"><p style=\"margin:12px 0 0;font:600 15px/1.4 'Open Sans',sans-serif;color:#2f855a\">{{ t.footer.thanks }} {{ t.footer.thanksSub }}</p></sc-if>\n<p style=\"margin:24px 0 0;font:300 16px/1.6 'Open Sans',sans-serif;color:#333\"><a href=\"Contact.dc.html\" style=\"display:inline-block;border:1px solid #829bcb;color:#35425b;font:500 15px/1 Poppins,sans-serif;padding:13px 26px;border-radius:999px;text-decoration:none\" style-hover=\"background:#829bcb;color:#fff\">{{ t.footer.contact }}</a></p>"
+    },
+    {
+      "file": "About.dc.html",
+      "why": "When a name wraps onto two lines (Nandini Asavari Bharadwaj, Ph.D.) the card's role and icons sat lower than its neighbours' (Gaelle, 11 Nov). The icon row now sits at the bottom of each card, so icons line up across a row.",
+      "find": "<div style=\"display:flex;gap:10px;margin-top:12px\">",
+      "replace": "<div style=\"display:flex;gap:10px;margin-top:auto;padding-top:12px\">"
+    },
+    {
+      "file": "Newsroom.dc.html",
+      "why": "Five items (IASEAI event, Global AI Forum fireside chat, ASU+GSV, Berkeley and NASA awards) had a '#event' / '#award' placeholder link that only jumped back to their own section (Julien's kanban A3, 11 Nov). With no real URL to point to, they are no longer links.",
+      "find": "items: items.map\\(\\(r, n\\) => \\(\\{ d: r\\[0\\], t: r\\[1\\], href: r\\[2\\],",
+      "replace": "items: items.map((r, n) => ({ d: r[0], t: r[1], href: r[2], link: !/^#/.test(r[2]), nolink: /^#/.test(r[2]),"
+    },
+    {
+      "file": "Newsroom.dc.html",
+      "why": "Second half of the placeholder-link fix: a plain block for items without a real URL.",
+      "find": "<a href=\"\\{\\{ i\\.href \\}\\}\" target=\"_blank\" rel=\"noopener\" style=\"display:block;text-decoration:none;color:inherit\">\\n(.*?)\\n</a>\\n</sc-for>",
+      "replace": "<sc-if value=\"{{ i.link }}\" hint-placeholder-val=\"{{ true }}\"><a href=\"{{ i.href }}\" target=\"_blank\" rel=\"noopener\" style=\"display:block;text-decoration:none;color:inherit\">\n\\1\n</a></sc-if><sc-if value=\"{{ i.nolink }}\" hint-placeholder-val=\"{{ false }}\"><div style=\"display:block;color:inherit\">\n\\1\n</div></sc-if>\n</sc-for>"
+    },
+    {
+      "file": "Open Letter.dc.html",
+      "why": "Luc Julia's role is out of date (Julien, 11 Nov).",
+      "find": "\\{ n: 'Luc Julia', r: 'Scientific Officer Renault Group',",
+      "replace": "{ n: 'Luc Julia', r: 'Co-Founder at ODIA',"
+    },
+    {
+      "file": "Home.dc.html",
+      "why": "Gaelle reworked 'Our latest publication' on the live site on 11 Nov: the four report covers in a row, newest on the right with the new Human-Centered AI Literacy report, each linking to its page, and a 'Read Our Reports' button. Alt texts are the report titles (Julien's kanban S5).",
+      "find": "<section id=\"publication\".*?</section>",
+      "replace": "<section id=\"publication\" style=\"padding:80px 0 0\">\n<div style=\"max-width:1080px;margin:0 auto;padding:0 20px;box-sizing:border-box;text-align:center\">\n<h2 data-h2=\"\" style=\"margin:0;font:600 36px/1.2 'Open Sans',sans-serif;color:#000\">{{ t.pub.title }}</h2>\n<div id=\"eai-pubs\" style=\"display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:28px;margin-top:36px\">\n<a href=\"Report Future.dc.html\" style=\"display:block\"><img src=\"assets/cover-future-of-child-development.webp\" alt=\"The Future of Child Development in the AI Era\" loading=\"lazy\" style=\"width:100%;aspect-ratio:1237/1600;object-fit:cover;display:block;box-shadow:0 12px 32px rgba(53,66,91,.18)\"></a>\n<a href=\"Report Adolescents.dc.html\" style=\"display:block\"><img src=\"assets/cover-adolescents-anthropomorphic-ai.webp\" alt=\"Adolescents &amp; Anthropomorphic AI: Rethinking Design for Wellbeing\" loading=\"lazy\" style=\"width:100%;aspect-ratio:1237/1600;object-fit:cover;display:block;box-shadow:0 12px 32px rgba(53,66,91,.18)\"></a>\n<a href=\"Report Mapping GenAI.dc.html\" style=\"display:block\"><img src=\"assets/report-mapping-genai-cover.webp\" alt=\"Mapping of GenAI impacts on child development\" loading=\"lazy\" style=\"width:100%;aspect-ratio:1237/1600;object-fit:cover;display:block;box-shadow:0 12px 32px rgba(53,66,91,.18)\"></a>\n<a href=\"Report AI Literacy.dc.html\" style=\"display:block\"><img src=\"assets/cover-human-centred-ai-literacy.webp\" alt=\"Human-Centered AI Literacy in Schools\" loading=\"lazy\" style=\"width:100%;aspect-ratio:1237/1600;object-fit:cover;display:block;box-shadow:0 12px 32px rgba(53,66,91,.18)\"></a>\n</div>\n<a href=\"Research.dc.html\" style=\"display:inline-block;margin-top:40px;background:#f8903e;color:#fff;font:500 15px/1 Poppins,sans-serif;padding:13px 26px;border-radius:999px;text-decoration:none\" style-hover=\"background:#e97f2d;color:#fff\">Read Our Reports</a>\n</div>\n</section>"
+    },
+    {
+      "file": "Research.dc.html",
+      "why": "New report published on the live site by Gaelle on 11 Nov, first in the list as there.",
+      "find": "const REPORTS = \\[\\n",
+      "replace": "const REPORTS = [\n        { title: 'Human-Centered AI Literacy in Schools', body: \"This report examines how digital and AI literacy can support children's learning, development, and wellbeing in K-12 education. Drawing on developmental science, international policy research, and consultations across four countries, it translates evidence into six actionable priorities for governments, schools, and AI stakeholders, emphasizing the essential role of human relationships in education.\", href: 'Report AI Literacy.dc.html', slot: 'research-cover-literacy', img: 'assets/cover-human-centred-ai-literacy.webp', ph: 'Report cover — Human-Centered AI Literacy in Schools' },\n"
+    },
+    {
+      "file": "Research.dc.html",
+      "why": "Report covers had no text alternative (Julien's kanban S5, 11 Nov); the report title is used, as he asked.",
+      "find": "<image-slot id=\"\\{\\{ r\\.slot \\}\\}\" shape=\"rect\" src=\"\\{\\{ r\\.img \\}\\}\" placeholder=\"\\{\\{ r\\.ph \\}\\}\">",
+      "replace": "<image-slot id=\"{{ r.slot }}\" shape=\"rect\" src=\"{{ r.img }}\" placeholder=\"{{ r.ph }}\" alt=\"{{ r.title }}\">"
+    },
+    {
+      "file": "Coalition.dc.html",
+      "why": "Luc Julia's role is out of date (Julien, 11 Nov; same change as on the Open Letter).",
+      "find": "Dr\\. Luc Julia~Chief Scientific Officer Renault Group",
+      "replace": "Dr. Luc Julia~Co-Founder at ODIA"
+    },
+    {
+      "file": "AIA.dc.html",
+      "why": "The two event photos had no real text alternative, only their short placeholder captions (Julien's kanban S5, 11 Nov).",
+      "find": "(<image-slot id=\"aia-photo-1\" [^>]*?)>",
+      "replace": "\\1 alt=\"The everyone.AI team at VivaTech 2026 in Paris\">"
+    },
+    {
+      "file": "AIA.dc.html",
+      "why": "Same, second photo.",
+      "find": "(<image-slot id=\"aia-photo-3\" [^>]*?)>",
+      "replace": "\\1 alt=\"everyone.AI presenting Toward Beneficial AI for Children on stage at AI for Good, Geneva 2026\">"
     }
   ]
 }

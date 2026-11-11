@@ -25,6 +25,7 @@ Why now: the rapid evolution of AI technologies is outpacing the development of 
 
 - [Home](https://everyone.ai/): mission, vision, pillars, latest publication, founding team, featured press, contact form (8 languages via ?lang=).
 - [Research](https://everyone.ai/research/): reports and the #RPD model policy.
+- [Human-Centered AI Literacy in Schools](https://everyone.ai/research/human-centredailiteracy/): iRAISE report by Maxime Le Bourgeois, Mathilde Cerioli, Ph.D. and Yann Bonnet on digital and AI literacy in K-12 schools, with six priorities for governments, schools and AI developers, and report and executive summary downloads.
 - [Mapping of GenAI impacts on child development](https://everyone.ai/research/mapping-of-genai-impacts/): G7 scientific contribution by Mathilde Cerioli, Ph.D and Daniel Hipp, Ph.D, with PDF download.
 - [Adolescents & Anthropomorphic AI: Rethinking Design for Wellbeing](https://everyone.ai/research/adolescents-and-anthropomorphic-ai/): report by Mathilde Cerioli, Ph.D on how conversational AI is embedded in adolescents' daily lives, with report and executive summary downloads.
 - [The Future of Child Development in the AI Era](https://everyone.ai/research/the-future-of-child-development-in-the-ai-era/): report on the implications of rapidly integrating AI applications into children's environments, with report and executive summary downloads (English and French).

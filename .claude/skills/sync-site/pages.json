@@ -80,6 +80,11 @@
       "role": "content"
     },
     {
+      "design": "Report AI Literacy.dc.html",
+      "slug": "research/human-centredailiteracy",
+      "role": "content"
+    },
+    {
       "design": "Report Adolescents.dc.html",
       "slug": "research/adolescents-and-anthropomorphic-ai",
       "role": "content"

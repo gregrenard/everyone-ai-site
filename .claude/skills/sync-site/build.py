@@ -138,7 +138,7 @@ MOBILE_CSS = (
     '<style id="eai-mobile">@media (max-width:640px){#dc-root [style*="text-align: justify"],'
     '#dc-root [style*="text-align:justify"]{text-align:left!important}'
     # Banners: on a phone the picture keeps its left third, so the title gets a little more room.
-    '[data-eai-banner-text]{width:60%!important;padding:12px 14px!important}}</style>'
+    '[data-eai-banner-text]{max-width:64%!important;padding:12px 14px!important}}</style>'
 )
 I18N_TAG = '<script src="eai-i18n.js" defer></script>'
 FORMS_TAG = ('<script>window.EAI_FORMS=%s;</script><script src="eai-forms.js" defer></script>'
@@ -353,9 +353,12 @@ def apply_banner(html, design):
     title = conf.get("title", old)
     keep = ""
     if h1 and title != old and not conf.get("full"):
-        keep = ('<p style="margin:0;font:600 clamp(18px,2.2vw,28px)/1.3 Poppins,sans-serif;color:#fff;'
+        keep = ('<p style="margin:0;font:600 clamp(18px,2.2vw,28px)/1.3 Poppins,sans-serif;color:#35425b;'
                 'text-transform:uppercase;letter-spacing:.04em">%s</p>' % old)
     rest = (inner[:h1.start()] + keep + inner[h1.end():]) if h1 else inner
+    # The band under the banner is the page colour (Gaelle, 11 Nov), so its white and pale-blue
+    # paragraph text turns dark; buttons keep their own colours.
+    rest = re.sub(r'(<p [^>]*?color:)(?:#fff|#cfd8ea)\b', lambda t: t.group(1) + "#35425b", rest)
     if conf.get("full"):
         banner = ('<section data-eai-banner="" style="position:relative;background:#324973">'
                   '<h1 style="%s">%s</h1>'
@@ -371,12 +374,12 @@ def apply_banner(html, design):
                   'min-height:clamp(120px,13.06vw,260px);display:flex;align-items:center;justify-content:flex-end">'
                   '<img src="%s" alt="" fetchpriority="high" style="position:absolute;left:0;top:0;height:100%%;'
                   'width:auto;max-width:none">'
-                  '<div data-eai-banner-text="" style="position:relative;width:50%%;padding:16px 24px;'
-                  'box-sizing:border-box;text-align:center">'
+                  '<div data-eai-banner-text="" style="position:relative;max-width:62%%;padding:16px 4.1vw 16px 24px;'
+                  'box-sizing:border-box;text-align:right">'
                   '<h1 style="margin:0;font:600 clamp(22px,2.9vw,46px)/1.15 Poppins,sans-serif;color:#fff;'
                   'letter-spacing:.03em;%s">%s</h1>%s</div></section>' % (conf["img"], caps, title, sub))
     if rest.strip():
-        banner += ('\n<section style="background:#35425b;padding:28px 20px 44px;text-align:center">%s</section>'
+        banner += ('\n<section style="background:#f0f2f6;padding:36px 20px 0;text-align:center">%s</section>'
                    % rest)
     return html[:m.start()] + m.group(1) + banner + html[m.end():]
 
@@ -404,6 +407,7 @@ def set_description(html, slug):
 # Report pages: what the page text states. No date where the page gives none; no person where
 # the report names none (the organisation is then the author).
 REPORTS = {
+    "research/human-centredailiteracy": {"authors": ["Maxime Le Bourgeois", "Mathilde Cerioli", "Yann Bonnet"], "date": "2026-11"},
     "research/mapping-of-genai-impacts": {"authors": ["Mathilde Cerioli", "Daniel Hipp"]},
     "research/adolescents-and-anthropomorphic-ai": {"authors": ["Mathilde Cerioli"]},
     "research/the-future-of-child-development-in-the-ai-era": {"date": "2024-05"},
@@ -688,6 +692,35 @@ def build_page(page):
 COMPONENT_SLUGS = {c[: -len(".dc.html")] for c in COMPONENTS}
 
 
+SLOT_ALT_MARK = "/* eai: alt from attribute */"
+
+
+def patch_image_slot():
+    """Give image-slot pictures a text alternative (Julien's kanban S5, 11 Nov).
+
+    Design's image-slot.js draws the picture as <img alt=""> inside its shadow root, so every slot
+    image (report covers, AIA photos, Newsroom thumbnails) read as decorative. The picture now
+    takes the slot's alt attribute, or failing that its placeholder caption without the
+    "Photo -" prefix. image-slot.js comes from the Design pull, so the patch is reapplied here.
+    """
+    path = os.path.join(OUT, "image-slot.js")
+    if not os.path.exists(path):
+        return
+    js = open(path, encoding="utf-8").read()
+    if SLOT_ALT_MARK in js:
+        return
+    a = "      return ['shape', 'radius', 'mask', 'fit', 'placeholder', 'src', 'id', 'credit', 'credit-href'];"
+    b = "    _render() {"
+    if a not in js or b not in js:
+        print("image-slot alt patch inert: image-slot.js changed")
+        return
+    js = js.replace(a, a.replace("'credit-href']", "'credit-href', 'alt']"), 1)
+    js = js.replace(b, b + "\n      " + SLOT_ALT_MARK + " if (this._img) this._img.alt = this.getAttribute('alt') || "
+                    "(this.getAttribute('placeholder') || '').replace(/^Photo\\s*[\u2014-]\\s*/, '');", 1)
+    with open(path, "w", encoding="utf-8", newline="") as f:
+        f.write(js)
+
+
 def main():
     for entry in os.listdir(OUT):
         full = os.path.join(OUT, entry)
@@ -700,6 +733,7 @@ def main():
     if os.path.exists(os.path.join(OUT, "index.html")):
         os.remove(os.path.join(OUT, "index.html"))
 
+    patch_image_slot()
     for page in PAGES:
         d = build_page(page)
         print("page      %s" % os.path.relpath(d, REPO))
